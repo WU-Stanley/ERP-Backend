@@ -176,12 +176,34 @@ try
     using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<WUIAMDbContext>();
 
-    // Check for pending migrations before applying
-    var pendingMigrations = db.Database.GetPendingMigrations().ToList();
+    bool isDbCreated = db.Database.CanConnect();
+    var pendingMigrations = db.Database.GetPendingMigrations();
     if (pendingMigrations.Any())
     {
-        Console.WriteLine($"Applying {pendingMigrations.Count} pending migration(s)...");
-        db.Database.Migrate();
+        Console.WriteLine($"Applying {pendingMigrations.Count()} pending migration(s)...");
+
+        // If the DB exists but migration history is missing, drop and recreate
+        if (isDbCreated)
+        {
+            var appliedMigrations = db.Database.GetAppliedMigrations();
+            bool hasInitialCreate = appliedMigrations.Any(m => m == "InitialCreate");
+            if (!hasInitialCreate)
+            {
+                Console.WriteLine("WARNING: Database exists but migration history is missing. " +
+                    "Dropping database to allow a clean migration run...");
+                db.Database.EnsureDeleted();
+                Console.WriteLine("Database dropped. Recreating via migrations...");
+                db.Database.Migrate();
+            }
+            else
+            {
+                db.Database.Migrate();
+            }
+        }
+        else
+        {
+            db.Database.Migrate();
+        }
         Console.WriteLine("Migration completed successfully.");
     }
     else
