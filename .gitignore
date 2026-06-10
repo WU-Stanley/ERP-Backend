@@ -1,0 +1,71 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# ASP.NET temporary files
+*.vspscc
+*.vssscc
+*.dbmdl
+*.pdb
+
+# IIS Express
+.vs/
+*.vspscc
+*.vssscc
+
+# ignore appsettings secrets
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+appsettings.Test.json
+appsettings.json
+# NuGet packages
+*.nupkg
+packages/
+*.snupkg
+
+# Publish output
+publish/
+*.Publish.xml
+
+# Logs
+*.log
+
+# Others
+TestResults/
+*.cache
+*.config.user
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Azure Pipelines
+.azure-pipelines/
+
+# Local history for Visual Studio
+.localhistory/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# OS generated files
+.DS_Store
+*.swp
+*.swo
+.fake
