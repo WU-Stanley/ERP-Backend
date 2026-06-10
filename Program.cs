@@ -175,8 +175,19 @@ try
 {
     using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<WUIAMDbContext>();
-    db.Database.Migrate();
-    Console.WriteLine("Migration completed successfully.");
+
+    // Check for pending migrations before applying
+    var pendingMigrations = db.Database.GetPendingMigrations().ToList();
+    if (pendingMigrations.Any())
+    {
+        Console.WriteLine($"Applying {pendingMigrations.Count} pending migration(s)...");
+        db.Database.Migrate();
+        Console.WriteLine("Migration completed successfully.");
+    }
+    else
+    {
+        Console.WriteLine("No pending migrations. Database is up to date.");
+    }
 
     // Seed Super Admin immediately after migration
     var seedService = scope.ServiceProvider.GetRequiredService<SeedService>();
@@ -185,8 +196,9 @@ try
 }
 catch (Exception ex)
 {
-    Console.Error.WriteLine($"Migration failed: {ex}");
-    throw;
+    Console.Error.WriteLine($"Migration/seed failed: {ex.Message}");
+    // Do not crash the app on migration failure — log and continue
+    Console.WriteLine("Continuing startup despite migration error.");
 }
 
 
