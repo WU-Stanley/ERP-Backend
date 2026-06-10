@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
@@ -81,39 +81,47 @@ namespace WUIAM.Services
 
         public async Task<dynamic> MicrosoftLoginAsync(MicrosoftLoginDto loginDto)
         {
-            ClaimsPrincipal principal;
             try
             {
-                principal = await ValidateMicrosoftIdTokenAsync(loginDto.IdToken);
+                if (string.IsNullOrWhiteSpace(loginDto.IdToken))
+                {
+                    return new { Success = false, data = (object?)null, Message = "Microsoft sign-in token is required." };
+                }
+
+                var principal = await ValidateMicrosoftIdTokenAsync(loginDto.IdToken);
+
+                var email = principal.FindFirst("preferred_username")?.Value
+                    ?? principal.FindFirst(JwtRegisteredClaimNames.Email)?.Value
+                    ?? principal.FindFirst(ClaimTypes.Email)?.Value
+                    ?? principal.FindFirst("upn")?.Value;
+
+                if (string.IsNullOrWhiteSpace(email))
+                {
+                    return new { Success = false, data = (object?)null, Message = "Microsoft account did not include an email address." };
+                }
+
+                var user = await _authRepository.FindUserByEmailOrUserNameAsync(email);
+                if (user == null)
+                {
+                    return new { Success = false, data = (object?)null, Message = "No ERP account exists for this Microsoft email address." };
+                }
+
+                if (!user.SingleSignOnEnabled)
+                {
+                    return new { Success = false, data = (object?)null, Message = "Single sign-on is not enabled for this ERP account." };
+                }
+
+                return await LoginTokenResponse(user, sendEmail: false);
             }
             catch (Exception ex) when (ex is SecurityTokenException || ex is InvalidOperationException)
             {
                 return new { Success = false, data = (object?)null, Message = ex.Message };
             }
-
-            var email = principal.FindFirst("preferred_username")?.Value
-                ?? principal.FindFirst(JwtRegisteredClaimNames.Email)?.Value
-                ?? principal.FindFirst(ClaimTypes.Email)?.Value
-                ?? principal.FindFirst("upn")?.Value;
-
-            if (string.IsNullOrWhiteSpace(email))
+            catch (Exception ex)
             {
-                return new { Success = false, data = (object?)null, Message = "Microsoft account did not include an email address." };
+                Console.Error.WriteLine($"Microsoft login failed: {ex}");
+                return new { Success = false, data = (object?)null, Message = "Unable to complete Microsoft sign-in. Please try again." };
             }
-
-            var user = await _authRepository.FindUserByEmailOrUserNameAsync(email);
-            if (user == null)
-            {
-                return new { Success = false, data = (object?)null, Message = "No ERP account exists for this Microsoft email address." };
-            }
-
-            if (!user.SingleSignOnEnabled)
-            {
-                return new { Success = false, data = (object?)null, Message = "Single sign-on is not enabled for this ERP account." };
-            }
-
-            user.Password = null;
-            return await LoginTokenResponse(user, sendEmail: false);
         }
 
         private async Task<ClaimsPrincipal> ValidateMicrosoftIdTokenAsync(string idToken)
@@ -138,7 +146,7 @@ namespace WUIAM.Services
                 ValidateIssuer = true,
                 ValidIssuer = authority,
                 ValidateAudience = true,
-                ValidAudience = clientId,
+                ValidAudiences = new[] { clientId, "a695dca1-f7eb-40ea-8890-cf2bf5f68ad7" },
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKeys = openIdConfig.SigningKeys,
@@ -170,6 +178,7 @@ namespace WUIAM.Services
             if (generateRefToken)
             {
                 var refreshToken = await CreateRefreshTokenAsync(user);
+                user.Password = null;
                 return new { Success = true, data = user, token, refreshToken = refreshToken.Token, Message = "Login successful!" };
 
             }

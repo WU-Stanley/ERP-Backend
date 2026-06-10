@@ -39,13 +39,21 @@ builder.Services.AddCors(options =>
 });
 
 // Configure Brevo (SendinBlue) API
-var brevoApiKey = builder.Configuration["BrevoApi:ApiKey"];
+var brevoApiKey = builder.Configuration["Brevo:ApiKey"];
 Configuration.Default.ApiKey.Add("api-key", brevoApiKey);
 
-var brevoApiUrl = builder.Configuration["BrevoApi:ApiUrl"];
+var brevoApiUrl = builder.Configuration["Brevo:ApiUrl"];
 if (!string.IsNullOrEmpty(brevoApiUrl))
 {
-    Configuration.Default.BasePath = brevoApiUrl;
+    var brevoUri = new Uri(brevoApiUrl);
+    var brevoBasePath = brevoUri.GetLeftPart(UriPartial.Path).TrimEnd('/');
+
+    if (brevoBasePath.EndsWith("/smtp/email", StringComparison.OrdinalIgnoreCase))
+    {
+        brevoBasePath = brevoBasePath[..^"/smtp/email".Length];
+    }
+
+    Configuration.Default.BasePath = brevoBasePath;
 }
 
 // Database
