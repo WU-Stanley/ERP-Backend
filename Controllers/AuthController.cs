@@ -28,7 +28,7 @@ namespace WUIAM.Controllers
             if (!result.Success)
                 return Ok(ApiResponse<dynamic>.Failure(result.Message));
 
-            return Ok(ApiResponse<dynamic>.Success(result.Message, result.data));
+            return Ok(ApiResponse<dynamic>.Success(result.Message, result));
         }
 
         [AllowAnonymous]
@@ -73,7 +73,7 @@ namespace WUIAM.Controllers
                 Path = "/" // Scope of cookie
             });
 
-            return Ok(ApiResponse<dynamic>.Success(result.Message, result.data));
+            return Ok(ApiResponse<dynamic>.Success(result.Message, result));
         }
         //[AllowAnonymous]
         [HttpGet("users")]

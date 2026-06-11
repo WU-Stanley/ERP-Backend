@@ -173,7 +173,6 @@ namespace WUIAM.Services
                     subject: "Login Notification",
                     body: EmailTemplateService.GenerateLoginNotificationEmailHtml(user.FullName!, DateTime.Now)
                 );
-                await _authRepository.ExpireTwoFactorTokenAsync(user.Id);
             }
             if (generateRefToken)
             {
@@ -185,7 +184,6 @@ namespace WUIAM.Services
             user.Password = null;
             return new { Success = true, data = user, token, Message = "Login successful!" };
         }
-
         private string GenerateJwtToken(User user)
         {
             var claims = new List<Claim>
@@ -397,6 +395,12 @@ namespace WUIAM.Services
             if (mfaToken == null)
             {
                 return new { Success = false, data = (object?)null, Message = "No 2FA token found." };
+            }
+
+            if (mfaToken.ExpiresOn <= DateTime.UtcNow)
+            {
+                await _authRepository.ExpireTwoFactorTokenAsync(mfaToken.Id);
+                return new { Success = false, data = (object?)null, Message = "2FA token has expired. Please sign in again to request a new token." };
             }
 
             // Verify the provided token against the hashed token

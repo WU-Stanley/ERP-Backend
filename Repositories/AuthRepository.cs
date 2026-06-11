@@ -60,7 +60,10 @@ namespace WUIAM.Repositories
 
         public async Task<MFAToken?> GetLatestTwoFactorTokenAsync(Guid userId)
         {
-            var token = await dbContext.MFATokens.FirstOrDefaultAsync(t => t.UserId == userId);
+            var token = await dbContext.MFATokens
+                .Where(t => t.UserId == userId)
+                .OrderByDescending(t => t.CreatedAt)
+                .FirstOrDefaultAsync();
             return token;
         }
 
@@ -78,7 +81,7 @@ namespace WUIAM.Repositories
                 Token = twoFactorToken,
                 CreatedAt = DateTime.UtcNow,
                 ClientId = "Web",
-                ExpiresOn = DateTime.Now.AddMinutes(5)
+                ExpiresOn = DateTime.UtcNow.AddMinutes(5)
             };
             var fAToken = await dbContext.MFATokens.FirstOrDefaultAsync(t => t.UserId == userId!);
             if (fAToken == null)
@@ -89,6 +92,8 @@ namespace WUIAM.Repositories
             {
                 fAToken.Token = twoFactorToken;
                 fAToken.CreatedAt = DateTime.UtcNow;
+                fAToken.ExpiresOn = DateTime.UtcNow.AddMinutes(5);
+                fAToken.ClientId = "Web";
                 dbContext.MFATokens.Update(fAToken);
             }
             var saved = await dbContext.SaveChangesAsync();
