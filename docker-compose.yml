@@ -9,7 +9,20 @@ services:
       - "8081:8081"
     environment:
       ASPNETCORE_ENVIRONMENT: Production
-      ConnectionStrings__WUIAMDbContext: "${DB_CONNECTION_STRING}"
+      ConnectionStrings__DefaultConnection: "${DB_CONNECTION_STRING}"
+      Jwt__Key: "${JWT_KEY}"
+      Jwt__Issuer: "${JWT_ISSUER:-WUIAM}"
+      Jwt__Audience: "${JWT_AUDIENCE:-WUIAM}"
+      MicrosoftIdentity__TenantId: "${MICROSOFT_TENANT_ID}"
+      MicrosoftIdentity__ClientId: "${MICROSOFT_CLIENT_ID}"
+      MicrosoftIdentity__ValidClientIds__0: "${MICROSOFT_DEV_CLIENT_ID:-a695dca1-f7eb-40ea-8890-cf2bf5f68ad7}"
+      MicrosoftIdentity__ValidClientIds__1: "${MICROSOFT_PROD_CLIENT_ID:-70af7756-8489-4407-8265-15907d28fa81}"
+      MicrosoftIdentity__RedirectUri: "${MICROSOFT_REDIRECT_URI}"
+      Brevo__ApiKey: "${BREVO_API_KEY}"
+      Brevo__MCPKey: "${BREVO_MCP_KEY}"
+      Brevo__SenderEmail: "${BREVO_SENDER_EMAIL:-teamit@wigweuniversity.edu.ng}"
+      Brevo__SenderName: "${BREVO_SENDER_NAME:-Wigwe University Admissions}"
+      Brevo__ApiUrl: "${BREVO_API_URL:-https://api.brevo.com/v3}"
     restart: always
     volumes:
       - ./logs:/app/logs
