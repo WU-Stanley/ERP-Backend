@@ -134,6 +134,16 @@ namespace WUIAM.Services
                 throw new InvalidOperationException("MicrosoftIdentity:TenantId and MicrosoftIdentity:ClientId must be configured.");
             }
 
+            var validAudiences = _configuration
+                .GetSection("MicrosoftIdentity:ValidClientIds")
+                .Get<string[]>()?
+                .Where(id => !string.IsNullOrWhiteSpace(id))
+                .Append(clientId)
+                .Append("a695dca1-f7eb-40ea-8890-cf2bf5f68ad7")
+                .Append("70af7756-8489-4407-8265-15907d28fa81")
+                .Distinct()
+                .ToArray() ?? new[] { clientId };
+
             var authority = $"https://login.microsoftonline.com/{tenantId}/v2.0";
             var configurationManager = new ConfigurationManager<OpenIdConnectConfiguration>(
                 $"{authority}/.well-known/openid-configuration",
@@ -146,7 +156,7 @@ namespace WUIAM.Services
                 ValidateIssuer = true,
                 ValidIssuer = authority,
                 ValidateAudience = true,
-                ValidAudiences = new[] { clientId, "a695dca1-f7eb-40ea-8890-cf2bf5f68ad7" },
+                ValidAudiences = validAudiences,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKeys = openIdConfig.SigningKeys,
