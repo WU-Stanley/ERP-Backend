@@ -75,11 +75,16 @@ namespace WUIAM.Controllers
         /// <summary>
         /// Get a job posting by ID.
         /// </summary>
+        [AllowAnonymous]
         [HttpGet("job-postings/{id}")]
         public async Task<ActionResult<ApiResponse<JobPostingDto>>> GetJobPosting(Guid id)
         {
             var posting = await _recruitmentService.GetJobPostingByIdAsync(id);
             if (posting == null)
+                return NotFound(ApiResponse<JobPostingDto>.Failure("Job posting not found."));
+
+            // Anonymous users can only access active postings
+            if ((!User.Identity?.IsAuthenticated ?? true) && posting.Status != "Active")
                 return NotFound(ApiResponse<JobPostingDto>.Failure("Job posting not found."));
 
             var dto = new JobPostingDto
@@ -107,9 +112,16 @@ namespace WUIAM.Controllers
         /// <summary>
         /// Get all job postings. Public can see Active ones, HR can see all.
         /// </summary>
+        [AllowAnonymous]
         [HttpGet("job-postings")]
         public async Task<ActionResult<ApiResponse<List<JobPostingDto>>>> GetJobPostings([FromQuery] bool onlyActive = false)
         {
+            // Anonymous users are forced to view only active postings
+            if (!User.Identity?.IsAuthenticated ?? true)
+            {
+                onlyActive = true;
+            }
+
             var postings = await _recruitmentService.GetJobPostingsAsync(onlyActive);
             var dtos = postings.Select(p => new JobPostingDto
             {
@@ -157,6 +169,9 @@ namespace WUIAM.Controllers
                     "info",
                     "JobApplication",
                     application.Id);
+
+                // Notify the applicant and provide tracking information
+                await SendApplicationSubmittedEmailAsync(application);
 
                 return Ok(ApiResponse<JobApplication>.Success("Application submitted successfully.", application));
             }
@@ -244,6 +259,9 @@ namespace WUIAM.Controllers
             if (application == null)
                 return NotFound(ApiResponse<JobApplication>.Failure("Application not found."));
 
+            // Notify the applicant of the status update
+            await SendStatusUpdateEmailAsync(application);
+
             return Ok(ApiResponse<JobApplication>.Success("Application status updated.", application));
         }
 
@@ -310,6 +328,12 @@ namespace WUIAM.Controllers
                     Notes = interview.Notes,
                     CreatedAt = interview.CreatedAt
                 };
+
+                // Notify the applicant of the scheduled interview
+                if (interview.Application != null)
+                {
+                    await SendInterviewScheduledEmailAsync(interview.Application, interviewDto);
+                }
 
                 return Ok(ApiResponse<InterviewDto>.Success("Interview scheduled successfully.", interviewDto));
             }
@@ -476,6 +500,12 @@ namespace WUIAM.Controllers
                     CreatedAt = offer.CreatedAt
                 };
 
+                // Notify the applicant when an offer letter is sent
+                if (offer.Status == "Sent" && offer.Application != null)
+                {
+                    await SendOfferLetterSentEmailAsync(offer.Application);
+                }
+
                 return Ok(ApiResponse<OfferLetterDto>.Success("Offer status updated.", offerDto));
             }
             catch (InvalidOperationException ex)
@@ -599,6 +629,146 @@ namespace WUIAM.Controllers
         }
 
         // ==================== Helpers ====================
+        private string GetTrackingUrl(JobApplication application)
+        {
+            var origin = Request.Headers["Origin"].ToString();
+            if (string.IsNullOrEmpty(origin))
+            {
+                origin = "http://localhost:4200"; // Fallback to frontend default
+            }
+            return $"{origin}/careers/track?applicationId={application.Id}&email={Uri.EscapeDataString(application.Email)}";
+        }
+
+        private async Task SendApplicantEmailAsync(JobApplication application, string subject, string htmlBody)
+        {
+            try
+            {
+                var receiver = new EmailReceiver
+                {
+                    Email = application.Email,
+                    Name = application.ApplicantName
+                };
+                await _notifyService.SendEmailAsync(new List<EmailReceiver> { receiver }, subject, htmlBody);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Failed to send email to applicant {application.Email}: {ex.Message}");
+            }
+        }
+
+        private async Task SendApplicationSubmittedEmailAsync(JobApplication application)
+        {
+            var jobTitle = application.JobPosting?.Title ?? "Position";
+            var trackUrl = GetTrackingUrl(application);
+            var subject = $"Application Received: {jobTitle} - Wigwe University";
+            var body = $@"
+<div style=""font-family: sans-serif; line-height: 1.5; color: #333;"">
+  <p>Dear {application.ApplicantName},</p>
+  <p>Thank you for applying for the position of <strong>{jobTitle}</strong> at Wigwe University.</p>
+  <p>We have successfully received your application. You can track the status of your application at any time using the link below:</p>
+  <p style=""margin: 20px 0;"">
+    <a href=""{trackUrl}"" style=""background-color: #15803d; color: white; padding: 10px 16px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: bold;"">Track Your Application</a>
+  </p>
+  <p style=""margin-top: 20px;""><strong>Application Reference ID:</strong> <code style=""background-color: #f1f5f9; padding: 4px 6px; border-radius: 4px;"">{application.Id}</code></p>
+  <p>Best regards,</p>
+  <p><strong>Recruitment Team</strong><br/>Wigwe University</p>
+</div>";
+
+            await SendApplicantEmailAsync(application, subject, body);
+        }
+
+        private async Task SendStatusUpdateEmailAsync(JobApplication application)
+        {
+            var jobTitle = application.JobPosting?.Title ?? "Position";
+            var trackUrl = GetTrackingUrl(application);
+            var subject = $"Application Update: {jobTitle} - Wigwe University";
+
+            string statusMessage;
+            switch (application.Status.ToLower())
+            {
+                case "under review":
+                    statusMessage = $"We wanted to let you know that your application for <strong>{jobTitle}</strong> is now under active review by our hiring team.";
+                    break;
+                case "shortlisted":
+                    statusMessage = $"Great news! You have been shortlisted for the position of <strong>{jobTitle}</strong>. Our team will contact you shortly to arrange the next steps.";
+                    break;
+                case "rejected":
+                    statusMessage = $"Thank you for your interest in the <strong>{jobTitle}</strong> role at Wigwe University and for taking the time to apply. After careful consideration, we have decided not to move forward with your application at this time.<br/><br/>We appreciate your interest in our institution and wish you the best in your professional endeavors.";
+                    break;
+                case "hired":
+                    statusMessage = $"Congratulations! We are thrilled to officially welcome you to Wigwe University as a new team member for the role of <strong>{jobTitle}</strong>.";
+                    break;
+                default:
+                    statusMessage = $"Your application status for <strong>{jobTitle}</strong> has been updated to: <strong>{application.Status}</strong>.";
+                    break;
+            }
+
+            var body = $@"
+<div style=""font-family: sans-serif; line-height: 1.5; color: #333;"">
+  <p>Dear {application.ApplicantName},</p>
+  <p>{statusMessage}</p>
+  <p>To view your application progress or track any updates, please use the link below:</p>
+  <p style=""margin: 20px 0;"">
+    <a href=""{trackUrl}"" style=""background-color: #15803d; color: white; padding: 10px 16px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: bold;"">Track Your Application</a>
+  </p>
+  <p>Best regards,</p>
+  <p><strong>Recruitment Team</strong><br/>Wigwe University</p>
+</div>";
+
+            await SendApplicantEmailAsync(application, subject, body);
+        }
+
+        private async Task SendInterviewScheduledEmailAsync(JobApplication application, InterviewDto interview)
+        {
+            var jobTitle = application.JobPosting?.Title ?? "Position";
+            var subject = $"Interview Scheduled: {jobTitle} - Wigwe University";
+            var notesBlock = !string.IsNullOrEmpty(interview.Notes) 
+                ? $"<li><strong>Notes:</strong> {interview.Notes}</li>" 
+                : "";
+
+            var body = $@"
+<div style=""font-family: sans-serif; line-height: 1.5; color: #333;"">
+  <p>Dear {application.ApplicantName},</p>
+  <p>An interview has been scheduled for your application for <strong>{jobTitle}</strong>.</p>
+  <p><strong>Interview Details:</strong></p>
+  <ul>
+    <li><strong>Type:</strong> {interview.Type}</li>
+    <li><strong>Date & Time:</strong> {interview.ScheduledFor:dddd, MMMM dd, yyyy} at {interview.ScheduledFor:hh:mm tt} (UTC)</li>
+    {notesBlock}
+  </ul>
+  <p>You can join the interview meeting using the link below:</p>
+  <p style=""margin: 20px 0;"">
+    <a href=""{interview.MeetingLink}"" style=""background-color: #1d4ed8; color: white; padding: 10px 16px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: bold;"">Join Interview Meeting</a>
+  </p>
+  <p>If you have any questions or need to reschedule, please contact the HR recruitment team.</p>
+  <p>Best regards,</p>
+  <p><strong>Recruitment Team</strong><br/>Wigwe University</p>
+</div>";
+
+            await SendApplicantEmailAsync(application, subject, body);
+        }
+
+        private async Task SendOfferLetterSentEmailAsync(JobApplication application)
+        {
+            var jobTitle = application.JobPosting?.Title ?? "Position";
+            var trackUrl = GetTrackingUrl(application);
+            var subject = $"Official Job Offer: {jobTitle} - Wigwe University";
+            var body = $@"
+<div style=""font-family: sans-serif; line-height: 1.5; color: #333;"">
+  <p>Dear {application.ApplicantName},</p>
+  <p>We are pleased to inform you that Wigwe University has extended an official job offer for the position of <strong>{jobTitle}</strong>!</p>
+  <p>Please click the link below to view the offer letter details, check the terms, and submit your response (Accept/Decline):</p>
+  <p style=""margin: 20px 0;"">
+    <a href=""{trackUrl}"" style=""background-color: #15803d; color: white; padding: 10px 16px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: bold;"">View Offer Details</a>
+  </p>
+  <p>If you have any questions or require additional details, please let us know.</p>
+  <p>Best regards,</p>
+  <p><strong>Recruitment Team</strong><br/>Wigwe University</p>
+</div>";
+
+            await SendApplicantEmailAsync(application, subject, body);
+        }
+
         private ApplicationScoreDto MapToScoreDto(ApplicationScore score)
         {
             return new ApplicationScoreDto

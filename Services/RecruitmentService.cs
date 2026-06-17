@@ -132,6 +132,13 @@ namespace WUIAM.Services
             if (jobPosting.Deadline.HasValue && jobPosting.Deadline.Value < DateTime.UtcNow)
                 throw new InvalidOperationException("Application deadline has passed.");
 
+            // Prevent duplicate applications for the same job with the same email
+            var normalizedEmail = dto.Email.Trim().ToLower();
+            var alreadyApplied = await _context.JobApplications
+                .AnyAsync(a => a.JobPostingId == jobId && a.Email.ToLower() == normalizedEmail);
+            if (alreadyApplied)
+                throw new InvalidOperationException("You have already applied for this position.");
+
             var app = new JobApplication
             {
                 JobPostingId = jobId, ApplicantName = dto.ApplicantName, Email = dto.Email,
@@ -154,6 +161,7 @@ namespace WUIAM.Services
             _context.JobApplications.Add(app);
             jobPosting.ApplicationsCount++;
             await _context.SaveChangesAsync();
+            app.JobPosting = jobPosting;
             return app;
         }
 
@@ -312,7 +320,9 @@ namespace WUIAM.Services
 
         public async Task<JobApplication> UpdateApplicationStatusAsync(Guid id, UpdateApplicationStatusDto dto)
         {
-            var app = await _context.JobApplications.FindAsync(id)
+            var app = await _context.JobApplications
+                .Include(a => a.JobPosting)
+                .FirstOrDefaultAsync(a => a.Id == id)
                 ?? throw new InvalidOperationException("Application not found.");
             app.Status = dto.Status;
             if (dto.AssignedTo != null) app.AssignedTo = dto.AssignedTo;
@@ -381,6 +391,7 @@ namespace WUIAM.Services
             }
 
             await _context.SaveChangesAsync();
+            interview.Application = app;
             return interview;
         }
 
@@ -438,6 +449,7 @@ namespace WUIAM.Services
         {
             var offer = await _context.OfferLetters
                 .Include(o => o.Application)
+                    .ThenInclude(a => a.JobPosting)
                 .FirstOrDefaultAsync(o => o.Id == id)
                 ?? throw new InvalidOperationException("Offer letter not found.");
             offer.Status = status;

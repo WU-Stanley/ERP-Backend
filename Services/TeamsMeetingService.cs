@@ -55,10 +55,13 @@ namespace WUIAM.Services
                     System.Text.Encoding.UTF8,
                     "application/json");
 
-                jsonContent.Headers.Remove("Authorization");
-                jsonContent.Headers.Add("Authorization", $"Bearer {accessToken}");
+                var request = new HttpRequestMessage(HttpMethod.Post, requestUrl)
+                {
+                    Content = jsonContent
+                };
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
 
-                var response = await _httpClient.PostAsync(requestUrl, jsonContent);
+                var response = await _httpClient.SendAsync(request);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -74,7 +77,8 @@ namespace WUIAM.Services
                 }
                 else
                 {
-                    _logger.LogWarning("Failed to create Teams meeting. Status: {Status}", response.StatusCode);
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    _logger.LogWarning("Failed to create Teams meeting. Status: {Status}. Response: {Response}", response.StatusCode, errorContent);
                 }
             }
             catch (Exception ex)
@@ -114,7 +118,10 @@ namespace WUIAM.Services
                 if (string.IsNullOrEmpty(accessToken)) return null;
 
                 var requestUrl = $"https://graph.microsoft.com/v1.0/events/{teamsMeetingId}";
-                var response = await _httpClient.GetAsync(requestUrl);
+                var request = new HttpRequestMessage(HttpMethod.Get, requestUrl);
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+
+                var response = await _httpClient.SendAsync(request);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -150,14 +157,20 @@ namespace WUIAM.Services
             try
             {
                 var response = await _httpClient.PostAsync(tokenUrl, content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    _logger.LogError("Token request failed with status {StatusCode}. Response: {Response}", response.StatusCode, errorContent);
+                }
                 response.EnsureSuccessStatusCode();
 
                 var jsonResponse = await response.Content.ReadAsStringAsync();
                 var jsonElement = System.Text.Json.JsonSerializer.Deserialize<System.Text.Json.JsonElement>(jsonResponse);
                 return jsonElement.TryGetProperty("access_token", out var tokenProp) ? tokenProp.GetString() : null;
             }
-            catch
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Exception occurred during Graph access token request.");
                 return null;
             }
         }
@@ -165,7 +178,7 @@ namespace WUIAM.Services
         private string GeneratePlaceholderMeetingLink()
         {
             var meetingId = Guid.NewGuid().ToString("N")[..16];
-            return $"https://teams.microsoft.com/l/meetup-join/19%3ameeting_{meetingId}";
+            return $"https://meet.jit.si/WU-Interview-{meetingId}";
         }
     }
 }

@@ -205,3 +205,264 @@
 [2026-06-17 11:51:52.332 ERR] [e47caf47-8ba3-415a-92cf-da82b3f4b06e] [CorrelationId: e47caf47-8ba3-415a-92cf-da82b3f4b06e] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 4179259.73ms (threshold: 5000ms)
 [2026-06-17 11:51:52.365 INF] [b6c5270f-2c3e-4b19-a633-8a9119305fa5] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.42ms
 [2026-06-17 11:51:52.365 INF] [b6c5270f-2c3e-4b19-a633-8a9119305fa5] [CorrelationId: b6c5270f-2c3e-4b19-a633-8a9119305fa5] POST /api/notificationsHub/negotiate completed in 0.51ms with status 200
+[2026-06-17 13:06:54.309 INF] [dced7eb9-a8b0-40c7-8e9a-ebf328edc619] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.26ms
+[2026-06-17 13:06:54.309 INF] [dced7eb9-a8b0-40c7-8e9a-ebf328edc619] [CorrelationId: dced7eb9-a8b0-40c7-8e9a-ebf328edc619] POST /api/notificationsHub/negotiate completed in 0.35ms with status 200
+[2026-06-17 13:06:54.327 INF] [cf54c85a-fcc5-4c43-a130-900fff6bfb83] [Perf] GET /api/notifications/unread-count -> 200 in 27.36ms
+[2026-06-17 13:06:54.327 INF] [cf54c85a-fcc5-4c43-a130-900fff6bfb83] [CorrelationId: cf54c85a-fcc5-4c43-a130-900fff6bfb83] GET /api/notifications/unread-count completed in 27.46ms with status 200
+[2026-06-17 13:06:54.334 INF] [cb75febd-df58-4379-926d-74d2b0972bfc] [Perf] GET /api/notifications -> 200 in 6.12ms
+[2026-06-17 13:06:54.334 INF] [cb75febd-df58-4379-926d-74d2b0972bfc] [CorrelationId: cb75febd-df58-4379-926d-74d2b0972bfc] GET /api/notifications completed in 6.21ms with status 200
+[2026-06-17 13:06:54.341 INF] [f875ef33-1c0d-4218-96bd-69f348942790] [Perf] GET /api/notifications/unread-count -> 200 in 17.44ms
+[2026-06-17 13:06:54.342 INF] [f875ef33-1c0d-4218-96bd-69f348942790] [CorrelationId: f875ef33-1c0d-4218-96bd-69f348942790] GET /api/notifications/unread-count completed in 17.55ms with status 200
+[2026-06-17 13:07:11.060 INF] [972939eb-19db-41c6-800b-ff8f1cd5a187] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.36ms
+[2026-06-17 13:07:11.060 INF] [972939eb-19db-41c6-800b-ff8f1cd5a187] [CorrelationId: 972939eb-19db-41c6-800b-ff8f1cd5a187] POST /api/notificationsHub/negotiate completed in 0.78ms with status 200
+[2026-06-17 13:07:11.063 INF] [f54e2cc0-119c-435a-ace7-5ccdbd570bf1] [Perf] GET /api/notifications/unread-count -> 200 in 6.29ms
+[2026-06-17 13:07:11.063 INF] [f54e2cc0-119c-435a-ace7-5ccdbd570bf1] [CorrelationId: f54e2cc0-119c-435a-ace7-5ccdbd570bf1] GET /api/notifications/unread-count completed in 6.60ms with status 200
+[2026-06-17 13:07:11.102 INF] [31301439-ce29-42a6-82b2-c03e1632e979] [Perf] GET /api/notifications -> 200 in 6.76ms
+[2026-06-17 13:07:11.102 INF] [31301439-ce29-42a6-82b2-c03e1632e979] [CorrelationId: 31301439-ce29-42a6-82b2-c03e1632e979] GET /api/notifications completed in 6.87ms with status 200
+[2026-06-17 13:07:11.102 INF] [fed7c945-3f10-43be-9cfa-9c4b44709a32] [Perf] GET /api/notifications/unread-count -> 200 in 6.76ms
+[2026-06-17 13:07:11.102 INF] [fed7c945-3f10-43be-9cfa-9c4b44709a32] [CorrelationId: fed7c945-3f10-43be-9cfa-9c4b44709a32] GET /api/notifications/unread-count completed in 6.92ms with status 200
+[2026-06-17 13:10:16.538 INF] [f835d444-5a53-42ca-a051-604cc6bda888] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.34ms
+[2026-06-17 13:10:16.538 INF] [f835d444-5a53-42ca-a051-604cc6bda888] [CorrelationId: f835d444-5a53-42ca-a051-604cc6bda888] POST /api/notificationsHub/negotiate completed in 0.45ms with status 200
+[2026-06-17 13:10:16.547 INF] [9ab2e2e3-74ca-40cf-9252-deb8b3015b05] [Perf] GET /api/notifications/unread-count -> 200 in 9.73ms
+[2026-06-17 13:10:16.547 INF] [9ab2e2e3-74ca-40cf-9252-deb8b3015b05] [CorrelationId: 9ab2e2e3-74ca-40cf-9252-deb8b3015b05] GET /api/notifications/unread-count completed in 9.84ms with status 200
+[2026-06-17 13:10:16.566 INF] [c4a7f675-50cf-4257-8caf-d9c4d25ac99c] [Perf] GET /api/notifications/unread-count -> 200 in 6.57ms
+[2026-06-17 13:10:16.566 INF] [6531b552-cc46-4865-a86b-5776c4463c13] [Perf] GET /api/notifications -> 200 in 5.98ms
+[2026-06-17 13:10:16.566 INF] [6531b552-cc46-4865-a86b-5776c4463c13] [CorrelationId: 6531b552-cc46-4865-a86b-5776c4463c13] GET /api/notifications completed in 6.20ms with status 200
+[2026-06-17 13:10:16.566 INF] [c4a7f675-50cf-4257-8caf-d9c4d25ac99c] [CorrelationId: c4a7f675-50cf-4257-8caf-d9c4d25ac99c] GET /api/notifications/unread-count completed in 6.75ms with status 200
+[2026-06-17 13:15:17.988 WRN] [cde6ed30-54f8-4c7b-bc53-54ac43509ff3] [Perf] GET /api/notificationsHub -> 101 in 486876.84ms
+[2026-06-17 13:15:17.988 INF] [cde6ed30-54f8-4c7b-bc53-54ac43509ff3] [CorrelationId: cde6ed30-54f8-4c7b-bc53-54ac43509ff3] GET /api/notificationsHub completed in 486877.26ms with status 101
+[2026-06-17 13:15:17.988 WRN] [cde6ed30-54f8-4c7b-bc53-54ac43509ff3] [CorrelationId: cde6ed30-54f8-4c7b-bc53-54ac43509ff3] SLOW REQUEST: GET /api/notificationsHub took 486877.26ms (threshold: 1000ms)
+[2026-06-17 13:15:17.988 ERR] [cde6ed30-54f8-4c7b-bc53-54ac43509ff3] [CorrelationId: cde6ed30-54f8-4c7b-bc53-54ac43509ff3] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 486877.26ms (threshold: 5000ms)
+[2026-06-17 13:15:17.988 WRN] [11961b8b-d281-4fcc-a464-9503294efce4] [Perf] GET /api/notificationsHub -> 101 in 503648.53ms
+[2026-06-17 13:15:17.993 INF] [11961b8b-d281-4fcc-a464-9503294efce4] [CorrelationId: 11961b8b-d281-4fcc-a464-9503294efce4] GET /api/notificationsHub completed in 503653.14ms with status 101
+[2026-06-17 13:15:17.993 WRN] [11961b8b-d281-4fcc-a464-9503294efce4] [CorrelationId: 11961b8b-d281-4fcc-a464-9503294efce4] SLOW REQUEST: GET /api/notificationsHub took 503653.14ms (threshold: 1000ms)
+[2026-06-17 13:15:17.993 WRN] [e73f258e-9dbd-4f21-90df-fd2015e4fbd0] [Perf] GET /api/notificationsHub -> 101 in 4241382.33ms
+[2026-06-17 13:15:17.993 INF] [e73f258e-9dbd-4f21-90df-fd2015e4fbd0] [CorrelationId: e73f258e-9dbd-4f21-90df-fd2015e4fbd0] GET /api/notificationsHub completed in 4241382.38ms with status 101
+[2026-06-17 13:15:17.993 WRN] [e73f258e-9dbd-4f21-90df-fd2015e4fbd0] [CorrelationId: e73f258e-9dbd-4f21-90df-fd2015e4fbd0] SLOW REQUEST: GET /api/notificationsHub took 4241382.38ms (threshold: 1000ms)
+[2026-06-17 13:15:17.993 ERR] [e73f258e-9dbd-4f21-90df-fd2015e4fbd0] [CorrelationId: e73f258e-9dbd-4f21-90df-fd2015e4fbd0] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 4241382.38ms (threshold: 5000ms)
+[2026-06-17 13:15:17.988 WRN] [b7f4db31-5400-4489-8dbf-3cb3029b4330] [Perf] GET /api/notificationsHub -> 101 in 301434.79ms
+[2026-06-17 13:15:18.012 INF] [b7f4db31-5400-4489-8dbf-3cb3029b4330] [CorrelationId: b7f4db31-5400-4489-8dbf-3cb3029b4330] GET /api/notificationsHub completed in 301458.85ms with status 101
+[2026-06-17 13:15:18.012 WRN] [b7f4db31-5400-4489-8dbf-3cb3029b4330] [CorrelationId: b7f4db31-5400-4489-8dbf-3cb3029b4330] SLOW REQUEST: GET /api/notificationsHub took 301458.85ms (threshold: 1000ms)
+[2026-06-17 13:15:18.012 ERR] [b7f4db31-5400-4489-8dbf-3cb3029b4330] [CorrelationId: b7f4db31-5400-4489-8dbf-3cb3029b4330] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 301458.85ms (threshold: 5000ms)
+[2026-06-17 13:15:17.993 ERR] [11961b8b-d281-4fcc-a464-9503294efce4] [CorrelationId: 11961b8b-d281-4fcc-a464-9503294efce4] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 503653.14ms (threshold: 5000ms)
+[2026-06-17 13:15:18.044 INF] [aa7e0bd1-8738-4de0-a4ac-02838353c493] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.36ms
+[2026-06-17 13:15:18.044 INF] [aa7e0bd1-8738-4de0-a4ac-02838353c493] [CorrelationId: aa7e0bd1-8738-4de0-a4ac-02838353c493] POST /api/notificationsHub/negotiate completed in 0.44ms with status 200
+[2026-06-17 13:15:18.046 INF] [cb6ccef8-f652-49ec-82c6-f557a0133249] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.17ms
+[2026-06-17 13:15:18.046 INF] [cb6ccef8-f652-49ec-82c6-f557a0133249] [CorrelationId: cb6ccef8-f652-49ec-82c6-f557a0133249] POST /api/notificationsHub/negotiate completed in 0.23ms with status 200
+[2026-06-17 13:15:18.047 INF] [6139a3a5-d08f-4527-906b-131ef0fca124] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.18ms
+[2026-06-17 13:15:18.047 INF] [6139a3a5-d08f-4527-906b-131ef0fca124] [CorrelationId: 6139a3a5-d08f-4527-906b-131ef0fca124] POST /api/notificationsHub/negotiate completed in 0.25ms with status 200
+[2026-06-17 13:15:18.078 INF] [59cdacc8-0cc2-45c8-8766-cba9b5430847] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.42ms
+[2026-06-17 13:15:18.078 INF] [59cdacc8-0cc2-45c8-8766-cba9b5430847] [CorrelationId: 59cdacc8-0cc2-45c8-8766-cba9b5430847] POST /api/notificationsHub/negotiate completed in 0.51ms with status 200
+[2026-06-17 13:53:09.030 WRN] [a95436fb-219f-48e4-b464-7fd115e1ebdd] [Perf] GET /api/notificationsHub -> 101 in 884680.61ms
+[2026-06-17 13:53:09.030 INF] [a95436fb-219f-48e4-b464-7fd115e1ebdd] [CorrelationId: a95436fb-219f-48e4-b464-7fd115e1ebdd] GET /api/notificationsHub completed in 884680.92ms with status 101
+[2026-06-17 13:53:09.030 WRN] [a95436fb-219f-48e4-b464-7fd115e1ebdd] [CorrelationId: a95436fb-219f-48e4-b464-7fd115e1ebdd] SLOW REQUEST: GET /api/notificationsHub took 884680.92ms (threshold: 1000ms)
+[2026-06-17 13:53:09.030 ERR] [a95436fb-219f-48e4-b464-7fd115e1ebdd] [CorrelationId: a95436fb-219f-48e4-b464-7fd115e1ebdd] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 884680.92ms (threshold: 5000ms)
+[2026-06-17 13:53:09.041 WRN] [fabf0bea-257d-418e-9d90-8491705b21b0] [Perf] GET /api/notificationsHub -> 101 in 884714.75ms
+[2026-06-17 13:53:09.042 INF] [fabf0bea-257d-418e-9d90-8491705b21b0] [CorrelationId: fabf0bea-257d-418e-9d90-8491705b21b0] GET /api/notificationsHub completed in 884714.84ms with status 101
+[2026-06-17 13:53:09.042 WRN] [fabf0bea-257d-418e-9d90-8491705b21b0] [CorrelationId: fabf0bea-257d-418e-9d90-8491705b21b0] SLOW REQUEST: GET /api/notificationsHub took 884714.84ms (threshold: 1000ms)
+[2026-06-17 13:53:09.042 ERR] [fabf0bea-257d-418e-9d90-8491705b21b0] [CorrelationId: fabf0bea-257d-418e-9d90-8491705b21b0] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 884714.84ms (threshold: 5000ms)
+[2026-06-17 13:53:09.032 WRN] [17c17014-eb93-45da-9a41-4c1d1b4167c4] [Perf] GET /api/notificationsHub -> 101 in 884750.33ms
+[2026-06-17 13:53:09.046 INF] [17c17014-eb93-45da-9a41-4c1d1b4167c4] [CorrelationId: 17c17014-eb93-45da-9a41-4c1d1b4167c4] GET /api/notificationsHub completed in 884764.52ms with status 101
+[2026-06-17 13:53:09.046 WRN] [8364fb93-8e1c-4673-8dc7-8e2c5982a899] [Perf] GET /api/notificationsHub -> 101 in 884741.50ms
+[2026-06-17 13:53:09.046 WRN] [17c17014-eb93-45da-9a41-4c1d1b4167c4] [CorrelationId: 17c17014-eb93-45da-9a41-4c1d1b4167c4] SLOW REQUEST: GET /api/notificationsHub took 884764.52ms (threshold: 1000ms)
+[2026-06-17 13:53:09.047 ERR] [17c17014-eb93-45da-9a41-4c1d1b4167c4] [CorrelationId: 17c17014-eb93-45da-9a41-4c1d1b4167c4] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 884764.52ms (threshold: 5000ms)
+[2026-06-17 13:53:09.046 INF] [8364fb93-8e1c-4673-8dc7-8e2c5982a899] [CorrelationId: 8364fb93-8e1c-4673-8dc7-8e2c5982a899] GET /api/notificationsHub completed in 884741.56ms with status 101
+[2026-06-17 13:53:09.048 WRN] [8364fb93-8e1c-4673-8dc7-8e2c5982a899] [CorrelationId: 8364fb93-8e1c-4673-8dc7-8e2c5982a899] SLOW REQUEST: GET /api/notificationsHub took 884741.56ms (threshold: 1000ms)
+[2026-06-17 13:53:09.048 ERR] [8364fb93-8e1c-4673-8dc7-8e2c5982a899] [CorrelationId: 8364fb93-8e1c-4673-8dc7-8e2c5982a899] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 884741.56ms (threshold: 5000ms)
+[2026-06-17 13:53:09.085 INF] [72180659-6e77-4632-8445-0ef8553ebff2] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.25ms
+[2026-06-17 13:53:09.085 INF] [72180659-6e77-4632-8445-0ef8553ebff2] [CorrelationId: 72180659-6e77-4632-8445-0ef8553ebff2] POST /api/notificationsHub/negotiate completed in 0.33ms with status 200
+[2026-06-17 13:53:09.120 INF] [a965fa70-ef08-4809-9e9a-04f26ffa44e1] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.22ms
+[2026-06-17 13:53:09.120 INF] [93370ba2-ec04-4120-983d-17b20dca2586] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.22ms
+[2026-06-17 13:53:09.120 INF] [a965fa70-ef08-4809-9e9a-04f26ffa44e1] [CorrelationId: a965fa70-ef08-4809-9e9a-04f26ffa44e1] POST /api/notificationsHub/negotiate completed in 0.30ms with status 200
+[2026-06-17 13:53:09.120 INF] [93370ba2-ec04-4120-983d-17b20dca2586] [CorrelationId: 93370ba2-ec04-4120-983d-17b20dca2586] POST /api/notificationsHub/negotiate completed in 0.39ms with status 200
+[2026-06-17 13:53:09.121 INF] [d8865c3c-2232-44d1-b78a-cf5dad7e204e] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.10ms
+[2026-06-17 13:53:09.121 INF] [d8865c3c-2232-44d1-b78a-cf5dad7e204e] [CorrelationId: d8865c3c-2232-44d1-b78a-cf5dad7e204e] POST /api/notificationsHub/negotiate completed in 0.13ms with status 200
+[2026-06-17 14:13:53.779 INF] [dc6d0ea7-e6a9-4cc6-8c33-415ae7dead1b] [Perf] GET /api/v1/recruitment/stats -> 200 in 57.54ms
+[2026-06-17 14:13:53.779 INF] [dc6d0ea7-e6a9-4cc6-8c33-415ae7dead1b] [CorrelationId: dc6d0ea7-e6a9-4cc6-8c33-415ae7dead1b] GET /api/v1/recruitment/stats completed in 57.71ms with status 200
+[2026-06-17 14:14:02.350 INF] [d7e416f2-c0c9-4146-9cfc-5d479ee89969] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 401 in 0.07ms
+[2026-06-17 14:14:02.350 INF] [d7e416f2-c0c9-4146-9cfc-5d479ee89969] [CorrelationId: d7e416f2-c0c9-4146-9cfc-5d479ee89969] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 0.20ms with status 401
+[2026-06-17 14:14:04.359 INF] [f206c4d0-ab4b-43c4-ad49-f1f3d89c6e13] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 401 in 0.14ms
+[2026-06-17 14:14:04.360 INF] [f206c4d0-ab4b-43c4-ad49-f1f3d89c6e13] [CorrelationId: f206c4d0-ab4b-43c4-ad49-f1f3d89c6e13] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 0.37ms with status 401
+[2026-06-17 14:14:08.368 INF] [bdbf2639-c7e9-4c32-bb63-aff46bd1e7a0] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 401 in 0.15ms
+[2026-06-17 14:14:08.368 INF] [bdbf2639-c7e9-4c32-bb63-aff46bd1e7a0] [CorrelationId: bdbf2639-c7e9-4c32-bb63-aff46bd1e7a0] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 0.36ms with status 401
+[2026-06-17 14:14:08.419 INF] [cbdf7b53-7e33-411e-801e-8dd9554400d3] [Perf] POST /api/auth/refresh-token -> 401 in 3.36ms
+[2026-06-17 14:14:08.419 INF] [cbdf7b53-7e33-411e-801e-8dd9554400d3] [CorrelationId: cbdf7b53-7e33-411e-801e-8dd9554400d3] POST /api/auth/refresh-token completed in 3.45ms with status 401
+[2026-06-17 14:14:10.426 INF] [18975239-4d3f-42e7-98f4-dbd3f2aac14c] [Perf] POST /api/auth/refresh-token -> 401 in 0.66ms
+[2026-06-17 14:14:10.426 INF] [18975239-4d3f-42e7-98f4-dbd3f2aac14c] [CorrelationId: 18975239-4d3f-42e7-98f4-dbd3f2aac14c] POST /api/auth/refresh-token completed in 0.87ms with status 401
+[2026-06-17 14:14:12.936 INF] [32baaf3b-f43f-47b7-ae56-4509a5f034d0] [Perf] GET /api/v1/recruitment/public/stats -> 200 in 9.28ms
+[2026-06-17 14:14:12.936 INF] [32baaf3b-f43f-47b7-ae56-4509a5f034d0] [CorrelationId: 32baaf3b-f43f-47b7-ae56-4509a5f034d0] GET /api/v1/recruitment/public/stats completed in 9.40ms with status 200
+[2026-06-17 14:14:14.439 INF] [31cd4ed8-0228-44f7-9ce2-9fa7970ab336] [Perf] POST /api/auth/refresh-token -> 401 in 0.82ms
+[2026-06-17 14:14:14.439 INF] [31cd4ed8-0228-44f7-9ce2-9fa7970ab336] [CorrelationId: 31cd4ed8-0228-44f7-9ce2-9fa7970ab336] POST /api/auth/refresh-token completed in 1.08ms with status 401
+[2026-06-17 14:14:16.701 INF] [2b206d05-2d24-4cb9-bee3-d71c8d329bb4] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 401 in 0.15ms
+[2026-06-17 14:14:16.702 INF] [2b206d05-2d24-4cb9-bee3-d71c8d329bb4] [CorrelationId: 2b206d05-2d24-4cb9-bee3-d71c8d329bb4] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 0.44ms with status 401
+[2026-06-17 14:14:18.715 INF] [1f665d77-0021-4600-ae3c-3d0cdace9f82] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 401 in 0.12ms
+[2026-06-17 14:14:18.715 INF] [1f665d77-0021-4600-ae3c-3d0cdace9f82] [CorrelationId: 1f665d77-0021-4600-ae3c-3d0cdace9f82] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 0.27ms with status 401
+[2026-06-17 14:14:22.722 INF] [5a2d37da-566b-4447-8b4d-a07b35f29d04] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 401 in 0.05ms
+[2026-06-17 14:14:22.722 INF] [5a2d37da-566b-4447-8b4d-a07b35f29d04] [CorrelationId: 5a2d37da-566b-4447-8b4d-a07b35f29d04] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 0.12ms with status 401
+[2026-06-17 14:14:22.727 INF] [f37a1185-3daa-4f30-b2aa-0bb27dd1b699] [Perf] POST /api/auth/refresh-token -> 401 in 0.31ms
+[2026-06-17 14:14:22.727 INF] [f37a1185-3daa-4f30-b2aa-0bb27dd1b699] [CorrelationId: f37a1185-3daa-4f30-b2aa-0bb27dd1b699] POST /api/auth/refresh-token completed in 0.40ms with status 401
+[2026-06-17 14:14:24.734 INF] [4a5e90ef-1847-42d2-bcfc-b218c72d8bd4] [Perf] POST /api/auth/refresh-token -> 401 in 0.87ms
+[2026-06-17 14:14:24.734 INF] [4a5e90ef-1847-42d2-bcfc-b218c72d8bd4] [CorrelationId: 4a5e90ef-1847-42d2-bcfc-b218c72d8bd4] POST /api/auth/refresh-token completed in 1.13ms with status 401
+[2026-06-17 14:14:28.748 INF] [fb6bdf7c-9b0f-49bf-bec6-ce844f7edf3a] [Perf] POST /api/auth/refresh-token -> 401 in 2.02ms
+[2026-06-17 14:14:28.748 INF] [fb6bdf7c-9b0f-49bf-bec6-ce844f7edf3a] [CorrelationId: fb6bdf7c-9b0f-49bf-bec6-ce844f7edf3a] POST /api/auth/refresh-token completed in 2.33ms with status 401
+[2026-06-17 14:18:44.857 INF] [52bdbe5b-1394-418d-aeab-cd06f375ba69] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 200 in 62.07ms
+[2026-06-17 14:18:44.857 INF] [52bdbe5b-1394-418d-aeab-cd06f375ba69] [CorrelationId: 52bdbe5b-1394-418d-aeab-cd06f375ba69] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 62.17ms with status 200
+[2026-06-17 14:23:36.372 INF] [e35dd6e5-5d7f-4ea8-8e22-b34af2bbc4db] Recruitment team notified: New Job Application - New application for "Junior Software Developer" by Stanley Joel Nwaegwu (kingstanley.ks16@gmail.com).
+[2026-06-17 14:23:36.376 INF] [e35dd6e5-5d7f-4ea8-8e22-b34af2bbc4db] [Perf] POST /api/v1/recruitment/public/apply/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 200 in 161.34ms
+[2026-06-17 14:23:36.376 INF] [e35dd6e5-5d7f-4ea8-8e22-b34af2bbc4db] [CorrelationId: e35dd6e5-5d7f-4ea8-8e22-b34af2bbc4db] POST /api/v1/recruitment/public/apply/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 161.46ms with status 200
+[2026-06-17 14:23:54.899 INF] [a8bc1f10-d84b-40f6-a9ea-95ba1c806089] [Perf] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track -> 200 in 90.85ms
+[2026-06-17 14:23:54.899 INF] [a8bc1f10-d84b-40f6-a9ea-95ba1c806089] [CorrelationId: a8bc1f10-d84b-40f6-a9ea-95ba1c806089] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track completed in 90.96ms with status 200
+[2026-06-17 14:23:59.605 INF] [3651f7e4-9206-485c-990c-4c622700daf4] [Perf] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track -> 200 in 11.41ms
+[2026-06-17 14:23:59.605 INF] [3651f7e4-9206-485c-990c-4c622700daf4] [CorrelationId: 3651f7e4-9206-485c-990c-4c622700daf4] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track completed in 11.51ms with status 200
+[2026-06-17 14:24:08.337 INF] [04206e3e-88a8-404a-a1b0-ba8fa8f4dcc7] [Perf] GET /api/v1/recruitment/job-postings -> 200 in 33.37ms
+[2026-06-17 14:24:08.337 INF] [04206e3e-88a8-404a-a1b0-ba8fa8f4dcc7] [CorrelationId: 04206e3e-88a8-404a-a1b0-ba8fa8f4dcc7] GET /api/v1/recruitment/job-postings completed in 33.48ms with status 200
+[2026-06-17 14:24:08.379 INF] [4e225a2e-2185-4e25-8117-c2a4af268dcc] [Perf] GET /api/department -> 200 in 63.32ms
+[2026-06-17 14:24:08.379 INF] [4e225a2e-2185-4e25-8117-c2a4af268dcc] [CorrelationId: 4e225a2e-2185-4e25-8117-c2a4af268dcc] GET /api/department completed in 63.43ms with status 200
+[2026-06-17 14:24:14.773 INF] [4c0a6262-9725-41ae-bfcb-baa33bee7ee7] [Perf] GET /api/v1/recruitment/stats -> 200 in 30.66ms
+[2026-06-17 14:24:14.774 INF] [4c0a6262-9725-41ae-bfcb-baa33bee7ee7] [CorrelationId: 4c0a6262-9725-41ae-bfcb-baa33bee7ee7] GET /api/v1/recruitment/stats completed in 30.79ms with status 200
+[2026-06-17 14:24:16.976 INF] [741d6869-dd3f-4b1d-8a1b-1f8b6095b948] [Perf] GET /api/v1/recruitment/applications -> 200 in 91.06ms
+[2026-06-17 14:24:16.976 INF] [741d6869-dd3f-4b1d-8a1b-1f8b6095b948] [CorrelationId: 741d6869-dd3f-4b1d-8a1b-1f8b6095b948] GET /api/v1/recruitment/applications completed in 91.18ms with status 200
+[2026-06-17 14:24:18.421 INF] [e3bc9840-700c-49d2-b8c5-a33dbdc2c6ea] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 404 in 13.62ms
+[2026-06-17 14:24:18.421 INF] [e3bc9840-700c-49d2-b8c5-a33dbdc2c6ea] [CorrelationId: e3bc9840-700c-49d2-b8c5-a33dbdc2c6ea] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 13.75ms with status 404
+[2026-06-17 14:24:18.437 INF] [507cbaae-abd5-435a-84c2-403c4f870270] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 31.50ms
+[2026-06-17 14:24:18.438 INF] [507cbaae-abd5-435a-84c2-403c4f870270] [CorrelationId: 507cbaae-abd5-435a-84c2-403c4f870270] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 31.62ms with status 200
+[2026-06-17 14:24:18.443 INF] [3d58b297-5875-4e5f-a23b-22f9c965ed9d] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 404 in 20.34ms
+[2026-06-17 14:24:18.443 INF] [3d58b297-5875-4e5f-a23b-22f9c965ed9d] [CorrelationId: 3d58b297-5875-4e5f-a23b-22f9c965ed9d] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 20.44ms with status 404
+[2026-06-17 14:24:18.457 INF] [e4282683-6cf5-429a-a832-1174611745d3] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 18.90ms
+[2026-06-17 14:24:18.457 INF] [e4282683-6cf5-429a-a832-1174611745d3] [CorrelationId: e4282683-6cf5-429a-a832-1174611745d3] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 19.01ms with status 200
+[2026-06-17 14:24:18.461 INF] [63530717-7d24-42aa-a5c5-76332430747b] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 17.16ms
+[2026-06-17 14:24:18.461 INF] [63530717-7d24-42aa-a5c5-76332430747b] [CorrelationId: 63530717-7d24-42aa-a5c5-76332430747b] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 17.23ms with status 200
+[2026-06-17 14:24:30.156 INF] [4ace9d8f-9397-427e-aabd-f22f37b1487a] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/scan-resume -> 200 in 88.35ms
+[2026-06-17 14:24:30.156 INF] [4ace9d8f-9397-427e-aabd-f22f37b1487a] [CorrelationId: 4ace9d8f-9397-427e-aabd-f22f37b1487a] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/scan-resume completed in 88.45ms with status 200
+[2026-06-17 14:26:02.885 WRN] [77206a15-726b-4982-9c9e-40b7d9fd290e] Failed to obtain Microsoft Graph access token. Using placeholder meeting link.
+[2026-06-17 14:26:02.923 INF] [77206a15-726b-4982-9c9e-40b7d9fd290e] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interview -> 200 in 70.99ms
+[2026-06-17 14:26:02.923 INF] [77206a15-726b-4982-9c9e-40b7d9fd290e] [CorrelationId: 77206a15-726b-4982-9c9e-40b7d9fd290e] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interview completed in 71.14ms with status 200
+[2026-06-17 14:26:02.936 INF] [e41bb54d-6be5-435f-81a0-93f819e132a8] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 8.62ms
+[2026-06-17 14:26:02.936 INF] [e41bb54d-6be5-435f-81a0-93f819e132a8] [CorrelationId: e41bb54d-6be5-435f-81a0-93f819e132a8] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 8.72ms with status 200
+[2026-06-17 14:26:02.939 INF] [04b4494c-71aa-43cc-82ef-fe8ef355bd89] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 200 in 12.26ms
+[2026-06-17 14:26:02.940 INF] [04b4494c-71aa-43cc-82ef-fe8ef355bd89] [CorrelationId: 04b4494c-71aa-43cc-82ef-fe8ef355bd89] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 12.37ms with status 200
+[2026-06-17 14:26:02.943 INF] [cb1e91cd-6fb7-4851-b08b-df6216086941] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 404 in 2.31ms
+[2026-06-17 14:26:02.943 INF] [cb1e91cd-6fb7-4851-b08b-df6216086941] [CorrelationId: cb1e91cd-6fb7-4851-b08b-df6216086941] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 2.41ms with status 404
+[2026-06-17 14:26:02.946 INF] [56e40584-c99e-467d-87fc-1cbfd28a6635] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 2.39ms
+[2026-06-17 14:26:02.946 INF] [56e40584-c99e-467d-87fc-1cbfd28a6635] [CorrelationId: 56e40584-c99e-467d-87fc-1cbfd28a6635] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 2.48ms with status 200
+[2026-06-17 14:26:02.948 INF] [944e0d77-b1b7-4eb5-87a2-6c6baf9123ee] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 11.39ms
+[2026-06-17 14:26:02.948 INF] [944e0d77-b1b7-4eb5-87a2-6c6baf9123ee] [CorrelationId: 944e0d77-b1b7-4eb5-87a2-6c6baf9123ee] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 11.48ms with status 200
+[2026-06-17 14:30:12.260 INF] [8cb4c7e0-103a-49c1-8e43-b47db0c5ac58] [Perf] GET /api/v1/recruitment/public/stats -> 200 in 10.93ms
+[2026-06-17 14:30:12.260 INF] [8cb4c7e0-103a-49c1-8e43-b47db0c5ac58] [CorrelationId: 8cb4c7e0-103a-49c1-8e43-b47db0c5ac58] GET /api/v1/recruitment/public/stats completed in 11.07ms with status 200
+[2026-06-17 14:30:14.653 INF] [b5b5c4a0-61bf-4a90-b6b9-fec2e7a676e5] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 200 in 6.07ms
+[2026-06-17 14:30:14.653 INF] [b5b5c4a0-61bf-4a90-b6b9-fec2e7a676e5] [CorrelationId: b5b5c4a0-61bf-4a90-b6b9-fec2e7a676e5] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 6.21ms with status 200
+[2026-06-17 14:32:17.705 INF] [f3caaf89-9ead-4b2a-8aff-a145510eb18c] Recruitment team notified: New Job Application - New application for "Junior Software Developer" by King Stanley (kingstanley.ks16@gmail.com).
+[2026-06-17 14:32:17.705 INF] [f3caaf89-9ead-4b2a-8aff-a145510eb18c] [Perf] POST /api/v1/recruitment/public/apply/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 200 in 34.36ms
+[2026-06-17 14:32:17.705 INF] [f3caaf89-9ead-4b2a-8aff-a145510eb18c] [CorrelationId: f3caaf89-9ead-4b2a-8aff-a145510eb18c] POST /api/v1/recruitment/public/apply/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 34.51ms with status 200
+[2026-06-17 14:32:51.807 INF] [1995a1e5-1d83-45ca-911c-f83f6fa39378] [Perf] GET /api/v1/recruitment/applications -> 200 in 16.59ms
+[2026-06-17 14:32:51.807 INF] [1995a1e5-1d83-45ca-911c-f83f6fa39378] [CorrelationId: 1995a1e5-1d83-45ca-911c-f83f6fa39378] GET /api/v1/recruitment/applications completed in 16.78ms with status 200
+[2026-06-17 14:32:54.433 INF] [065b451f-b81f-4790-b7db-ea901ca649da] [Perf] PUT /api/notifications/read-all -> 200 in 37.08ms
+[2026-06-17 14:32:54.433 INF] [065b451f-b81f-4790-b7db-ea901ca649da] [CorrelationId: 065b451f-b81f-4790-b7db-ea901ca649da] PUT /api/notifications/read-all completed in 37.17ms with status 200
+[2026-06-17 14:32:54.459 INF] [5923b207-ed7b-4e59-bebe-a389b7e69137] [Perf] GET /api/notifications/unread-count -> 200 in 19.24ms
+[2026-06-17 14:32:54.459 INF] [5923b207-ed7b-4e59-bebe-a389b7e69137] [CorrelationId: 5923b207-ed7b-4e59-bebe-a389b7e69137] GET /api/notifications/unread-count completed in 19.38ms with status 200
+[2026-06-17 14:32:58.723 INF] [11eb47a9-e175-4352-a83e-abf4abaf38db] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b -> 200 in 7.43ms
+[2026-06-17 14:32:58.723 INF] [11eb47a9-e175-4352-a83e-abf4abaf38db] [CorrelationId: 11eb47a9-e175-4352-a83e-abf4abaf38db] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b completed in 7.54ms with status 200
+[2026-06-17 14:32:58.725 INF] [fa554c0f-d3e3-4570-8c41-d0f602a13833] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score -> 404 in 2.07ms
+[2026-06-17 14:32:58.726 INF] [fa554c0f-d3e3-4570-8c41-d0f602a13833] [CorrelationId: fa554c0f-d3e3-4570-8c41-d0f602a13833] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score completed in 2.16ms with status 404
+[2026-06-17 14:32:58.729 INF] [30ee0206-a2f7-4aaa-a4ab-212dcfda4be1] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews -> 200 in 2.76ms
+[2026-06-17 14:32:58.729 INF] [30ee0206-a2f7-4aaa-a4ab-212dcfda4be1] [CorrelationId: 30ee0206-a2f7-4aaa-a4ab-212dcfda4be1] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews completed in 2.84ms with status 200
+[2026-06-17 14:32:58.732 INF] [e56bb905-22f6-4c02-9fe4-0ff28e14453b] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter -> 404 in 2.30ms
+[2026-06-17 14:32:58.732 INF] [e56bb905-22f6-4c02-9fe4-0ff28e14453b] [CorrelationId: e56bb905-22f6-4c02-9fe4-0ff28e14453b] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter completed in 2.39ms with status 404
+[2026-06-17 14:32:58.734 INF] [75540714-8af0-446d-b264-e78bd7034e81] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries -> 200 in 1.76ms
+[2026-06-17 14:32:58.734 INF] [75540714-8af0-446d-b264-e78bd7034e81] [CorrelationId: 75540714-8af0-446d-b264-e78bd7034e81] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries completed in 1.84ms with status 200
+[2026-06-17 14:33:14.997 INF] [45f0954e-b3f0-48e4-bb9a-a84926c16d74] [Perf] POST /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/scan-resume -> 200 in 34.85ms
+[2026-06-17 14:33:14.997 INF] [45f0954e-b3f0-48e4-bb9a-a84926c16d74] [CorrelationId: 45f0954e-b3f0-48e4-bb9a-a84926c16d74] POST /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/scan-resume completed in 35.02ms with status 200
+[2026-06-17 14:34:08.152 WRN] [6d2975f4-c1ab-4e30-b590-9b9d64a37d6f] Failed to obtain Microsoft Graph access token. Using placeholder meeting link.
+[2026-06-17 14:34:08.161 INF] [6d2975f4-c1ab-4e30-b590-9b9d64a37d6f] [Perf] POST /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interview -> 200 in 27.03ms
+[2026-06-17 14:34:08.161 INF] [6d2975f4-c1ab-4e30-b590-9b9d64a37d6f] [CorrelationId: 6d2975f4-c1ab-4e30-b590-9b9d64a37d6f] POST /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interview completed in 27.14ms with status 200
+[2026-06-17 14:34:08.171 INF] [164dc6f4-4931-4315-975e-04caf6fd2477] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b -> 200 in 6.12ms
+[2026-06-17 14:34:08.171 INF] [164dc6f4-4931-4315-975e-04caf6fd2477] [CorrelationId: 164dc6f4-4931-4315-975e-04caf6fd2477] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b completed in 6.23ms with status 200
+[2026-06-17 14:34:08.174 INF] [89f1cb5c-d52e-4b1a-b64c-56b1ca6e303a] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score -> 200 in 1.92ms
+[2026-06-17 14:34:08.174 INF] [89f1cb5c-d52e-4b1a-b64c-56b1ca6e303a] [CorrelationId: 89f1cb5c-d52e-4b1a-b64c-56b1ca6e303a] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score completed in 1.98ms with status 200
+[2026-06-17 14:34:08.177 INF] [411914bf-8aa8-4a2b-abff-a86fab48f4f6] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews -> 200 in 2.27ms
+[2026-06-17 14:34:08.177 INF] [411914bf-8aa8-4a2b-abff-a86fab48f4f6] [CorrelationId: 411914bf-8aa8-4a2b-abff-a86fab48f4f6] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews completed in 2.35ms with status 200
+[2026-06-17 14:34:08.179 INF] [3013f504-4c1c-43ea-ba79-361c5299c594] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter -> 404 in 2.01ms
+[2026-06-17 14:34:08.179 INF] [3013f504-4c1c-43ea-ba79-361c5299c594] [CorrelationId: 3013f504-4c1c-43ea-ba79-361c5299c594] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter completed in 2.08ms with status 404
+[2026-06-17 14:34:08.182 INF] [e227d726-995c-4f0c-b45e-3c899ab9b855] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries -> 200 in 1.69ms
+[2026-06-17 14:34:08.182 INF] [e227d726-995c-4f0c-b45e-3c899ab9b855] [CorrelationId: e227d726-995c-4f0c-b45e-3c899ab9b855] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries completed in 1.75ms with status 200
+[2026-06-17 14:34:53.001 WRN] [67edfeb6-6dfe-49f4-b536-71fa8f6196cc] [Perf] GET /api/notificationsHub -> 101 in 1911860.52ms
+[2026-06-17 14:34:53.001 INF] [67edfeb6-6dfe-49f4-b536-71fa8f6196cc] [CorrelationId: 67edfeb6-6dfe-49f4-b536-71fa8f6196cc] GET /api/notificationsHub completed in 1911860.63ms with status 101
+[2026-06-17 14:34:53.001 WRN] [67edfeb6-6dfe-49f4-b536-71fa8f6196cc] [CorrelationId: 67edfeb6-6dfe-49f4-b536-71fa8f6196cc] SLOW REQUEST: GET /api/notificationsHub took 1911860.63ms (threshold: 1000ms)
+[2026-06-17 14:34:53.001 ERR] [67edfeb6-6dfe-49f4-b536-71fa8f6196cc] [CorrelationId: 67edfeb6-6dfe-49f4-b536-71fa8f6196cc] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 1911860.63ms (threshold: 5000ms)
+[2026-06-17 14:34:53.685 INF] [c6cbde6c-62f9-4fba-b37e-7bca13c250da] [Perf] GET /api/notifications/unread-count -> 200 in 7.28ms
+[2026-06-17 14:34:53.685 INF] [c6cbde6c-62f9-4fba-b37e-7bca13c250da] [CorrelationId: c6cbde6c-62f9-4fba-b37e-7bca13c250da] GET /api/notifications/unread-count completed in 7.37ms with status 200
+[2026-06-17 14:34:53.701 INF] [dbd97f6a-553b-4efe-b0ae-195eee20e2e9] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b -> 200 in 12.85ms
+[2026-06-17 14:34:53.701 INF] [dbd97f6a-553b-4efe-b0ae-195eee20e2e9] [CorrelationId: dbd97f6a-553b-4efe-b0ae-195eee20e2e9] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b completed in 12.98ms with status 200
+[2026-06-17 14:34:53.704 INF] [fcfafb8e-f8b3-4dbc-95d3-ea72f2cbe678] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.49ms
+[2026-06-17 14:34:53.704 INF] [fcfafb8e-f8b3-4dbc-95d3-ea72f2cbe678] [CorrelationId: fcfafb8e-f8b3-4dbc-95d3-ea72f2cbe678] POST /api/notificationsHub/negotiate completed in 0.58ms with status 200
+[2026-06-17 14:34:53.719 INF] [42e83a82-6ba9-4111-aa4c-febba270f2b6] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score -> 200 in 30.30ms
+[2026-06-17 14:34:53.719 INF] [42e83a82-6ba9-4111-aa4c-febba270f2b6] [CorrelationId: 42e83a82-6ba9-4111-aa4c-febba270f2b6] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score completed in 30.40ms with status 200
+[2026-06-17 14:34:53.719 INF] [6a18aca1-2b62-4154-8d38-fae3d2c62846] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews -> 200 in 29.16ms
+[2026-06-17 14:34:53.719 INF] [6a18aca1-2b62-4154-8d38-fae3d2c62846] [CorrelationId: 6a18aca1-2b62-4154-8d38-fae3d2c62846] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews completed in 29.20ms with status 200
+[2026-06-17 14:34:53.735 INF] [8e07fa71-6e6f-4273-8a01-f8469fddeeed] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries -> 200 in 42.05ms
+[2026-06-17 14:34:53.736 INF] [8e07fa71-6e6f-4273-8a01-f8469fddeeed] [CorrelationId: 8e07fa71-6e6f-4273-8a01-f8469fddeeed] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries completed in 42.19ms with status 200
+[2026-06-17 14:34:53.736 INF] [a59b1407-71f3-457c-b772-92b95b03e2c4] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter -> 404 in 45.71ms
+[2026-06-17 14:34:53.736 INF] [a59b1407-71f3-457c-b772-92b95b03e2c4] [CorrelationId: a59b1407-71f3-457c-b772-92b95b03e2c4] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter completed in 45.79ms with status 404
+[2026-06-17 14:34:53.763 INF] [b17b7603-58fc-45f6-a168-c09f6614d999] [Perf] GET /api/notifications/unread-count -> 200 in 2.11ms
+[2026-06-17 14:34:53.763 INF] [b17b7603-58fc-45f6-a168-c09f6614d999] [CorrelationId: b17b7603-58fc-45f6-a168-c09f6614d999] GET /api/notifications/unread-count completed in 2.21ms with status 200
+[2026-06-17 14:34:53.769 INF] [753f9710-2684-49d6-9746-b15678190dfc] [Perf] GET /api/notifications -> 200 in 9.66ms
+[2026-06-17 14:34:53.769 INF] [753f9710-2684-49d6-9746-b15678190dfc] [CorrelationId: 753f9710-2684-49d6-9746-b15678190dfc] GET /api/notifications completed in 9.75ms with status 200
+[2026-06-17 14:36:25.776 INF] [8f3ec5fa-be87-4c62-94ad-accd47b6bb6e] [Perf] GET /api/v1/recruitment/applications -> 200 in 10.38ms
+[2026-06-17 14:36:25.776 INF] [8f3ec5fa-be87-4c62-94ad-accd47b6bb6e] [CorrelationId: 8f3ec5fa-be87-4c62-94ad-accd47b6bb6e] GET /api/v1/recruitment/applications completed in 10.49ms with status 200
+[2026-06-17 14:36:34.070 INF] [fd6045cd-2758-4da9-8ac2-54609d5cfc67] [Perf] GET /api/v1/recruitment/applications -> 200 in 56.90ms
+[2026-06-17 14:36:34.070 INF] [fd6045cd-2758-4da9-8ac2-54609d5cfc67] [CorrelationId: fd6045cd-2758-4da9-8ac2-54609d5cfc67] GET /api/v1/recruitment/applications completed in 57.03ms with status 200
+[2026-06-17 14:36:34.076 INF] [9718f6f3-2cf7-4781-ab5e-75d575800a48] [Perf] GET /api/v1/recruitment/applications -> 200 in 5.48ms
+[2026-06-17 14:36:34.076 INF] [9718f6f3-2cf7-4781-ab5e-75d575800a48] [CorrelationId: 9718f6f3-2cf7-4781-ab5e-75d575800a48] GET /api/v1/recruitment/applications completed in 5.59ms with status 200
+[2026-06-17 14:36:34.947 INF] [481f1b61-0eec-4f13-9c24-d042753ba2dc] [Perf] GET /api/v1/recruitment/applications -> 200 in 8.99ms
+[2026-06-17 14:36:34.947 INF] [481f1b61-0eec-4f13-9c24-d042753ba2dc] [CorrelationId: 481f1b61-0eec-4f13-9c24-d042753ba2dc] GET /api/v1/recruitment/applications completed in 9.12ms with status 200
+[2026-06-17 14:36:34.954 INF] [0c3d1dde-aa7b-49bb-b394-2d3cf7293a84] [Perf] GET /api/v1/recruitment/applications -> 200 in 5.71ms
+[2026-06-17 14:36:34.954 INF] [0c3d1dde-aa7b-49bb-b394-2d3cf7293a84] [CorrelationId: 0c3d1dde-aa7b-49bb-b394-2d3cf7293a84] GET /api/v1/recruitment/applications completed in 5.82ms with status 200
+[2026-06-17 14:36:38.942 INF] [5852d592-06ae-4720-abe1-318bc70179cb] [Perf] GET /api/v1/recruitment/applications -> 200 in 25.31ms
+[2026-06-17 14:36:38.942 INF] [5852d592-06ae-4720-abe1-318bc70179cb] [CorrelationId: 5852d592-06ae-4720-abe1-318bc70179cb] GET /api/v1/recruitment/applications completed in 25.57ms with status 200
+[2026-06-17 14:36:38.957 INF] [e8877494-5212-46ac-9151-0e6946f74b54] [Perf] GET /api/v1/recruitment/applications -> 200 in 12.01ms
+[2026-06-17 14:36:38.957 INF] [e8877494-5212-46ac-9151-0e6946f74b54] [CorrelationId: e8877494-5212-46ac-9151-0e6946f74b54] GET /api/v1/recruitment/applications completed in 12.24ms with status 200
+[2026-06-17 14:36:45.097 INF] [6c18c8b3-2650-48a0-9e22-94f7faefbe57] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 13.11ms
+[2026-06-17 14:36:45.097 INF] [6c18c8b3-2650-48a0-9e22-94f7faefbe57] [CorrelationId: 6c18c8b3-2650-48a0-9e22-94f7faefbe57] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 13.19ms with status 200
+[2026-06-17 14:36:57.494 INF] [d2c2b79b-9543-4ae5-b723-0f619e202a01] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 26.27ms
+[2026-06-17 14:36:57.494 INF] [d2c2b79b-9543-4ae5-b723-0f619e202a01] [CorrelationId: d2c2b79b-9543-4ae5-b723-0f619e202a01] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 26.56ms with status 200
+[2026-06-17 14:37:00.311 INF] [cdeff419-e386-48bd-aac3-2895de0c838e] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 15.91ms
+[2026-06-17 14:37:00.312 INF] [cdeff419-e386-48bd-aac3-2895de0c838e] [CorrelationId: cdeff419-e386-48bd-aac3-2895de0c838e] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 16.71ms with status 200
+[2026-06-17 14:37:01.742 INF] [dc714b51-67db-4793-81f4-2f6df232adec] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 36.92ms
+[2026-06-17 14:37:01.742 INF] [dc714b51-67db-4793-81f4-2f6df232adec] [CorrelationId: dc714b51-67db-4793-81f4-2f6df232adec] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 37.02ms with status 200
+[2026-06-17 14:37:01.998 INF] [bcf2775c-c917-45eb-864a-ec5b21f3a197] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 16.94ms
+[2026-06-17 14:37:01.998 INF] [bcf2775c-c917-45eb-864a-ec5b21f3a197] [CorrelationId: bcf2775c-c917-45eb-864a-ec5b21f3a197] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 17.06ms with status 200
+[2026-06-17 14:37:02.456 INF] [57f5b298-56bd-4264-99ea-899456998312] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 12.64ms
+[2026-06-17 14:37:02.456 INF] [57f5b298-56bd-4264-99ea-899456998312] [CorrelationId: 57f5b298-56bd-4264-99ea-899456998312] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 12.73ms with status 200
+[2026-06-17 14:37:04.995 INF] [829cdee3-1607-4aa5-a2c2-1e1cdf02448e] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 200 in 5.28ms
+[2026-06-17 14:37:04.995 INF] [829cdee3-1607-4aa5-a2c2-1e1cdf02448e] [CorrelationId: 829cdee3-1607-4aa5-a2c2-1e1cdf02448e] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 5.67ms with status 200
+[2026-06-17 14:37:06.799 INF] [f7c43fe8-e20d-4837-ac98-9d2915a43e3c] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 13.89ms
+[2026-06-17 14:37:06.799 INF] [f7c43fe8-e20d-4837-ac98-9d2915a43e3c] [CorrelationId: f7c43fe8-e20d-4837-ac98-9d2915a43e3c] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 14.03ms with status 200
+[2026-06-17 14:37:12.733 INF] [615e9672-bf53-4651-8cd0-b2ffa8f2c204] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 11.78ms
+[2026-06-17 14:37:12.735 INF] [615e9672-bf53-4651-8cd0-b2ffa8f2c204] [CorrelationId: 615e9672-bf53-4651-8cd0-b2ffa8f2c204] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 13.01ms with status 200
+[2026-06-17 14:37:16.868 INF] [388bb050-014b-41f7-8937-fb5a1a0a7819] [Perf] GET /api/v1/recruitment/public/stats -> 200 in 34.67ms
+[2026-06-17 14:37:16.869 INF] [388bb050-014b-41f7-8937-fb5a1a0a7819] [CorrelationId: 388bb050-014b-41f7-8937-fb5a1a0a7819] GET /api/v1/recruitment/public/stats completed in 34.94ms with status 200
+[2026-06-17 14:37:18.328 INF] [896fe612-8109-429b-83e0-0435351548c0] [Perf] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 -> 200 in 4.47ms
+[2026-06-17 14:37:18.328 INF] [896fe612-8109-429b-83e0-0435351548c0] [CorrelationId: 896fe612-8109-429b-83e0-0435351548c0] GET /api/v1/recruitment/job-postings/59b7236a-0f45-4646-a0ff-a1fe7e0ee798 completed in 4.57ms with status 200
+[2026-06-17 14:37:35.127 INF] [ac991e13-a719-4b5d-872e-cdd7e0399e5d] [Perf] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track -> 200 in 18.27ms
+[2026-06-17 14:37:35.127 INF] [ac991e13-a719-4b5d-872e-cdd7e0399e5d] [CorrelationId: ac991e13-a719-4b5d-872e-cdd7e0399e5d] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track completed in 18.36ms with status 200
+[2026-06-17 14:48:27.361 INF] [] Server macbook-pro:13347:5077e9d7 caught stopping signal...
+[2026-06-17 14:48:27.365 WRN] [2d21747f-1b5d-4bfb-a30b-78f71c614c77] [Perf] GET /api/notificationsHub -> 101 in 2726208.29ms
+[2026-06-17 14:48:27.365 WRN] [347e2748-8fd2-415c-9da1-55bcbbf6b42b] [Perf] GET /api/notificationsHub -> 101 in 2726164.54ms
+[2026-06-17 14:48:27.365 INF] [2d21747f-1b5d-4bfb-a30b-78f71c614c77] [CorrelationId: 2d21747f-1b5d-4bfb-a30b-78f71c614c77] GET /api/notificationsHub completed in 2726208.50ms with status 101
+[2026-06-17 14:48:27.365 WRN] [2d21747f-1b5d-4bfb-a30b-78f71c614c77] [CorrelationId: 2d21747f-1b5d-4bfb-a30b-78f71c614c77] SLOW REQUEST: GET /api/notificationsHub took 2726208.50ms (threshold: 1000ms)
+[2026-06-17 14:48:27.365 WRN] [7d1b38a7-901f-4f78-bfd8-9934368f6533] [Perf] GET /api/notificationsHub -> 101 in 813614.80ms
+[2026-06-17 14:48:27.365 INF] [7d1b38a7-901f-4f78-bfd8-9934368f6533] [CorrelationId: 7d1b38a7-901f-4f78-bfd8-9934368f6533] GET /api/notificationsHub completed in 813615.21ms with status 101
+[2026-06-17 14:48:27.365 WRN] [7d1b38a7-901f-4f78-bfd8-9934368f6533] [CorrelationId: 7d1b38a7-901f-4f78-bfd8-9934368f6533] SLOW REQUEST: GET /api/notificationsHub took 813615.21ms (threshold: 1000ms)
+[2026-06-17 14:48:27.365 ERR] [7d1b38a7-901f-4f78-bfd8-9934368f6533] [CorrelationId: 7d1b38a7-901f-4f78-bfd8-9934368f6533] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 813615.21ms (threshold: 5000ms)
+[2026-06-17 14:48:27.365 ERR] [2d21747f-1b5d-4bfb-a30b-78f71c614c77] [CorrelationId: 2d21747f-1b5d-4bfb-a30b-78f71c614c77] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 2726208.50ms (threshold: 5000ms)
+[2026-06-17 14:48:27.365 WRN] [05d3fff0-1dfe-48ef-b475-72ac921302f6] [Perf] GET /api/notificationsHub -> 101 in 2726186.52ms
+[2026-06-17 14:48:27.366 INF] [05d3fff0-1dfe-48ef-b475-72ac921302f6] [CorrelationId: 05d3fff0-1dfe-48ef-b475-72ac921302f6] GET /api/notificationsHub completed in 2726187.27ms with status 101
+[2026-06-17 14:48:27.366 WRN] [05d3fff0-1dfe-48ef-b475-72ac921302f6] [CorrelationId: 05d3fff0-1dfe-48ef-b475-72ac921302f6] SLOW REQUEST: GET /api/notificationsHub took 2726187.27ms (threshold: 1000ms)
+[2026-06-17 14:48:27.366 ERR] [05d3fff0-1dfe-48ef-b475-72ac921302f6] [CorrelationId: 05d3fff0-1dfe-48ef-b475-72ac921302f6] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 2726187.27ms (threshold: 5000ms)
+[2026-06-17 14:48:27.365 INF] [347e2748-8fd2-415c-9da1-55bcbbf6b42b] [CorrelationId: 347e2748-8fd2-415c-9da1-55bcbbf6b42b] GET /api/notificationsHub completed in 2726164.83ms with status 101
+[2026-06-17 14:48:27.366 WRN] [347e2748-8fd2-415c-9da1-55bcbbf6b42b] [CorrelationId: 347e2748-8fd2-415c-9da1-55bcbbf6b42b] SLOW REQUEST: GET /api/notificationsHub took 2726164.83ms (threshold: 1000ms)
+[2026-06-17 14:48:27.366 ERR] [347e2748-8fd2-415c-9da1-55bcbbf6b42b] [CorrelationId: 347e2748-8fd2-415c-9da1-55bcbbf6b42b] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 2726164.83ms (threshold: 5000ms)
+[2026-06-17 14:48:27.872 INF] [] Server macbook-pro:13347:5077e9d7 caught stopped signal...
+[2026-06-17 14:48:27.890 INF] [] Server macbook-pro:13347:5077e9d7 All dispatchers stopped
+[2026-06-17 14:48:27.913 INF] [] Server macbook-pro:13347:5077e9d7 successfully reported itself as stopped in 20.4505 ms
+[2026-06-17 14:48:27.913 INF] [] Server macbook-pro:13347:5077e9d7 has been stopped in total 550.0836 ms
