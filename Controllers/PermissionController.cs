@@ -8,9 +8,16 @@ using WUIAM.DTOs;
 using WUIAM.Enums;
 using Microsoft.AspNetCore.Authorization;
 
+/// <summary>
+/// API v1 - Permission and role-based access control endpoints.
+/// </summary>
 namespace WUIAM.Controllers
 {
+    /// <summary>
+    /// API v1 - Permission and role-based access control endpoints.
+    /// </summary>
     [ApiController]
+    [ApiVersion("1.0")]
     [Route("api/[controller]")]
     [HasPermission([Permissions.ManagePermissions])]
     public class PermissionController : ControllerBase

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using WUIAM.Repositories.IRepositories; 
 using WUIAM.Models;
 using WUIAM.DTOs;
+using WUIAM.Enums;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -34,6 +35,7 @@ public class LeavePolicyController : ControllerBase
     }
 
     [HttpPost]
+    [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
     public async Task<ActionResult<ApiResponse<LeavePolicy>>> Create([FromBody] LeavePolicyDto policy)
     {
         if (policy == null)
@@ -45,6 +47,7 @@ public class LeavePolicyController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
     public async Task<IActionResult> Update(Guid id, [FromBody] LeavePolicy policy)
     {
         if (id != policy.Id)
@@ -59,6 +62,7 @@ public class LeavePolicyController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
     public async Task<IActionResult> Delete(Guid id)
     {
         var existing = await _policyRepo.GetByIdAsync(id);

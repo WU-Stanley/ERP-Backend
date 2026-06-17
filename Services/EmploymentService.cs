@@ -1,4 +1,5 @@
 using WUIAM.Interfaces;
+using WUIAM.DTOs;
 using WUIAM.Models;
 using WUIAM.Repositories.IRepositories;
 namespace WUIAM.Services
@@ -41,6 +42,32 @@ namespace WUIAM.Services
 
             await _employmentRepo.AddAsync(employment);
             return employment;
+        }
+
+        public async Task<EmploymentDetails> AssignEmploymentAsync(Guid employeeId, EmploymentAssignmentDto dto)
+        {
+            var employment = new EmploymentDetails
+            {
+                EmploymentId = Guid.NewGuid(),
+                EmployeeId = employeeId,
+                DepartmentId = dto.DepartmentId,
+                JobTitle = dto.JobTitle,
+                EmploymentTypeId = dto.EmploymentTypeId,
+                EmploymentStatus = dto.EmploymentStatus,
+                GradeLevel = dto.GradeLevel,
+                DateOfHire = dto.DateOfHire,
+                ProbationEndDate = dto.ProbationEndDate,
+                SupervisorId = dto.SupervisorId,
+                SalaryStructureId = dto.SalaryStructureId ?? Guid.Empty,
+                Benefits = dto.Benefits,
+                PromotionHistory = dto.PromotionHistory,
+                TransferHistory = dto.TransferHistory,
+                JobCategoryId = dto.JobCategoryId ?? Guid.Empty,
+                StartDate = DateTime.UtcNow,
+                IsActive = true
+            };
+
+            return await AssignEmploymentAsync(employeeId, employment);
         }
 
         public async Task EndEmploymentAsync(Guid employmentId, DateTime endDate)

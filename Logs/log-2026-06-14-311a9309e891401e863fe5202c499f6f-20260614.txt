@@ -1,0 +1,148 @@
+[2026-06-14 20:03:15.945 WRN] [] No store type was specified for the decimal property 'PurchaseCost' on entity type 'FacilityAsset'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'UnitCost' on entity type 'InventoryItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'GrossPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'NetPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'EstimatedAmount' on entity type 'ProcurementRequest'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'BasePay' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'HousingAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'OtherAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'PensionRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'TaxRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:15.960 WRN] [] No store type was specified for the decimal property 'TransportAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 20:03:17.260 INF] [] Start installing Hangfire SQL objects...
+[2026-06-14 20:03:17.308 INF] [] Hangfire SQL objects installed.
+[2026-06-14 20:03:17.616 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.
+[2026-06-14 20:03:17.798 INF] [] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@WUIAM'
+[2026-06-14 20:03:17.799 INF] [] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2026-06-14 20:03:17.799 INF] [] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-06-14 20:03:17.816 INF] [] Server macbookpro:2034:5065cad7 successfully announced in 10.6392 ms
+[2026-06-14 20:03:17.818 INF] [] Server macbookpro:2034:5065cad7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-14 20:03:17.822 INF] [] Server macbookpro:2034:5065cad7 all the dispatchers started
+[2026-06-14 20:03:56.788 INF] [6accd30b-de36-45d4-b96f-bb3d7623d922] [Perf] GET /favicon.ico -> 401 in 22.02ms
+[2026-06-14 20:03:56.791 INF] [6accd30b-de36-45d4-b96f-bb3d7623d922] [CorrelationId: 6accd30b-de36-45d4-b96f-bb3d7623d922] GET /favicon.ico completed in 28.11ms with status 401
+[2026-06-14 20:04:48.452 INF] [b87eb919-b772-4b21-aaf5-d4da63b936e5] [Perf] POST /api/Employees/me/profile-update-requests -> 200 in 258.55ms
+[2026-06-14 20:04:48.452 INF] [b87eb919-b772-4b21-aaf5-d4da63b936e5] [CorrelationId: b87eb919-b772-4b21-aaf5-d4da63b936e5] POST /api/Employees/me/profile-update-requests completed in 258.96ms with status 200
+[2026-06-14 20:05:32.789 INF] [954d0185-3d8d-48d6-b801-a3b9787757fa] [Perf] GET / -> 401 in 2.39ms
+[2026-06-14 20:05:32.789 INF] [954d0185-3d8d-48d6-b801-a3b9787757fa] [CorrelationId: 954d0185-3d8d-48d6-b801-a3b9787757fa] GET / completed in 2.67ms with status 401
+[2026-06-14 20:19:48.575 INF] [78d6acd5-4fc6-4416-b2a3-0515d44c7f39] [Perf] GET /api/Employees/me -> 200 in 45.43ms
+[2026-06-14 20:19:48.575 INF] [78d6acd5-4fc6-4416-b2a3-0515d44c7f39] [CorrelationId: 78d6acd5-4fc6-4416-b2a3-0515d44c7f39] GET /api/Employees/me completed in 45.65ms with status 200
+[2026-06-14 20:19:48.615 INF] [b320fde8-7e81-455f-8671-4bd5a22b8882] [Perf] GET /api/Employees/me/profile-update-requests -> 200 in 36.73ms
+[2026-06-14 20:19:48.615 INF] [b320fde8-7e81-455f-8671-4bd5a22b8882] [CorrelationId: b320fde8-7e81-455f-8671-4bd5a22b8882] GET /api/Employees/me/profile-update-requests completed in 36.93ms with status 200
+[2026-06-14 20:20:06.892 INF] [52c7838f-f9a7-45d1-a9a4-2147c312d134] [Perf] GET /api/Employees/me -> 200 in 8.86ms
+[2026-06-14 20:20:06.892 INF] [52c7838f-f9a7-45d1-a9a4-2147c312d134] [CorrelationId: 52c7838f-f9a7-45d1-a9a4-2147c312d134] GET /api/Employees/me completed in 9.14ms with status 200
+[2026-06-14 20:20:06.904 INF] [0fc31055-9eed-461c-af6e-5dd06100d460] [Perf] GET /api/Employees/me/profile-update-requests -> 200 in 9.12ms
+[2026-06-14 20:20:06.904 INF] [0fc31055-9eed-461c-af6e-5dd06100d460] [CorrelationId: 0fc31055-9eed-461c-af6e-5dd06100d460] GET /api/Employees/me/profile-update-requests completed in 9.32ms with status 200
+[2026-06-14 20:20:08.688 INF] [7480f446-4d90-4638-b1e8-258af7651e38] [Perf] GET /api/dashboard/hr-summary -> 200 in 68.80ms
+[2026-06-14 20:20:08.688 INF] [7480f446-4d90-4638-b1e8-258af7651e38] [CorrelationId: 7480f446-4d90-4638-b1e8-258af7651e38] GET /api/dashboard/hr-summary completed in 69.01ms with status 200
+[2026-06-14 20:20:26.361 INF] [1add7c70-e4d0-4bac-8347-7a3c39569bef] [Perf] GET /api/Employees/me -> 200 in 3.76ms
+[2026-06-14 20:20:26.361 INF] [1add7c70-e4d0-4bac-8347-7a3c39569bef] [CorrelationId: 1add7c70-e4d0-4bac-8347-7a3c39569bef] GET /api/Employees/me completed in 3.97ms with status 200
+[2026-06-14 20:20:26.374 INF] [466cc32d-3677-42c1-949a-a39f89d43089] [Perf] GET /api/Employees/me/profile-update-requests -> 200 in 9.92ms
+[2026-06-14 20:20:26.374 INF] [466cc32d-3677-42c1-949a-a39f89d43089] [CorrelationId: 466cc32d-3677-42c1-949a-a39f89d43089] GET /api/Employees/me/profile-update-requests completed in 10.11ms with status 200
+[2026-06-14 20:20:28.204 INF] [13ae6b91-92f8-4430-9cd8-9ae00a3ae8c8] [Perf] GET /api/dashboard/hr-summary -> 200 in 17.74ms
+[2026-06-14 20:20:28.204 INF] [13ae6b91-92f8-4430-9cd8-9ae00a3ae8c8] [CorrelationId: 13ae6b91-92f8-4430-9cd8-9ae00a3ae8c8] GET /api/dashboard/hr-summary completed in 17.96ms with status 200
+[2026-06-14 20:20:33.024 INF] [536fb9a5-551f-40b9-b39e-83892c6434ba] [Perf] GET /api/Employees/me -> 200 in 6.51ms
+[2026-06-14 20:20:33.024 INF] [536fb9a5-551f-40b9-b39e-83892c6434ba] [CorrelationId: 536fb9a5-551f-40b9-b39e-83892c6434ba] GET /api/Employees/me completed in 6.73ms with status 200
+[2026-06-14 20:20:33.036 INF] [54294fbe-1069-42e6-a6e1-10ab6c86b536] [Perf] GET /api/Employees/me/profile-update-requests -> 200 in 9.00ms
+[2026-06-14 20:20:33.036 INF] [54294fbe-1069-42e6-a6e1-10ab6c86b536] [CorrelationId: 54294fbe-1069-42e6-a6e1-10ab6c86b536] GET /api/Employees/me/profile-update-requests completed in 9.16ms with status 200
+[2026-06-14 20:27:58.842 INF] [3f42d1bb-259f-479b-a6a5-3b0ca55d4982] [Perf] GET /api/dashboard/admin-summary -> 200 in 83.67ms
+[2026-06-14 20:27:58.842 INF] [3f42d1bb-259f-479b-a6a5-3b0ca55d4982] [CorrelationId: 3f42d1bb-259f-479b-a6a5-3b0ca55d4982] GET /api/dashboard/admin-summary completed in 83.83ms with status 200
+[2026-06-14 20:28:16.095 INF] [b83e3365-3f80-4f27-b0e3-0feb1f9d47be] [Perf] POST /api/auth/logout -> 200 in 23.27ms
+[2026-06-14 20:28:16.096 ERR] [b83e3365-3f80-4f27-b0e3-0feb1f9d47be] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<RefreshToken>()
+    .Where(r => r.UserId == @userId && r.RevokedOn == null && r.IsExpired == False)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-14 20:28:27.289 WRN] [2aebb153-fc38-419d-9b74-a060e652ad30] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-14 20:28:27.444 WRN] [2aebb153-fc38-419d-9b74-a060e652ad30] [Perf] POST /api/auth/microsoft-login -> 200 in 1170.31ms
+[2026-06-14 20:28:27.444 INF] [2aebb153-fc38-419d-9b74-a060e652ad30] [CorrelationId: 2aebb153-fc38-419d-9b74-a060e652ad30] POST /api/auth/microsoft-login completed in 1170.48ms with status 200
+[2026-06-14 20:28:27.444 WRN] [2aebb153-fc38-419d-9b74-a060e652ad30] [CorrelationId: 2aebb153-fc38-419d-9b74-a060e652ad30] SLOW REQUEST: POST /api/auth/microsoft-login took 1170.48ms (threshold: 1000ms)
+[2026-06-14 20:28:27.497 INF] [6169adcf-ed04-420b-8b68-f9b375646186] [Perf] GET /api/dashboard/hr-summary -> 200 in 8.44ms
+[2026-06-14 20:28:27.497 INF] [6169adcf-ed04-420b-8b68-f9b375646186] [CorrelationId: 6169adcf-ed04-420b-8b68-f9b375646186] GET /api/dashboard/hr-summary completed in 8.58ms with status 200
+[2026-06-14 20:28:31.123 INF] [dfc4e9a0-4768-43e3-889c-2bff03c27142] [Perf] GET /api/Employees/me -> 200 in 4.96ms
+[2026-06-14 20:28:31.123 INF] [dfc4e9a0-4768-43e3-889c-2bff03c27142] [CorrelationId: dfc4e9a0-4768-43e3-889c-2bff03c27142] GET /api/Employees/me completed in 5.10ms with status 200
+[2026-06-14 20:28:31.137 INF] [a964b77a-958c-4f0b-8055-8e681b8c550e] [Perf] GET /api/Employees/me/profile-update-requests -> 200 in 11.27ms
+[2026-06-14 20:28:31.137 INF] [a964b77a-958c-4f0b-8055-8e681b8c550e] [CorrelationId: a964b77a-958c-4f0b-8055-8e681b8c550e] GET /api/Employees/me/profile-update-requests completed in 11.38ms with status 200
+[2026-06-14 20:29:11.316 INF] [2a0ef3f6-4c19-4065-ab9b-8cb9eab11449] [Perf] GET /api/leavetype/available -> 200 in 95.87ms
+[2026-06-14 20:29:11.316 INF] [2a0ef3f6-4c19-4065-ab9b-8cb9eab11449] [CorrelationId: 2a0ef3f6-4c19-4065-ab9b-8cb9eab11449] GET /api/leavetype/available completed in 96.05ms with status 200
+[2026-06-14 20:36:15.802 INF] [401a7ccc-9295-4faf-9ffb-08fee3297921] [Perf] GET /api/leavetype/available -> 200 in 26.28ms
+[2026-06-14 20:36:15.802 INF] [401a7ccc-9295-4faf-9ffb-08fee3297921] [CorrelationId: 401a7ccc-9295-4faf-9ffb-08fee3297921] GET /api/leavetype/available completed in 26.44ms with status 200
+[2026-06-14 20:37:21.320 INF] [338e51d7-25a5-4f12-8e28-46de3b30d05e] [Perf] GET /api/leave/user-requests/871b8923-7ce0-4e64-4935-08dec98d574c -> 200 in 28.58ms
+[2026-06-14 20:37:21.320 INF] [338e51d7-25a5-4f12-8e28-46de3b30d05e] [CorrelationId: 338e51d7-25a5-4f12-8e28-46de3b30d05e] GET /api/leave/user-requests/871b8923-7ce0-4e64-4935-08dec98d574c completed in 28.76ms with status 200
+[2026-06-14 20:37:24.717 INF] [974be2ae-d587-4ae4-a0d2-066caa4542a7] [Perf] GET /api/leavetype/available -> 200 in 12.47ms
+[2026-06-14 20:37:24.717 INF] [974be2ae-d587-4ae4-a0d2-066caa4542a7] [CorrelationId: 974be2ae-d587-4ae4-a0d2-066caa4542a7] GET /api/leavetype/available completed in 12.60ms with status 200
+[2026-06-14 20:37:32.362 INF] [4cc6af76-6c58-460d-92ab-1e56651093d4] [Perf] GET /api/dashboard/hr-summary -> 200 in 11.28ms
+[2026-06-14 20:37:32.362 INF] [4cc6af76-6c58-460d-92ab-1e56651093d4] [CorrelationId: 4cc6af76-6c58-460d-92ab-1e56651093d4] GET /api/dashboard/hr-summary completed in 11.43ms with status 200
+[2026-06-14 20:39:55.241 INF] [ca3b63f0-56e2-4a4c-92d0-dd8b0d6cf723] [Perf] GET /api/leavetype/available -> 200 in 12.06ms
+[2026-06-14 20:39:55.241 INF] [ca3b63f0-56e2-4a4c-92d0-dd8b0d6cf723] [CorrelationId: ca3b63f0-56e2-4a4c-92d0-dd8b0d6cf723] GET /api/leavetype/available completed in 12.18ms with status 200
+[2026-06-14 20:48:45.380 INF] [8a4101ed-d905-4e6f-817e-baf859dba4f7] [Perf] GET /api/dashboard/hr-summary -> 200 in 12.96ms
+[2026-06-14 20:48:45.380 INF] [8a4101ed-d905-4e6f-817e-baf859dba4f7] [CorrelationId: 8a4101ed-d905-4e6f-817e-baf859dba4f7] GET /api/dashboard/hr-summary completed in 13.12ms with status 200
+[2026-06-14 20:48:58.261 INF] [00fe7ec1-dfe4-4e56-925f-6e209e20bc44] [Perf] GET /api/dashboard/hr-summary -> 200 in 12.92ms
+[2026-06-14 20:48:58.261 INF] [00fe7ec1-dfe4-4e56-925f-6e209e20bc44] [CorrelationId: 00fe7ec1-dfe4-4e56-925f-6e209e20bc44] GET /api/dashboard/hr-summary completed in 13.04ms with status 200
+[2026-06-14 20:49:02.360 INF] [c245ad3f-13e8-41bd-b35c-a1908d6c2c06] [Perf] GET /api/dashboard/hr-summary -> 200 in 12.89ms
+[2026-06-14 20:49:02.360 INF] [c245ad3f-13e8-41bd-b35c-a1908d6c2c06] [CorrelationId: c245ad3f-13e8-41bd-b35c-a1908d6c2c06] GET /api/dashboard/hr-summary completed in 13.02ms with status 200
+[2026-06-14 20:49:05.799 INF] [56756128-df82-4d76-a792-010a225dcdab] [Perf] GET /api/dashboard/hr-summary -> 200 in 14.35ms
+[2026-06-14 20:49:05.799 INF] [56756128-df82-4d76-a792-010a225dcdab] [CorrelationId: 56756128-df82-4d76-a792-010a225dcdab] GET /api/dashboard/hr-summary completed in 14.46ms with status 200
+[2026-06-14 20:49:09.289 INF] [5204366f-c9eb-4a49-862c-3fed7f7068eb] [Perf] GET /api/dashboard/hr-summary -> 200 in 16.65ms
+[2026-06-14 20:49:09.289 INF] [5204366f-c9eb-4a49-862c-3fed7f7068eb] [CorrelationId: 5204366f-c9eb-4a49-862c-3fed7f7068eb] GET /api/dashboard/hr-summary completed in 16.75ms with status 200
+[2026-06-14 20:49:16.140 INF] [eee9d7d1-4dcb-4860-ad29-784600e31597] [Perf] GET /api/dashboard/hr-summary -> 200 in 16.79ms
+[2026-06-14 20:49:16.140 INF] [eee9d7d1-4dcb-4860-ad29-784600e31597] [CorrelationId: eee9d7d1-4dcb-4860-ad29-784600e31597] GET /api/dashboard/hr-summary completed in 16.91ms with status 200
+[2026-06-14 20:49:31.647 INF] [231501a7-6c1f-43a7-9909-4be34f19e82e] [Perf] GET /api/dashboard/hr-summary -> 200 in 12.45ms
+[2026-06-14 20:49:31.647 INF] [231501a7-6c1f-43a7-9909-4be34f19e82e] [CorrelationId: 231501a7-6c1f-43a7-9909-4be34f19e82e] GET /api/dashboard/hr-summary completed in 12.57ms with status 200
+[2026-06-14 20:49:36.228 INF] [b474707c-5a69-4257-a308-c777d9b05999] [Perf] GET /api/dashboard/hr-summary -> 200 in 13.07ms
+[2026-06-14 20:49:36.229 INF] [b474707c-5a69-4257-a308-c777d9b05999] [CorrelationId: b474707c-5a69-4257-a308-c777d9b05999] GET /api/dashboard/hr-summary completed in 13.18ms with status 200
+[2026-06-14 20:50:44.686 INF] [c8074bf8-10b3-488e-8456-62315ac7daa7] [Perf] GET /api/dashboard/hr-summary -> 200 in 19.41ms
+[2026-06-14 20:50:44.686 INF] [c8074bf8-10b3-488e-8456-62315ac7daa7] [CorrelationId: c8074bf8-10b3-488e-8456-62315ac7daa7] GET /api/dashboard/hr-summary completed in 19.55ms with status 200
+[2026-06-14 20:51:20.411 INF] [717ae37d-e686-4a63-bb75-c3d1b01b5839] [Perf] GET /api/dashboard/hr-summary -> 200 in 14.22ms
+[2026-06-14 20:51:20.412 INF] [717ae37d-e686-4a63-bb75-c3d1b01b5839] [CorrelationId: 717ae37d-e686-4a63-bb75-c3d1b01b5839] GET /api/dashboard/hr-summary completed in 14.34ms with status 200
+[2026-06-14 20:51:26.347 INF] [3be07719-3a29-49b8-a253-f84d82179ff8] [Perf] GET /api/dashboard/hr-summary -> 200 in 14.96ms
+[2026-06-14 20:51:26.347 INF] [3be07719-3a29-49b8-a253-f84d82179ff8] [CorrelationId: 3be07719-3a29-49b8-a253-f84d82179ff8] GET /api/dashboard/hr-summary completed in 15.07ms with status 200
+[2026-06-14 20:51:39.127 INF] [63db6f43-149f-4237-b868-d10fe5d112e6] [Perf] GET /api/dashboard/hr-summary -> 200 in 10.74ms
+[2026-06-14 20:51:39.128 INF] [63db6f43-149f-4237-b868-d10fe5d112e6] [CorrelationId: 63db6f43-149f-4237-b868-d10fe5d112e6] GET /api/dashboard/hr-summary completed in 11.29ms with status 200
+[2026-06-14 20:51:44.578 INF] [b5a16714-304f-46dd-9275-c2a93e35a05e] [Perf] GET /api/dashboard/hr-summary -> 200 in 12.66ms
+[2026-06-14 20:51:44.578 INF] [b5a16714-304f-46dd-9275-c2a93e35a05e] [CorrelationId: b5a16714-304f-46dd-9275-c2a93e35a05e] GET /api/dashboard/hr-summary completed in 12.76ms with status 200
+[2026-06-14 20:51:56.490 INF] [e81509aa-119d-41ee-b480-38b54206e9aa] [Perf] POST /api/auth/logout -> 200 in 4.77ms
+[2026-06-14 20:51:56.490 ERR] [e81509aa-119d-41ee-b480-38b54206e9aa] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<RefreshToken>()
+    .Where(r => r.UserId == @userId && r.RevokedOn == null && r.IsExpired == False)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-14 20:51:58.733 INF] [e4ddf7a6-dddf-4fb6-9207-b449740238a5] [Perf] POST /api/auth/logout -> 401 in 0.15ms
+[2026-06-14 20:51:58.733 INF] [e4ddf7a6-dddf-4fb6-9207-b449740238a5] [CorrelationId: e4ddf7a6-dddf-4fb6-9207-b449740238a5] POST /api/auth/logout completed in 0.26ms with status 401
+[2026-06-14 20:52:00.745 INF] [fb56b060-0339-4188-beb9-4946aba9528b] [Perf] POST /api/auth/logout -> 401 in 0.08ms
+[2026-06-14 20:52:00.745 INF] [fb56b060-0339-4188-beb9-4946aba9528b] [CorrelationId: fb56b060-0339-4188-beb9-4946aba9528b] POST /api/auth/logout completed in 0.17ms with status 401
+[2026-06-14 20:52:01.109 INF] [1b58d569-ac0b-4122-af5d-8b48fef150a8] [Perf] POST /api/auth/logout -> 401 in 0.07ms
+[2026-06-14 20:52:01.109 INF] [1b58d569-ac0b-4122-af5d-8b48fef150a8] [CorrelationId: 1b58d569-ac0b-4122-af5d-8b48fef150a8] POST /api/auth/logout completed in 0.16ms with status 401
+[2026-06-14 20:52:02.311 INF] [c0b70bfe-e0e9-4b70-9196-bc6a410126a7] [Perf] POST /api/auth/logout -> 401 in 0.12ms
+[2026-06-14 20:52:02.311 INF] [c0b70bfe-e0e9-4b70-9196-bc6a410126a7] [CorrelationId: c0b70bfe-e0e9-4b70-9196-bc6a410126a7] POST /api/auth/logout completed in 0.21ms with status 401
+[2026-06-14 20:52:03.044 INF] [85ab411c-b79d-4de0-a4bc-90ec9c1ef9ac] [Perf] POST /api/auth/logout -> 401 in 0.08ms
+[2026-06-14 20:52:03.044 INF] [85ab411c-b79d-4de0-a4bc-90ec9c1ef9ac] [CorrelationId: 85ab411c-b79d-4de0-a4bc-90ec9c1ef9ac] POST /api/auth/logout completed in 0.18ms with status 401
+[2026-06-14 20:52:03.117 INF] [b866eb92-cde2-4957-98b4-665620bbfc1f] [Perf] POST /api/auth/logout -> 401 in 0.08ms
+[2026-06-14 20:52:03.117 INF] [b866eb92-cde2-4957-98b4-665620bbfc1f] [CorrelationId: b866eb92-cde2-4957-98b4-665620bbfc1f] POST /api/auth/logout completed in 0.16ms with status 401
+[2026-06-14 20:52:04.314 INF] [72a09229-1ae3-48d3-970c-2a495ac37122] [Perf] POST /api/auth/logout -> 401 in 0.09ms
+[2026-06-14 20:52:04.314 INF] [72a09229-1ae3-48d3-970c-2a495ac37122] [CorrelationId: 72a09229-1ae3-48d3-970c-2a495ac37122] POST /api/auth/logout completed in 0.21ms with status 401
+[2026-06-14 20:52:04.750 INF] [11991175-7747-4a12-862e-d0d21ffdc8ec] [Perf] POST /api/auth/logout -> 401 in 0.07ms
+[2026-06-14 20:52:04.750 INF] [11991175-7747-4a12-862e-d0d21ffdc8ec] [CorrelationId: 11991175-7747-4a12-862e-d0d21ffdc8ec] POST /api/auth/logout completed in 0.19ms with status 401
+[2026-06-14 20:52:04.785 WRN] [4c8d36a2-6ad3-4eb4-8e44-e0f2de1dbca6] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-14 20:52:04.869 INF] [4c8d36a2-6ad3-4eb4-8e44-e0f2de1dbca6] [Perf] POST /api/auth/refresh-token -> 200 in 115.54ms
+[2026-06-14 20:52:04.869 INF] [4c8d36a2-6ad3-4eb4-8e44-e0f2de1dbca6] [CorrelationId: 4c8d36a2-6ad3-4eb4-8e44-e0f2de1dbca6] POST /api/auth/refresh-token completed in 115.64ms with status 200
+[2026-06-14 20:52:04.880 INF] [75bb2bb2-b9fa-4c23-bf8e-ab83b2b01149] [Perf] POST /api/auth/logout -> 200 in 2.97ms
+[2026-06-14 20:52:04.880 ERR] [75bb2bb2-b9fa-4c23-bf8e-ab83b2b01149] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<RefreshToken>()
+    .Where(r => r.UserId == @userId && r.RevokedOn == null && r.IsExpired == False)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-14 20:52:05.052 INF] [2090cf7c-176d-4be2-a3c5-41de210d653f] [Perf] POST /api/auth/logout -> 401 in 0.07ms
+[2026-06-14 20:52:05.052 INF] [2090cf7c-176d-4be2-a3c5-41de210d653f] [CorrelationId: 2090cf7c-176d-4be2-a3c5-41de210d653f] POST /api/auth/logout completed in 0.18ms with status 401
+[2026-06-14 20:52:08.868 INF] [65da6d26-2c30-437a-bdc4-ba74bbcb119c] [Perf] GET /api/dashboard/hr-summary -> 200 in 11.63ms
+[2026-06-14 20:52:08.868 INF] [65da6d26-2c30-437a-bdc4-ba74bbcb119c] [CorrelationId: 65da6d26-2c30-437a-bdc4-ba74bbcb119c] GET /api/dashboard/hr-summary completed in 11.72ms with status 200
+[2026-06-14 20:52:11.657 INF] [e2df8861-470c-4690-af15-0fd889549a0f] [Perf] POST /api/auth/logout -> 200 in 4.22ms
+[2026-06-14 20:52:11.657 ERR] [e2df8861-470c-4690-af15-0fd889549a0f] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<RefreshToken>()
+    .Where(r => r.UserId == @userId && r.RevokedOn == null && r.IsExpired == False)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-14 20:52:16.885 INF] [b5329165-2e3f-43ee-8698-d47aa5286523] [Perf] POST /api/auth/microsoft-login -> 200 in 886.73ms
+[2026-06-14 20:52:16.885 INF] [b5329165-2e3f-43ee-8698-d47aa5286523] [CorrelationId: b5329165-2e3f-43ee-8698-d47aa5286523] POST /api/auth/microsoft-login completed in 886.83ms with status 200
+[2026-06-14 20:52:16.936 INF] [1b78f2db-a75a-4ef1-a44b-af8df8862615] [Perf] GET /api/dashboard/hr-summary -> 200 in 13.64ms
+[2026-06-14 20:52:16.936 INF] [1b78f2db-a75a-4ef1-a44b-af8df8862615] [CorrelationId: 1b78f2db-a75a-4ef1-a44b-af8df8862615] GET /api/dashboard/hr-summary completed in 13.74ms with status 200
+[2026-06-14 21:41:23.170 INF] [] Server macbookpro:2034:5065cad7 caught stopping signal...
+[2026-06-14 21:41:23.683 INF] [] Server macbookpro:2034:5065cad7 caught stopped signal...
+[2026-06-14 21:41:23.778 INF] [] Server macbookpro:2034:5065cad7 All dispatchers stopped
+[2026-06-14 21:41:23.786 INF] [] Server macbookpro:2034:5065cad7 successfully reported itself as stopped in 6.5905 ms
+[2026-06-14 21:41:23.786 INF] [] Server macbookpro:2034:5065cad7 has been stopped in total 614.6775 ms

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using System;
 using WUIAM.DTOs;
 using WUIAM.Models;
@@ -7,18 +7,67 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WUIAM.Repositories
 {
+    /// <summary>
+    /// Optimized LeaveRepository with compiled queries and efficient balance calculations.
+    /// </summary>
     public class LeaveRepository : ILeaveRepository
     {
         private readonly WUIAMDbContext _context;
+
+        // Compiled query: get leave request by ID
+        private static readonly Func<WUIAMDbContext, Guid, Task<LeaveRequest?>> _getById =
+            EF.CompileAsyncQuery((WUIAMDbContext db, Guid id) =>
+                db.LeaveRequests.FirstOrDefault(lr => lr.Id == id));
+
+        // Compiled query: get leave requests by user
+        private static readonly Func<WUIAMDbContext, Guid, Task<List<LeaveRequest>>> _getByUser =
+            EF.CompileAsyncQuery((WUIAMDbContext db, Guid userId) =>
+                db.LeaveRequests
+                    .Where(r => r.UserId == userId)
+                    .OrderByDescending(r => r.AppliedAt)
+                    .ToList());
+
+        // Compiled query: get active leaves
+        private static readonly Func<WUIAMDbContext, DateTime, Task<List<Leave>>> _getActiveLeaves =
+            EF.CompileAsyncQuery((WUIAMDbContext db, DateTime today) =>
+                db.Leaves
+                    .Where(l => !l.IsCancelled && l.EndDate >= today)
+                    .ToList());
+
+        // Compiled query: count public holidays in date range
+        private static readonly Func<WUIAMDbContext, DateTime, DateTime, Task<int>> _countHolidaysInRange =
+            EF.CompileAsyncQuery((WUIAMDbContext db, DateTime start, DateTime end) =>
+                db.PublicHolidays
+                    .Count(h => h.Date >= start && h.Date <= end));
+
+        // Compiled query: sum used leave days for balance sync
+        private static readonly Func<WUIAMDbContext, Guid, Guid, DateTime, DateTime, Task<int>> _sumUsedDays =
+            EF.CompileAsyncQuery((WUIAMDbContext db, Guid userId, Guid leaveTypeId, DateTime validFrom, DateTime validTo) =>
+                db.Leaves
+                    .Where(l => l.UserId == userId
+                             && l.LeaveTypeId == leaveTypeId
+                             && !l.IsCancelled
+                             && l.StartDate >= validFrom
+                             && l.EndDate <= validTo)
+                    .Sum(l => l.TotalDays));
+
+        // Compiled query: get leave balance for a specific user/type/year
+        private static readonly Func<WUIAMDbContext, Guid, Guid, DateTime, DateTime, Task<LeaveBalance?>> _getBalance =
+            EF.CompileAsyncQuery((WUIAMDbContext db, Guid userId, Guid leaveTypeId, DateTime validFrom, DateTime validTo) =>
+                db.LeaveBalances
+                    .FirstOrDefault(lb => lb.UserId == userId
+                                         && lb.LeaveTypeId == leaveTypeId
+                                         && validFrom >= lb.ValidFrom
+                                         && validTo <= lb.ValidTo));
 
         public LeaveRepository(WUIAMDbContext context)
         {
             _context = context;
         }
 
-        public async Task<LeaveRequest?> GetByIdAsync(Guid id)
+        public Task<LeaveRequest?> GetByIdAsync(Guid id)
         {
-            return await _context.LeaveRequests.FirstOrDefaultAsync(x => x.Id == id);
+            return _getById(_context, id);
         }
 
         public async Task<List<LeaveRequest>> GetAllAsync()
@@ -67,60 +116,21 @@ namespace WUIAM.Repositories
             return leaveRequest;
         }
 
-        //public async Task<LeaveRequestApproval> ApproveOrRejectStepAsync(User user, Guid approvalId, ApprovalDecisionDto dto)
-        //{
-        //    var approval = await _context.LeaveRequestApprovals.FirstOrDefaultAsync(a => a.Id == approvalId && a.ApproverPersonId == user.Id);
-        //    if (approval == null)
-        //    {
-        //        throw new UnauthorizedAccessException("Not authorized or approval step not found");
-        //    }
-
-        //    approval.Status = dto.IsApproved ? "Approved" : "Rejected";
-        //    approval.Comment = dto.Comment;
-        //    approval.DecisionAt = DateTime.UtcNow;
-        //    _context.LeaveRequestApprovals.Update(approval);
-
-        //    var request = await _context.LeaveRequests.FirstOrDefaultAsync(r => r.Id == approval.LeaveRequestId);
-        //    if (!dto.IsApproved)
-        //    {
-        //        request!.Status = "Rejected";
-        //    }
-        //    else
-        //    {
-        //        var allApprovals = await _context.LeaveRequestApprovals
-        //            .Where(a => a.LeaveRequestId == request!.Id)
-        //            .ToListAsync();
-
-        //        if (allApprovals.All(a => a.Status == "Approved"))
-        //        {
-        //            request.Status = "Approved";
-        //            await CreateLeaveFromApprovedRequestAsync(request);
-        //        }
-        //    }
-
-        //    _context.LeaveRequests.Update(request!);
-        //    await _context.SaveChangesAsync();
-
-        //    return approval;
-        //}
-
         public async Task<List<LeaveRequest>> GetAllLeaveRequestsAsync()
         {
             return await _context.LeaveRequests.ToListAsync();
         }
 
-        public async Task<List<LeaveRequest>> GetLeaveRequestsByUserAsync(Guid userId)
+        public Task<List<LeaveRequest>> GetLeaveRequestsByUserAsync(Guid userId)
         {
-            return await _context.LeaveRequests.Where(r => r.UserId == userId).ToListAsync();
+            return _getByUser(_context, userId);
         }
-
 
         public async Task<Leave> CreateLeaveFromApprovedRequestAsync(LeaveRequest request)
         {
-            var publicHolidays = await _context.PublicHolidays.ToListAsync();
-            int totalDays = Enumerable.Range(0, (request.EndDate - request.StartDate).Days + 1)
-                .Select(offset => request.StartDate.AddDays(offset))
-                .Count(day => !publicHolidays.Any(h => h.Date.Date == day.Date));
+            // Optimized: count holidays in range instead of iterating all dates
+            var totalDays = (request.EndDate - request.StartDate).Days + 1
+                - await _countHolidaysInRange(_context, request.StartDate, request.EndDate);
 
             var leave = new Leave
             {
@@ -143,12 +153,9 @@ namespace WUIAM.Repositories
             return leave;
         }
 
-        public async Task<List<Leave>> GetActiveLeavesAsync()
+        public Task<List<Leave>> GetActiveLeavesAsync()
         {
-            var today = DateTime.UtcNow.Date;
-            return await _context.Leaves
-                .Where(l => !l.IsCancelled && l.EndDate >= today)
-                .ToListAsync();
+            return _getActiveLeaves(_context, DateTime.UtcNow.Date);
         }
 
         public async Task CancelLeaveAsync(Guid leaveId)
@@ -169,10 +176,9 @@ namespace WUIAM.Repositories
             var leave = await _context.Leaves.FirstOrDefaultAsync(l => l.Id == leaveId);
             if (leave != null && !leave.IsCancelled)
             {
-                var publicHolidays = await _context.PublicHolidays.ToListAsync();
-                int totalDays = Enumerable.Range(0, (newEndDate - newStartDate).Days + 1)
-                    .Select(offset => newStartDate.AddDays(offset))
-                    .Count(day => !publicHolidays.Any(h => h.Date.Date == day.Date));
+                // Optimized: count holidays in range instead of iterating all dates
+                int totalDays = (newEndDate - newStartDate).Days + 1
+                    - await _countHolidaysInRange(_context, newStartDate, newEndDate);
 
                 leave.StartDate = newStartDate;
                 leave.EndDate = newEndDate;
@@ -186,34 +192,19 @@ namespace WUIAM.Repositories
 
         public async Task SyncLeaveBalanceAsync(Leave leave)
         {
-            // Find the specific balance record for this type and year
-            var leaveBalance = await _context.LeaveBalances
-                .FirstOrDefaultAsync(lb => lb.UserId == leave.UserId
-                                        && lb.LeaveTypeId == leave.LeaveTypeId
-                                        && leave.StartDate >= lb.ValidFrom
-                                        && lb.ValidTo >= leave.EndDate);
+            // Optimized: use compiled query instead of re-querying DbContext
+            var leaveBalance = await _getBalance(_context, leave.UserId, leave.LeaveTypeId, leave.StartDate, leave.EndDate);
 
             if (leaveBalance != null)
             {
-                // Sum only the leaves of this specific type within this specific cycle
-                var usedDays = await _context.Leaves
-                    .Where(l => l.UserId == leave.UserId
-                             && l.LeaveTypeId == leave.LeaveTypeId
-                             && !l.IsCancelled
-                             && l.StartDate >= leaveBalance.ValidFrom
-                             && l.EndDate <= leaveBalance.ValidTo)
-                    .SumAsync(l => l.TotalDays);
+                // Optimized: use compiled query for sum calculation
+                var usedDays = await _sumUsedDays(_context, leave.UserId, leave.LeaveTypeId, leaveBalance.ValidFrom, leaveBalance.ValidTo);
 
                 leaveBalance.UsedDays = usedDays;
                 leaveBalance.RemainingDays = leaveBalance.TotalDays - usedDays;
 
                 await _context.SaveChangesAsync();
             }
-            else
-            {
-                // Optional: Handle case where no balance exists for the current year
-                //_logger.LogWarning($"No balance found for User {leave.UserId} and Type {leave.LeaveTypeId}");
-            }
         }
     }
-    }
+}

@@ -1,14 +1,14 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using WUIAM.DTOs;
 using WUIAM.Enums;
 using WUIAM.Models;
 using WUIAM.Repositories.IRepositories;
 
 namespace WUIAM.Repositories
 {
-
-
+    /// <summary>
+    /// Optimized DepartmentRepository with compiled queries and selective includes.
+    /// </summary>
     public class DepartmentRepository : IDepartmentRepository
     {
         private readonly WUIAMDbContext _context;
@@ -18,21 +18,55 @@ namespace WUIAM.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Department>> GetAllAsync()
+        private static DepartmentResponseDto ToDto(Department d) => new()
         {
-            return await _context.Departments.ToListAsync();
+            Id = d.Id,
+            Code = d.Code,
+            Name = d.Name,
+            Description = d.Description,
+            DepartmentType = d.DepartmentType,
+            CollegeId = d.CollegeId,
+            CollegeName = d.College != null ? d.College.Name : null,
+            ParentDepartmentId = d.ParentDepartmentId,
+            ParentDepartmentName = d.ParentDepartment != null ? d.ParentDepartment.Name : null,
+            HeadId = d.HeadId,
+            HeadName = d.Head != null ? $"{d.Head.FirstName} {d.Head.LastName}".Trim() : null,
+        };
+
+        public async Task<IEnumerable<DepartmentResponseDto>> GetAllAsync()
+        {
+            return await _context.Departments
+                .AsNoTracking()
+                .Select(d => new DepartmentResponseDto
+                {
+                    Id = d.Id,
+                    Code = d.Code,
+                    Name = d.Name,
+                    Description = d.Description,
+                    DepartmentType = d.DepartmentType,
+                    CollegeId = d.CollegeId,
+                    CollegeName = d.College != null ? d.College.Name : null,
+                    ParentDepartmentId = d.ParentDepartmentId,
+                    HeadId = d.HeadId,
+                    HeadName = d.Head != null ? d.Head.FirstName + " " + d.Head.LastName : null,
+                })
+                .ToListAsync();
         }
 
-        public async Task<Department?> GetByIdAsync(Guid id)
+        public Task<Department?> GetByIdAsync(Guid id)
         {
-            return await _context.Departments.FindAsync(id);
+            return _context.Departments
+                .Where(d => d.Id == id)
+                .Include(d => d.College)
+                .Include(d => d.Head)
+                .FirstOrDefaultAsync();
         }
 
         public async Task<Department> AddAsync(Department department)
         {
-            var added = _context.Departments.AddAsync(department);
+            var added = await _context.Departments.AddAsync(department);
             await _context.SaveChangesAsync();
-            return added.Result.Entity;
+            return added.Entity;
         }
 
         public async Task UpdateAsync(Department department)
@@ -50,13 +84,47 @@ namespace WUIAM.Repositories
                 await _context.SaveChangesAsync();
             }
         }
-        public async Task<IEnumerable<Department>> GetAcademicDepartmentsAsync()
+
+        public async Task<IEnumerable<DepartmentResponseDto>> GetAcademicDepartmentsAsync()
         {
-            return await _context.Departments.Where(e => e.DepartmentType == DepartmentTypes.Academic.ToString()).ToListAsync();
+            return await _context.Departments
+                .Where(d => d.DepartmentType == DepartmentTypes.Academic.ToString())
+                .AsNoTracking()
+                .Select(d => new DepartmentResponseDto
+                {
+                    Id = d.Id,
+                    Code = d.Code,
+                    Name = d.Name,
+                    Description = d.Description,
+                    DepartmentType = d.DepartmentType,
+                    CollegeId = d.CollegeId,
+                    CollegeName = d.College != null ? d.College.Name : null,
+                    ParentDepartmentId = d.ParentDepartmentId,
+                    HeadId = d.HeadId,
+                    HeadName = d.Head != null ? d.Head.FirstName + " " + d.Head.LastName : null,
+                })
+                .ToListAsync();
         }
-        public async Task<IEnumerable<Department>> GetNonAcademicDepartmentsAsync()
+
+        public async Task<IEnumerable<DepartmentResponseDto>> GetNonAcademicDepartmentsAsync()
         {
-            return await _context.Departments.Where(e => e.DepartmentType == DepartmentTypes.NonAcademic.ToString()).ToListAsync();
+            return await _context.Departments
+                .Where(d => d.DepartmentType == DepartmentTypes.NonAcademic.ToString())
+                .AsNoTracking()
+                .Select(d => new DepartmentResponseDto
+                {
+                    Id = d.Id,
+                    Code = d.Code,
+                    Name = d.Name,
+                    Description = d.Description,
+                    DepartmentType = d.DepartmentType,
+                    CollegeId = d.CollegeId,
+                    CollegeName = d.College != null ? d.College.Name : null,
+                    ParentDepartmentId = d.ParentDepartmentId,
+                    HeadId = d.HeadId,
+                    HeadName = d.Head != null ? d.Head.FirstName + " " + d.Head.LastName : null,
+                })
+                .ToListAsync();
         }
     }
 }

@@ -17,6 +17,11 @@ namespace WUIAM.Models
         public DateTime? RevokedOn { get; set; }
         public string? RevokedByIp { get; set; }
         public string? ReplacedByToken { get; set; }
+        public string? DeviceType { get; set; }
+        public string? DeviceName { get; set; }
+        public string? Browser { get; set; }
+        public string? UserAgent { get; set; }
+        public string? IpAddress { get; set; }
         public bool IsActive => RevokedOn == null && !IsExpired;
     }
 }

@@ -5,26 +5,30 @@ using WUIAM.Services; // Adjust namespace as needed
 using WUIAM.Models;
 using WUIAM.Interfaces;
 using WUIAM.DTOs;   // Adjust namespace as needed
+using WUIAM.Enums;
 
 namespace WUIAM.Controllers
 {
     [ApiController]
+    [ApiVersion("1.0")]
     [Route("api/[controller]")]
     public class DepartmentController : ControllerBase
     {
         private readonly IDepartmentService _departmentService;
+        private readonly IEmployeeService _employeeService;
 
-        public DepartmentController(IDepartmentService departmentService)
+        public DepartmentController(IDepartmentService departmentService, IEmployeeService employeeService)
         {
             _departmentService = departmentService;
+            _employeeService = employeeService;
         }
 
         // GET: api/Department
         [HttpGet]
-        public async Task<ActionResult<ApiResponse<IEnumerable<Department>>>> GetAll()
+        public async Task<ActionResult<ApiResponse<IEnumerable<DepartmentResponseDto>>>> GetAll()
         {
             var departments = await _departmentService.GetAllAsync();
-            return ApiResponse<IEnumerable<Department>>.Success("Department list", departments);
+            return ApiResponse<IEnumerable<DepartmentResponseDto>>.Success("Department list", departments);
         }
 
         // GET: api/Department/{id}
@@ -38,15 +42,43 @@ namespace WUIAM.Controllers
             return ApiResponse<Department>.Success("Department found", department);
         }
 
+        // GET: api/Department/{id}/employees
+        [HttpGet("{id}/employees")]
+        [HasPermission(Permissions.AdminAccess, Permissions.ViewEmployeeProfiles, Permissions.ViewDepartmentEmployeeProfiles, Permissions.ManageUsers, Permissions.SuperAdminAccess)]
+        public async Task<ActionResult<ApiResponse<IEnumerable<EmployeeDirectoryDto>>>> GetDepartmentEmployees(Guid id)
+        {
+            var department = await _departmentService.GetByIdAsync(id);
+            if (department == null)
+                return NotFound(ApiResponse<IEnumerable<EmployeeDirectoryDto>>.Failure("Department not found"));
+
+            var employees = await _employeeService.GetEmployeeDirectoryByDepartmentAsync(id);
+            return Ok(ApiResponse<IEnumerable<EmployeeDirectoryDto>>.Success(
+                employees.Any() ? "Department employees retrieved successfully" : "No employees assigned to this department",
+                employees));
+        }
+
         // POST: api/Department
         [HttpPost]
         public async Task<ActionResult<ApiResponse<Department>>> Create([FromBody] CreateDepartmentDto createDept)
         {
+            Guid? headId = null;
+            if (!string.IsNullOrWhiteSpace(createDept.HeadOfDepartmentId)
+                && createDept.HeadOfDepartmentId != Guid.Empty.ToString())
+            {
+                if (!Guid.TryParse(createDept.HeadOfDepartmentId, out var parsedHeadId)
+                    || !await _departmentService.EmployeeExistsAsync(parsedHeadId))
+                {
+                    return BadRequest(ApiResponse<Department>.Failure("Selected head of department is not a valid employee."));
+                }
+
+                headId = parsedHeadId;
+            }
+
             var department = new Department
             {
                 Name = createDept.Name,
                 Description = createDept.Description,
-                HeadId = createDept.HeadOfDepartmentId
+                HeadId = headId
             };
 
             var created = await _departmentService.CreateDepartmentAsync(department);
@@ -65,7 +97,7 @@ namespace WUIAM.Controllers
             if (updated == null)
                 return ApiResponse<Department>.Failure("Department not found!");
 
-            return ApiResponse<Department>.Success("Department with id {updated.Id}  has being updated", updated);
+            return ApiResponse<Department>.Success($"Department with id {updated.Id} has been updated", updated);
         }
 
         // DELETE: api/Department/{id}
@@ -76,28 +108,28 @@ namespace WUIAM.Controllers
             if (deleted == null)
                 return ApiResponse<Department>.Failure("Department not found!");
 
-            return ApiResponse<Department>.Failure("Department deleted successfully!");
+            return ApiResponse<Department>.Success("Department deleted successfully!", deleted);
 
         }
         [HttpGet("get-academic-departments")]
-        public async Task<ActionResult<ApiResponse<IEnumerable<Department>>>> GetAcademicDepartments()
+        public async Task<ActionResult<ApiResponse<IEnumerable<DepartmentResponseDto>>>> GetAcademicDepartments()
         {
             var departments = await _departmentService.GetAcademicDepartmentsAsync();
             if (departments == null || !departments.Any())
             {
-                return ApiResponse<IEnumerable<Department>>.Failure("No academic department found");
+                return ApiResponse<IEnumerable<DepartmentResponseDto>>.Failure("No academic department found");
             }
-            return ApiResponse<IEnumerable<Department>>.Success(departments.Count() + " departments found!", departments);
+            return ApiResponse<IEnumerable<DepartmentResponseDto>>.Success(departments.Count() + " departments found!", departments);
         }
         [HttpGet("get-nonacademic-departments")]
-        public async Task<ActionResult<ApiResponse<IEnumerable<Department>>>> GetAcademiNoncDepartments()
+        public async Task<ActionResult<ApiResponse<IEnumerable<DepartmentResponseDto>>>> GetAcademiNoncDepartments()
         {
             var departments = await _departmentService.GetNonAcademicDepartmentsAsync();
             if (departments == null || !departments.Any())
             {
-                return ApiResponse<IEnumerable<Department>>.Failure("No academic department found");
+                return ApiResponse<IEnumerable<DepartmentResponseDto>>.Failure("No academic department found");
             }
-            return ApiResponse<IEnumerable<Department>>.Success(departments.Count() + " departments found!", departments);
+            return ApiResponse<IEnumerable<DepartmentResponseDto>>.Success(departments.Count() + " departments found!", departments);
         }
     }
 }

@@ -1,0 +1,841 @@
+[2026-06-16 05:55:10.239 INF] [] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:39.1624090 and is in the Running state now
+[2026-06-16 05:55:10.243 INF] [] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:31.8638757 and is in the Running state now
+[2026-06-16 05:59:13.982 INF] [89ece4a5-dbbc-4529-978f-935d166a2330] [Perf] GET /api/v1/recruitment/stats -> 200 in 49.92ms
+[2026-06-16 05:59:13.982 INF] [89ece4a5-dbbc-4529-978f-935d166a2330] [CorrelationId: 89ece4a5-dbbc-4529-978f-935d166a2330] GET /api/v1/recruitment/stats completed in 50.11ms with status 200
+[2026-06-16 06:10:53.785 INF] [bcf28e4f-f74f-4a90-8156-6d136e83383c] [Perf] GET /api/notifications/unread-count -> 200 in 47.87ms
+[2026-06-16 06:10:53.786 INF] [bcf28e4f-f74f-4a90-8156-6d136e83383c] [CorrelationId: bcf28e4f-f74f-4a90-8156-6d136e83383c] GET /api/notifications/unread-count completed in 48.32ms with status 200
+[2026-06-16 06:10:53.793 INF] [b3d6ac2d-2c4f-4664-a47d-1a21aaea54f3] [Perf] GET /api/v1/recruitment/stats -> 200 in 50.10ms
+[2026-06-16 06:10:53.793 INF] [b3d6ac2d-2c4f-4664-a47d-1a21aaea54f3] [CorrelationId: b3d6ac2d-2c4f-4664-a47d-1a21aaea54f3] GET /api/v1/recruitment/stats completed in 50.30ms with status 200
+[2026-06-16 06:10:53.802 INF] [a8cfdcab-6136-40cd-a310-c49788e3deb8] [Perf] GET /api/notifications -> 200 in 64.58ms
+[2026-06-16 06:10:53.802 INF] [a8cfdcab-6136-40cd-a310-c49788e3deb8] [CorrelationId: a8cfdcab-6136-40cd-a310-c49788e3deb8] GET /api/notifications completed in 64.74ms with status 200
+[2026-06-16 06:12:36.500 INF] [4dde21d2-1fc7-477b-a8ec-a582c87053b2] [Perf] GET /api/notifications/unread-count -> 200 in 9.76ms
+[2026-06-16 06:12:36.500 INF] [a1d58551-f1f0-4740-b747-d698767d346c] [Perf] GET /api/notifications -> 200 in 9.69ms
+[2026-06-16 06:12:36.500 INF] [4dde21d2-1fc7-477b-a8ec-a582c87053b2] [CorrelationId: 4dde21d2-1fc7-477b-a8ec-a582c87053b2] GET /api/notifications/unread-count completed in 9.99ms with status 200
+[2026-06-16 06:12:36.500 INF] [a1d58551-f1f0-4740-b747-d698767d346c] [CorrelationId: a1d58551-f1f0-4740-b747-d698767d346c] GET /api/notifications completed in 10.08ms with status 200
+[2026-06-16 06:12:36.529 INF] [28b3a58a-66ab-4b17-8489-220a97de7d9c] [Perf] GET /api/v1/recruitment/stats -> 200 in 35.50ms
+[2026-06-16 06:12:36.529 INF] [28b3a58a-66ab-4b17-8489-220a97de7d9c] [CorrelationId: 28b3a58a-66ab-4b17-8489-220a97de7d9c] GET /api/v1/recruitment/stats completed in 35.64ms with status 200
+[2026-06-16 06:12:41.053 INF] [543cf2d5-880c-48e3-9389-32e542ced60f] [Perf] GET /api/v1/recruitment/stats -> 200 in 40.17ms
+[2026-06-16 06:12:41.053 INF] [543cf2d5-880c-48e3-9389-32e542ced60f] [CorrelationId: 543cf2d5-880c-48e3-9389-32e542ced60f] GET /api/v1/recruitment/stats completed in 40.35ms with status 200
+[2026-06-16 06:12:45.401 INF] [7c00d300-3cbd-4538-887e-d6f563350d97] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 17.31ms
+[2026-06-16 06:12:45.401 INF] [7c00d300-3cbd-4538-887e-d6f563350d97] [CorrelationId: 7c00d300-3cbd-4538-887e-d6f563350d97] GET /api/erp-modules/helpdesk/tickets completed in 17.47ms with status 200
+[2026-06-16 06:12:45.448 INF] [94bd4b9d-0ce0-41d2-badd-a0569b89dae4] [Perf] GET /api/erp-modules/summary -> 200 in 64.94ms
+[2026-06-16 06:12:45.448 INF] [94bd4b9d-0ce0-41d2-badd-a0569b89dae4] [CorrelationId: 94bd4b9d-0ce0-41d2-badd-a0569b89dae4] GET /api/erp-modules/summary completed in 65.08ms with status 200
+[2026-06-16 06:12:52.826 INF] [30701bc0-55ca-4324-8a7a-a3c247ee85b7] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 5.20ms
+[2026-06-16 06:12:52.827 INF] [30701bc0-55ca-4324-8a7a-a3c247ee85b7] [CorrelationId: 30701bc0-55ca-4324-8a7a-a3c247ee85b7] GET /api/erp-modules/helpdesk/tickets completed in 6.48ms with status 200
+[2026-06-16 06:12:52.838 INF] [a9c98df7-aba3-425b-bbd0-767804d37e68] [Perf] GET /api/erp-modules/summary -> 200 in 17.89ms
+[2026-06-16 06:12:52.839 INF] [a9c98df7-aba3-425b-bbd0-767804d37e68] [CorrelationId: a9c98df7-aba3-425b-bbd0-767804d37e68] GET /api/erp-modules/summary completed in 18.04ms with status 200
+[2026-06-16 06:13:16.742 INF] [7e958396-5ad2-4622-875d-3a2b19a87190] [Perf] GET /api/erp-modules/summary -> 200 in 17.51ms
+[2026-06-16 06:13:16.742 INF] [7e958396-5ad2-4622-875d-3a2b19a87190] [CorrelationId: 7e958396-5ad2-4622-875d-3a2b19a87190] GET /api/erp-modules/summary completed in 17.67ms with status 200
+[2026-06-16 06:13:16.744 INF] [d4f4f6fe-9bd7-4802-8e5b-15f38cd3b9e3] [Perf] GET /api/erp-modules/facilities/assets -> 200 in 19.60ms
+[2026-06-16 06:13:16.744 INF] [d4f4f6fe-9bd7-4802-8e5b-15f38cd3b9e3] [CorrelationId: d4f4f6fe-9bd7-4802-8e5b-15f38cd3b9e3] GET /api/erp-modules/facilities/assets completed in 20.04ms with status 200
+[2026-06-16 06:13:28.597 INF] [8cc8c9d7-6bfd-46de-8275-d0b2da6b63da] [Perf] GET /api/erp-modules/facilities/assets -> 200 in 14.78ms
+[2026-06-16 06:13:28.597 INF] [8cc8c9d7-6bfd-46de-8275-d0b2da6b63da] [CorrelationId: 8cc8c9d7-6bfd-46de-8275-d0b2da6b63da] GET /api/erp-modules/facilities/assets completed in 15.02ms with status 200
+[2026-06-16 06:13:28.604 INF] [bdc61e04-d2c6-43b5-a4a6-b100f9ec0da2] [Perf] GET /api/erp-modules/summary -> 200 in 22.41ms
+[2026-06-16 06:13:28.605 INF] [bdc61e04-d2c6-43b5-a4a6-b100f9ec0da2] [CorrelationId: bdc61e04-d2c6-43b5-a4a6-b100f9ec0da2] GET /api/erp-modules/summary completed in 22.56ms with status 200
+[2026-06-16 06:13:29.196 INF] [f02cd376-cd57-469d-a965-49f6f9fbf02a] [Perf] GET /api/notifications -> 200 in 13.40ms
+[2026-06-16 06:13:29.196 INF] [83b5f641-7f47-43d5-81ef-faf3850efb12] [Perf] GET /api/notifications/unread-count -> 200 in 13.38ms
+[2026-06-16 06:13:29.196 INF] [f02cd376-cd57-469d-a965-49f6f9fbf02a] [CorrelationId: f02cd376-cd57-469d-a965-49f6f9fbf02a] GET /api/notifications completed in 13.67ms with status 200
+[2026-06-16 06:13:29.196 INF] [83b5f641-7f47-43d5-81ef-faf3850efb12] [CorrelationId: 83b5f641-7f47-43d5-81ef-faf3850efb12] GET /api/notifications/unread-count completed in 13.76ms with status 200
+[2026-06-16 06:13:29.200 INF] [7b4b4350-fb2e-453d-aac8-0a19b33acc05] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 2.52ms
+[2026-06-16 06:13:29.200 INF] [7b4b4350-fb2e-453d-aac8-0a19b33acc05] [CorrelationId: 7b4b4350-fb2e-453d-aac8-0a19b33acc05] GET /api/erp-modules/helpdesk/tickets completed in 2.64ms with status 200
+[2026-06-16 06:13:29.208 INF] [902872f4-541c-46e0-b38c-204c06ea96ef] [Perf] GET /api/erp-modules/summary -> 200 in 23.65ms
+[2026-06-16 06:13:29.208 INF] [902872f4-541c-46e0-b38c-204c06ea96ef] [CorrelationId: 902872f4-541c-46e0-b38c-204c06ea96ef] GET /api/erp-modules/summary completed in 23.74ms with status 200
+[2026-06-16 06:13:34.921 INF] [fa2f29d1-9a00-4b1d-9a99-87eb88474f34] [Perf] GET /api/v1/recruitment/stats -> 200 in 34.03ms
+[2026-06-16 06:13:34.921 INF] [fa2f29d1-9a00-4b1d-9a99-87eb88474f34] [CorrelationId: fa2f29d1-9a00-4b1d-9a99-87eb88474f34] GET /api/v1/recruitment/stats completed in 34.16ms with status 200
+[2026-06-16 06:16:08.181 INF] [7fa2f9a0-71e2-4f8b-9dd6-bb7657ac8ec1] [Perf] GET /api/notifications -> 200 in 3.54ms
+[2026-06-16 06:16:08.181 INF] [7fa2f9a0-71e2-4f8b-9dd6-bb7657ac8ec1] [CorrelationId: 7fa2f9a0-71e2-4f8b-9dd6-bb7657ac8ec1] GET /api/notifications completed in 3.67ms with status 200
+[2026-06-16 06:16:08.183 INF] [44f5b7e2-9f95-40a1-8ac4-ec9fc161f266] [Perf] GET /api/notifications/unread-count -> 200 in 1.98ms
+[2026-06-16 06:16:08.184 INF] [44f5b7e2-9f95-40a1-8ac4-ec9fc161f266] [CorrelationId: 44f5b7e2-9f95-40a1-8ac4-ec9fc161f266] GET /api/notifications/unread-count completed in 2.11ms with status 200
+[2026-06-16 06:16:08.212 INF] [2411ca19-b67d-48ef-bf18-b319e4cbe943] [Perf] GET /api/v1/recruitment/stats -> 200 in 27.80ms
+[2026-06-16 06:16:08.212 INF] [2411ca19-b67d-48ef-bf18-b319e4cbe943] [CorrelationId: 2411ca19-b67d-48ef-bf18-b319e4cbe943] GET /api/v1/recruitment/stats completed in 27.97ms with status 200
+[2026-06-16 06:21:35.969 INF] [66505b65-eda3-43db-8306-49e01353d6c7] [Perf] GET /api/Employees/me -> 200 in 67.91ms
+[2026-06-16 06:21:35.970 INF] [66505b65-eda3-43db-8306-49e01353d6c7] [CorrelationId: 66505b65-eda3-43db-8306-49e01353d6c7] GET /api/Employees/me completed in 69.01ms with status 200
+[2026-06-16 06:21:35.995 INF] [2e07450b-fbb4-41c1-aa4c-9217d88397b3] [Perf] GET /api/Employees/me/profile-update-requests -> 200 in 22.10ms
+[2026-06-16 06:21:35.995 INF] [2e07450b-fbb4-41c1-aa4c-9217d88397b3] [CorrelationId: 2e07450b-fbb4-41c1-aa4c-9217d88397b3] GET /api/Employees/me/profile-update-requests completed in 22.24ms with status 200
+[2026-06-16 06:21:49.967 INF] [d0e614f4-d127-46ab-9ff0-156c2e2422dc] [Perf] GET /api/v1/recruitment/stats -> 200 in 36.42ms
+[2026-06-16 06:21:49.967 INF] [d0e614f4-d127-46ab-9ff0-156c2e2422dc] [CorrelationId: d0e614f4-d127-46ab-9ff0-156c2e2422dc] GET /api/v1/recruitment/stats completed in 36.55ms with status 200
+[2026-06-16 06:23:41.833 INF] [75a3bbad-8afd-4632-8090-d082bae6520d] [Perf] GET /api/notifications -> 200 in 13.09ms
+[2026-06-16 06:23:41.833 INF] [75a3bbad-8afd-4632-8090-d082bae6520d] [CorrelationId: 75a3bbad-8afd-4632-8090-d082bae6520d] GET /api/notifications completed in 13.22ms with status 200
+[2026-06-16 06:23:41.836 INF] [91311985-aca7-4b6a-b410-317aae3a4a2b] [Perf] GET /api/notifications/unread-count -> 200 in 2.31ms
+[2026-06-16 06:23:41.836 INF] [91311985-aca7-4b6a-b410-317aae3a4a2b] [CorrelationId: 91311985-aca7-4b6a-b410-317aae3a4a2b] GET /api/notifications/unread-count completed in 2.41ms with status 200
+[2026-06-16 06:23:41.858 INF] [26360de1-6792-401f-a6e2-c062f6c7f13d] [Perf] GET /api/v1/recruitment/stats -> 200 in 21.64ms
+[2026-06-16 06:23:41.858 INF] [26360de1-6792-401f-a6e2-c062f6c7f13d] [CorrelationId: 26360de1-6792-401f-a6e2-c062f6c7f13d] GET /api/v1/recruitment/stats completed in 21.78ms with status 200
+[2026-06-16 06:31:05.897 INF] [3971ea90-5624-4828-8c2e-b8a36fdecd99] [Perf] GET /api/notifications -> 200 in 25.27ms
+[2026-06-16 06:31:05.898 INF] [3971ea90-5624-4828-8c2e-b8a36fdecd99] [CorrelationId: 3971ea90-5624-4828-8c2e-b8a36fdecd99] GET /api/notifications completed in 25.67ms with status 200
+[2026-06-16 06:31:05.916 INF] [f74c6eb6-f2b7-49fb-bdd9-adcf56eebb8b] [Perf] GET /api/notifications/unread-count -> 200 in 36.94ms
+[2026-06-16 06:31:05.916 INF] [f74c6eb6-f2b7-49fb-bdd9-adcf56eebb8b] [CorrelationId: f74c6eb6-f2b7-49fb-bdd9-adcf56eebb8b] GET /api/notifications/unread-count completed in 37.05ms with status 200
+[2026-06-16 06:31:05.935 INF] [76a03659-7f4c-4702-a627-257d467b58e7] [Perf] GET /api/v1/recruitment/stats -> 200 in 49.93ms
+[2026-06-16 06:31:05.936 INF] [76a03659-7f4c-4702-a627-257d467b58e7] [CorrelationId: 76a03659-7f4c-4702-a627-257d467b58e7] GET /api/v1/recruitment/stats completed in 50.10ms with status 200
+[2026-06-16 06:36:02.591 INF] [32cf22b1-51ea-46c7-abad-93f0954c5d39] [Perf] GET /api/v1/recruitment/job-postings -> 200 in 70.37ms
+[2026-06-16 06:36:02.591 INF] [32cf22b1-51ea-46c7-abad-93f0954c5d39] [CorrelationId: 32cf22b1-51ea-46c7-abad-93f0954c5d39] GET /api/v1/recruitment/job-postings completed in 70.54ms with status 200
+[2026-06-16 06:41:58.378 INF] [7dd8c539-738b-42f1-b5c0-c855fb417e06] [Perf] GET /api/v1/recruitment/stats -> 200 in 28.87ms
+[2026-06-16 06:41:58.378 INF] [7dd8c539-738b-42f1-b5c0-c855fb417e06] [CorrelationId: 7dd8c539-738b-42f1-b5c0-c855fb417e06] GET /api/v1/recruitment/stats completed in 29.00ms with status 200
+[2026-06-16 06:43:40.634 INF] [fc829669-8746-4031-ab9c-d890eaed9d51] [Perf] GET /api/notifications -> 200 in 14.25ms
+[2026-06-16 06:43:40.634 INF] [fc829669-8746-4031-ab9c-d890eaed9d51] [CorrelationId: fc829669-8746-4031-ab9c-d890eaed9d51] GET /api/notifications completed in 14.37ms with status 200
+[2026-06-16 06:43:40.638 INF] [22999e69-d6cc-4a68-bcda-0fe1a1809f91] [Perf] GET /api/notifications/unread-count -> 200 in 2.48ms
+[2026-06-16 06:43:40.638 INF] [22999e69-d6cc-4a68-bcda-0fe1a1809f91] [CorrelationId: 22999e69-d6cc-4a68-bcda-0fe1a1809f91] GET /api/notifications/unread-count completed in 2.60ms with status 200
+[2026-06-16 06:43:40.669 INF] [3110ea8d-e7ec-4e9c-bfac-b8525278ee93] [Perf] GET /api/v1/recruitment/stats -> 200 in 30.35ms
+[2026-06-16 06:43:40.669 INF] [3110ea8d-e7ec-4e9c-bfac-b8525278ee93] [CorrelationId: 3110ea8d-e7ec-4e9c-bfac-b8525278ee93] GET /api/v1/recruitment/stats completed in 30.50ms with status 200
+[2026-06-16 06:43:46.098 INF] [e7456231-ac83-4862-9c45-3147873f9c7e] [Perf] GET /api/notifications -> 200 in 7.98ms
+[2026-06-16 06:43:46.098 INF] [e7456231-ac83-4862-9c45-3147873f9c7e] [CorrelationId: e7456231-ac83-4862-9c45-3147873f9c7e] GET /api/notifications completed in 8.09ms with status 200
+[2026-06-16 06:43:46.115 INF] [b2925818-bd36-4b7f-8ba1-7768e53c0e56] [Perf] GET /api/notifications/unread-count -> 200 in 24.91ms
+[2026-06-16 06:43:46.115 INF] [b2925818-bd36-4b7f-8ba1-7768e53c0e56] [CorrelationId: b2925818-bd36-4b7f-8ba1-7768e53c0e56] GET /api/notifications/unread-count completed in 25.02ms with status 200
+[2026-06-16 06:43:46.129 INF] [d6b34619-1ddf-4ea8-8c4d-4543406bd3c1] [Perf] GET /api/v1/recruitment/stats -> 200 in 37.22ms
+[2026-06-16 06:43:46.129 INF] [d6b34619-1ddf-4ea8-8c4d-4543406bd3c1] [CorrelationId: d6b34619-1ddf-4ea8-8c4d-4543406bd3c1] GET /api/v1/recruitment/stats completed in 37.33ms with status 200
+[2026-06-16 06:43:57.487 INF] [86d85edb-e2bf-4dd4-a46e-38406cf7bcad] [Perf] GET /api/notifications -> 200 in 6.91ms
+[2026-06-16 06:43:57.487 INF] [86d85edb-e2bf-4dd4-a46e-38406cf7bcad] [CorrelationId: 86d85edb-e2bf-4dd4-a46e-38406cf7bcad] GET /api/notifications completed in 7.03ms with status 200
+[2026-06-16 06:43:57.487 INF] [c3e39fc6-5239-4274-85ff-fa22453895ad] [Perf] GET /api/notifications/unread-count -> 200 in 7.06ms
+[2026-06-16 06:43:57.487 INF] [c3e39fc6-5239-4274-85ff-fa22453895ad] [CorrelationId: c3e39fc6-5239-4274-85ff-fa22453895ad] GET /api/notifications/unread-count completed in 7.16ms with status 200
+[2026-06-16 06:43:57.525 INF] [788fe70a-430b-4cc3-8421-f8341310c623] [Perf] GET /api/v1/recruitment/stats -> 200 in 42.12ms
+[2026-06-16 06:43:57.525 INF] [788fe70a-430b-4cc3-8421-f8341310c623] [CorrelationId: 788fe70a-430b-4cc3-8421-f8341310c623] GET /api/v1/recruitment/stats completed in 42.23ms with status 200
+[2026-06-16 06:44:04.120 INF] [926d796d-fd24-484a-a34a-945df9c6dc93] [Perf] GET /api/notifications/unread-count -> 200 in 10.98ms
+[2026-06-16 06:44:04.121 INF] [926d796d-fd24-484a-a34a-945df9c6dc93] [CorrelationId: 926d796d-fd24-484a-a34a-945df9c6dc93] GET /api/notifications/unread-count completed in 11.10ms with status 200
+[2026-06-16 06:44:04.122 INF] [7da16ed7-549d-4f79-98f7-ca7e8c68be47] [Perf] GET /api/notifications -> 200 in 12.47ms
+[2026-06-16 06:44:04.122 INF] [7da16ed7-549d-4f79-98f7-ca7e8c68be47] [CorrelationId: 7da16ed7-549d-4f79-98f7-ca7e8c68be47] GET /api/notifications completed in 12.66ms with status 200
+[2026-06-16 06:44:04.153 INF] [95da658b-9d66-4167-a35a-e2daa0049f7f] [Perf] GET /api/v1/recruitment/stats -> 200 in 40.37ms
+[2026-06-16 06:44:04.153 INF] [95da658b-9d66-4167-a35a-e2daa0049f7f] [CorrelationId: 95da658b-9d66-4167-a35a-e2daa0049f7f] GET /api/v1/recruitment/stats completed in 40.48ms with status 200
+[2026-06-16 06:44:09.405 INF] [b909e85b-b5ca-478b-afa6-2ce796433bda] [Perf] GET /api/notifications -> 200 in 10.05ms
+[2026-06-16 06:44:09.405 INF] [b909e85b-b5ca-478b-afa6-2ce796433bda] [CorrelationId: b909e85b-b5ca-478b-afa6-2ce796433bda] GET /api/notifications completed in 10.16ms with status 200
+[2026-06-16 06:44:09.406 INF] [11dd8a87-c674-4bd8-bc72-e130e25cfa83] [Perf] GET /api/notifications/unread-count -> 200 in 11.10ms
+[2026-06-16 06:44:09.406 INF] [11dd8a87-c674-4bd8-bc72-e130e25cfa83] [CorrelationId: 11dd8a87-c674-4bd8-bc72-e130e25cfa83] GET /api/notifications/unread-count completed in 11.16ms with status 200
+[2026-06-16 06:44:09.420 INF] [417657bb-fa27-4664-aefa-c4e3c589ea0a] [Perf] GET /api/v1/recruitment/stats -> 200 in 22.04ms
+[2026-06-16 06:44:09.420 INF] [417657bb-fa27-4664-aefa-c4e3c589ea0a] [CorrelationId: 417657bb-fa27-4664-aefa-c4e3c589ea0a] GET /api/v1/recruitment/stats completed in 22.15ms with status 200
+[2026-06-16 06:44:17.553 INF] [1fc8e521-5e2e-4cee-9569-de46cc54e1d5] [Perf] GET /api/notifications/unread-count -> 200 in 5.26ms
+[2026-06-16 06:44:17.553 INF] [e1710216-51ac-4742-aea4-c6fca085619d] [Perf] GET /api/notifications -> 200 in 5.27ms
+[2026-06-16 06:44:17.553 INF] [e1710216-51ac-4742-aea4-c6fca085619d] [CorrelationId: e1710216-51ac-4742-aea4-c6fca085619d] GET /api/notifications completed in 5.47ms with status 200
+[2026-06-16 06:44:17.553 INF] [1fc8e521-5e2e-4cee-9569-de46cc54e1d5] [CorrelationId: 1fc8e521-5e2e-4cee-9569-de46cc54e1d5] GET /api/notifications/unread-count completed in 5.35ms with status 200
+[2026-06-16 06:44:17.581 INF] [881d3c5c-0c46-4d67-a6ad-2ff10b39670d] [Perf] GET /api/v1/recruitment/stats -> 200 in 29.67ms
+[2026-06-16 06:44:17.581 INF] [881d3c5c-0c46-4d67-a6ad-2ff10b39670d] [CorrelationId: 881d3c5c-0c46-4d67-a6ad-2ff10b39670d] GET /api/v1/recruitment/stats completed in 29.78ms with status 200
+[2026-06-16 06:55:29.924 INF] [3760c4bb-ed4a-4e23-9847-6d73e5e9c730] [Perf] GET /api/notifications/unread-count -> 200 in 5.60ms
+[2026-06-16 06:55:29.926 INF] [3760c4bb-ed4a-4e23-9847-6d73e5e9c730] [CorrelationId: 3760c4bb-ed4a-4e23-9847-6d73e5e9c730] GET /api/notifications/unread-count completed in 6.83ms with status 200
+[2026-06-16 06:55:29.926 INF] [b8cee739-3069-4e2a-93a3-b061f7db5950] [Perf] GET /api/notifications -> 200 in 6.83ms
+[2026-06-16 06:55:29.926 INF] [b8cee739-3069-4e2a-93a3-b061f7db5950] [CorrelationId: b8cee739-3069-4e2a-93a3-b061f7db5950] GET /api/notifications completed in 7.17ms with status 200
+[2026-06-16 06:55:29.952 INF] [dc77724b-1d3d-4aaf-9cbc-072b019e5961] [Perf] GET /api/v1/recruitment/stats -> 200 in 26.07ms
+[2026-06-16 06:55:29.953 INF] [dc77724b-1d3d-4aaf-9cbc-072b019e5961] [CorrelationId: dc77724b-1d3d-4aaf-9cbc-072b019e5961] GET /api/v1/recruitment/stats completed in 26.18ms with status 200
+[2026-06-16 06:55:37.312 INF] [d518f3e2-a3ac-497a-b872-e51f032ecce3] [Perf] GET /api/notifications -> 200 in 19.99ms
+[2026-06-16 06:55:37.313 INF] [d518f3e2-a3ac-497a-b872-e51f032ecce3] [CorrelationId: d518f3e2-a3ac-497a-b872-e51f032ecce3] GET /api/notifications completed in 20.16ms with status 200
+[2026-06-16 06:55:37.314 INF] [8f90055f-77ea-4920-a700-808a38d551fd] [Perf] GET /api/notifications/unread-count -> 200 in 21.10ms
+[2026-06-16 06:55:37.314 INF] [8f90055f-77ea-4920-a700-808a38d551fd] [CorrelationId: 8f90055f-77ea-4920-a700-808a38d551fd] GET /api/notifications/unread-count completed in 21.25ms with status 200
+[2026-06-16 06:55:37.349 INF] [050d8b9d-f670-474c-8e71-ad31b4230271] [Perf] GET /api/v1/recruitment/stats -> 200 in 53.10ms
+[2026-06-16 06:55:37.349 INF] [050d8b9d-f670-474c-8e71-ad31b4230271] [CorrelationId: 050d8b9d-f670-474c-8e71-ad31b4230271] GET /api/v1/recruitment/stats completed in 53.25ms with status 200
+[2026-06-16 06:55:43.729 INF] [535040a5-08cd-47f0-9390-fbf632dc03ba] [Perf] GET /api/v1/recruitment/job-postings -> 200 in 15.92ms
+[2026-06-16 06:55:43.729 INF] [535040a5-08cd-47f0-9390-fbf632dc03ba] [CorrelationId: 535040a5-08cd-47f0-9390-fbf632dc03ba] GET /api/v1/recruitment/job-postings completed in 16.30ms with status 200
+[2026-06-16 06:55:54.992 INF] [8690ebaa-4082-43e9-b56c-6f4606efb9fe] [Perf] GET /api/notifications/unread-count -> 200 in 4.91ms
+[2026-06-16 06:55:54.992 INF] [c313a236-8f3b-45f4-b8fe-e9b3e78f8642] [Perf] GET /api/notifications -> 200 in 4.90ms
+[2026-06-16 06:55:54.992 INF] [8690ebaa-4082-43e9-b56c-6f4606efb9fe] [CorrelationId: 8690ebaa-4082-43e9-b56c-6f4606efb9fe] GET /api/notifications/unread-count completed in 5.00ms with status 200
+[2026-06-16 06:55:54.992 INF] [c313a236-8f3b-45f4-b8fe-e9b3e78f8642] [CorrelationId: c313a236-8f3b-45f4-b8fe-e9b3e78f8642] GET /api/notifications completed in 5.00ms with status 200
+[2026-06-16 06:55:55.001 INF] [1f347583-d328-427e-a1a4-7daafd6eb948] [Perf] GET /api/v1/recruitment/job-postings -> 200 in 9.52ms
+[2026-06-16 06:55:55.002 INF] [1f347583-d328-427e-a1a4-7daafd6eb948] [CorrelationId: 1f347583-d328-427e-a1a4-7daafd6eb948] GET /api/v1/recruitment/job-postings completed in 10.03ms with status 200
+[2026-06-16 06:56:31.387 INF] [957e1715-3f9d-4e1a-85c7-1695052094a4] [Perf] GET /api/notifications/unread-count -> 200 in 4.20ms
+[2026-06-16 06:56:31.387 INF] [957e1715-3f9d-4e1a-85c7-1695052094a4] [CorrelationId: 957e1715-3f9d-4e1a-85c7-1695052094a4] GET /api/notifications/unread-count completed in 4.31ms with status 200
+[2026-06-16 06:56:31.387 INF] [8b884139-2312-4ac7-a777-0d0ddc14b948] [Perf] GET /api/notifications -> 200 in 4.37ms
+[2026-06-16 06:56:31.387 INF] [8b884139-2312-4ac7-a777-0d0ddc14b948] [CorrelationId: 8b884139-2312-4ac7-a777-0d0ddc14b948] GET /api/notifications completed in 4.84ms with status 200
+[2026-06-16 06:56:31.390 INF] [2a2a3233-00ab-46b5-80ad-233b52f1180e] [Perf] GET /api/v1/recruitment/job-postings -> 200 in 3.54ms
+[2026-06-16 06:56:31.390 INF] [2a2a3233-00ab-46b5-80ad-233b52f1180e] [CorrelationId: 2a2a3233-00ab-46b5-80ad-233b52f1180e] GET /api/v1/recruitment/job-postings completed in 3.66ms with status 200
+[2026-06-16 07:14:56.058 INF] [60470a0e-4495-48ad-ad9c-25cdeea97c79] [Perf] GET /api/v1/recruitment/stats -> 200 in 42.53ms
+[2026-06-16 07:14:56.059 INF] [60470a0e-4495-48ad-ad9c-25cdeea97c79] [CorrelationId: 60470a0e-4495-48ad-ad9c-25cdeea97c79] GET /api/v1/recruitment/stats completed in 43.70ms with status 200
+[2026-06-16 07:15:53.337 INF] [eede8021-b3f0-46a1-9c4e-d7c78e9bd327] [Perf] GET /api/notifications -> 200 in 11.81ms
+[2026-06-16 07:15:53.337 INF] [eede8021-b3f0-46a1-9c4e-d7c78e9bd327] [CorrelationId: eede8021-b3f0-46a1-9c4e-d7c78e9bd327] GET /api/notifications completed in 12.18ms with status 200
+[2026-06-16 07:15:53.341 INF] [64b5e5be-2ee7-4cc4-beca-32da3162e426] [Perf] GET /api/notifications/unread-count -> 200 in 2.92ms
+[2026-06-16 07:15:53.341 INF] [64b5e5be-2ee7-4cc4-beca-32da3162e426] [CorrelationId: 64b5e5be-2ee7-4cc4-beca-32da3162e426] GET /api/notifications/unread-count completed in 3.03ms with status 200
+[2026-06-16 07:15:53.362 INF] [b85326de-4c0b-41ed-9ac6-ee2e7c8948e8] [Perf] GET /api/v1/recruitment/stats -> 200 in 19.72ms
+[2026-06-16 07:15:53.362 INF] [b85326de-4c0b-41ed-9ac6-ee2e7c8948e8] [CorrelationId: b85326de-4c0b-41ed-9ac6-ee2e7c8948e8] GET /api/v1/recruitment/stats completed in 19.83ms with status 200
+[2026-06-16 07:17:19.862 INF] [cba20ddc-c1c4-435d-b60d-526d40506dbe] [Perf] GET /api/v1/recruitment/job-postings -> 200 in 4.51ms
+[2026-06-16 07:17:19.862 INF] [cba20ddc-c1c4-435d-b60d-526d40506dbe] [CorrelationId: cba20ddc-c1c4-435d-b60d-526d40506dbe] GET /api/v1/recruitment/job-postings completed in 4.95ms with status 200
+[2026-06-16 08:49:20.134 INF] [] 1 servers were removed due to timeout
+[2026-06-16 08:49:33.926 WRN] [] Server macbookpro:63140:38f174e8 was considered dead by other servers, restarting...
+[2026-06-16 08:49:33.926 INF] [] Server macbookpro:63140:38f174e8 caught restart signal...
+[2026-06-16 08:49:33.927 WRN] [] Server macbookpro:63140:38f174e8 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-16 08:49:33.948 INF] [] Server macbookpro:63140:38f174e8 successfully reported itself as stopped in 4.1993 ms
+[2026-06-16 08:49:33.948 INF] [] Server macbookpro:63140:38f174e8 has been stopped in total 20.721 ms
+[2026-06-16 08:49:33.954 INF] [] Server macbook-pro:63140:77c6af51 successfully announced in 6.1281 ms
+[2026-06-16 08:49:33.954 INF] [] Server macbook-pro:63140:77c6af51 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-16 08:49:33.958 INF] [] Server macbook-pro:63140:77c6af51 all the dispatchers started
+[2026-06-16 09:03:41.329 INF] [327b6587-cd80-4ae1-b496-e7ffce63a01a] [Perf] GET /api/notifications -> 200 in 24.06ms
+[2026-06-16 09:03:41.330 INF] [327b6587-cd80-4ae1-b496-e7ffce63a01a] [CorrelationId: 327b6587-cd80-4ae1-b496-e7ffce63a01a] GET /api/notifications completed in 24.44ms with status 200
+[2026-06-16 09:03:41.368 INF] [ecb82bf7-8e98-4483-8f8e-291a7ee4ae27] [Perf] GET /api/notifications/unread-count -> 200 in 48.37ms
+[2026-06-16 09:03:41.368 INF] [ecb82bf7-8e98-4483-8f8e-291a7ee4ae27] [CorrelationId: ecb82bf7-8e98-4483-8f8e-291a7ee4ae27] GET /api/notifications/unread-count completed in 48.50ms with status 200
+[2026-06-16 09:03:41.368 INF] [761d78d3-4832-47c8-9783-d8d233f5e66d] [Perf] GET /api/v1/recruitment/job-postings -> 200 in 48.22ms
+[2026-06-16 09:03:41.368 INF] [761d78d3-4832-47c8-9783-d8d233f5e66d] [CorrelationId: 761d78d3-4832-47c8-9783-d8d233f5e66d] GET /api/v1/recruitment/job-postings completed in 48.41ms with status 200
+[2026-06-16 09:03:41.389 ERR] [8a1ab49f-d454-4482-bc40-62bd878867f9] Failed executing DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = DateTime), @p3='?' (Size = 4000), @p4='?' (DbType = Guid), @p5='?' (Size = 100), @p6='?' (Size = 45), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 255), @p10='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [ActionType], [CreatedAt], [Description], [EntityId], [EntityName], [IpAddress], [NewValues], [OldValues], [UserAgent], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-06-16 09:03:41.391 ERR] [8a1ab49f-d454-4482-bc40-62bd878867f9] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:18dcd231-4db5-4b2b-8fdb-2c64e29d8170
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:18dcd231-4db5-4b2b-8fdb-2c64e29d8170
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-16 09:03:41.392 INF] [8a1ab49f-d454-4482-bc40-62bd878867f9] [Perf] GET /api/department -> 200 in 72.98ms
+[2026-06-16 09:03:41.392 ERR] [8a1ab49f-d454-4482-bc40-62bd878867f9] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<Department>()
+    .LeftJoin(
+        inner: DbSet<College>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d, "CollegeId"), 
+        innerKeySelector: c => EF.Property<Guid?>(c, "CollegeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<Department, College>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<EmployeeDetails>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer, "HeadId"), 
+        innerKeySelector: e => EF.Property<Guid?>(e, "EmployeeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<Department>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer.Outer, "ParentDepartmentId"), 
+        innerKeySelector: d0 => EF.Property<Guid?>(d0, "Id"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>, Department>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Select(d => Include(
+        Entity: Include(
+            Entity: Include(
+                Entity: d.Outer.Outer.Outer, 
+                Navigation: College, d.Outer.Outer.Inner, 
+            Navigation: Head, d.Outer.Inner, 
+        Navigation: ParentDepartment, d.Inner)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/department | Client IP: ::1
+[2026-06-16 09:06:30.867 INF] [c868cecf-0a23-4c82-964f-10df84908d25] [Perf] GET /api/notifications/unread-count -> 200 in 7.15ms
+[2026-06-16 09:06:30.867 INF] [c868cecf-0a23-4c82-964f-10df84908d25] [CorrelationId: c868cecf-0a23-4c82-964f-10df84908d25] GET /api/notifications/unread-count completed in 7.27ms with status 200
+[2026-06-16 09:06:30.868 INF] [e62eb595-5581-4c2f-b3e0-5aa1c0f6f170] [Perf] GET /api/v1/recruitment/job-postings -> 200 in 7.17ms
+[2026-06-16 09:06:30.868 INF] [e62eb595-5581-4c2f-b3e0-5aa1c0f6f170] [CorrelationId: e62eb595-5581-4c2f-b3e0-5aa1c0f6f170] GET /api/v1/recruitment/job-postings completed in 7.27ms with status 200
+[2026-06-16 09:06:30.868 INF] [b31cca14-03e2-414e-aef5-a8129f73233f] [Perf] GET /api/notifications -> 200 in 7.55ms
+[2026-06-16 09:06:30.868 INF] [b31cca14-03e2-414e-aef5-a8129f73233f] [CorrelationId: b31cca14-03e2-414e-aef5-a8129f73233f] GET /api/notifications completed in 7.92ms with status 200
+[2026-06-16 09:06:30.887 ERR] [e39c7ddd-fdab-48bf-9be5-7ae4ee45fa61] Failed executing DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = DateTime), @p3='?' (Size = 4000), @p4='?' (DbType = Guid), @p5='?' (Size = 100), @p6='?' (Size = 45), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 255), @p10='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [ActionType], [CreatedAt], [Description], [EntityId], [EntityName], [IpAddress], [NewValues], [OldValues], [UserAgent], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-06-16 09:06:30.887 ERR] [e39c7ddd-fdab-48bf-9be5-7ae4ee45fa61] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:fa93ac34-aa68-47f4-bdbe-30d382e2a235
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:fa93ac34-aa68-47f4-bdbe-30d382e2a235
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-16 09:06:30.888 INF] [e39c7ddd-fdab-48bf-9be5-7ae4ee45fa61] [Perf] GET /api/department -> 200 in 27.58ms
+[2026-06-16 09:06:30.888 ERR] [e39c7ddd-fdab-48bf-9be5-7ae4ee45fa61] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<Department>()
+    .LeftJoin(
+        inner: DbSet<College>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d, "CollegeId"), 
+        innerKeySelector: c => EF.Property<Guid?>(c, "CollegeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<Department, College>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<EmployeeDetails>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer, "HeadId"), 
+        innerKeySelector: e => EF.Property<Guid?>(e, "EmployeeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<Department>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer.Outer, "ParentDepartmentId"), 
+        innerKeySelector: d0 => EF.Property<Guid?>(d0, "Id"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>, Department>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Select(d => Include(
+        Entity: Include(
+            Entity: Include(
+                Entity: d.Outer.Outer.Outer, 
+                Navigation: College, d.Outer.Outer.Inner, 
+            Navigation: Head, d.Outer.Inner, 
+        Navigation: ParentDepartment, d.Inner)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/department | Client IP: ::1
+[2026-06-16 09:07:18.864 INF] [3eca8731-1fd4-403f-8c4d-9fa29a2ea1e0] [Perf] GET /api/notifications/unread-count -> 200 in 5.30ms
+[2026-06-16 09:07:18.864 INF] [1aeeeaa6-2404-4821-8e05-8d2157c1aeab] [Perf] GET /api/notifications -> 200 in 5.46ms
+[2026-06-16 09:07:18.864 INF] [3eca8731-1fd4-403f-8c4d-9fa29a2ea1e0] [CorrelationId: 3eca8731-1fd4-403f-8c4d-9fa29a2ea1e0] GET /api/notifications/unread-count completed in 5.42ms with status 200
+[2026-06-16 09:07:18.864 INF] [1aeeeaa6-2404-4821-8e05-8d2157c1aeab] [CorrelationId: 1aeeeaa6-2404-4821-8e05-8d2157c1aeab] GET /api/notifications completed in 5.60ms with status 200
+[2026-06-16 09:07:18.880 INF] [b91503ec-787b-4de2-bcc3-a7e1e5b2d43a] [Perf] GET /api/v1/recruitment/job-postings -> 200 in 8.11ms
+[2026-06-16 09:07:18.880 INF] [b91503ec-787b-4de2-bcc3-a7e1e5b2d43a] [CorrelationId: b91503ec-787b-4de2-bcc3-a7e1e5b2d43a] GET /api/v1/recruitment/job-postings completed in 8.22ms with status 200
+[2026-06-16 09:07:18.882 ERR] [4cb409d4-b151-45ad-bcf6-882d99bbe0a6] Failed executing DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = DateTime), @p3='?' (Size = 4000), @p4='?' (DbType = Guid), @p5='?' (Size = 100), @p6='?' (Size = 45), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 255), @p10='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [ActionType], [CreatedAt], [Description], [EntityId], [EntityName], [IpAddress], [NewValues], [OldValues], [UserAgent], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-06-16 09:07:18.883 ERR] [4cb409d4-b151-45ad-bcf6-882d99bbe0a6] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:563aaaed-de27-4d90-9ba3-38422062f42d
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:563aaaed-de27-4d90-9ba3-38422062f42d
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-16 09:07:18.884 INF] [4cb409d4-b151-45ad-bcf6-882d99bbe0a6] [Perf] GET /api/department -> 200 in 9.23ms
+[2026-06-16 09:07:18.884 ERR] [4cb409d4-b151-45ad-bcf6-882d99bbe0a6] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<Department>()
+    .LeftJoin(
+        inner: DbSet<College>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d, "CollegeId"), 
+        innerKeySelector: c => EF.Property<Guid?>(c, "CollegeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<Department, College>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<EmployeeDetails>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer, "HeadId"), 
+        innerKeySelector: e => EF.Property<Guid?>(e, "EmployeeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<Department>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer.Outer, "ParentDepartmentId"), 
+        innerKeySelector: d0 => EF.Property<Guid?>(d0, "Id"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>, Department>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Select(d => Include(
+        Entity: Include(
+            Entity: Include(
+                Entity: d.Outer.Outer.Outer, 
+                Navigation: College, d.Outer.Outer.Inner, 
+            Navigation: Head, d.Outer.Inner, 
+        Navigation: ParentDepartment, d.Inner)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/department | Client IP: ::1
+[2026-06-16 09:08:32.869 ERR] [be1d289a-ec5b-4b18-8b30-daaab76daf59] Failed executing DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = DateTime), @p3='?' (Size = 4000), @p4='?' (DbType = Guid), @p5='?' (Size = 100), @p6='?' (Size = 45), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 255), @p10='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [ActionType], [CreatedAt], [Description], [EntityId], [EntityName], [IpAddress], [NewValues], [OldValues], [UserAgent], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-06-16 09:08:32.870 ERR] [be1d289a-ec5b-4b18-8b30-daaab76daf59] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:563aaaed-de27-4d90-9ba3-38422062f42d
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:563aaaed-de27-4d90-9ba3-38422062f42d
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-16 09:08:32.871 INF] [be1d289a-ec5b-4b18-8b30-daaab76daf59] [Perf] GET /api/department -> 200 in 7.53ms
+[2026-06-16 09:08:32.871 ERR] [be1d289a-ec5b-4b18-8b30-daaab76daf59] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<Department>()
+    .LeftJoin(
+        inner: DbSet<College>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d, "CollegeId"), 
+        innerKeySelector: c => EF.Property<Guid?>(c, "CollegeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<Department, College>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<EmployeeDetails>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer, "HeadId"), 
+        innerKeySelector: e => EF.Property<Guid?>(e, "EmployeeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<Department>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer.Outer, "ParentDepartmentId"), 
+        innerKeySelector: d0 => EF.Property<Guid?>(d0, "Id"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>, Department>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Select(d => Include(
+        Entity: Include(
+            Entity: Include(
+                Entity: d.Outer.Outer.Outer, 
+                Navigation: College, d.Outer.Outer.Inner, 
+            Navigation: Head, d.Outer.Inner, 
+        Navigation: ParentDepartment, d.Inner)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/department | Client IP: ::1
+[2026-06-16 09:08:32.913 INF] [4a462f31-691b-446d-b8bb-2ac528ddfb88] [Perf] GET /api/auth/users -> 200 in 49.72ms
+[2026-06-16 09:08:32.913 INF] [4a462f31-691b-446d-b8bb-2ac528ddfb88] [CorrelationId: 4a462f31-691b-446d-b8bb-2ac528ddfb88] GET /api/auth/users completed in 49.87ms with status 200
+[2026-06-16 09:08:50.358 INF] [de92da68-7c9b-442c-abce-e1149db8fff3] [Perf] POST /api/department -> 200 in 64.87ms
+[2026-06-16 09:08:50.358 INF] [de92da68-7c9b-442c-abce-e1149db8fff3] [CorrelationId: de92da68-7c9b-442c-abce-e1149db8fff3] POST /api/department completed in 64.99ms with status 200
+[2026-06-16 09:08:50.366 ERR] [0e3505c7-f05f-467e-8f38-7a3c8a290b97] Failed executing DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = DateTime), @p3='?' (Size = 4000), @p4='?' (DbType = Guid), @p5='?' (Size = 100), @p6='?' (Size = 45), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 255), @p10='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [ActionType], [CreatedAt], [Description], [EntityId], [EntityName], [IpAddress], [NewValues], [OldValues], [UserAgent], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-06-16 09:08:50.367 ERR] [0e3505c7-f05f-467e-8f38-7a3c8a290b97] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:563aaaed-de27-4d90-9ba3-38422062f42d
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:563aaaed-de27-4d90-9ba3-38422062f42d
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-16 09:08:50.367 INF] [0e3505c7-f05f-467e-8f38-7a3c8a290b97] [Perf] GET /api/department -> 200 in 4.90ms
+[2026-06-16 09:08:50.367 ERR] [0e3505c7-f05f-467e-8f38-7a3c8a290b97] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<Department>()
+    .LeftJoin(
+        inner: DbSet<College>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d, "CollegeId"), 
+        innerKeySelector: c => EF.Property<Guid?>(c, "CollegeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<Department, College>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<EmployeeDetails>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer, "HeadId"), 
+        innerKeySelector: e => EF.Property<Guid?>(e, "EmployeeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<Department>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer.Outer, "ParentDepartmentId"), 
+        innerKeySelector: d0 => EF.Property<Guid?>(d0, "Id"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>, Department>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Select(d => Include(
+        Entity: Include(
+            Entity: Include(
+                Entity: d.Outer.Outer.Outer, 
+                Navigation: College, d.Outer.Outer.Inner, 
+            Navigation: Head, d.Outer.Inner, 
+        Navigation: ParentDepartment, d.Inner)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/department | Client IP: ::1
+[2026-06-16 09:09:17.398 ERR] [b1c599ee-b053-44f2-8438-fc2f6070b489] Failed executing DbCommand (13ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = DateTime), @p3='?' (Size = 4000), @p4='?' (DbType = Guid), @p5='?' (Size = 100), @p6='?' (Size = 45), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 255), @p10='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [ActionType], [CreatedAt], [Description], [EntityId], [EntityName], [IpAddress], [NewValues], [OldValues], [UserAgent], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-06-16 09:09:17.398 ERR] [b1c599ee-b053-44f2-8438-fc2f6070b489] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3c42a696-1db8-4722-8984-109ef7cc3dd9
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3c42a696-1db8-4722-8984-109ef7cc3dd9
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-16 09:09:17.399 INF] [b1c599ee-b053-44f2-8438-fc2f6070b489] [Perf] GET /api/department -> 200 in 17.86ms
+[2026-06-16 09:09:17.399 ERR] [b1c599ee-b053-44f2-8438-fc2f6070b489] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<Department>()
+    .LeftJoin(
+        inner: DbSet<College>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d, "CollegeId"), 
+        innerKeySelector: c => EF.Property<Guid?>(c, "CollegeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<Department, College>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<EmployeeDetails>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer, "HeadId"), 
+        innerKeySelector: e => EF.Property<Guid?>(e, "EmployeeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<Department>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer.Outer, "ParentDepartmentId"), 
+        innerKeySelector: d0 => EF.Property<Guid?>(d0, "Id"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>, Department>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Select(d => Include(
+        Entity: Include(
+            Entity: Include(
+                Entity: d.Outer.Outer.Outer, 
+                Navigation: College, d.Outer.Outer.Inner, 
+            Navigation: Head, d.Outer.Inner, 
+        Navigation: ParentDepartment, d.Inner)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/department | Client IP: ::1
+[2026-06-16 09:09:17.404 INF] [2fe19b25-48b8-4fdc-83a4-9dd402ce78d8] [Perf] GET /api/auth/users -> 200 in 22.42ms
+[2026-06-16 09:09:17.404 INF] [2fe19b25-48b8-4fdc-83a4-9dd402ce78d8] [CorrelationId: 2fe19b25-48b8-4fdc-83a4-9dd402ce78d8] GET /api/auth/users completed in 22.50ms with status 200
+[2026-06-16 09:14:18.184 INF] [ba6cf983-9313-4a97-8c39-9172f5bc1528] [Perf] POST /api/department -> 200 in 51.78ms
+[2026-06-16 09:14:18.184 INF] [ba6cf983-9313-4a97-8c39-9172f5bc1528] [CorrelationId: ba6cf983-9313-4a97-8c39-9172f5bc1528] POST /api/department completed in 51.99ms with status 200
+[2026-06-16 09:14:18.200 ERR] [50ebf5b8-96ec-4498-bd2d-188585bed0c9] Failed executing DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = DateTime), @p3='?' (Size = 4000), @p4='?' (DbType = Guid), @p5='?' (Size = 100), @p6='?' (Size = 45), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 255), @p10='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [ActionType], [CreatedAt], [Description], [EntityId], [EntityName], [IpAddress], [NewValues], [OldValues], [UserAgent], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-06-16 09:14:18.201 ERR] [50ebf5b8-96ec-4498-bd2d-188585bed0c9] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:43314a37-4af8-4f66-adfd-b041b303e55c
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'WUIAM.dbo.AuditLogs', column 'Description'. Truncated value: 'Read action on Department failed: The LINQ expression ''DbSet<Department>()
+    .LeftJoin(
+        i'.
+The statement has been terminated.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:43314a37-4af8-4f66-adfd-b041b303e55c
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-16 09:14:18.202 INF] [50ebf5b8-96ec-4498-bd2d-188585bed0c9] [Perf] GET /api/department -> 200 in 10.18ms
+[2026-06-16 09:14:18.202 ERR] [50ebf5b8-96ec-4498-bd2d-188585bed0c9] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<Department>()
+    .LeftJoin(
+        inner: DbSet<College>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d, "CollegeId"), 
+        innerKeySelector: c => EF.Property<Guid?>(c, "CollegeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<Department, College>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<EmployeeDetails>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer, "HeadId"), 
+        innerKeySelector: e => EF.Property<Guid?>(e, "EmployeeId"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>(
+            Outer = o, 
+            Inner = i
+        ))
+    .LeftJoin(
+        inner: DbSet<Department>(), 
+        outerKeySelector: d => EF.Property<Guid?>(d.Outer.Outer, "ParentDepartmentId"), 
+        innerKeySelector: d0 => EF.Property<Guid?>(d0, "Id"), 
+        resultSelector: (o, i) => new TransparentIdentifier<TransparentIdentifier<TransparentIdentifier<Department, College>, EmployeeDetails>, Department>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Select(d => Include(
+        Entity: Include(
+            Entity: Include(
+                Entity: d.Outer.Outer.Outer, 
+                Navigation: College, d.Outer.Outer.Inner, 
+            Navigation: Head, d.Outer.Inner, 
+        Navigation: ParentDepartment, d.Inner)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/department | Client IP: ::1
+[2026-06-16 09:17:09.251 INF] [] Server macbook-pro:63140:77c6af51 caught stopping signal...
+[2026-06-16 09:17:09.517 INF] [] Server macbook-pro:63140:77c6af51 All dispatchers stopped
+[2026-06-16 09:17:09.528 INF] [] Server macbook-pro:63140:77c6af51 successfully reported itself as stopped in 10.6626 ms
+[2026-06-16 09:17:09.528 INF] [] Server macbook-pro:63140:77c6af51 has been stopped in total 276.7738 ms

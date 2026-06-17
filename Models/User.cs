@@ -36,7 +36,13 @@ namespace WUIAM
 
         public string? ResetPasswordToken { get; set; }
 
+        public bool IsActive { get; set; } = true;
         public bool IsDefault { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool IsLocked { get; set; }
+        public bool IsSuspended { get; set; }
+        public int FailedLoginAttempts { get; set; }
+        public DateTime? LockedUntil { get; set; }
 
         public DateTime? DateLastLoggedIn { get; set; }
 

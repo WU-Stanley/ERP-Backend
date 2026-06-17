@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WUIAM.DTOs;
+using WUIAM.Enums;
 using WUIAM.Interfaces;
 using WUIAM.Models;
 using WUIAM.Services;
@@ -39,6 +40,7 @@ namespace WUIAM.Controllers
         }
 
         // POST: api/PublicHoliday  
+        [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
         [HttpPost]
         public async Task<ActionResult<ApiResponse<PublicHoliday>>> CreatePublicHoliday(PublicHolidayDto publicHolidayDto)
         {
@@ -47,6 +49,7 @@ namespace WUIAM.Controllers
         }
 
         // PUT: api/PublicHoliday/5 
+        [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
         [HttpPut("{id}")]
         public async Task<ActionResult<ApiResponse<PublicHoliday>>> UpdatePublicHoliday(Guid id, PublicHolidayDto publicHolidayDto)
         {
@@ -59,6 +62,7 @@ namespace WUIAM.Controllers
         }
 
         // DELETE: api/PublicHoliday/5
+        [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
         [HttpDelete("{id}")]
         public async Task<ActionResult<ApiResponse<dynamic>>> DeletePublicHoliday(Guid id)
         {

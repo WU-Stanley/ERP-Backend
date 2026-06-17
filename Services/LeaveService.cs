@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -89,7 +89,10 @@ namespace WUIAM.Services
             if (policy == null)
                 return ApiResponse<LeaveRequest>.Failure("No leave policy found for this leave type.");
 
-            int requestedDays = await _leaveDateCalculator.CalculateWorkingDaysAsync(dto.StartDate, dto.EndDate); // Optional holiday exclusion
+            int requestedDays = await _leaveDateCalculator.CalculateWorkingDaysAsync(
+                dto.StartDate,
+                dto.EndDate,
+                policy.IncludePublicHolidays);
             if (requestedDays <= 0)
                 return ApiResponse<LeaveRequest>.Failure("Invalid leave duration.");
 
@@ -181,8 +184,11 @@ namespace WUIAM.Services
         {
             var now = DateTime.UtcNow;
 
+            // First check if the user IS the actual approver
+            if (await IsActualApprover(userId, step))
+                return true;
 
-            // Check active delegations
+            // Then check active delegations
             var delegations = await _dbContext.ApprovalDelegations
                 .Where(d =>
                     d.StartDate <= now && d.EndDate >= now)
@@ -199,6 +205,32 @@ namespace WUIAM.Services
             return isDelegate;
         }
 
+        private async Task<bool> IsActualApprover(Guid userId, ApprovalStep step)
+        {
+            // Check if the user matches the approver criteria
+            switch (step.ApproverType)
+            {
+                case "USER":
+                    return Guid.TryParse(step.ApproverValue, out var uid) && uid == userId;
+
+                case "ROLE":
+                    var usersWithRole = await _userRepo.GetUsersByRoleAsync(step.ApproverValue);
+                    return usersWithRole.Any(u => u.Id == userId);
+
+                case "MANAGER":
+                    // Check if this user is the head of any active department
+                    var deptHeads = await _dbContext.EmploymentDetails
+                        .Where(ed => ed.IsActive && ed.Department != null && ed.Department.HeadId == userId)
+                        .Select(ed => ed.Employee!.UserId)
+                        .Distinct()
+                        .ToListAsync();
+                    return deptHeads.Contains(userId);
+
+                default:
+                    return false;
+            }
+        }
+
         public async Task<IEnumerable<LeaveRequest>> GetLeaveRequestsByUserAsync(Guid userId)
         {
             return await _leaveRequestRepo.GetByUserIdAsync(userId);
@@ -211,9 +243,9 @@ namespace WUIAM.Services
                 return ApiResponse<LeaveRequestApproval>.Failure("Invalid or missing user identity.");
 
             var approval = await _approvalRepo.GetByIdAsync(approvalId);
-            var isDelegate = await IsUserApprover(userId, approval!.ApprovalStep!);
-            if ((approval == null))
+            if (approval == null || approval.ApprovalStep == null)
                 return ApiResponse<LeaveRequestApproval>.Failure("Not authorized or approval step not found.");
+            var isDelegate = await IsUserApprover(userId, approval.ApprovalStep);
             if (approval.ApproverPersonId != userId && !isDelegate)
                 return ApiResponse<LeaveRequestApproval>.Failure("Not authorized or approval step not found.");
 
@@ -221,8 +253,11 @@ namespace WUIAM.Services
                 return ApiResponse<LeaveRequestApproval>.Failure("This step has already been processed.");
             if (approval.ApprovalStep!.StepOrder != 1)
             {
-                var previousApproval = await _approvalRepo.GetByStepOrderAndApprovalFlowIdAsync(approval.ApprovalStep.ApprovalFlowId, approval.ApprovalStep.StepOrder - 1);
-                // var previousApproval = await _approvalStepRepo.GetByStepOrderAndApprovalFlowIdAsync(approval.ApprovalStep.ApprovalFlowId, approval.ApprovalStep.StepOrder - 1);
+                // Scope previous-step check to the SAME leave request, not just the same approval flow
+                var requestApprovals = await _approvalRepo.GetByLeaveRequestIdAsync(approval.LeaveRequestId);
+                var previousApproval = requestApprovals.FirstOrDefault(a =>
+                    a.LeaveRequestId == approval.LeaveRequestId &&
+                    a.ApprovalStep?.StepOrder == approval.ApprovalStep.StepOrder - 1);
                 if (previousApproval == null || previousApproval.Status != StatusConstants.Approved)
                     return ApiResponse<LeaveRequestApproval>.Failure("Previous step must be approved before processing this step.");
             }

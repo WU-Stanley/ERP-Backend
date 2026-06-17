@@ -78,9 +78,20 @@ namespace WUIAM.Services
             return ApiResponse<IEnumerable<LeaveRequestApproval?>>.Success("Leave requests found!", requestApprovals);
         }
 
-        public Task<ApiResponse<LeaveRequestApproval>?> GetByStepOrderAndApprovalFlowIdAsync(Guid approvalFlowId, int stepOrder)
+        public async Task<ApiResponse<LeaveRequestApproval>?> GetByStepOrderAndApprovalFlowIdAsync(Guid approvalFlowId, int stepOrder)
         {
-            throw new NotImplementedException();
+            if (approvalFlowId == Guid.Empty || stepOrder <= 0)
+            {
+                return ApiResponse<LeaveRequestApproval>.Failure("Approval flow ID and step order are required.");
+            }
+
+            var approval = await _leaveReqApprovalRepo.GetByStepOrderAndApprovalFlowIdAsync(approvalFlowId, stepOrder);
+            if (approval == null)
+            {
+                return ApiResponse<LeaveRequestApproval>.Failure("No approval found for the requested flow and step.");
+            }
+
+            return ApiResponse<LeaveRequestApproval>.Success("Approval found!", approval);
         }
 
         public async Task<ApiResponse<IEnumerable<LeaveRequestApproval>>> GetLeaveRequestApprovals(Guid leaveRequestId)

@@ -1,0 +1,151 @@
+[2026-06-13 10:11:07.032 WRN] [] Entity 'Department' has a global query filter defined and is the required end of a relationship with the entity 'EmploymentDetails'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+[2026-06-13 10:11:07.480 INF] [] Start installing Hangfire SQL objects...
+[2026-06-13 10:11:07.517 INF] [] Hangfire SQL objects installed.
+[2026-06-13 10:11:07.769 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.
+[2026-06-13 10:11:07.907 INF] [] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@WUIAM'
+[2026-06-13 10:11:07.907 INF] [] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2026-06-13 10:11:07.907 INF] [] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-06-13 10:11:07.921 INF] [] Server macbookpro:22690:0dc091d3 successfully announced in 8.4967 ms
+[2026-06-13 10:11:07.923 INF] [] Server macbookpro:22690:0dc091d3 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-13 10:11:07.927 INF] [] Server macbookpro:22690:0dc091d3 all the dispatchers started
+[2026-06-13 10:11:24.053 WRN] [403e2eb0-ea19-48d5-9566-9754ae053ffb] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-13 10:11:24.164 ERR] [403e2eb0-ea19-48d5-9566-9754ae053ffb] [CorrelationId: 403e2eb0-ea19-48d5-9566-9754ae053ffb] Unhandled exception in request POST /api/auth/microsoft-login
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/PerformanceMetricsMiddleware.cs:line 67
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context)
+   at WUIAM.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/CorrelationIdMiddleware.cs:line 48
+[2026-06-13 10:11:24.167 INF] [403e2eb0-ea19-48d5-9566-9754ae053ffb] [CorrelationId: 403e2eb0-ea19-48d5-9566-9754ae053ffb] POST /api/auth/microsoft-login completed in 1395.15ms with status 200
+[2026-06-13 10:11:24.168 WRN] [403e2eb0-ea19-48d5-9566-9754ae053ffb] [CorrelationId: 403e2eb0-ea19-48d5-9566-9754ae053ffb] SLOW REQUEST: POST /api/auth/microsoft-login took 1395.15ms (threshold: 1000ms)
+[2026-06-13 10:11:24.169 ERR] [403e2eb0-ea19-48d5-9566-9754ae053ffb] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/PerformanceMetricsMiddleware.cs:line 67
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context)
+   at WUIAM.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/CorrelationIdMiddleware.cs:line 48
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-06-13 10:11:24.169 WRN] [403e2eb0-ea19-48d5-9566-9754ae053ffb] The response has already started, the error page middleware will not be executed.
+[2026-06-13 10:11:24.170 ERR] [403e2eb0-ea19-48d5-9566-9754ae053ffb] Connection id "0HNM95EQ6CKFT", Request id "0HNM95EQ6CKFT:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/PerformanceMetricsMiddleware.cs:line 67
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context)
+   at WUIAM.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/CorrelationIdMiddleware.cs:line 48
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+[2026-06-13 10:11:26.661 ERR] [4b9f12f0-ca2e-472d-9f08-454af7901966] [CorrelationId: 4b9f12f0-ca2e-472d-9f08-454af7901966] Unhandled exception in request POST /api/auth/microsoft-login
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/PerformanceMetricsMiddleware.cs:line 67
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context)
+   at WUIAM.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/CorrelationIdMiddleware.cs:line 48
+[2026-06-13 10:11:26.661 INF] [4b9f12f0-ca2e-472d-9f08-454af7901966] [CorrelationId: 4b9f12f0-ca2e-472d-9f08-454af7901966] POST /api/auth/microsoft-login completed in 450.09ms with status 200
+[2026-06-13 10:11:26.662 ERR] [4b9f12f0-ca2e-472d-9f08-454af7901966] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/PerformanceMetricsMiddleware.cs:line 67
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context)
+   at WUIAM.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/CorrelationIdMiddleware.cs:line 48
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-06-13 10:11:26.662 WRN] [4b9f12f0-ca2e-472d-9f08-454af7901966] The response has already started, the error page middleware will not be executed.
+[2026-06-13 10:11:26.662 ERR] [4b9f12f0-ca2e-472d-9f08-454af7901966] Connection id "0HNM95EQ6CKFU", Request id "0HNM95EQ6CKFU:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/PerformanceMetricsMiddleware.cs:line 67
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context)
+   at WUIAM.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/CorrelationIdMiddleware.cs:line 48
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+[2026-06-13 10:11:31.128 ERR] [36eb056a-ba85-4fb7-9f50-b1f7bcba6729] [CorrelationId: 36eb056a-ba85-4fb7-9f50-b1f7bcba6729] Unhandled exception in request POST /api/auth/microsoft-login
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/PerformanceMetricsMiddleware.cs:line 67
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context)
+   at WUIAM.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/CorrelationIdMiddleware.cs:line 48
+[2026-06-13 10:11:31.129 INF] [36eb056a-ba85-4fb7-9f50-b1f7bcba6729] [CorrelationId: 36eb056a-ba85-4fb7-9f50-b1f7bcba6729] POST /api/auth/microsoft-login completed in 424.72ms with status 200
+[2026-06-13 10:11:31.129 ERR] [36eb056a-ba85-4fb7-9f50-b1f7bcba6729] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/PerformanceMetricsMiddleware.cs:line 67
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context)
+   at WUIAM.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/CorrelationIdMiddleware.cs:line 48
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-06-13 10:11:31.129 WRN] [36eb056a-ba85-4fb7-9f50-b1f7bcba6729] The response has already started, the error page middleware will not be executed.
+[2026-06-13 10:11:31.129 ERR] [36eb056a-ba85-4fb7-9f50-b1f7bcba6729] Connection id "0HNM95EQ6CKFV", Request id "0HNM95EQ6CKFV:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/PerformanceMetricsMiddleware.cs:line 67
+   at WUIAM.Middleware.PerformanceMetricsMiddleware.InvokeAsync(HttpContext context)
+   at WUIAM.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in /Users/mac/Apps/ERP/ERP-Backend/Middleware/CorrelationIdMiddleware.cs:line 48
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+[2026-06-13 10:31:13.983 WRN] [5bb9ded0-e92a-4fb1-a340-961418b7e8fe] [Perf] POST /api/auth/microsoft-login -> 200 in 1012.32ms
+[2026-06-13 10:31:13.984 INF] [5bb9ded0-e92a-4fb1-a340-961418b7e8fe] [CorrelationId: 5bb9ded0-e92a-4fb1-a340-961418b7e8fe] POST /api/auth/microsoft-login completed in 1014.20ms with status 200
+[2026-06-13 10:31:13.984 WRN] [5bb9ded0-e92a-4fb1-a340-961418b7e8fe] [CorrelationId: 5bb9ded0-e92a-4fb1-a340-961418b7e8fe] SLOW REQUEST: POST /api/auth/microsoft-login took 1014.20ms (threshold: 1000ms)
+[2026-06-13 10:35:19.627 WRN] [1b5f063b-4f0f-4675-9f84-e7ec890964cf] [Perf] POST /api/auth/microsoft-login -> 200 in 1109.55ms
+[2026-06-13 10:35:19.629 INF] [1b5f063b-4f0f-4675-9f84-e7ec890964cf] [CorrelationId: 1b5f063b-4f0f-4675-9f84-e7ec890964cf] POST /api/auth/microsoft-login completed in 1110.98ms with status 200
+[2026-06-13 10:35:19.629 WRN] [1b5f063b-4f0f-4675-9f84-e7ec890964cf] [CorrelationId: 1b5f063b-4f0f-4675-9f84-e7ec890964cf] SLOW REQUEST: POST /api/auth/microsoft-login took 1110.98ms (threshold: 1000ms)
+[2026-06-13 10:44:38.591 WRN] [] Server macbookpro:22690:0dc091d3 encountered an exception while sending heartbeat
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=23; handshake=25433; [Login] initialization=1; authentication=1; [Post-Login] complete=1182; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[TContext,TResult](DbConnection dedicatedConnection, Func`4 func, TContext context) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 291
+   at Hangfire.SqlServer.SqlServerConnection.Heartbeat(String serverId) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 548
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 50
+ClientConnectionId:5a17a703-43fc-4e21-a79e-8b35cdc28334
+Error Number:-2,State:0,Class:11
+[2026-06-13 10:45:10.403 INF] [] Server macbookpro:22690:0dc091d3 is now able to continue sending heartbeats
+[2026-06-13 11:52:35.826 INF] [] Server macbookpro:22690:0dc091d3 caught stopping signal...

@@ -8,6 +8,9 @@ namespace WUIAM.Services.Config.SeedService
 {
     public class SeedService
     {
+        private const string SuperAdminEmail = "standevcode@gmail.com";
+        private const string SuperAdminRoleName = "SuperAdmin";
+
         private readonly WUIAMDbContext _context;
 
         public SeedService(WUIAMDbContext context)
@@ -18,25 +21,26 @@ namespace WUIAM.Services.Config.SeedService
         public void Seed()
         {
             // Seed Roles  
-            if (!_context.Roles.Any())
+            var roleNames = Enum.GetNames(typeof(Roles));
+            foreach (var role in roleNames)
             {
-                var roleNames = Enum.GetNames(typeof(Roles));
-                foreach (var role in roleNames)
+                if (!_context.Roles.Any(existing => existing.Name == role))
                 {
-                    _context.Roles.Add(new()
+                    _context.Roles.Add(new Role
                     {
                         Name = role,
                         Description = "The " + role + " role access"
                     });
                 }
-                _context.SaveChanges();
             }
+            _context.SaveChanges();
+
             if (!_context.EmploymentTypes.Any())
             {
                 var emtypes = Enum.GetNames(typeof(EmploymentTypes));
                 foreach (var emtype in emtypes)
                 {
-                    _context.EmploymentTypes.Add(new()
+                    _context.EmploymentTypes.Add(new EmploymentType
                     {
                         Name = emtype,
                         Description = "The " + emtype + " employment type",
@@ -49,7 +53,7 @@ namespace WUIAM.Services.Config.SeedService
             // Seed Departments  
             if (!_context.Departments.Any())
             {
-                _context.Departments.Add(new()
+                _context.Departments.Add(new Department
                 {
                     Name = "ICT",
                     Description = "Main ICT department",
@@ -64,91 +68,126 @@ namespace WUIAM.Services.Config.SeedService
             if (!_context.UserTypes.Any())
             {
                 _context.UserTypes.AddRange(new List<UserType>
-                   {
-                       new() { Name = "Staff", Description = "Staff user" },
-                       new() { Name = "Student", Description = "Regular student user" },
-                       new() { Name = "Contract", Description = "Contract staff user" }
-                   });
+                {
+                    new UserType { Name = "Staff", Description = "Staff user" },
+                    new UserType { Name = "Student", Description = "Regular student user" },
+                    new UserType { Name = "Contract", Description = "Contract staff user" }
+                });
                 _context.SaveChanges();
             }
 
             // Seed Permissions  
-            if (!_context.Permissions.Any())
+            var permissionNames = Enum.GetNames(typeof(Permissions));
+            foreach (var permissionName in permissionNames)
             {
-                var permissionNames = Enum.GetNames(typeof(Permissions));
-                foreach (var permissionName in permissionNames)
+                if (!_context.Permissions.Any(existing => existing.Name == permissionName))
                 {
-                    _context.Permissions.Add(new()
+                    _context.Permissions.Add(new Permission
                     {
                         Name = permissionName,
                         Description = "Permission to " + permissionName.ToLower()
                     });
                 }
+            }
+            _context.SaveChanges();
+
+            EnsureSuperAdminAccess();
+        }
+
+        private void EnsureSuperAdminAccess()
+        {
+            var superAdminUserType = _context.UserTypes.FirstOrDefault(type =>
+                type.Name == "Super Admin" || type.Name == "Staff") ?? _context.UserTypes.First();
+
+            var superAdminRole = _context.Roles.FirstOrDefault(role => role.Name == SuperAdminRoleName)
+                ?? _context.Roles.FirstOrDefault(role => role.Name == "Super Admin");
+
+            if (superAdminRole == null)
+            {
+                superAdminRole = new Role
+                {
+                    Name = SuperAdminRoleName,
+                    Description = "Full system access to all modules"
+                };
+                _context.Roles.Add(superAdminRole);
                 _context.SaveChanges();
             }
 
-            // Seed Admin User  
-            if (!_context.Users.Any())
+            var adminUser = _context.Users.FirstOrDefault(user => user.UserEmail == SuperAdminEmail);
+            if (adminUser == null)
             {
-                var adminUserTypeId = _context.UserTypes.FirstOrDefault()?.Id ?? Guid.NewGuid();
-                var adminDeptId = _context.Departments.FirstOrDefault()?.Id ?? Guid.NewGuid();
-                var employTypeId = _context.EmploymentTypes.FirstOrDefault()?.Id ?? Guid.NewGuid();
-
-                var adminUser = new User
+                adminUser = new User
                 {
                     UserName = "SuperAdmin",
-                    UserEmail = "standevcode@gmail.com",
+                    UserEmail = SuperAdminEmail,
                     Password = PasswordUtilService.HashPassword("admin103#,"),
                     DateCreated = DateTime.Now,
                     IsDefault = true,
+                    IsActive = true,
                     FirstName = "Administrator",
                     LastName = "WU",
-                    UserTypeId = adminUserTypeId,
+                    UserTypeId = superAdminUserType.Id,
                     CreatedById = Guid.NewGuid(),
                     SingleSignOnEnabled = false,
                     SessionId = Guid.NewGuid().ToString(),
                     SessionTime = DateTime.Now,
                     TwoFactorEnabled = true,
-
                 };
                 _context.Users.Add(adminUser);
                 _context.SaveChanges();
+            }
+            else
+            {
+                adminUser.UserName = "SuperAdmin";
+                adminUser.IsActive = true;
+                adminUser.IsDeleted = false;
+                adminUser.UserTypeId = superAdminUserType.Id;
+                _context.Users.Update(adminUser);
+                _context.SaveChanges();
+            }
 
-                // Assign Admin Role to Admin User  
-                var adminRole = _context.Roles.FirstOrDefault(r => r.Name == "Admin") ?? _context.Roles.First();
-                _context.UserRoles.Add(new()
+            if (!_context.UserRoles.Any(userRole => userRole.UserId == adminUser.Id && userRole.RoleId == superAdminRole.Id))
+            {
+                _context.UserRoles.Add(new UserRole
                 {
                     UserId = adminUser.Id,
-                    RoleId = adminRole.Id,
-                    AssignedAt = DateTime.Now
+                    RoleId = superAdminRole.Id,
+                    AssignedAt = DateTime.UtcNow
                 });
                 _context.SaveChanges();
-
-                // Assign AdminAccess Permission to Admin Role  
-                var adminAccessPermission = _context.Permissions.FirstOrDefault(p => p.Name == Permissions.AdminAccess.ToString());
-                if (adminAccessPermission != null && !_context.RolePermissions.Any(rp => rp.RoleId == adminRole.Id && rp.PermissionId == adminAccessPermission.Id))
-                {
-                    // _context.RolePermissions.Add(new()
-                    // {
-                    //     RoleId = adminRole.Id,
-                    //     PermissionId = adminAccessPermission.Id,
-                    //     GrantedAt = DateTime.Now
-                    // });
-                    // _context.UserPermissions.Add(new UserPermission { UserId = adminUser.Id, PermissionId = adminAccessPermission!.Id });
-                    var permissions = _context.Permissions.ToList();
-                    foreach (var item in permissions)
-                    {
-                        _context.RolePermissions.Add(new()
-                        {
-                            RoleId = adminRole.Id,
-                            PermissionId = item.Id,
-                            GrantedAt = DateTime.UtcNow
-                        });
-                    }
-                    _context.SaveChanges();
-                }
-
             }
+
+            var permissions = _context.Permissions.ToList();
+            foreach (var permission in permissions)
+            {
+                if (!_context.RolePermissions.Any(rolePermission =>
+                    rolePermission.RoleId == superAdminRole.Id &&
+                    rolePermission.PermissionId == permission.Id))
+                {
+                    _context.RolePermissions.Add(new RolePermission
+                    {
+                        RoleId = superAdminRole.Id,
+                        PermissionId = permission.Id,
+                        GrantedAt = DateTime.UtcNow
+                    });
+                }
+            }
+
+            var superAdminAccess = _context.Permissions.FirstOrDefault(permission =>
+                permission.Name == Permissions.SuperAdminAccess.ToString());
+            if (superAdminAccess != null &&
+                !_context.UserPermissions.Any(userPermission =>
+                    userPermission.UserId == adminUser.Id &&
+                    userPermission.PermissionId == superAdminAccess.Id))
+            {
+                _context.UserPermissions.Add(new UserPermission
+                {
+                    UserId = adminUser.Id,
+                    PermissionId = superAdminAccess.Id
+                });
+            }
+
+            _context.SaveChanges();
         }
         public async Task SeedJobCategoriesAsync()
         {
@@ -156,8 +195,8 @@ namespace WUIAM.Services.Config.SeedService
             {
                 var jobCategories = new List<JobCategory>
                 {
-                    new() { Name = "Academic", Description = "Academic staff" },
-                    new() { Name = "Non-Academic", Description = "Non-Academic staff" }
+                    new JobCategory { Name = "Academic", Description = "Academic staff" },
+                    new JobCategory { Name = "Non-Academic", Description = "Non-Academic staff" }
                 };
                 _context.JobCategories.AddRange(jobCategories);
                 await _context.SaveChangesAsync();

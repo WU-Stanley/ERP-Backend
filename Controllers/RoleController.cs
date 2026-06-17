@@ -6,9 +6,16 @@ using WUIAM.Models;
 using WUIAM.Interfaces;
 using WUIAM.DTOs;
 
+/// <summary>
+/// API v1 - Role management endpoints.
+/// </summary>
 namespace WUIAM.Controllers
 {
+    /// <summary>
+    /// API v1 - Role management endpoints.
+    /// </summary>
     [ApiController]
+    [ApiVersion("1.0")]
     [Route("api/[controller]")]
     public class RoleController : ControllerBase
     {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WUIAM.DTOs;
+using WUIAM.Enums;
 using WUIAM.Interfaces;
 using WUIAM.Models;
 using WUIAM.Repositories.IRepositories;
@@ -21,6 +22,7 @@ namespace WUIAM.Controllers
         }
 
         // POST: api/leavetype/create
+        [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
         [HttpPost("create")]
         public async Task<ActionResult<ApiResponse<LeaveType>>> CreateLeaveType([FromBody] CreateLeaveTypeDto createLeaveTypeDto)
         {
@@ -53,6 +55,7 @@ namespace WUIAM.Controllers
         }
 
         // PUT: api/leavetype/update/{id}
+        [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
         [HttpPut("update/{id:guid}")]
         public async Task<ActionResult<ApiResponse<LeaveType>>> UpdateLeaveType(Guid id, [FromBody] LeaveType leaveType)
         {
@@ -69,6 +72,7 @@ namespace WUIAM.Controllers
         }
 
         // DELETE: api/leavetype/delete/{id}
+        [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
         [HttpDelete("delete/{id:guid}")]
         public async Task<ActionResult<ApiResponse<LeaveType>>> DeleteLeaveType(Guid id)
         {

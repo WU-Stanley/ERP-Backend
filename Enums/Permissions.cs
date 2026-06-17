@@ -118,7 +118,10 @@
             // Reports & Analytics
             ViewHRReports,
             GenerateDepartmentReports,
-            ExportData
+            ExportData,
+
+            // Recruitment Management (catch-all)
+            ManageRecruitment
         }
     }
 

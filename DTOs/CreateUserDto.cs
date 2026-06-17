@@ -36,10 +36,11 @@ namespace WUIAM.DTOs
     public class UserDto
     {
         public Guid Id { get; set; }
+        public Guid? EmployeeId { get; set; }
         public string FullName { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public Guid UserTypeId { get; set; }
-        public Guid DepartmentId { get; set; }
+        public Guid? DepartmentId { get; set; }
     }
     public class UserTypeDto
     {
@@ -58,4 +59,3 @@ namespace WUIAM.DTOs
         public bool IsActive { get; set; } = true;
     }
 }
-

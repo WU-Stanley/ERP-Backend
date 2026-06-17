@@ -17,12 +17,16 @@ namespace WUIAM.Repositories
         public async Task<EmploymentDetails?> GetByIdAsync(Guid employmentId)
         {
             return await _context.EmploymentDetails
+                .Include(e => e.Department)
+                .Include(e => e.EmploymentType)
                 .FirstOrDefaultAsync(e => e.EmploymentId == employmentId);
         }
 
         public async Task<IEnumerable<EmploymentDetails>> GetByEmployeeIdAsync(Guid employeeId)
         {
             return await _context.EmploymentDetails
+                .Include(e => e.Department)
+                .Include(e => e.EmploymentType)
                 .Where(e => e.EmployeeId == employeeId)
                 .OrderByDescending(e => e.StartDate)
                 .ToListAsync();
@@ -31,6 +35,8 @@ namespace WUIAM.Repositories
         public async Task<EmploymentDetails?> GetCurrentByEmployeeIdAsync(Guid employeeId)
         {
             return await _context.EmploymentDetails
+                .Include(e => e.Department)
+                .Include(e => e.EmploymentType)
                 .FirstOrDefaultAsync(e => e.EmployeeId == employeeId && e.IsActive);
         }
 

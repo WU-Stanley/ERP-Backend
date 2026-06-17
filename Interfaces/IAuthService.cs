@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using WUIAM.DTOs;
 using WUIAM.Enums;
 using WUIAM.Models;
@@ -9,16 +9,18 @@ namespace WUIAM.Interfaces
     public interface IAuthService
     {
 
-        public Task<dynamic> LoginAsync(LoginDto loginDto);
-        public Task<dynamic> MicrosoftLoginAsync(MicrosoftLoginDto loginDto);
-        public Task<dynamic> VerifyLoginTokenAsync(string email, string token);
+        public Task<AuthResultDto> LoginAsync(LoginDto loginDto);
+        public Task<AuthResultDto> MicrosoftLoginAsync(MicrosoftLoginDto loginDto);
+        public Task<AuthResultDto> VerifyLoginTokenAsync(string email, string token);
         public Task<User> RegisterAsync(CreateUserDto createUserDto);
         public Task<(string message, bool status)> ResetPasswordAsync(ResetPasswordDTo resetPasswordDTo);
         public Task<(string message, bool status)> ChangePasswordAsync(ChangePasswordDto changePasswordDto);
-        public Task<(string message, bool status)> LogoutAsync(string email);
+        public Task<(string message, bool status)> LogoutAsync(string email, string? userId = null);
+        public Task<(string message, bool status, List<SessionInfo> sessions)> GetActiveSessionsAsync(string email);
+        public Task<(string message, bool status)> RevokeAllSessionsAsync(string email);
         public Task<string> ForgotPasswordAsync(string email);
         public Task<RefreshToken> CreateRefreshTokenAsync(User user);
-        public Task<dynamic> GetRefreshTokenAsync(string refreshToken);
+        public Task<AuthResultDto> GetRefreshTokenAsync(string refreshToken);
         Task<dynamic> getUserTypes();
         Task<IEnumerable<UserDto?>?> GetStaffListAsync();
         Task<IEnumerable<EmploymentType>> GetEmploymentTypes();

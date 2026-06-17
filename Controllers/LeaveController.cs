@@ -1,4 +1,4 @@
-﻿
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,7 +12,11 @@ using WUIAM.Repositories.IRepositories;
 
 namespace WUIAM.Controllers
 {
+    /// <summary>
+    /// API v1 - Leave management endpoints.
+    /// </summary>
     [ApiController]
+    [ApiVersion("1.0")]
     [Route("api/[controller]")]
     public class LeaveController : ControllerBase
     {
@@ -51,24 +55,59 @@ namespace WUIAM.Controllers
         }
 
       
-        //GET: /api/leave/pending-leave-requests
+        /// <summary>
+        /// Get all leave requests with pagination.
+        /// </summary>
         [HasPermission([Permissions.ApproveRequests, Permissions.AdminAccess, Permissions.ManageLeaveRequests])]
         [HttpGet("all-leave-requests")]
-        public async Task<ActionResult<ApiResponse<IEnumerable<LeaveRequest>>>> GetPendingLeaveRequests()
+        public async Task<ActionResult<ApiResponse<PaginatedResponse<LeaveRequest>>>> GetPendingLeaveRequests([FromQuery] PaginationParams pagination)
         {
             var result = await _leaveService.GetAllLeaveRequestsAsync();
-            return Ok(ApiResponse<IEnumerable<LeaveRequest>>.Success(result.Count() <= 0 ? "Leave request found" : "No leave request found", result));
+            var totalCount = result.Count();
+            var paged = result
+                .Skip((pagination.PageNumber - 1) * pagination.PageSize)
+                .Take(pagination.PageSize)
+                .ToList();
+
+            var response = new PaginatedResponse<LeaveRequest>
+            {
+                Items = paged,
+                TotalCount = totalCount,
+                PageNumber = pagination.PageNumber,
+                PageSize = pagination.PageSize
+            };
+
+            return Ok(ApiResponse<PaginatedResponse<LeaveRequest>>.Success(
+                result.Any() ? "Leave requests found" : "No leave request found",
+                response));
         }
-        //GET: /api/leave/get-user-request
+
+        /// <summary>
+        /// Get leave requests for a specific user with pagination.
+        /// </summary>
         [HttpGet("user-requests/{userId}")]
-        public async Task<ActionResult<ApiResponse<IEnumerable<LeaveRequest>>>> GetUserLeaveRequests(Guid userId)
+        public async Task<ActionResult<ApiResponse<PaginatedResponse<LeaveRequest>>>> GetUserLeaveRequests(Guid userId, [FromQuery] PaginationParams pagination)
         {
             var result = await _leaveService.GetLeaveRequestsByUserAsync(userId);
-            return Ok(ApiResponse<IEnumerable<LeaveRequest>>.Success(result.Count() <= 0 ? "Leave request found" : "No leave request found", result));
+            var totalCount = result.Count();
+            var paged = result
+                .Skip((pagination.PageNumber - 1) * pagination.PageSize)
+                .Take(pagination.PageSize)
+                .ToList();
 
+            var response = new PaginatedResponse<LeaveRequest>
+            {
+                Items = paged,
+                TotalCount = totalCount,
+                PageNumber = pagination.PageNumber,
+                PageSize = pagination.PageSize
+            };
+
+            return Ok(ApiResponse<PaginatedResponse<LeaveRequest>>.Success(
+                result.Any() ? "Leave requests found" : "No leave request found",
+                response));
         }
              
     }
 
 }
-

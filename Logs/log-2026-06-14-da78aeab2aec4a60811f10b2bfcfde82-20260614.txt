@@ -1,0 +1,236 @@
+[2026-06-14 21:41:32.328 WRN] [] No store type was specified for the decimal property 'PurchaseCost' on entity type 'FacilityAsset'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'UnitCost' on entity type 'InventoryItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'GrossPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'NetPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'EstimatedAmount' on entity type 'ProcurementRequest'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'BasePay' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'HousingAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'OtherAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'PensionRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'TaxRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:32.344 WRN] [] No store type was specified for the decimal property 'TransportAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 21:41:33.450 INF] [] Start installing Hangfire SQL objects...
+[2026-06-14 21:41:33.493 INF] [] Hangfire SQL objects installed.
+[2026-06-14 21:41:33.755 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.
+[2026-06-14 21:41:33.907 INF] [] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@WUIAM'
+[2026-06-14 21:41:33.907 INF] [] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2026-06-14 21:41:33.907 INF] [] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-06-14 21:41:33.923 INF] [] Server macbookpro:42387:065f065e successfully announced in 8.8954 ms
+[2026-06-14 21:41:33.924 INF] [] Server macbookpro:42387:065f065e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-14 21:41:33.929 INF] [] Server macbookpro:42387:065f065e all the dispatchers started
+[2026-06-14 21:51:24.466 INF] [353f48c0-d497-4b54-bfce-2f06bbd10a80] [Perf] GET /api/dashboard/admin-summary -> 200 in 276.24ms
+[2026-06-14 21:51:24.469 INF] [353f48c0-d497-4b54-bfce-2f06bbd10a80] [CorrelationId: 353f48c0-d497-4b54-bfce-2f06bbd10a80] GET /api/dashboard/admin-summary completed in 281.13ms with status 200
+[2026-06-14 21:51:33.145 INF] [927b1949-52f7-4f7f-915b-3dc9955af5e7] [Perf] POST /api/auth/logout -> 200 in 68.06ms
+[2026-06-14 21:51:33.146 ERR] [927b1949-52f7-4f7f-915b-3dc9955af5e7] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<RefreshToken>()
+    .Where(r => r.UserId == @userId && r.RevokedOn == null && r.IsExpired == False)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-14 21:51:57.414 WRN] [e2805659-417b-4f8d-827b-9aa87f56123a] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-14 21:51:57.595 WRN] [e2805659-417b-4f8d-827b-9aa87f56123a] [Perf] POST /api/auth/microsoft-login -> 200 in 1446.39ms
+[2026-06-14 21:51:57.595 INF] [e2805659-417b-4f8d-827b-9aa87f56123a] [CorrelationId: e2805659-417b-4f8d-827b-9aa87f56123a] POST /api/auth/microsoft-login completed in 1446.61ms with status 200
+[2026-06-14 21:51:57.595 WRN] [e2805659-417b-4f8d-827b-9aa87f56123a] [CorrelationId: e2805659-417b-4f8d-827b-9aa87f56123a] SLOW REQUEST: POST /api/auth/microsoft-login took 1446.61ms (threshold: 1000ms)
+[2026-06-14 21:51:57.757 INF] [9e623660-9c0b-4cbc-9fc3-97eca8c899c9] [Perf] GET /api/dashboard/hr-summary -> 200 in 122.91ms
+[2026-06-14 21:51:57.757 INF] [9e623660-9c0b-4cbc-9fc3-97eca8c899c9] [CorrelationId: 9e623660-9c0b-4cbc-9fc3-97eca8c899c9] GET /api/dashboard/hr-summary completed in 123.16ms with status 200
+[2026-06-14 21:52:06.752 INF] [ce02d527-072d-4d3b-ac74-b6afb3188432] [Perf] GET /api/Employees/me -> 200 in 33.70ms
+[2026-06-14 21:52:06.753 INF] [ce02d527-072d-4d3b-ac74-b6afb3188432] [CorrelationId: ce02d527-072d-4d3b-ac74-b6afb3188432] GET /api/Employees/me completed in 33.89ms with status 200
+[2026-06-14 21:52:06.788 INF] [0bc57fa5-3970-4bc7-98c0-df46b9585789] [Perf] GET /api/Employees/me/profile-update-requests -> 200 in 32.19ms
+[2026-06-14 21:52:06.788 INF] [0bc57fa5-3970-4bc7-98c0-df46b9585789] [CorrelationId: 0bc57fa5-3970-4bc7-98c0-df46b9585789] GET /api/Employees/me/profile-update-requests completed in 32.34ms with status 200
+[2026-06-14 21:52:35.055 INF] [fbd5e0a3-b8bc-48bb-99c9-8c2b9f3fb10d] [Perf] GET /api/dashboard/hr-summary -> 200 in 19.24ms
+[2026-06-14 21:52:35.056 INF] [fbd5e0a3-b8bc-48bb-99c9-8c2b9f3fb10d] [CorrelationId: fbd5e0a3-b8bc-48bb-99c9-8c2b9f3fb10d] GET /api/dashboard/hr-summary completed in 19.45ms with status 200
+[2026-06-14 21:53:53.453 INF] [a944ddc1-96b3-4010-a3e6-3cdda73784c8] [Perf] GET /api/leavetype/available -> 200 in 56.68ms
+[2026-06-14 21:53:53.453 INF] [a944ddc1-96b3-4010-a3e6-3cdda73784c8] [CorrelationId: a944ddc1-96b3-4010-a3e6-3cdda73784c8] GET /api/leavetype/available completed in 56.91ms with status 200
+[2026-06-14 22:01:20.814 INF] [a3cf7e7d-6c27-4b6a-be35-eb0ae7400697] [Perf] GET /api/leavetype/available -> 200 in 25.83ms
+[2026-06-14 22:01:20.814 INF] [a3cf7e7d-6c27-4b6a-be35-eb0ae7400697] [CorrelationId: a3cf7e7d-6c27-4b6a-be35-eb0ae7400697] GET /api/leavetype/available completed in 26.03ms with status 200
+[2026-06-14 22:01:25.830 INF] [6e802d58-71dc-4e6e-9d5c-ce486fb0e10a] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 27.00ms
+[2026-06-14 22:01:25.830 INF] [6e802d58-71dc-4e6e-9d5c-ce486fb0e10a] [CorrelationId: 6e802d58-71dc-4e6e-9d5c-ce486fb0e10a] GET /api/erp-modules/helpdesk/tickets completed in 27.30ms with status 200
+[2026-06-14 22:01:25.852 INF] [eb149a0b-73ec-4c86-b417-356e928ec866] [Perf] GET /api/erp-modules/summary -> 403 in 86.77ms
+[2026-06-14 22:01:25.852 INF] [eb149a0b-73ec-4c86-b417-356e928ec866] [CorrelationId: eb149a0b-73ec-4c86-b417-356e928ec866] GET /api/erp-modules/summary completed in 86.95ms with status 403
+[2026-06-14 22:01:39.773 INF] [f89c2aa6-3891-403b-8907-f5c94f7dfb1e] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.82ms
+[2026-06-14 22:01:39.774 INF] [f89c2aa6-3891-403b-8907-f5c94f7dfb1e] [CorrelationId: f89c2aa6-3891-403b-8907-f5c94f7dfb1e] GET /api/erp-modules/helpdesk/tickets completed in 5.02ms with status 200
+[2026-06-14 22:01:39.788 INF] [73051937-5290-4db8-93c2-071e95ac4ef5] [Perf] GET /api/erp-modules/summary -> 403 in 19.79ms
+[2026-06-14 22:01:39.789 INF] [73051937-5290-4db8-93c2-071e95ac4ef5] [CorrelationId: 73051937-5290-4db8-93c2-071e95ac4ef5] GET /api/erp-modules/summary completed in 19.94ms with status 403
+[2026-06-14 22:01:41.180 INF] [724e0745-6993-4bad-bfba-5622088dcc14] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.79ms
+[2026-06-14 22:01:41.180 INF] [724e0745-6993-4bad-bfba-5622088dcc14] [CorrelationId: 724e0745-6993-4bad-bfba-5622088dcc14] GET /api/erp-modules/helpdesk/tickets completed in 4.92ms with status 200
+[2026-06-14 22:01:41.191 INF] [321e4bd6-fd5d-437c-a476-06516c794ad9] [Perf] GET /api/erp-modules/summary -> 403 in 16.02ms
+[2026-06-14 22:01:41.191 INF] [321e4bd6-fd5d-437c-a476-06516c794ad9] [CorrelationId: 321e4bd6-fd5d-437c-a476-06516c794ad9] GET /api/erp-modules/summary completed in 16.17ms with status 403
+[2026-06-14 22:01:43.466 INF] [e2ab433e-d2af-4db2-a53b-67036ecf85d5] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 5.41ms
+[2026-06-14 22:01:43.466 INF] [e2ab433e-d2af-4db2-a53b-67036ecf85d5] [CorrelationId: e2ab433e-d2af-4db2-a53b-67036ecf85d5] GET /api/erp-modules/helpdesk/tickets completed in 5.55ms with status 200
+[2026-06-14 22:01:43.478 INF] [250fa250-70c3-4de7-a829-b026abee2082] [Perf] GET /api/erp-modules/summary -> 403 in 17.64ms
+[2026-06-14 22:01:43.478 INF] [250fa250-70c3-4de7-a829-b026abee2082] [CorrelationId: 250fa250-70c3-4de7-a829-b026abee2082] GET /api/erp-modules/summary completed in 17.80ms with status 403
+[2026-06-14 22:01:45.597 INF] [eac09ca9-0a2d-4916-9fed-869cbffffb01] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.05ms
+[2026-06-14 22:01:45.598 INF] [eac09ca9-0a2d-4916-9fed-869cbffffb01] [CorrelationId: eac09ca9-0a2d-4916-9fed-869cbffffb01] GET /api/erp-modules/helpdesk/tickets completed in 4.16ms with status 200
+[2026-06-14 22:01:45.607 INF] [88dcdeb3-8fb8-4882-b912-f1db9010c6d6] [Perf] GET /api/erp-modules/summary -> 403 in 13.96ms
+[2026-06-14 22:01:45.608 INF] [88dcdeb3-8fb8-4882-b912-f1db9010c6d6] [CorrelationId: 88dcdeb3-8fb8-4882-b912-f1db9010c6d6] GET /api/erp-modules/summary completed in 14.09ms with status 403
+[2026-06-14 22:01:47.563 INF] [7a5c2afb-aecb-4070-81a8-133856f4702c] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.82ms
+[2026-06-14 22:01:47.563 INF] [7a5c2afb-aecb-4070-81a8-133856f4702c] [CorrelationId: 7a5c2afb-aecb-4070-81a8-133856f4702c] GET /api/erp-modules/helpdesk/tickets completed in 4.95ms with status 200
+[2026-06-14 22:01:47.575 INF] [248babfd-583e-4e7f-904f-da1187590263] [Perf] GET /api/erp-modules/summary -> 403 in 16.39ms
+[2026-06-14 22:01:47.575 INF] [248babfd-583e-4e7f-904f-da1187590263] [CorrelationId: 248babfd-583e-4e7f-904f-da1187590263] GET /api/erp-modules/summary completed in 16.56ms with status 403
+[2026-06-14 22:01:52.033 INF] [ea12a284-a0c1-478f-9c56-c595496b0e6c] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.33ms
+[2026-06-14 22:01:52.033 INF] [ea12a284-a0c1-478f-9c56-c595496b0e6c] [CorrelationId: ea12a284-a0c1-478f-9c56-c595496b0e6c] GET /api/erp-modules/helpdesk/tickets completed in 4.46ms with status 200
+[2026-06-14 22:01:52.044 INF] [8334dd00-6f36-4e4d-94f5-df8b46989a6e] [Perf] GET /api/erp-modules/summary -> 403 in 15.72ms
+[2026-06-14 22:01:52.044 INF] [8334dd00-6f36-4e4d-94f5-df8b46989a6e] [CorrelationId: 8334dd00-6f36-4e4d-94f5-df8b46989a6e] GET /api/erp-modules/summary completed in 15.89ms with status 403
+[2026-06-14 22:01:53.655 INF] [6001bbba-7554-452c-8ac0-f3f5675ca9e4] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.12ms
+[2026-06-14 22:01:53.655 INF] [6001bbba-7554-452c-8ac0-f3f5675ca9e4] [CorrelationId: 6001bbba-7554-452c-8ac0-f3f5675ca9e4] GET /api/erp-modules/helpdesk/tickets completed in 4.26ms with status 200
+[2026-06-14 22:01:53.664 INF] [0d26492e-ec2c-4d9b-8937-081992d9120e] [Perf] GET /api/erp-modules/summary -> 403 in 13.04ms
+[2026-06-14 22:01:53.664 INF] [0d26492e-ec2c-4d9b-8937-081992d9120e] [CorrelationId: 0d26492e-ec2c-4d9b-8937-081992d9120e] GET /api/erp-modules/summary completed in 13.21ms with status 403
+[2026-06-14 22:02:54.148 INF] [56bd5471-c8d3-4857-a4d5-32e43dda2533] [Perf] POST /api/erp-modules/helpdesk/tickets -> 201 in 70.01ms
+[2026-06-14 22:02:54.148 INF] [56bd5471-c8d3-4857-a4d5-32e43dda2533] [CorrelationId: 56bd5471-c8d3-4857-a4d5-32e43dda2533] POST /api/erp-modules/helpdesk/tickets completed in 70.16ms with status 201
+[2026-06-14 22:02:54.160 INF] [9971c542-7864-41c7-8d9d-7894d7ddb78b] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 5.26ms
+[2026-06-14 22:02:54.160 INF] [9971c542-7864-41c7-8d9d-7894d7ddb78b] [CorrelationId: 9971c542-7864-41c7-8d9d-7894d7ddb78b] GET /api/erp-modules/helpdesk/tickets completed in 5.41ms with status 200
+[2026-06-14 22:02:54.171 INF] [c6d1c658-3e14-47d0-b034-91ec7130fff8] [Perf] GET /api/erp-modules/summary -> 403 in 15.24ms
+[2026-06-14 22:02:54.171 INF] [c6d1c658-3e14-47d0-b034-91ec7130fff8] [CorrelationId: c6d1c658-3e14-47d0-b034-91ec7130fff8] GET /api/erp-modules/summary completed in 15.38ms with status 403
+[2026-06-14 22:03:03.271 INF] [f36887e8-95c2-46fb-9b94-6d78e2564d85] [Perf] PATCH /api/erp-modules/helpdesk/tickets/f36c14cf-000b-4d97-97f1-6f623312cf99/status -> 200 in 78.08ms
+[2026-06-14 22:03:03.271 INF] [f36887e8-95c2-46fb-9b94-6d78e2564d85] [CorrelationId: f36887e8-95c2-46fb-9b94-6d78e2564d85] PATCH /api/erp-modules/helpdesk/tickets/f36c14cf-000b-4d97-97f1-6f623312cf99/status completed in 78.33ms with status 200
+[2026-06-14 22:03:03.317 INF] [b0def717-1627-4573-84de-b929316e38c8] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.94ms
+[2026-06-14 22:03:03.317 INF] [b0def717-1627-4573-84de-b929316e38c8] [CorrelationId: b0def717-1627-4573-84de-b929316e38c8] GET /api/erp-modules/helpdesk/tickets completed in 5.06ms with status 200
+[2026-06-14 22:03:03.330 INF] [e89bb384-3b48-498b-91b7-e0c608f4d365] [Perf] GET /api/erp-modules/summary -> 403 in 19.96ms
+[2026-06-14 22:03:03.330 INF] [e89bb384-3b48-498b-91b7-e0c608f4d365] [CorrelationId: e89bb384-3b48-498b-91b7-e0c608f4d365] GET /api/erp-modules/summary completed in 20.09ms with status 403
+[2026-06-14 22:03:16.763 INF] [e890fdbf-1c17-420d-9968-0661959b8e65] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.21ms
+[2026-06-14 22:03:16.763 INF] [e890fdbf-1c17-420d-9968-0661959b8e65] [CorrelationId: e890fdbf-1c17-420d-9968-0661959b8e65] GET /api/erp-modules/helpdesk/tickets completed in 4.32ms with status 200
+[2026-06-14 22:03:16.774 INF] [6a1014d7-b38d-47c6-89ec-44e61eac39cd] [Perf] GET /api/erp-modules/summary -> 403 in 15.44ms
+[2026-06-14 22:03:16.775 INF] [6a1014d7-b38d-47c6-89ec-44e61eac39cd] [CorrelationId: 6a1014d7-b38d-47c6-89ec-44e61eac39cd] GET /api/erp-modules/summary completed in 15.61ms with status 403
+[2026-06-14 22:03:18.748 INF] [9caa728a-0ef8-4c8d-9502-e29b267db43f] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.94ms
+[2026-06-14 22:03:18.748 INF] [9caa728a-0ef8-4c8d-9502-e29b267db43f] [CorrelationId: 9caa728a-0ef8-4c8d-9502-e29b267db43f] GET /api/erp-modules/helpdesk/tickets completed in 5.04ms with status 200
+[2026-06-14 22:03:18.757 INF] [030f1233-4c22-4534-a4d2-162b5875e189] [Perf] GET /api/erp-modules/summary -> 403 in 14.28ms
+[2026-06-14 22:03:18.757 INF] [030f1233-4c22-4534-a4d2-162b5875e189] [CorrelationId: 030f1233-4c22-4534-a4d2-162b5875e189] GET /api/erp-modules/summary completed in 14.38ms with status 403
+[2026-06-14 22:03:20.061 INF] [9aa2da15-788b-4814-8ffa-cec8ecd79f12] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.79ms
+[2026-06-14 22:03:20.061 INF] [9aa2da15-788b-4814-8ffa-cec8ecd79f12] [CorrelationId: 9aa2da15-788b-4814-8ffa-cec8ecd79f12] GET /api/erp-modules/helpdesk/tickets completed in 4.91ms with status 200
+[2026-06-14 22:03:20.072 INF] [8a0499f6-c329-437d-99e7-eb0c34aa1251] [Perf] GET /api/erp-modules/summary -> 403 in 15.87ms
+[2026-06-14 22:03:20.072 INF] [8a0499f6-c329-437d-99e7-eb0c34aa1251] [CorrelationId: 8a0499f6-c329-437d-99e7-eb0c34aa1251] GET /api/erp-modules/summary completed in 15.98ms with status 403
+[2026-06-14 22:03:34.297 INF] [ec86d248-7e2b-4b15-a8ed-cbc7ec9aa8ad] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.92ms
+[2026-06-14 22:03:34.297 INF] [ec86d248-7e2b-4b15-a8ed-cbc7ec9aa8ad] [CorrelationId: ec86d248-7e2b-4b15-a8ed-cbc7ec9aa8ad] GET /api/erp-modules/helpdesk/tickets completed in 5.01ms with status 200
+[2026-06-14 22:03:34.309 INF] [2567db6d-07e5-4989-ab94-1afb4eda30a9] [Perf] GET /api/erp-modules/summary -> 403 in 16.49ms
+[2026-06-14 22:03:34.309 INF] [2567db6d-07e5-4989-ab94-1afb4eda30a9] [CorrelationId: 2567db6d-07e5-4989-ab94-1afb4eda30a9] GET /api/erp-modules/summary completed in 16.59ms with status 403
+[2026-06-14 22:04:38.967 INF] [60182d8f-74e6-45b1-bd44-1bb1c770661f] [Perf] GET /api/erp-modules/summary -> 401 in 1.49ms
+[2026-06-14 22:04:38.967 INF] [60182d8f-74e6-45b1-bd44-1bb1c770661f] [CorrelationId: 60182d8f-74e6-45b1-bd44-1bb1c770661f] GET /api/erp-modules/summary completed in 1.61ms with status 401
+[2026-06-14 22:35:06.142 INF] [8e6246ca-f375-4445-952a-f8e6ec998d1f] [Perf] GET /api/erp-modules/summary -> 200 in 67.93ms
+[2026-06-14 22:35:06.142 INF] [8e6246ca-f375-4445-952a-f8e6ec998d1f] [CorrelationId: 8e6246ca-f375-4445-952a-f8e6ec998d1f] GET /api/erp-modules/summary completed in 68.05ms with status 200
+[2026-06-14 22:36:33.800 INF] [171e7266-3c4c-4ce6-85ed-50f7479a090c] [Perf] GET /api/erp-modules/summary -> 200 in 16.26ms
+[2026-06-14 22:36:33.800 INF] [171e7266-3c4c-4ce6-85ed-50f7479a090c] [CorrelationId: 171e7266-3c4c-4ce6-85ed-50f7479a090c] GET /api/erp-modules/summary completed in 16.41ms with status 200
+[2026-06-14 22:36:47.747 INF] [6ae0f56a-fdd1-44e8-b869-7027eb32a084] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 7.52ms
+[2026-06-14 22:36:47.747 INF] [6ae0f56a-fdd1-44e8-b869-7027eb32a084] [CorrelationId: 6ae0f56a-fdd1-44e8-b869-7027eb32a084] GET /api/erp-modules/helpdesk/tickets completed in 7.62ms with status 200
+[2026-06-14 22:42:05.025 INF] [2387b360-3ee1-4d01-bfe5-8a4e4c323f47] [Perf] GET /api/erp-modules/summary -> 200 in 28.19ms
+[2026-06-14 22:42:05.025 INF] [2387b360-3ee1-4d01-bfe5-8a4e4c323f47] [CorrelationId: 2387b360-3ee1-4d01-bfe5-8a4e4c323f47] GET /api/erp-modules/summary completed in 28.30ms with status 200
+[2026-06-14 22:42:05.035 INF] [bf1ceebe-3831-4d8b-8fb5-b0de23238241] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 37.41ms
+[2026-06-14 22:42:05.035 INF] [bf1ceebe-3831-4d8b-8fb5-b0de23238241] [CorrelationId: bf1ceebe-3831-4d8b-8fb5-b0de23238241] GET /api/erp-modules/helpdesk/tickets completed in 37.51ms with status 200
+[2026-06-14 22:42:13.004 INF] [848406ed-aa1d-4ea1-8360-958ad22cfe10] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 14.14ms
+[2026-06-14 22:42:13.004 INF] [848406ed-aa1d-4ea1-8360-958ad22cfe10] [CorrelationId: 848406ed-aa1d-4ea1-8360-958ad22cfe10] GET /api/erp-modules/helpdesk/tickets completed in 14.26ms with status 200
+[2026-06-14 22:42:13.013 INF] [81d89f67-7c63-434c-b3a2-325df4fb4872] [Perf] GET /api/erp-modules/summary -> 200 in 14.63ms
+[2026-06-14 22:42:13.014 INF] [81d89f67-7c63-434c-b3a2-325df4fb4872] [CorrelationId: 81d89f67-7c63-434c-b3a2-325df4fb4872] GET /api/erp-modules/summary completed in 14.76ms with status 200
+[2026-06-14 22:42:13.936 INF] [9c3b3f78-ad87-406d-9925-0a7f2f51084e] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 2.98ms
+[2026-06-14 22:42:13.936 INF] [9c3b3f78-ad87-406d-9925-0a7f2f51084e] [CorrelationId: 9c3b3f78-ad87-406d-9925-0a7f2f51084e] GET /api/erp-modules/helpdesk/tickets completed in 3.10ms with status 200
+[2026-06-14 22:42:13.943 INF] [2cbcd7b1-46a0-48f6-932f-f3a320d68132] [Perf] GET /api/erp-modules/summary -> 200 in 9.67ms
+[2026-06-14 22:42:13.943 INF] [2cbcd7b1-46a0-48f6-932f-f3a320d68132] [CorrelationId: 2cbcd7b1-46a0-48f6-932f-f3a320d68132] GET /api/erp-modules/summary completed in 9.77ms with status 200
+[2026-06-14 22:42:24.233 INF] [a06b1257-17ff-46c1-bf2c-5d747d09cbb2] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 5.07ms
+[2026-06-14 22:42:24.234 INF] [a06b1257-17ff-46c1-bf2c-5d747d09cbb2] [CorrelationId: a06b1257-17ff-46c1-bf2c-5d747d09cbb2] GET /api/erp-modules/helpdesk/tickets completed in 5.21ms with status 200
+[2026-06-14 22:42:24.245 INF] [ef159eed-f663-41ed-ad9a-3977be4e67cc] [Perf] GET /api/erp-modules/summary -> 200 in 16.40ms
+[2026-06-14 22:42:24.245 INF] [ef159eed-f663-41ed-ad9a-3977be4e67cc] [CorrelationId: ef159eed-f663-41ed-ad9a-3977be4e67cc] GET /api/erp-modules/summary completed in 16.52ms with status 200
+[2026-06-14 22:42:31.554 INF] [f9e45152-ee79-4c3c-bdb0-6b6395d6e820] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 10.43ms
+[2026-06-14 22:42:31.554 INF] [f9e45152-ee79-4c3c-bdb0-6b6395d6e820] [CorrelationId: f9e45152-ee79-4c3c-bdb0-6b6395d6e820] GET /api/erp-modules/helpdesk/tickets completed in 10.55ms with status 200
+[2026-06-14 22:42:31.557 INF] [09c951a6-ccf8-420f-9511-3e4644dd92ad] [Perf] GET /api/erp-modules/summary -> 200 in 13.72ms
+[2026-06-14 22:42:31.557 INF] [09c951a6-ccf8-420f-9511-3e4644dd92ad] [CorrelationId: 09c951a6-ccf8-420f-9511-3e4644dd92ad] GET /api/erp-modules/summary completed in 13.85ms with status 200
+[2026-06-14 22:42:33.643 INF] [a0df0c07-328b-4475-8fee-ec755fd672ef] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 6.01ms
+[2026-06-14 22:42:33.643 INF] [a0df0c07-328b-4475-8fee-ec755fd672ef] [CorrelationId: a0df0c07-328b-4475-8fee-ec755fd672ef] GET /api/erp-modules/helpdesk/tickets completed in 6.12ms with status 200
+[2026-06-14 22:42:33.651 INF] [b1748034-36b3-4c8c-be3e-5505497b02cf] [Perf] GET /api/erp-modules/summary -> 200 in 15.32ms
+[2026-06-14 22:42:33.651 INF] [b1748034-36b3-4c8c-be3e-5505497b02cf] [CorrelationId: b1748034-36b3-4c8c-be3e-5505497b02cf] GET /api/erp-modules/summary completed in 15.42ms with status 200
+[2026-06-14 22:46:59.487 INF] [58113b73-4ef6-4259-92dd-bce782cc533d] [Perf] GET /api/dashboard/hr-summary -> 200 in 33.10ms
+[2026-06-14 22:46:59.487 INF] [58113b73-4ef6-4259-92dd-bce782cc533d] [CorrelationId: 58113b73-4ef6-4259-92dd-bce782cc533d] GET /api/dashboard/hr-summary completed in 33.21ms with status 200
+[2026-06-14 22:48:05.874 INF] [02b723fe-c058-4071-b145-d845d99958d1] [Perf] GET /api/leavetype/available -> 200 in 15.55ms
+[2026-06-14 22:48:05.875 INF] [02b723fe-c058-4071-b145-d845d99958d1] [CorrelationId: 02b723fe-c058-4071-b145-d845d99958d1] GET /api/leavetype/available completed in 15.66ms with status 200
+[2026-06-14 22:48:11.500 INF] [2536f906-0731-4664-8791-80d656f9fa95] [Perf] GET /api/erp-modules/summary -> 200 in 12.33ms
+[2026-06-14 22:48:11.501 INF] [2536f906-0731-4664-8791-80d656f9fa95] [CorrelationId: 2536f906-0731-4664-8791-80d656f9fa95] GET /api/erp-modules/summary completed in 12.45ms with status 200
+[2026-06-14 22:48:11.504 INF] [f6cee0fa-3ed2-4695-80f7-160f7536f817] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 3.10ms
+[2026-06-14 22:48:11.504 INF] [f6cee0fa-3ed2-4695-80f7-160f7536f817] [CorrelationId: f6cee0fa-3ed2-4695-80f7-160f7536f817] GET /api/erp-modules/helpdesk/tickets completed in 3.21ms with status 200
+[2026-06-14 22:48:23.429 INF] [0733adfb-abc9-49f9-b3cb-a75710f8ce20] [Perf] GET /api/Employees/me -> 200 in 11.86ms
+[2026-06-14 22:48:23.429 INF] [0733adfb-abc9-49f9-b3cb-a75710f8ce20] [CorrelationId: 0733adfb-abc9-49f9-b3cb-a75710f8ce20] GET /api/Employees/me completed in 11.98ms with status 200
+[2026-06-14 22:48:23.444 INF] [9caa4db5-987f-41d4-a931-74cdb42ebfcd] [Perf] GET /api/Employees/me/profile-update-requests -> 200 in 12.19ms
+[2026-06-14 22:48:23.444 INF] [9caa4db5-987f-41d4-a931-74cdb42ebfcd] [CorrelationId: 9caa4db5-987f-41d4-a931-74cdb42ebfcd] GET /api/Employees/me/profile-update-requests completed in 12.39ms with status 200
+[2026-06-14 22:48:32.946 INF] [040807e5-af5b-4af1-82f1-2f57753a5600] [Perf] GET /api/leave/user-requests/871b8923-7ce0-4e64-4935-08dec98d574c -> 200 in 31.47ms
+[2026-06-14 22:48:32.946 INF] [040807e5-af5b-4af1-82f1-2f57753a5600] [CorrelationId: 040807e5-af5b-4af1-82f1-2f57753a5600] GET /api/leave/user-requests/871b8923-7ce0-4e64-4935-08dec98d574c completed in 31.58ms with status 200
+[2026-06-14 22:48:39.931 INF] [644b3319-4444-431e-ad0e-86f84be1dca4] [Perf] GET /api/erp-modules/summary -> 200 in 13.84ms
+[2026-06-14 22:48:39.931 INF] [644b3319-4444-431e-ad0e-86f84be1dca4] [CorrelationId: 644b3319-4444-431e-ad0e-86f84be1dca4] GET /api/erp-modules/summary completed in 13.95ms with status 200
+[2026-06-14 22:48:39.939 INF] [c7b9517f-119d-468a-b105-91f05177717c] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 22.31ms
+[2026-06-14 22:48:39.940 INF] [c7b9517f-119d-468a-b105-91f05177717c] [CorrelationId: c7b9517f-119d-468a-b105-91f05177717c] GET /api/erp-modules/helpdesk/tickets completed in 22.43ms with status 200
+[2026-06-14 22:50:12.271 INF] [258aef98-7a43-40e5-a672-841c8e74620a] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 10.04ms
+[2026-06-14 22:50:12.271 INF] [258aef98-7a43-40e5-a672-841c8e74620a] [CorrelationId: 258aef98-7a43-40e5-a672-841c8e74620a] GET /api/erp-modules/helpdesk/tickets completed in 10.15ms with status 200
+[2026-06-14 22:50:12.282 INF] [67f1327e-535c-4339-98e7-eb875f7985c8] [Perf] GET /api/erp-modules/summary -> 200 in 20.55ms
+[2026-06-14 22:50:12.282 INF] [67f1327e-535c-4339-98e7-eb875f7985c8] [CorrelationId: 67f1327e-535c-4339-98e7-eb875f7985c8] GET /api/erp-modules/summary completed in 20.71ms with status 200
+[2026-06-14 22:50:18.212 INF] [18623f6c-1bb9-4a98-af7b-9f7dadcb0bba] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.66ms
+[2026-06-14 22:50:18.212 INF] [18623f6c-1bb9-4a98-af7b-9f7dadcb0bba] [CorrelationId: 18623f6c-1bb9-4a98-af7b-9f7dadcb0bba] GET /api/erp-modules/helpdesk/tickets completed in 4.77ms with status 200
+[2026-06-14 22:50:18.224 INF] [09c9d1fc-b2a1-4ced-ac05-4dc1aed971ae] [Perf] GET /api/erp-modules/summary -> 200 in 16.51ms
+[2026-06-14 22:50:18.224 INF] [09c9d1fc-b2a1-4ced-ac05-4dc1aed971ae] [CorrelationId: 09c9d1fc-b2a1-4ced-ac05-4dc1aed971ae] GET /api/erp-modules/summary completed in 16.62ms with status 200
+[2026-06-14 22:50:19.616 INF] [f5f23265-5e20-47bd-8121-f6938405c6b0] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.39ms
+[2026-06-14 22:50:19.616 INF] [f5f23265-5e20-47bd-8121-f6938405c6b0] [CorrelationId: f5f23265-5e20-47bd-8121-f6938405c6b0] GET /api/erp-modules/helpdesk/tickets completed in 4.50ms with status 200
+[2026-06-14 22:50:19.630 INF] [b09edb0e-6459-402b-bdbe-8fae8433c3e2] [Perf] GET /api/erp-modules/summary -> 200 in 18.49ms
+[2026-06-14 22:50:19.631 INF] [b09edb0e-6459-402b-bdbe-8fae8433c3e2] [CorrelationId: b09edb0e-6459-402b-bdbe-8fae8433c3e2] GET /api/erp-modules/summary completed in 18.59ms with status 200
+[2026-06-14 22:51:19.633 INF] [156c791a-ac38-4eb6-a53c-230164b1da0e] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 7.90ms
+[2026-06-14 22:51:19.633 INF] [156c791a-ac38-4eb6-a53c-230164b1da0e] [CorrelationId: 156c791a-ac38-4eb6-a53c-230164b1da0e] GET /api/erp-modules/helpdesk/tickets completed in 8.02ms with status 200
+[2026-06-14 22:51:19.643 INF] [171d514d-6d42-4323-991d-021ca72f4f4f] [Perf] GET /api/erp-modules/summary -> 200 in 18.07ms
+[2026-06-14 22:51:19.643 INF] [171d514d-6d42-4323-991d-021ca72f4f4f] [CorrelationId: 171d514d-6d42-4323-991d-021ca72f4f4f] GET /api/erp-modules/summary completed in 18.19ms with status 200
+[2026-06-14 22:51:23.562 INF] [b5ab72e3-c8d6-43fa-84ff-0d8b651840d8] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.21ms
+[2026-06-14 22:51:23.562 INF] [b5ab72e3-c8d6-43fa-84ff-0d8b651840d8] [CorrelationId: b5ab72e3-c8d6-43fa-84ff-0d8b651840d8] GET /api/erp-modules/helpdesk/tickets completed in 4.31ms with status 200
+[2026-06-14 22:51:23.571 INF] [a05b801d-b0cb-4ec9-87dc-7eb050251021] [Perf] GET /api/erp-modules/summary -> 200 in 13.00ms
+[2026-06-14 22:51:23.571 INF] [a05b801d-b0cb-4ec9-87dc-7eb050251021] [CorrelationId: a05b801d-b0cb-4ec9-87dc-7eb050251021] GET /api/erp-modules/summary completed in 13.10ms with status 200
+[2026-06-14 22:52:11.041 INF] [85656fb0-54bc-4d2b-9549-d87b3063d148] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 8.55ms
+[2026-06-14 22:52:11.041 INF] [85656fb0-54bc-4d2b-9549-d87b3063d148] [CorrelationId: 85656fb0-54bc-4d2b-9549-d87b3063d148] GET /api/erp-modules/helpdesk/tickets completed in 8.68ms with status 200
+[2026-06-14 22:52:11.051 INF] [2234dd0c-b745-4ad5-9c01-9937f8dee512] [Perf] GET /api/erp-modules/summary -> 200 in 18.05ms
+[2026-06-14 22:52:11.051 INF] [2234dd0c-b745-4ad5-9c01-9937f8dee512] [CorrelationId: 2234dd0c-b745-4ad5-9c01-9937f8dee512] GET /api/erp-modules/summary completed in 18.16ms with status 200
+[2026-06-14 22:52:27.895 INF] [3fca4566-c939-4938-bf04-674a3d20b6e2] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 3.95ms
+[2026-06-14 22:52:27.895 INF] [3fca4566-c939-4938-bf04-674a3d20b6e2] [CorrelationId: 3fca4566-c939-4938-bf04-674a3d20b6e2] GET /api/erp-modules/helpdesk/tickets completed in 4.04ms with status 200
+[2026-06-14 22:52:27.902 INF] [ffb4f1a2-c4ac-4600-8156-3c5134cb1d3c] [Perf] GET /api/erp-modules/summary -> 200 in 11.13ms
+[2026-06-14 22:52:27.903 INF] [ffb4f1a2-c4ac-4600-8156-3c5134cb1d3c] [CorrelationId: ffb4f1a2-c4ac-4600-8156-3c5134cb1d3c] GET /api/erp-modules/summary completed in 11.24ms with status 200
+[2026-06-14 22:52:29.654 INF] [4b7d29c9-7bfd-4b8f-b49c-7de59f23a706] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 3.85ms
+[2026-06-14 22:52:29.654 INF] [4b7d29c9-7bfd-4b8f-b49c-7de59f23a706] [CorrelationId: 4b7d29c9-7bfd-4b8f-b49c-7de59f23a706] GET /api/erp-modules/helpdesk/tickets completed in 3.98ms with status 200
+[2026-06-14 22:52:29.664 INF] [741b2446-b2dd-4df2-b8c8-5877adeef151] [Perf] GET /api/erp-modules/summary -> 200 in 14.10ms
+[2026-06-14 22:52:29.664 INF] [741b2446-b2dd-4df2-b8c8-5877adeef151] [CorrelationId: 741b2446-b2dd-4df2-b8c8-5877adeef151] GET /api/erp-modules/summary completed in 14.23ms with status 200
+[2026-06-14 22:52:31.047 INF] [bb95e723-b9ef-4a21-ba99-45c70f823077] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 5.91ms
+[2026-06-14 22:52:31.047 INF] [bb95e723-b9ef-4a21-ba99-45c70f823077] [CorrelationId: bb95e723-b9ef-4a21-ba99-45c70f823077] GET /api/erp-modules/helpdesk/tickets completed in 6.03ms with status 200
+[2026-06-14 22:52:31.055 INF] [6422116b-bda4-471a-8327-c9f484894c6a] [Perf] GET /api/erp-modules/summary -> 200 in 13.31ms
+[2026-06-14 22:52:31.055 INF] [6422116b-bda4-471a-8327-c9f484894c6a] [CorrelationId: 6422116b-bda4-471a-8327-c9f484894c6a] GET /api/erp-modules/summary completed in 13.41ms with status 200
+[2026-06-14 22:52:40.670 INF] [fbb77a47-ac05-4de4-a42e-e76b01ca9f70] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 5.21ms
+[2026-06-14 22:52:40.670 INF] [fbb77a47-ac05-4de4-a42e-e76b01ca9f70] [CorrelationId: fbb77a47-ac05-4de4-a42e-e76b01ca9f70] GET /api/erp-modules/helpdesk/tickets completed in 5.32ms with status 200
+[2026-06-14 22:52:40.680 INF] [fd7815b7-8833-4560-a390-100c2b5142ca] [Perf] GET /api/erp-modules/summary -> 200 in 15.29ms
+[2026-06-14 22:52:40.680 INF] [fd7815b7-8833-4560-a390-100c2b5142ca] [CorrelationId: fd7815b7-8833-4560-a390-100c2b5142ca] GET /api/erp-modules/summary completed in 15.39ms with status 200
+[2026-06-14 22:52:42.512 INF] [77583884-91ae-4d62-8f5e-f466d46cc326] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 3.65ms
+[2026-06-14 22:52:42.512 INF] [77583884-91ae-4d62-8f5e-f466d46cc326] [CorrelationId: 77583884-91ae-4d62-8f5e-f466d46cc326] GET /api/erp-modules/helpdesk/tickets completed in 3.79ms with status 200
+[2026-06-14 22:52:42.519 INF] [a5280e0e-7fb6-4d50-9d29-fa5174edfa1a] [Perf] GET /api/erp-modules/summary -> 200 in 10.93ms
+[2026-06-14 22:52:42.519 INF] [a5280e0e-7fb6-4d50-9d29-fa5174edfa1a] [CorrelationId: a5280e0e-7fb6-4d50-9d29-fa5174edfa1a] GET /api/erp-modules/summary completed in 11.04ms with status 200
+[2026-06-14 22:52:44.070 INF] [040cbb93-d078-4d5a-9f7d-2093b0b7d27d] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.25ms
+[2026-06-14 22:52:44.070 INF] [040cbb93-d078-4d5a-9f7d-2093b0b7d27d] [CorrelationId: 040cbb93-d078-4d5a-9f7d-2093b0b7d27d] GET /api/erp-modules/helpdesk/tickets completed in 4.33ms with status 200
+[2026-06-14 22:52:44.075 INF] [2f51cd92-0514-4c9a-ac20-e0aaa515156f] [Perf] GET /api/erp-modules/summary -> 200 in 9.84ms
+[2026-06-14 22:52:44.075 INF] [2f51cd92-0514-4c9a-ac20-e0aaa515156f] [CorrelationId: 2f51cd92-0514-4c9a-ac20-e0aaa515156f] GET /api/erp-modules/summary completed in 9.92ms with status 200
+[2026-06-14 22:52:46.612 INF] [08a6c5ce-428e-4dac-ac30-0743fc37c876] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.53ms
+[2026-06-14 22:52:46.613 INF] [08a6c5ce-428e-4dac-ac30-0743fc37c876] [CorrelationId: 08a6c5ce-428e-4dac-ac30-0743fc37c876] GET /api/erp-modules/helpdesk/tickets completed in 4.63ms with status 200
+[2026-06-14 22:52:46.620 INF] [79c2d9c5-ae0b-4354-bbe9-de00f8690ec9] [Perf] GET /api/erp-modules/summary -> 200 in 11.74ms
+[2026-06-14 22:52:46.620 INF] [79c2d9c5-ae0b-4354-bbe9-de00f8690ec9] [CorrelationId: 79c2d9c5-ae0b-4354-bbe9-de00f8690ec9] GET /api/erp-modules/summary completed in 11.85ms with status 200
+[2026-06-14 23:48:15.224 INF] [8afbdcd4-3273-41a2-b87b-cbd72d720688] [Perf] POST /api/notifications -> 404 in 0.14ms
+[2026-06-14 23:48:15.224 INF] [8afbdcd4-3273-41a2-b87b-cbd72d720688] [CorrelationId: 8afbdcd4-3273-41a2-b87b-cbd72d720688] POST /api/notifications completed in 0.27ms with status 404
+[2026-06-14 23:50:24.868 INF] [dc119a50-cac0-4b25-85fa-db6c9dfd5111] [Perf] GET /health -> 401 in 0.16ms
+[2026-06-14 23:50:24.868 INF] [dc119a50-cac0-4b25-85fa-db6c9dfd5111] [CorrelationId: dc119a50-cac0-4b25-85fa-db6c9dfd5111] GET /health completed in 0.30ms with status 401
+[2026-06-14 23:51:32.649 INF] [75107be2-e1b6-4923-a7c3-5a218218f2a1] [Perf] GET /notificationsHub -> 401 in 0.09ms
+[2026-06-14 23:51:32.649 INF] [75107be2-e1b6-4923-a7c3-5a218218f2a1] [CorrelationId: 75107be2-e1b6-4923-a7c3-5a218218f2a1] GET /notificationsHub completed in 0.23ms with status 401
+[2026-06-14 23:52:10.409 INF] [960a50b7-35db-4e72-9b89-e0c21a19d151] [Perf] GET /notifications -> 401 in 0.08ms
+[2026-06-14 23:52:10.409 INF] [960a50b7-35db-4e72-9b89-e0c21a19d151] [CorrelationId: 960a50b7-35db-4e72-9b89-e0c21a19d151] GET /notifications completed in 0.22ms with status 401
+[2026-06-14 23:53:35.971 INF] [79ae7a35-e998-4310-be62-176586702a56] [Perf] GET /api/dashboard/hr-summary -> 200 in 41.15ms
+[2026-06-14 23:53:35.971 INF] [79ae7a35-e998-4310-be62-176586702a56] [CorrelationId: 79ae7a35-e998-4310-be62-176586702a56] GET /api/dashboard/hr-summary completed in 41.26ms with status 200
+[2026-06-14 23:53:39.982 INF] [74319895-a592-4846-bec8-ed4122bac3e0] [Perf] GET /api/erp-modules/summary -> 200 in 25.79ms
+[2026-06-14 23:53:39.982 INF] [74319895-a592-4846-bec8-ed4122bac3e0] [CorrelationId: 74319895-a592-4846-bec8-ed4122bac3e0] GET /api/erp-modules/summary completed in 25.90ms with status 200
+[2026-06-14 23:53:39.992 INF] [1ca28e32-3279-40d5-9203-57a5285db20c] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 9.26ms
+[2026-06-14 23:53:39.992 INF] [1ca28e32-3279-40d5-9203-57a5285db20c] [CorrelationId: 1ca28e32-3279-40d5-9203-57a5285db20c] GET /api/erp-modules/helpdesk/tickets completed in 9.36ms with status 200
+[2026-06-14 23:53:44.853 INF] [7693b93b-52bf-4d13-82a8-bf81e4315561] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 8.46ms
+[2026-06-14 23:53:44.854 INF] [7693b93b-52bf-4d13-82a8-bf81e4315561] [CorrelationId: 7693b93b-52bf-4d13-82a8-bf81e4315561] GET /api/erp-modules/helpdesk/tickets completed in 8.56ms with status 200
+[2026-06-14 23:53:44.877 INF] [7f4a7372-82ff-4ff9-8450-28210f3ac673] [Perf] GET /api/erp-modules/summary -> 200 in 31.89ms
+[2026-06-14 23:53:44.877 INF] [7f4a7372-82ff-4ff9-8450-28210f3ac673] [CorrelationId: 7f4a7372-82ff-4ff9-8450-28210f3ac673] GET /api/erp-modules/summary completed in 31.99ms with status 200
+[2026-06-14 23:54:45.460 INF] [8bf37af5-fa97-4111-ba9e-0ce1f76a855f] [Perf] POST /api/erp-modules/helpdesk/tickets -> 201 in 23.01ms
+[2026-06-14 23:54:45.460 INF] [8bf37af5-fa97-4111-ba9e-0ce1f76a855f] [CorrelationId: 8bf37af5-fa97-4111-ba9e-0ce1f76a855f] POST /api/erp-modules/helpdesk/tickets completed in 23.11ms with status 201
+[2026-06-14 23:54:45.465 INF] [3b76a9b0-92a9-4263-a550-1ec74eb8233e] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 2.64ms
+[2026-06-14 23:54:45.465 INF] [3b76a9b0-92a9-4263-a550-1ec74eb8233e] [CorrelationId: 3b76a9b0-92a9-4263-a550-1ec74eb8233e] GET /api/erp-modules/helpdesk/tickets completed in 2.72ms with status 200
+[2026-06-14 23:54:45.474 INF] [b592e931-b2fe-40e2-8d91-8e1aab71387c] [Perf] GET /api/erp-modules/summary -> 200 in 10.08ms
+[2026-06-14 23:54:45.474 INF] [b592e931-b2fe-40e2-8d91-8e1aab71387c] [CorrelationId: b592e931-b2fe-40e2-8d91-8e1aab71387c] GET /api/erp-modules/summary completed in 10.18ms with status 200
+[2026-06-14 23:55:42.863 INF] [] Server macbookpro:42387:065f065e caught stopping signal...
+[2026-06-14 23:55:43.250 INF] [] Server macbookpro:42387:065f065e All dispatchers stopped
+[2026-06-14 23:55:43.260 INF] [] Server macbookpro:42387:065f065e successfully reported itself as stopped in 8.6015 ms
+[2026-06-14 23:55:43.260 INF] [] Server macbookpro:42387:065f065e has been stopped in total 396.4745 ms

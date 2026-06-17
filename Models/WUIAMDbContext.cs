@@ -37,9 +37,28 @@ namespace WUIAM.Models
         public DbSet<EmployeeDetails> EmployeeDetails { get; set; }
         public DbSet<EmploymentDetails> EmploymentDetails { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<EmployeeProfileUpdateRequest> EmployeeProfileUpdateRequests { get; set; }
         public DbSet<JobCategory> JobCategories { get; set; }
 
-        // public DbSet<AuditLog> AuditLogs { get; set; }
+        public DbSet<AuditLog> AuditLogs { get; set; }
+        public DbSet<SalaryStructure> SalaryStructures { get; set; }
+        public DbSet<PayrollRun> PayrollRuns { get; set; }
+        public DbSet<ProcurementRequest> ProcurementRequests { get; set; }
+        public DbSet<InventoryItem> InventoryItems { get; set; }
+        public DbSet<DocumentRecord> DocumentRecords { get; set; }
+        public DbSet<HelpdeskTicket> HelpdeskTickets { get; set; }
+        public DbSet<HelpdeskTicketComment> HelpdeskTicketComments { get; set; }
+        public DbSet<FacilityAsset> FacilityAssets { get; set; }
+        public DbSet<RegistryIntegrationRecord> RegistryIntegrationRecords { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+
+        // Recruitment Management
+        public DbSet<JobPosting> JobPostings { get; set; }
+        public DbSet<JobApplication> JobApplications { get; set; }
+        public DbSet<ApplicationScore> ApplicationScores { get; set; }
+        public DbSet<InterviewSchedule> InterviewSchedules { get; set; }
+        public DbSet<OfferLetter> OfferLetters { get; set; }
+        public DbSet<ApplicantQuery> ApplicantQueries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -234,6 +253,111 @@ namespace WUIAM.Models
                     .WithMany()
                     .HasForeignKey(s => s.ProgramId)
                     .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<HelpdeskTicketComment>(entity =>
+            {
+                entity.HasKey(c => c.Id);
+                entity.HasOne(c => c.Ticket)
+                    .WithMany(t => t.Comments)
+                    .HasForeignKey(c => c.TicketId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<Notification>(entity =>
+            {
+                entity.HasKey(n => n.Id);
+                entity.HasOne(n => n.User)
+                    .WithMany()
+                    .HasForeignKey(n => n.UserId)
+                    .OnDelete(DeleteBehavior.Cascade);
+                entity.HasIndex(n => new { n.UserId, n.IsRead, n.CreatedAt });
+            });
+
+            // Recruitment entity configurations
+            modelBuilder.Entity<JobPosting>(entity =>
+            {
+                entity.HasKey(j => j.Id);
+                entity.HasOne(j => j.Department)
+                    .WithMany()
+                    .HasForeignKey(j => j.DepartmentId)
+                    .OnDelete(DeleteBehavior.SetNull);
+                entity.HasOne(j => j.CreatedByUser)
+                    .WithMany()
+                    .HasForeignKey(j => j.CreatedBy)
+                    .OnDelete(DeleteBehavior.Restrict);
+                entity.Property(j => j.Title).IsRequired().HasMaxLength(200);
+                entity.Property(j => j.Description).IsRequired();
+                entity.Property(j => j.Status).HasMaxLength(50);
+                entity.Property(j => j.EmploymentType).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<JobApplication>(entity =>
+            {
+                entity.HasKey(a => a.Id);
+                entity.HasOne(a => a.JobPosting)
+                    .WithMany()
+                    .HasForeignKey(a => a.JobPostingId)
+                    .OnDelete(DeleteBehavior.Cascade);
+                entity.HasOne(a => a.AssignedToUser)
+                    .WithMany()
+                    .HasForeignKey(a => a.AssignedTo)
+                    .OnDelete(DeleteBehavior.SetNull);
+                entity.Property(a => a.ApplicantName).IsRequired().HasMaxLength(200);
+                entity.Property(a => a.Email).IsRequired().HasMaxLength(200);
+                entity.Property(a => a.Status).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<ApplicationScore>(entity =>
+            {
+                entity.HasKey(s => s.Id);
+                entity.HasOne(s => s.Application)
+                    .WithMany()
+                    .HasForeignKey(s => s.ApplicationId)
+                    .OnDelete(DeleteBehavior.Cascade);
+                entity.Property(s => s.TechnicalMatch).HasPrecision(5, 2);
+                entity.Property(s => s.CulturalFit).HasPrecision(5, 2);
+                entity.Property(s => s.EducationMatch).HasPrecision(5, 2);
+                entity.Property(s => s.ExperienceMatch).HasPrecision(5, 2);
+                entity.Property(s => s.OverallMatch).HasPrecision(5, 2);
+            });
+
+            modelBuilder.Entity<InterviewSchedule>(entity =>
+            {
+                entity.HasKey(i => i.Id);
+                entity.HasOne(i => i.Application)
+                    .WithMany()
+                    .HasForeignKey(i => i.ApplicationId)
+                    .OnDelete(DeleteBehavior.Cascade);
+                entity.Property(i => i.Type).HasMaxLength(50);
+                entity.Property(i => i.Status).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<OfferLetter>(entity =>
+            {
+                entity.HasKey(o => o.Id);
+                entity.HasOne(o => o.Application)
+                    .WithMany()
+                    .HasForeignKey(o => o.ApplicationId)
+                    .OnDelete(DeleteBehavior.Cascade);
+                entity.Property(o => o.Status).HasMaxLength(50);
+                entity.Property(o => o.CompanyName).HasMaxLength(200);
+                entity.Property(o => o.Position).HasMaxLength(200);
+                entity.Property(o => o.Salary).HasPrecision(18, 2);
+            });
+
+            modelBuilder.Entity<ApplicantQuery>(entity =>
+            {
+                entity.HasKey(q => q.Id);
+                entity.HasOne(q => q.Application)
+                    .WithMany()
+                    .HasForeignKey(q => q.ApplicationId)
+                    .OnDelete(DeleteBehavior.Cascade);
+                entity.HasOne(q => q.FromUser)
+                    .WithMany()
+                    .HasForeignKey(q => q.FromUserId)
+                    .OnDelete(DeleteBehavior.SetNull);
+                entity.Property(q => q.MessageFrom).HasMaxLength(50);
             });
         }
     }

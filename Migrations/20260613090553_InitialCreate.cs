@@ -28,6 +28,27 @@ namespace WUIAM.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "DocumentRecords",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Category = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    OwnerDepartmentId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    OwnerUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    StorageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Confidentiality = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    Version = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DocumentRecords", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "EmploymentTypes",
                 columns: table => new
                 {
@@ -39,6 +60,73 @@ namespace WUIAM.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_EmploymentTypes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "FacilityAssets",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    AssetTag = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(160)", maxLength: 160, nullable: false),
+                    Category = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Location = table.Column<string>(type: "nvarchar(120)", maxLength: 120, nullable: false),
+                    CustodianEmployeeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    Condition = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    PurchaseDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    PurchaseCost = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    WarrantyExpiryDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FacilityAssets", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HelpdeskTickets",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    TicketNumber = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(180)", maxLength: 180, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Category = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
+                    Priority = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    RequesterUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    AssigneeUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    DueAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ClosedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HelpdeskTickets", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "InventoryItems",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Sku = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(160)", maxLength: 160, nullable: false),
+                    Category = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    QuantityOnHand = table.Column<int>(type: "int", nullable: false),
+                    ReorderLevel = table.Column<int>(type: "int", nullable: false),
+                    UnitCost = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Location = table.Column<string>(type: "nvarchar(120)", maxLength: 120, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_InventoryItems", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -56,6 +144,28 @@ namespace WUIAM.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "PayrollRuns",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PeriodName = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
+                    PeriodStart = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    PeriodEnd = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    EmployeeCount = table.Column<int>(type: "int", nullable: false),
+                    GrossPayTotal = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    NetPayTotal = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ProcessedByUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    ProcessedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PayrollRuns", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Permissions",
                 columns: table => new
                 {
@@ -66,6 +176,28 @@ namespace WUIAM.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Permissions", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProcurementRequests",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    RequestNumber = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(180)", maxLength: 180, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DepartmentId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    RequestedByUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    EstimatedAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Priority = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    NeededBy = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProcurementRequests", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -96,11 +228,35 @@ namespace WUIAM.Migrations
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     RevokedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
                     RevokedByIp = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ReplacedByToken = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ReplacedByToken = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeviceType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DeviceName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Browser = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserAgent = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IpAddress = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_RefreshTokens", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RegistryIntegrationRecords",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SystemName = table.Column<string>(type: "nvarchar(140)", maxLength: 140, nullable: false),
+                    IntegrationType = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
+                    ExternalUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    LastSyncedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Notes = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RegistryIntegrationRecords", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -114,6 +270,29 @@ namespace WUIAM.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Roles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SalaryStructures",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(120)", maxLength: 120, nullable: false),
+                    GradeLevel = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
+                    BasePay = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    HousingAllowance = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    TransportAllowance = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    OtherAllowance = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    TaxRatePercent = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    PensionRatePercent = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SalaryStructures", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -224,7 +403,13 @@ namespace WUIAM.Migrations
                     SessionID = table.Column<string>(type: "varchar(max)", unicode: false, nullable: true),
                     SessionTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     UserTypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    TwoFactorEnabled = table.Column<bool>(type: "bit", nullable: false)
+                    TwoFactorEnabled = table.Column<bool>(type: "bit", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    IsSuspended = table.Column<bool>(type: "bit", nullable: false),
+                    IsLocked = table.Column<bool>(type: "bit", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
+                    FailedLoginAttempts = table.Column<int>(type: "int", nullable: false),
+                    LockedUntil = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -330,6 +515,32 @@ namespace WUIAM.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "AuditLogs",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ActionType = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    EntityName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    EntityId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    OldValues = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NewValues = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IpAddress = table.Column<string>(type: "nvarchar(45)", maxLength: 45, nullable: true),
+                    UserAgent = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AuditLogs", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AuditLogs_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "EmployeeDetails",
                 columns: table => new
                 {
@@ -342,8 +553,8 @@ namespace WUIAM.Migrations
                     MaritalStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Nationality = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     EmergencyContactName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EmergencyContactPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Relationship = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -437,7 +648,9 @@ namespace WUIAM.Migrations
                     ExpiresOn = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     ClientId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsUsed = table.Column<bool>(type: "bit", nullable: false),
+                    UsedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -519,6 +732,44 @@ namespace WUIAM.Migrations
                         column: x => x.DeanId,
                         principalTable: "EmployeeDetails",
                         principalColumn: "EmployeeId");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EmployeeProfileUpdateRequests",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    EmployeeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    RequestedByUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CurrentValuesJson = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProposedValuesJson = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ReviewedByUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    RequestedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ReviewedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EmployeeProfileUpdateRequests", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_EmployeeProfileUpdateRequests_EmployeeDetails_EmployeeId",
+                        column: x => x.EmployeeId,
+                        principalTable: "EmployeeDetails",
+                        principalColumn: "EmployeeId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EmployeeProfileUpdateRequests_Users_RequestedByUserId",
+                        column: x => x.RequestedByUserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_EmployeeProfileUpdateRequests_Users_ReviewedByUserId",
+                        column: x => x.ReviewedByUserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -606,7 +857,10 @@ namespace WUIAM.Migrations
                     DepartmentType = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     CollegeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     ParentDepartmentId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    HeadId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    HeadId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
+                    DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DeletedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -663,7 +917,7 @@ namespace WUIAM.Migrations
                     JobTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     JobCategory = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EmploymentTypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    EmploymentStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EmploymentStatus = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     GradeLevel = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateOfHire = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ProbationEndDate = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -782,6 +1036,11 @@ namespace WUIAM.Migrations
                 column: "ApprovalFlowId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_AuditLogs_UserId",
+                table: "AuditLogs",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Colleges_DeanId",
                 table: "Colleges",
                 column: "DeanId");
@@ -802,10 +1061,50 @@ namespace WUIAM.Migrations
                 column: "ParentDepartmentId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_DocumentRecords_OwnerDepartmentId",
+                table: "DocumentRecords",
+                column: "OwnerDepartmentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DocumentRecords_OwnerUserId",
+                table: "DocumentRecords",
+                column: "OwnerUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DocumentRecords_Status",
+                table: "DocumentRecords",
+                column: "Status");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EmployeeDetails_Email",
+                table: "EmployeeDetails",
+                column: "Email");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EmployeeDetails_PhoneNumber",
+                table: "EmployeeDetails",
+                column: "PhoneNumber");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_EmployeeDetails_UserId",
                 table: "EmployeeDetails",
                 column: "UserId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EmployeeProfileUpdateRequests_EmployeeId",
+                table: "EmployeeProfileUpdateRequests",
+                column: "EmployeeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EmployeeProfileUpdateRequests_RequestedByUserId",
+                table: "EmployeeProfileUpdateRequests",
+                column: "RequestedByUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EmployeeProfileUpdateRequests_ReviewedByUserId",
+                table: "EmployeeProfileUpdateRequests",
+                column: "ReviewedByUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_EmploymentDetails_DepartmentId",
@@ -818,14 +1117,82 @@ namespace WUIAM.Migrations
                 column: "EmployeeId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_EmploymentDetails_EmploymentStatus",
+                table: "EmploymentDetails",
+                column: "EmploymentStatus");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_EmploymentDetails_EmploymentTypeId",
                 table: "EmploymentDetails",
                 column: "EmploymentTypeId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_EmploymentDetails_IsActive",
+                table: "EmploymentDetails",
+                column: "IsActive");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_EmploymentDetails_SupervisorId",
                 table: "EmploymentDetails",
                 column: "SupervisorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FacilityAssets_AssetTag",
+                table: "FacilityAssets",
+                column: "AssetTag",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FacilityAssets_Category",
+                table: "FacilityAssets",
+                column: "Category");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FacilityAssets_CustodianEmployeeId",
+                table: "FacilityAssets",
+                column: "CustodianEmployeeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FacilityAssets_Status",
+                table: "FacilityAssets",
+                column: "Status");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HelpdeskTickets_AssigneeUserId",
+                table: "HelpdeskTickets",
+                column: "AssigneeUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HelpdeskTickets_RequesterUserId",
+                table: "HelpdeskTickets",
+                column: "RequesterUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HelpdeskTickets_Status",
+                table: "HelpdeskTickets",
+                column: "Status");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HelpdeskTickets_TicketNumber",
+                table: "HelpdeskTickets",
+                column: "TicketNumber",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_InventoryItems_Category",
+                table: "InventoryItems",
+                column: "Category");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_InventoryItems_Sku",
+                table: "InventoryItems",
+                column: "Sku",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_InventoryItems_Status",
+                table: "InventoryItems",
+                column: "Status");
 
             migrationBuilder.CreateIndex(
                 name: "IX_LeaveBalances_LeaveTypeId",
@@ -836,6 +1203,12 @@ namespace WUIAM.Migrations
                 name: "IX_LeaveBalances_UserId",
                 table: "LeaveBalances",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LeaveBalances_UserId_LeaveTypeId_ValidFrom",
+                table: "LeaveBalances",
+                columns: new[] { "UserId", "LeaveTypeId", "ValidFrom" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_LeavePolicies_EmploymentTypeId",
@@ -903,14 +1276,67 @@ namespace WUIAM.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_PayrollRuns_PeriodName",
+                table: "PayrollRuns",
+                column: "PeriodName",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PayrollRuns_ProcessedByUserId",
+                table: "PayrollRuns",
+                column: "ProcessedByUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PayrollRuns_Status",
+                table: "PayrollRuns",
+                column: "Status");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProcurementRequests_DepartmentId",
+                table: "ProcurementRequests",
+                column: "DepartmentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProcurementRequests_RequestedByUserId",
+                table: "ProcurementRequests",
+                column: "RequestedByUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProcurementRequests_RequestNumber",
+                table: "ProcurementRequests",
+                column: "RequestNumber",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProcurementRequests_Status",
+                table: "ProcurementRequests",
+                column: "Status");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Programs_CollegeId",
                 table: "Programs",
                 column: "CollegeId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_RegistryIntegrationRecords_Status",
+                table: "RegistryIntegrationRecords",
+                column: "Status");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RegistryIntegrationRecords_SystemName",
+                table: "RegistryIntegrationRecords",
+                column: "SystemName");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_RolePermissions_PermissionId",
                 table: "RolePermissions",
                 column: "PermissionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SalaryStructures_Code",
+                table: "SalaryStructures",
+                column: "Code",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Students_AcademicProgramProgramId",
@@ -967,7 +1393,25 @@ namespace WUIAM.Migrations
                 name: "ApprovalDelegations");
 
             migrationBuilder.DropTable(
+                name: "AuditLogs");
+
+            migrationBuilder.DropTable(
+                name: "DocumentRecords");
+
+            migrationBuilder.DropTable(
+                name: "EmployeeProfileUpdateRequests");
+
+            migrationBuilder.DropTable(
                 name: "EmploymentDetails");
+
+            migrationBuilder.DropTable(
+                name: "FacilityAssets");
+
+            migrationBuilder.DropTable(
+                name: "HelpdeskTickets");
+
+            migrationBuilder.DropTable(
+                name: "InventoryItems");
 
             migrationBuilder.DropTable(
                 name: "JobCategories");
@@ -991,13 +1435,25 @@ namespace WUIAM.Migrations
                 name: "MFATokens");
 
             migrationBuilder.DropTable(
+                name: "PayrollRuns");
+
+            migrationBuilder.DropTable(
+                name: "ProcurementRequests");
+
+            migrationBuilder.DropTable(
                 name: "PublicHolidays");
 
             migrationBuilder.DropTable(
                 name: "RefreshTokens");
 
             migrationBuilder.DropTable(
+                name: "RegistryIntegrationRecords");
+
+            migrationBuilder.DropTable(
                 name: "RolePermissions");
+
+            migrationBuilder.DropTable(
+                name: "SalaryStructures");
 
             migrationBuilder.DropTable(
                 name: "Students");

@@ -1,4 +1,5 @@
 using WUIAM.Models;
+using WUIAM.DTOs;
 namespace WUIAM.Interfaces
 {
 
@@ -9,6 +10,7 @@ namespace WUIAM.Interfaces
         Task<EmploymentDetails?> GetCurrentEmploymentAsync(Guid employeeId);
 
         Task<EmploymentDetails> AssignEmploymentAsync(Guid employeeId, EmploymentDetails employment);
+        Task<EmploymentDetails> AssignEmploymentAsync(Guid employeeId, EmploymentAssignmentDto employment);
         Task EndEmploymentAsync(Guid employmentId, DateTime endDate);
     }
 }

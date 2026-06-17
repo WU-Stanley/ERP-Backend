@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using System.Threading.Tasks;
 using WUIAM.Services;
 using WUIAM.Models;
@@ -6,11 +7,19 @@ using WUIAM.Interfaces;
 using WUIAM.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using WUIAM.Enums;
+using System.Security.Claims;
 
 
+/// <summary>
+/// API v1 - Authentication and user management endpoints.
+/// </summary>
 namespace WUIAM.Controllers
 {
+    /// <summary>
+    /// API v1 - Authentication and user management endpoints.
+    /// </summary>
     [ApiController]
+    [ApiVersion("1.0")]
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
@@ -28,6 +37,8 @@ namespace WUIAM.Controllers
             if (!result.Success)
                 return Ok(ApiResponse<dynamic>.Failure(result.Message));
 
+            AppendRefreshTokenCookie(GetStringProperty(result, "refreshToken"));
+
             return Ok(ApiResponse<dynamic>.Success(result.Message, result));
         }
 
@@ -39,18 +50,7 @@ namespace WUIAM.Controllers
             if (!result.Success)
                 return Ok(ApiResponse<dynamic>.Failure(result.Message));
 
-            var refreshToken = result.refreshToken as string;
-            if (!string.IsNullOrEmpty(refreshToken))
-            {
-                Response.Cookies.Append("refresh_token", refreshToken, new CookieOptions
-                {
-                    HttpOnly = true,
-                    Secure = true,
-                    SameSite = SameSiteMode.None,
-                    Expires = DateTime.UtcNow.AddDays(7),
-                    Path = "/"
-                });
-            }
+            AppendRefreshTokenCookie(GetStringProperty(result, "refreshToken"));
 
             return Ok(ApiResponse<dynamic>.Success(result.Message, result));
         }
@@ -63,15 +63,7 @@ namespace WUIAM.Controllers
             if (!result.Success)
                 return Ok(ApiResponse<dynamic>.Failure(result.Message));
 
-            var refreshToken = result.refreshToken;
-            Response.Cookies.Append("refresh_token", refreshToken, new CookieOptions
-            {
-                HttpOnly = true,
-                Secure = true, // Use true in production
-                SameSite = SameSiteMode.None,
-                Expires = DateTime.UtcNow.AddDays(7),
-                Path = "/" // Scope of cookie
-            });
+            AppendRefreshTokenCookie(GetStringProperty(result, "refreshToken"));
 
             return Ok(ApiResponse<dynamic>.Success(result.Message, result));
         }
@@ -96,7 +88,6 @@ namespace WUIAM.Controllers
 
             if (result == null)
                 return BadRequest("User registration failed!");
-            result.Password = null;
             return Ok(result);
         }
         [AllowAnonymous]
@@ -110,6 +101,8 @@ namespace WUIAM.Controllers
             var result = await _authService.GetRefreshTokenAsync(refreshToken);
             if (!result.Success)
                 return Unauthorized(result.Message);
+
+            AppendRefreshTokenCookie(GetStringProperty(result, "refreshToken"));
 
             return Ok(result);
         }
@@ -194,10 +187,75 @@ namespace WUIAM.Controllers
         }
 
         [HttpPost("logout")]
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            if (!string.IsNullOrWhiteSpace(email))
+            {
+                await _authService.LogoutAsync(email);
+            }
+
             Response.Cookies.Delete("refresh_token");
-            return Ok();
+            return Ok(new { message = "Logged out successfully" });
+        }
+
+        [HttpGet("sessions")]
+        public async Task<IActionResult> GetActiveSessions()
+        {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            if (string.IsNullOrWhiteSpace(email))
+                return Unauthorized(ApiResponse<dynamic>.Failure("Unauthenticated"));
+
+            var result = await _authService.GetActiveSessionsAsync(email);
+            if (!result.status)
+                return BadRequest(ApiResponse<dynamic>.Failure(result.message));
+
+            return Ok(ApiResponse<dynamic>.Success(result.message, result.sessions));
+        }
+
+        [HttpPost("sessions/revoke-all")]
+        public async Task<IActionResult> RevokeAllSessions()
+        {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            if (string.IsNullOrWhiteSpace(email))
+                return Unauthorized(ApiResponse<dynamic>.Failure("Unauthenticated"));
+
+            var result = await _authService.RevokeAllSessionsAsync(email);
+            if (!result.status)
+                return BadRequest(ApiResponse<dynamic>.Failure(result.message));
+
+            Response.Cookies.Delete("refresh_token");
+            return Ok(new { message = result.message });
+        }
+
+        private void AppendRefreshTokenCookie(string? refreshToken)
+        {
+            if (string.IsNullOrWhiteSpace(refreshToken))
+                return;
+
+            var host = Request.Host.Host;
+            var isLocalRequest =
+                string.Equals(host, "localhost", StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(host, "127.0.0.1", StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(host, "::1", StringComparison.OrdinalIgnoreCase);
+            var useSecureCookie = Request.IsHttps || !isLocalRequest;
+
+            Response.Cookies.Append("refresh_token", refreshToken, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = useSecureCookie,
+                SameSite = useSecureCookie ? SameSiteMode.None : SameSiteMode.Lax,
+                Expires = DateTime.UtcNow.AddDays(7),
+                Path = "/"
+            });
+        }
+
+        private static string? GetStringProperty(object? value, string propertyName)
+        {
+            if (value == null)
+                return null;
+
+            return value.GetType().GetProperty(propertyName)?.GetValue(value) as string;
         }
     }
 

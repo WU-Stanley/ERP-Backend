@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using WUIAM.DTOs;
+using WUIAM.Enums;
 using WUIAM.Interfaces;
 using WUIAM.Models;
 
@@ -20,11 +21,11 @@ namespace WUIAM.Controllers
         [HttpGet("{employmentId:guid}")]
         public async Task<ActionResult<ApiResponse<EmploymentDetails>>> GetEmployment(Guid employmentId)
         {
-            // Get the employee that has this employment record
-            var employees = await _employmentService.GetEmploymentAsync(Guid.Empty);
-            // NOTE: adjust service to fetch directly by employmentId if needed
-
-            // In a proper service: await _employmentService.GetEmploymentByIdAsync(employmentId);
+            var employment = await _employmentService.GetEmploymentAsync(employmentId);
+            if (employment != null)
+            {
+                return Ok(ApiResponse<EmploymentDetails>.Success("Employment retrieved successfully", employment));
+            }
 
             return NotFound(ApiResponse<EmploymentDetails>.Failure($"Employment with ID {employmentId} not found."));
         }
@@ -49,13 +50,14 @@ namespace WUIAM.Controllers
         }
 
         [HttpPost("employee/{employeeId:guid}")]
-        public async Task<ActionResult<ApiResponse<EmploymentDetails>>> AssignEmployment(Guid employeeId, EmploymentDetails employment)
+        [HasPermission(Permissions.AdminAccess, Permissions.UpdateEmployeeProfiles, Permissions.AssignSupervisor, Permissions.ManageUsers, Permissions.SuperAdminAccess)]
+        public async Task<ActionResult<ApiResponse<EmploymentDetails>>> AssignEmployment(Guid employeeId, EmploymentAssignmentDto employment)
         {
             try
             {
-                await _employmentService.AssignEmploymentAsync(employeeId, employment);
+                var result = await _employmentService.AssignEmploymentAsync(employeeId, employment);
 
-                return Ok(ApiResponse<EmploymentDetails>.Success("Employment assigned successfully", employment));
+                return Ok(ApiResponse<EmploymentDetails>.Success("Employment assigned successfully", result));
             }
             catch (Exception ex)
             {
@@ -64,6 +66,7 @@ namespace WUIAM.Controllers
         }
 
         [HttpPut("{employmentId:guid}/end")]
+        [HasPermission(Permissions.AdminAccess, Permissions.UpdateEmployeeProfiles, Permissions.ManageUsers, Permissions.SuperAdminAccess)]
         public async Task<ActionResult<ApiResponse<object>>> EndEmployment(Guid employmentId)
         {
             try

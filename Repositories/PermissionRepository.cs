@@ -61,21 +61,52 @@ namespace WUIAM.Repositories
         // This method checks if a user has a specific permission, either directly or through their roles.
         public async Task<bool> UserHasPermissionAsync(Guid userId, string permission)
         {
+            var superAdminPermission = Permissions.SuperAdminAccess.ToString();
+            var adminPermission = Permissions.AdminAccess.ToString();
+
             // Check direct user permissions  
             var hasUserPermission = await dbContext.UserPermissions
-                .AnyAsync(up => up.UserId == userId && (up.Permission.Name == permission || up.Permission.Name == Permissions.AdminAccess.ToString()));
+                .AnyAsync(up => up.UserId == userId &&
+                    (up.Permission.Name == permission ||
+                     up.Permission.Name == adminPermission ||
+                     up.Permission.Name == superAdminPermission));
 
             if (hasUserPermission)
+                return true;
+
+            var roleNames = await dbContext.UserRoles
+                .Where(ur => ur.UserId == userId)
+                .Select(ur => ur.Role.Name)
+                .ToListAsync();
+
+            var hasSuperAdminRole = roleNames.Any(roleName =>
+            {
+                var normalizedRoleName = NormalizeRoleName(roleName);
+                return normalizedRoleName is "superadmin" or "superadministrator";
+            });
+
+            if (hasSuperAdminRole)
                 return true;
 
             // Check role-based permissions  
             var hasRolePermission = await dbContext.Users
                 .Where(u => u.Id == userId)
                 .SelectMany(u => u.UserRoles.SelectMany(ur => ur.Role.RolePermissions))
-                .AnyAsync(rp => rp.Permission.Name == permission ||rp.Permission.Name =="AdminAccess");
+                .AnyAsync(rp => rp.Permission.Name == permission ||
+                    rp.Permission.Name == adminPermission ||
+                    rp.Permission.Name == superAdminPermission);
 
             return hasRolePermission;
         }
+
+        private static string NormalizeRoleName(string roleName)
+        {
+            return new string(roleName
+                .Where(char.IsLetterOrDigit)
+                .Select(char.ToLowerInvariant)
+                .ToArray());
+        }
+
         public async Task<bool> RevokePermissionAsync(Guid userId, string permission)
         {
             var userPermission = await dbContext.UserPermissions
@@ -179,4 +210,3 @@ namespace WUIAM.Repositories
         }
     }
 }
-

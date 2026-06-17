@@ -1,0 +1,146 @@
+[2026-06-14 19:46:14.687 WRN] [] No store type was specified for the decimal property 'PurchaseCost' on entity type 'FacilityAsset'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.703 WRN] [] No store type was specified for the decimal property 'UnitCost' on entity type 'InventoryItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.703 WRN] [] No store type was specified for the decimal property 'GrossPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.703 WRN] [] No store type was specified for the decimal property 'NetPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.703 WRN] [] No store type was specified for the decimal property 'EstimatedAmount' on entity type 'ProcurementRequest'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.704 WRN] [] No store type was specified for the decimal property 'BasePay' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.704 WRN] [] No store type was specified for the decimal property 'HousingAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.704 WRN] [] No store type was specified for the decimal property 'OtherAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.704 WRN] [] No store type was specified for the decimal property 'PensionRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.704 WRN] [] No store type was specified for the decimal property 'TaxRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:14.704 WRN] [] No store type was specified for the decimal property 'TransportAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-14 19:46:15.748 INF] [] Start installing Hangfire SQL objects...
+[2026-06-14 19:46:15.789 INF] [] Hangfire SQL objects installed.
+[2026-06-14 19:46:16.052 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.
+[2026-06-14 19:46:16.228 INF] [] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@WUIAM'
+[2026-06-14 19:46:16.228 INF] [] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2026-06-14 19:46:16.228 INF] [] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-06-14 19:46:16.246 INF] [] Server macbookpro:30466:e351a89b successfully announced in 9.7497 ms
+[2026-06-14 19:46:16.247 INF] [] Server macbookpro:30466:e351a89b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-14 19:46:16.259 INF] [] Server macbookpro:30466:e351a89b all the dispatchers started
+[2026-06-14 19:46:28.746 INF] [7dc8f214-c331-4fb9-a4de-1bee89cc26b2] [Perf] GET /api/Employees/me -> 404 in 186.08ms
+[2026-06-14 19:46:28.749 INF] [7dc8f214-c331-4fb9-a4de-1bee89cc26b2] [CorrelationId: 7dc8f214-c331-4fb9-a4de-1bee89cc26b2] GET /api/Employees/me completed in 191.74ms with status 404
+[2026-06-14 19:48:30.837 INF] [6454f234-3632-4965-be27-03b0da74a1a4] [Perf] GET /api/health -> 401 in 3.96ms
+[2026-06-14 19:48:30.837 INF] [6454f234-3632-4965-be27-03b0da74a1a4] [CorrelationId: 6454f234-3632-4965-be27-03b0da74a1a4] GET /api/health completed in 4.29ms with status 401
+[2026-06-14 19:49:09.893 INF] [e2820e88-6478-4c76-9f76-34d8603a2647] [Perf] GET /api/dashboard/hr-summary -> 200 in 100.04ms
+[2026-06-14 19:49:09.893 INF] [e2820e88-6478-4c76-9f76-34d8603a2647] [CorrelationId: e2820e88-6478-4c76-9f76-34d8603a2647] GET /api/dashboard/hr-summary completed in 100.25ms with status 200
+[2026-06-14 19:49:21.678 INF] [640901d9-6dcb-40bc-b59d-f496953dc679] [Perf] GET /api/Employees/me -> 404 in 6.99ms
+[2026-06-14 19:49:21.679 INF] [640901d9-6dcb-40bc-b59d-f496953dc679] [CorrelationId: 640901d9-6dcb-40bc-b59d-f496953dc679] GET /api/Employees/me completed in 7.20ms with status 404
+[2026-06-14 19:52:32.279 INF] [32a552d3-69ae-4cf2-81fe-a2fe6140371b] [Perf] GET /api/dashboard/hr-summary -> 200 in 18.44ms
+[2026-06-14 19:52:32.279 INF] [32a552d3-69ae-4cf2-81fe-a2fe6140371b] [CorrelationId: 32a552d3-69ae-4cf2-81fe-a2fe6140371b] GET /api/dashboard/hr-summary completed in 18.65ms with status 200
+[2026-06-14 19:52:37.219 INF] [9cfe7a97-ff4f-4441-8745-6db1307b05b1] [Perf] GET /api/Employees/me -> 200 in 7.29ms
+[2026-06-14 19:52:37.220 ERR] [9cfe7a97-ff4f-4441-8745-6db1307b05b1] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/Employees/me | Client IP: ::1
+[2026-06-14 19:52:39.234 INF] [3aae81b1-a2aa-43de-b0bd-5233bdf54e4a] [Perf] GET /api/Employees/me -> 200 in 0.80ms
+[2026-06-14 19:52:39.234 ERR] [3aae81b1-a2aa-43de-b0bd-5233bdf54e4a] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/Employees/me | Client IP: ::1
+[2026-06-14 19:52:43.247 INF] [325bb3b5-db64-46ba-a327-f2d0dfd5b599] [Perf] GET /api/Employees/me -> 200 in 0.86ms
+[2026-06-14 19:52:43.247 ERR] [325bb3b5-db64-46ba-a327-f2d0dfd5b599] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/Employees/me | Client IP: ::1
+[2026-06-14 19:52:48.262 INF] [e989b55e-8b7a-40d4-b837-737598a4fb6c] [Perf] GET /api/dashboard/hr-summary -> 200 in 14.01ms
+[2026-06-14 19:52:48.262 INF] [e989b55e-8b7a-40d4-b837-737598a4fb6c] [CorrelationId: e989b55e-8b7a-40d4-b837-737598a4fb6c] GET /api/dashboard/hr-summary completed in 14.20ms with status 200
+[2026-06-14 19:52:50.009 INF] [323cfa39-e224-4c6d-81b8-f9d7cd53f6ba] [Perf] POST /api/auth/logout -> 200 in 4.10ms
+[2026-06-14 19:52:50.010 ERR] [323cfa39-e224-4c6d-81b8-f9d7cd53f6ba] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-14 19:52:52.019 INF] [67bc68a8-5739-40f9-9705-5431e0a6a210] [Perf] POST /api/auth/logout -> 200 in 0.72ms
+[2026-06-14 19:52:52.019 ERR] [67bc68a8-5739-40f9-9705-5431e0a6a210] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-14 19:52:52.661 INF] [18ed8fe5-8345-43b0-9c2d-c53a8487018e] [Perf] POST /api/auth/logout -> 401 in 0.21ms
+[2026-06-14 19:52:52.661 INF] [18ed8fe5-8345-43b0-9c2d-c53a8487018e] [CorrelationId: 18ed8fe5-8345-43b0-9c2d-c53a8487018e] POST /api/auth/logout completed in 0.40ms with status 401
+[2026-06-14 19:52:54.668 INF] [188ccf04-e124-4816-9e33-98cc0bd79da2] [Perf] POST /api/auth/logout -> 401 in 0.09ms
+[2026-06-14 19:52:54.668 INF] [188ccf04-e124-4816-9e33-98cc0bd79da2] [CorrelationId: 188ccf04-e124-4816-9e33-98cc0bd79da2] POST /api/auth/logout completed in 0.30ms with status 401
+[2026-06-14 19:52:56.025 INF] [97b531fc-03be-40f6-a57b-fda7ebff5f14] [Perf] POST /api/auth/logout -> 200 in 0.79ms
+[2026-06-14 19:52:56.026 ERR] [97b531fc-03be-40f6-a57b-fda7ebff5f14] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-14 19:52:57.769 INF] [3658c55b-a065-46eb-8662-5d5bd47c4ed8] [Perf] POST /api/auth/logout -> 401 in 0.10ms
+[2026-06-14 19:52:57.769 INF] [3658c55b-a065-46eb-8662-5d5bd47c4ed8] [CorrelationId: 3658c55b-a065-46eb-8662-5d5bd47c4ed8] POST /api/auth/logout completed in 0.25ms with status 401
+[2026-06-14 19:52:58.676 INF] [9de597e0-c63b-4ac9-b19c-890ef117fb59] [Perf] POST /api/auth/logout -> 401 in 0.10ms
+[2026-06-14 19:52:58.676 INF] [9de597e0-c63b-4ac9-b19c-890ef117fb59] [CorrelationId: 9de597e0-c63b-4ac9-b19c-890ef117fb59] POST /api/auth/logout completed in 0.27ms with status 401
+[2026-06-14 19:52:58.684 INF] [b62446f7-9af7-4653-b09a-f9cc064a1552] [Perf] POST /api/auth/refresh-token -> 200 in 4.03ms
+[2026-06-14 19:52:58.684 ERR] [b62446f7-9af7-4653-b09a-f9cc064a1552] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:52:58.902 INF] [3985d43d-3fbb-4335-9e41-57d73c0d500e] [Perf] POST /api/auth/logout -> 401 in 0.09ms
+[2026-06-14 19:52:58.902 INF] [3985d43d-3fbb-4335-9e41-57d73c0d500e] [CorrelationId: 3985d43d-3fbb-4335-9e41-57d73c0d500e] POST /api/auth/logout completed in 0.24ms with status 401
+[2026-06-14 19:52:59.774 INF] [5d838814-b6c3-4d1e-bf8b-94e68079f7b6] [Perf] POST /api/auth/logout -> 401 in 0.09ms
+[2026-06-14 19:52:59.774 INF] [5d838814-b6c3-4d1e-bf8b-94e68079f7b6] [CorrelationId: 5d838814-b6c3-4d1e-bf8b-94e68079f7b6] POST /api/auth/logout completed in 0.23ms with status 401
+[2026-06-14 19:53:00.691 INF] [22577220-5a0c-4c6e-9a3a-8b9f34c33924] [Perf] POST /api/auth/refresh-token -> 200 in 0.73ms
+[2026-06-14 19:53:00.691 ERR] [22577220-5a0c-4c6e-9a3a-8b9f34c33924] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:00.908 INF] [81353c38-fdde-4208-a3b3-3827d5465346] [Perf] POST /api/auth/logout -> 401 in 0.07ms
+[2026-06-14 19:53:00.908 INF] [81353c38-fdde-4208-a3b3-3827d5465346] [CorrelationId: 81353c38-fdde-4208-a3b3-3827d5465346] POST /api/auth/logout completed in 0.22ms with status 401
+[2026-06-14 19:53:03.779 INF] [b1188b6a-973c-4c0e-a30b-1e5281e76254] [Perf] POST /api/auth/logout -> 401 in 0.09ms
+[2026-06-14 19:53:03.779 INF] [b1188b6a-973c-4c0e-a30b-1e5281e76254] [CorrelationId: b1188b6a-973c-4c0e-a30b-1e5281e76254] POST /api/auth/logout completed in 0.23ms with status 401
+[2026-06-14 19:53:03.783 INF] [79046347-0792-413f-9e1d-883cd927e995] [Perf] POST /api/auth/refresh-token -> 200 in 0.53ms
+[2026-06-14 19:53:03.783 ERR] [79046347-0792-413f-9e1d-883cd927e995] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:04.701 INF] [682ee9f9-07b2-4352-8ba4-112a1dcfb908] [Perf] POST /api/auth/refresh-token -> 200 in 0.60ms
+[2026-06-14 19:53:04.701 ERR] [682ee9f9-07b2-4352-8ba4-112a1dcfb908] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:04.913 INF] [4c0b26b1-cc3d-41ba-b3d8-0010c88b5719] [Perf] POST /api/auth/logout -> 401 in 0.17ms
+[2026-06-14 19:53:04.913 INF] [4c0b26b1-cc3d-41ba-b3d8-0010c88b5719] [CorrelationId: 4c0b26b1-cc3d-41ba-b3d8-0010c88b5719] POST /api/auth/logout completed in 0.36ms with status 401
+[2026-06-14 19:53:04.917 INF] [91fdf5de-1ff3-436e-a4fe-17d9722a8512] [Perf] POST /api/auth/refresh-token -> 200 in 0.51ms
+[2026-06-14 19:53:04.917 ERR] [91fdf5de-1ff3-436e-a4fe-17d9722a8512] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:05.311 INF] [115581ba-9478-4402-8573-582d12242ead] [Perf] POST /api/auth/logout -> 401 in 0.10ms
+[2026-06-14 19:53:05.312 INF] [115581ba-9478-4402-8573-582d12242ead] [CorrelationId: 115581ba-9478-4402-8573-582d12242ead] POST /api/auth/logout completed in 0.22ms with status 401
+[2026-06-14 19:53:05.793 INF] [efa74998-fbf0-460f-a1d5-9c204b673b16] [Perf] POST /api/auth/refresh-token -> 200 in 0.50ms
+[2026-06-14 19:53:05.793 ERR] [efa74998-fbf0-460f-a1d5-9c204b673b16] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:06.680 INF] [aa3a1d1c-79e8-416a-9804-a2a1d3cefbd0] [Perf] POST /api/auth/logout -> 401 in 0.09ms
+[2026-06-14 19:53:06.680 INF] [aa3a1d1c-79e8-416a-9804-a2a1d3cefbd0] [CorrelationId: aa3a1d1c-79e8-416a-9804-a2a1d3cefbd0] POST /api/auth/logout completed in 0.21ms with status 401
+[2026-06-14 19:53:06.923 INF] [291fe301-8650-4aa1-bd89-a6a98731ec6f] [Perf] POST /api/auth/refresh-token -> 200 in 0.53ms
+[2026-06-14 19:53:06.923 ERR] [291fe301-8650-4aa1-bd89-a6a98731ec6f] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:07.317 INF] [b606f0c2-69fb-47e6-8ecc-88aad96a3795] [Perf] POST /api/auth/logout -> 401 in 0.10ms
+[2026-06-14 19:53:07.317 INF] [b606f0c2-69fb-47e6-8ecc-88aad96a3795] [CorrelationId: b606f0c2-69fb-47e6-8ecc-88aad96a3795] POST /api/auth/logout completed in 0.36ms with status 401
+[2026-06-14 19:53:08.690 INF] [c5af4ee8-1262-4e79-93db-0d219ad9c470] [Perf] POST /api/auth/logout -> 401 in 0.12ms
+[2026-06-14 19:53:08.690 INF] [c5af4ee8-1262-4e79-93db-0d219ad9c470] [CorrelationId: c5af4ee8-1262-4e79-93db-0d219ad9c470] POST /api/auth/logout completed in 0.22ms with status 401
+[2026-06-14 19:53:09.804 INF] [c4fcd06a-9758-4378-8169-af55ed69140c] [Perf] POST /api/auth/refresh-token -> 200 in 0.53ms
+[2026-06-14 19:53:09.804 ERR] [c4fcd06a-9758-4378-8169-af55ed69140c] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:10.931 INF] [28c2dee8-47bb-4c55-8ad0-de4ef34616f9] [Perf] POST /api/auth/refresh-token -> 200 in 0.66ms
+[2026-06-14 19:53:10.931 ERR] [28c2dee8-47bb-4c55-8ad0-de4ef34616f9] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:11.321 INF] [52aa2d50-a484-467c-a759-aa7527ef59a7] [Perf] POST /api/auth/logout -> 401 in 0.08ms
+[2026-06-14 19:53:11.321 INF] [52aa2d50-a484-467c-a759-aa7527ef59a7] [CorrelationId: 52aa2d50-a484-467c-a759-aa7527ef59a7] POST /api/auth/logout completed in 0.22ms with status 401
+[2026-06-14 19:53:11.327 INF] [a3f079d0-fecc-455b-a75c-34231cd71ff2] [Perf] POST /api/auth/refresh-token -> 200 in 1.02ms
+[2026-06-14 19:53:11.327 ERR] [a3f079d0-fecc-455b-a75c-34231cd71ff2] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:12.697 INF] [7f464186-6d4b-4fb9-8eb9-f90e8050f26d] [Perf] POST /api/auth/logout -> 401 in 0.09ms
+[2026-06-14 19:53:12.697 INF] [7f464186-6d4b-4fb9-8eb9-f90e8050f26d] [CorrelationId: 7f464186-6d4b-4fb9-8eb9-f90e8050f26d] POST /api/auth/logout completed in 0.20ms with status 401
+[2026-06-14 19:53:12.701 INF] [ab43a732-2b4c-4236-a66d-94fca093be01] [Perf] POST /api/auth/refresh-token -> 200 in 0.61ms
+[2026-06-14 19:53:12.701 ERR] [ab43a732-2b4c-4236-a66d-94fca093be01] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:13.333 INF] [6d48dcb2-0e97-4493-9850-36c1441f72a2] [Perf] POST /api/auth/refresh-token -> 200 in 0.53ms
+[2026-06-14 19:53:13.333 ERR] [6d48dcb2-0e97-4493-9850-36c1441f72a2] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:14.706 INF] [12195057-5410-41c7-9371-0cdf2552869d] [Perf] POST /api/auth/refresh-token -> 200 in 0.57ms
+[2026-06-14 19:53:14.706 ERR] [12195057-5410-41c7-9371-0cdf2552869d] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:17.344 INF] [7c90dd3f-b2e9-4ca0-8b40-1f5994e335d5] [Perf] POST /api/auth/refresh-token -> 200 in 0.51ms
+[2026-06-14 19:53:17.344 ERR] [7c90dd3f-b2e9-4ca0-8b40-1f5994e335d5] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:53:18.715 INF] [cf73695e-b3f7-4425-b640-6e1574556ffe] [Perf] POST /api/auth/refresh-token -> 200 in 0.49ms
+[2026-06-14 19:53:18.715 ERR] [cf73695e-b3f7-4425-b640-6e1574556ffe] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:54:08.435 INF] [eaf98e6e-3296-482e-845c-f2a35dfdca65] [Perf] GET /api/leave/user-requests/undefined -> 401 in 0.09ms
+[2026-06-14 19:54:08.435 INF] [eaf98e6e-3296-482e-845c-f2a35dfdca65] [CorrelationId: eaf98e6e-3296-482e-845c-f2a35dfdca65] GET /api/leave/user-requests/undefined completed in 0.19ms with status 401
+[2026-06-14 19:54:10.444 INF] [2f13ac68-f085-489d-91cf-ff192f57be31] [Perf] GET /api/leave/user-requests/undefined -> 401 in 0.08ms
+[2026-06-14 19:54:10.444 INF] [2f13ac68-f085-489d-91cf-ff192f57be31] [CorrelationId: 2f13ac68-f085-489d-91cf-ff192f57be31] GET /api/leave/user-requests/undefined completed in 0.18ms with status 401
+[2026-06-14 19:54:11.927 INF] [a97488b9-fa86-415e-b1d5-9ab5dd79d7a6] [Perf] POST /api/auth/logout -> 401 in 0.09ms
+[2026-06-14 19:54:11.927 INF] [a97488b9-fa86-415e-b1d5-9ab5dd79d7a6] [CorrelationId: a97488b9-fa86-415e-b1d5-9ab5dd79d7a6] POST /api/auth/logout completed in 0.19ms with status 401
+[2026-06-14 19:54:13.937 INF] [45ce5c8d-b3f6-42d2-a0e5-45374fe66df1] [Perf] POST /api/auth/logout -> 401 in 0.14ms
+[2026-06-14 19:54:13.937 INF] [45ce5c8d-b3f6-42d2-a0e5-45374fe66df1] [CorrelationId: 45ce5c8d-b3f6-42d2-a0e5-45374fe66df1] POST /api/auth/logout completed in 0.29ms with status 401
+[2026-06-14 19:54:14.448 INF] [eaa79349-1559-4c54-8463-3942c7d00ea6] [Perf] GET /api/leave/user-requests/undefined -> 401 in 0.27ms
+[2026-06-14 19:54:14.448 INF] [eaa79349-1559-4c54-8463-3942c7d00ea6] [CorrelationId: eaa79349-1559-4c54-8463-3942c7d00ea6] GET /api/leave/user-requests/undefined completed in 0.36ms with status 401
+[2026-06-14 19:54:14.451 INF] [9e9f701e-0684-4070-be52-478338957689] [Perf] POST /api/auth/refresh-token -> 200 in 0.51ms
+[2026-06-14 19:54:14.452 ERR] [9e9f701e-0684-4070-be52-478338957689] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:54:18.185 INF] [69f182b6-a7f0-4f8b-b37b-462bb1fb741f] [Perf] GET /api/leave/user-requests/undefined -> 401 in 0.12ms
+[2026-06-14 19:54:18.185 INF] [69f182b6-a7f0-4f8b-b37b-462bb1fb741f] [CorrelationId: 69f182b6-a7f0-4f8b-b37b-462bb1fb741f] GET /api/leave/user-requests/undefined completed in 0.21ms with status 401
+[2026-06-14 19:54:20.204 INF] [475158c3-a284-4850-b963-0ea43240f87c] [Perf] GET /api/leave/user-requests/undefined -> 401 in 0.09ms
+[2026-06-14 19:54:20.204 INF] [475158c3-a284-4850-b963-0ea43240f87c] [CorrelationId: 475158c3-a284-4850-b963-0ea43240f87c] GET /api/leave/user-requests/undefined completed in 0.27ms with status 401
+[2026-06-14 19:54:24.210 INF] [23bfa9e2-aba8-4807-a42c-fe47fa0c5d1b] [Perf] GET /api/leave/user-requests/undefined -> 401 in 0.12ms
+[2026-06-14 19:54:24.210 INF] [23bfa9e2-aba8-4807-a42c-fe47fa0c5d1b] [CorrelationId: 23bfa9e2-aba8-4807-a42c-fe47fa0c5d1b] GET /api/leave/user-requests/undefined completed in 0.23ms with status 401
+[2026-06-14 19:54:24.214 INF] [b1293b0b-117a-4757-b13d-938b7b977be5] [Perf] POST /api/auth/refresh-token -> 200 in 0.57ms
+[2026-06-14 19:54:24.214 ERR] [b1293b0b-117a-4757-b13d-938b7b977be5] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:54:26.220 INF] [b2a76dc6-cc03-42fe-a8cd-1dfb17171403] [Perf] POST /api/auth/refresh-token -> 200 in 0.66ms
+[2026-06-14 19:54:26.220 ERR] [b2a76dc6-cc03-42fe-a8cd-1dfb17171403] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:54:30.228 INF] [c8182f0a-b0b2-4aa8-b0e9-91979703a831] [Perf] POST /api/auth/refresh-token -> 200 in 0.47ms
+[2026-06-14 19:54:30.228 ERR] [c8182f0a-b0b2-4aa8-b0e9-91979703a831] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/refresh-token | Client IP: ::1
+[2026-06-14 19:55:02.975 INF] [d3392a27-d4ff-4d9d-98b6-38e9ab44fa57] [Perf] POST /api/auth/logout -> 401 in 0.07ms
+[2026-06-14 19:55:02.975 INF] [d3392a27-d4ff-4d9d-98b6-38e9ab44fa57] [CorrelationId: d3392a27-d4ff-4d9d-98b6-38e9ab44fa57] POST /api/auth/logout completed in 0.19ms with status 401
+[2026-06-14 19:55:04.983 INF] [536f4fdf-e7ba-4f5e-9d77-b6f5ac86b27f] [Perf] POST /api/auth/logout -> 401 in 0.11ms
+[2026-06-14 19:55:04.983 INF] [536f4fdf-e7ba-4f5e-9d77-b6f5ac86b27f] [CorrelationId: 536f4fdf-e7ba-4f5e-9d77-b6f5ac86b27f] POST /api/auth/logout completed in 0.25ms with status 401
+[2026-06-14 19:55:33.119 INF] [6de013a4-8d51-4c38-88a7-ae6b19b0679b] [Perf] POST /api/auth/microsoft-login -> 200 in 7.60ms
+[2026-06-14 19:55:33.120 ERR] [6de013a4-8d51-4c38-88a7-ae6b19b0679b] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/microsoft-login | Client IP: ::1
+[2026-06-14 19:55:35.125 INF] [8e1c16db-c40a-43ce-9c01-f7726bc8c1e9] [Perf] POST /api/auth/microsoft-login -> 200 in 0.54ms
+[2026-06-14 19:55:35.125 ERR] [8e1c16db-c40a-43ce-9c01-f7726bc8c1e9] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/microsoft-login | Client IP: ::1
+[2026-06-14 19:55:39.130 INF] [0ca3c73e-3d0c-49bd-ad1b-abb9d3c529ca] [Perf] POST /api/auth/microsoft-login -> 200 in 0.45ms
+[2026-06-14 19:55:39.130 ERR] [0ca3c73e-3d0c-49bd-ad1b-abb9d3c529ca] Unhandled exception: TypeLoadException: Could not load type '<>f__AnonymousType5`2' from assembly 'WUIAM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/microsoft-login | Client IP: ::1
+[2026-06-14 19:56:50.442 INF] [] Server macbookpro:30466:e351a89b caught stopping signal...
+[2026-06-14 19:56:50.924 INF] [] Server macbookpro:30466:e351a89b All dispatchers stopped
+[2026-06-14 19:56:50.938 INF] [] Server macbookpro:30466:e351a89b successfully reported itself as stopped in 12.9051 ms
+[2026-06-14 19:56:50.938 INF] [] Server macbookpro:30466:e351a89b has been stopped in total 496.1755 ms

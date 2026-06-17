@@ -1,4 +1,4 @@
-﻿﻿using WUIAM.DTOs;
+using WUIAM.DTOs;
 
 namespace WUIAM.Interfaces
 {
@@ -9,5 +9,6 @@ namespace WUIAM.Interfaces
         Task SendSmsAsync(string to, string message);
         Task PushNotificationAsync(string to, string title, string message);
         Task LogNotificationAsync(string userId, string message);
+        Task NotifyRecruitmentTeamAsync(string title, string message, string type = "info", string? entityType = null, Guid? entityId = null);
     }
 }
