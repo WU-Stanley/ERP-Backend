@@ -199,3 +199,9 @@
 [2026-06-17 10:43:58.144 INF] [30085756-c82c-477a-ac15-37f226b4d942] [CorrelationId: 30085756-c82c-477a-ac15-37f226b4d942] GET /api/v1/recruitment/public/stats completed in 155.86ms with status 200
 [2026-06-17 10:46:45.347 INF] [164cc294-7345-42b9-9c13-b089fe70ddad] [Perf] GET /api/v1/recruitment/public/stats -> 200 in 19.75ms
 [2026-06-17 10:46:45.347 INF] [164cc294-7345-42b9-9c13-b089fe70ddad] [CorrelationId: 164cc294-7345-42b9-9c13-b089fe70ddad] GET /api/v1/recruitment/public/stats completed in 19.89ms with status 200
+[2026-06-17 11:51:52.332 WRN] [e47caf47-8ba3-415a-92cf-da82b3f4b06e] [Perf] GET /api/notificationsHub -> 101 in 4179259.40ms
+[2026-06-17 11:51:52.332 INF] [e47caf47-8ba3-415a-92cf-da82b3f4b06e] [CorrelationId: e47caf47-8ba3-415a-92cf-da82b3f4b06e] GET /api/notificationsHub completed in 4179259.73ms with status 101
+[2026-06-17 11:51:52.332 WRN] [e47caf47-8ba3-415a-92cf-da82b3f4b06e] [CorrelationId: e47caf47-8ba3-415a-92cf-da82b3f4b06e] SLOW REQUEST: GET /api/notificationsHub took 4179259.73ms (threshold: 1000ms)
+[2026-06-17 11:51:52.332 ERR] [e47caf47-8ba3-415a-92cf-da82b3f4b06e] [CorrelationId: e47caf47-8ba3-415a-92cf-da82b3f4b06e] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 4179259.73ms (threshold: 5000ms)
+[2026-06-17 11:51:52.365 INF] [b6c5270f-2c3e-4b19-a633-8a9119305fa5] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.42ms
+[2026-06-17 11:51:52.365 INF] [b6c5270f-2c3e-4b19-a633-8a9119305fa5] [CorrelationId: b6c5270f-2c3e-4b19-a633-8a9119305fa5] POST /api/notificationsHub/negotiate completed in 0.51ms with status 200
