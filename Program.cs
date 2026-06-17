@@ -65,7 +65,9 @@ string[] allowedOrigins = new[]
     "https://localhost:4200",
     "http://localhost:64645",
     "https://erp.uat.wigweuniversity.edu.ng",
-    "https://erp.wigweuniversity.edu.ng"
+    "https://erp.wigweuniversity.edu.ng",
+    "https://wigweuniversity.edu.ng",
+    "https://www.wigweuniversity.edu.ng"
 };
 
 builder.Services.AddCors(options =>
