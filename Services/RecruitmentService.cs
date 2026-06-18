@@ -595,35 +595,26 @@ namespace WUIAM.Services
         {
             try
             {
-                // Fallback: read raw bytes as text (works for simple PDFs, or we can integrate a library later)
-                var bytes = await File.ReadAllBytesAsync(filePath);
-                var text = System.Text.Encoding.UTF8.GetString(bytes);
-                // Extract text between /ByteString or from PDF content streams (simplified)
-                var lines = text.Split('\n');
+                using var document = UglyToad.PdfPig.PdfDocument.Open(filePath);
                 var sb = new StringBuilder();
-                var inContent = false;
-                foreach (var line in lines)
+                foreach (var page in document.GetPages())
                 {
-                    if (line.Contains("stream\r\n") || line.Contains("stream\n"))
+                    var pageText = page.Text;
+                    if (!string.IsNullOrWhiteSpace(pageText))
                     {
-                        inContent = true;
-                        continue;
-                    }
-                    if (inContent && line.Trim() == "endstream")
-                    {
-                        inContent = false;
-                        continue;
-                    }
-                    if (inContent)
-                    {
-                        // Try to extract readable text from PDF content
-                        var cleaned = line.Replace("\\n", "\n").Replace("\\r", "\r");
-                        sb.AppendLine(cleaned);
+                        sb.AppendLine(pageText);
                     }
                 }
-                return sb.Length > 0 ? sb.ToString() : "[PDF content could not be fully extracted. Please use a text-based format for best results.]";
+                var extracted = sb.ToString().Trim();
+                return !string.IsNullOrEmpty(extracted)
+                    ? extracted
+                    : "[PDF content could not be fully extracted. Please use a text-based format for best results.]";
             }
-            catch { return "[PDF extraction failed]"; }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "PdfPig failed to extract text from {FilePath}", filePath);
+                return "[PDF extraction failed]";
+            }
         }
 
         private async Task<string> ExtractDocxTextAsync(string filePath)

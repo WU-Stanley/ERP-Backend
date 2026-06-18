@@ -12,7 +12,6 @@ namespace WUIAM.DTOs
         [Required]
         public string Description { get; set; } = string.Empty;
 
-        [MaxLength(500)]
         public string? Requirements { get; set; }
 
         [MaxLength(200)]
@@ -32,8 +31,6 @@ namespace WUIAM.DTOs
         public string? Title { get; set; }
 
         public string? Description { get; set; }
-
-        [MaxLength(500)]
         public string? Requirements { get; set; }
 
         [MaxLength(200)]

@@ -212,8 +212,7 @@ builder.Services.AddAuthentication(options =>
         OnMessageReceived = context =>
         {
             var accessToken = context.Request.Query["access_token"];
-            var path = context.HttpContext.Request.Path;
-            if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/api/notificationsHub"))
+            if (!string.IsNullOrEmpty(accessToken))
             {
                 context.Token = accessToken;
             }
@@ -443,6 +442,18 @@ app.UsePerformanceMetrics();
 // Response compression (Gzip/Brotli)
 app.UseResponseCompression();
 app.UseStaticFiles();
+
+// Serve files from uploads folder (recruitment resumes, etc.)
+var uploadsPath = Path.Combine(builder.Environment.ContentRootPath, "uploads");
+if (!Directory.Exists(uploadsPath))
+{
+    Directory.CreateDirectory(uploadsPath);
+}
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(uploadsPath),
+    RequestPath = "/uploads"
+});
 
 // Rate limiting
 app.UseRateLimiter();

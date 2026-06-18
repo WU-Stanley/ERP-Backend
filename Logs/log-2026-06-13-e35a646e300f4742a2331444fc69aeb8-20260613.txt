@@ -1,1 +1,0 @@
-[2026-06-13 20:49:13.689 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.

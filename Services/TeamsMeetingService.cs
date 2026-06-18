@@ -44,10 +44,7 @@ namespace WUIAM.Services
                     end = new { dateTime = endTime.ToString("yyyy-MM-ddTHH:mm:ss"), timeZone = "UTC" },
                     location = new { displayName = "Microsoft Teams Meeting" },
                     isOnlineMeeting = true,
-                    onlineMeetingProvider = "teamsForBusiness",
-                    allowNewTimeProposals = false,
-                    isCancellation = false,
-                    responseRequested = true
+                    onlineMeetingProvider = "teamsForBusiness"
                 };
 
                 var jsonContent = new StringContent(
@@ -78,7 +75,44 @@ namespace WUIAM.Services
                 else
                 {
                     var errorContent = await response.Content.ReadAsStringAsync();
-                    _logger.LogWarning("Failed to create Teams meeting. Status: {Status}. Response: {Response}", response.StatusCode, errorContent);
+                    string? errorCode = null;
+                    string? errorMessage = null;
+                    string? graphRequestId = null;
+
+                    try
+                    {
+                        using var doc = System.Text.Json.JsonDocument.Parse(errorContent);
+                        var root = doc.RootElement;
+                        if (root.TryGetProperty("error", out var errorProp))
+                        {
+                            if (errorProp.TryGetProperty("code", out var codeProp))
+                                errorCode = codeProp.GetString();
+                            if (errorProp.TryGetProperty("message", out var msgProp))
+                                errorMessage = msgProp.GetString();
+                            if (errorProp.TryGetProperty("innerError", out var innerProp))
+                            {
+                                if (innerProp.TryGetProperty("request-id", out var reqIdProp))
+                                    graphRequestId = reqIdProp.GetString();
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        // Fallback
+                    }
+
+                    if (string.IsNullOrEmpty(graphRequestId) && response.Headers.TryGetValues("request-id", out var headerValues))
+                    {
+                        graphRequestId = headerValues.FirstOrDefault();
+                    }
+
+                    _logger.LogWarning(
+                        "Failed to create Teams meeting. Status: {Status}. Graph Error Code: {ErrorCode}, Message: {ErrorMessage}, Graph Request ID: {GraphRequestId}. Raw Response: {Response}",
+                        response.StatusCode,
+                        errorCode ?? "N/A",
+                        errorMessage ?? "N/A",
+                        graphRequestId ?? "N/A",
+                        errorContent);
                 }
             }
             catch (Exception ex)
@@ -101,7 +135,18 @@ namespace WUIAM.Services
                 request.Headers.Add("Authorization", $"Bearer {accessToken}");
 
                 var response = await _httpClient.SendAsync(request);
-                return response.IsSuccessStatusCode;
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    response.Headers.TryGetValues("request-id", out var headerValues);
+                    var graphRequestId = headerValues?.FirstOrDefault() ?? "N/A";
+                    _logger.LogWarning("Failed to cancel Teams meeting. Status: {Status}. Graph Request ID: {GraphRequestId}. Response: {Response}", response.StatusCode, graphRequestId, errorContent);
+                    return false;
+                }
             }
             catch (Exception ex)
             {
@@ -130,6 +175,13 @@ namespace WUIAM.Services
 
                     if (jsonElement.TryGetProperty("onlineMeetingUrl", out var meetingUrlProp))
                         return meetingUrlProp.GetString();
+                }
+                else
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    response.Headers.TryGetValues("request-id", out var headerValues);
+                    var graphRequestId = headerValues?.FirstOrDefault() ?? "N/A";
+                    _logger.LogWarning("Failed to get Teams meeting link. Status: {Status}. Graph Request ID: {GraphRequestId}. Response: {Response}", response.StatusCode, graphRequestId, errorContent);
                 }
             }
             catch (Exception ex)

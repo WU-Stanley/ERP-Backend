@@ -20,11 +20,16 @@ namespace WUIAM.Controllers
     {
         private readonly IRecruitmentService _recruitmentService;
         private readonly INotifyService _notifyService;
+        private readonly Microsoft.AspNetCore.Hosting.IWebHostEnvironment _env;
 
-        public RecruitmentController(IRecruitmentService recruitmentService, INotifyService notifyService)
+        public RecruitmentController(
+            IRecruitmentService recruitmentService, 
+            INotifyService notifyService,
+            Microsoft.AspNetCore.Hosting.IWebHostEnvironment env)
         {
             _recruitmentService = recruitmentService;
             _notifyService = notifyService;
+            _env = env;
         }
 
         // ==================== Job Postings ====================
@@ -234,6 +239,38 @@ namespace WUIAM.Controllers
         }
 
         /// <summary>
+        /// Get the resume file for an application. HR only.
+        /// </summary>
+        [HasPermission([Permissions.AdminAccess, Permissions.SuperAdminAccess, Permissions.ManageRecruitment])]
+        [HttpGet("applications/{id}/resume")]
+        public async Task<IActionResult> GetResume(Guid id, [FromQuery] bool download = false)
+        {
+            var application = await _recruitmentService.GetApplicationByIdAsync(id);
+            if (application == null || string.IsNullOrEmpty(application.ResumeFilePath))
+                return NotFound(ApiResponse<string>.Failure("Resume not found."));
+
+            var filePath = System.IO.Path.Combine(_env.ContentRootPath, application.ResumeFilePath.TrimStart('/'));
+            if (!System.IO.File.Exists(filePath))
+                return NotFound(ApiResponse<string>.Failure("Resume file not found on server."));
+
+            var provider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider();
+            if (!provider.TryGetContentType(filePath, out var contentType))
+            {
+                contentType = "application/octet-stream";
+            }
+
+            var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
+            if (download)
+            {
+                return File(bytes, contentType, System.IO.Path.GetFileName(filePath));
+            }
+            else
+            {
+                return File(bytes, contentType);
+            }
+        }
+
+        /// <summary>
         /// Get all applications with pagination and filters. HR only.
         /// </summary>
         [HasPermission([Permissions.AdminAccess, Permissions.SuperAdminAccess, Permissions.ManageRecruitment])]
@@ -297,7 +334,7 @@ namespace WUIAM.Controllers
         {
             var score = await _recruitmentService.GetLatestScoreAsync(id);
             if (score == null)
-                return NotFound(ApiResponse<ApplicationScoreDto>.Failure("No AI score available for this application."));
+                return Ok(new ApiResponse<ApplicationScoreDto>("No AI score available for this application.", true, null));
 
             return Ok(ApiResponse<ApplicationScoreDto>.Success("Score retrieved.", MapToScoreDto(score)));
         }
@@ -448,7 +485,7 @@ namespace WUIAM.Controllers
         {
             var offer = await _recruitmentService.GetOfferLetterByApplicationIdAsync(id);
             if (offer == null)
-                return NotFound(ApiResponse<OfferLetterDto>.Failure("No offer letter found for this application."));
+                return Ok(new ApiResponse<OfferLetterDto>("No offer letter found for this application.", true, null));
 
             var offerDto = new OfferLetterDto
             {
