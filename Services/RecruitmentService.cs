@@ -374,14 +374,71 @@ namespace WUIAM.Services
                 throw new InvalidOperationException("Interview must be scheduled for a future date and time.");
 
             var endTime = dto.ScheduledFor.AddHours(1);
+
+            var interviewers = new List<InterviewInterviewer>();
+            var attendeeEmails = new List<string>();
+
+            // Always add candidate to meeting invite if valid email
+            if (!string.IsNullOrWhiteSpace(app.Email))
+            {
+                attendeeEmails.Add(app.Email);
+            }
+
+            if (dto.Interviewers != null)
+            {
+                foreach (var interviewerDto in dto.Interviewers)
+                {
+                    string email = interviewerDto.Email;
+                    string? name = interviewerDto.Name;
+                    Guid? employeeId = interviewerDto.EmployeeId;
+
+                    if (employeeId.HasValue)
+                    {
+                        var employee = await _context.EmployeeDetails
+                            .FirstOrDefaultAsync(e => e.EmployeeId == employeeId.Value);
+                        if (employee != null)
+                        {
+                            email = employee.Email;
+                            name = $"{employee.FirstName} {employee.LastName}";
+                        }
+                    }
+                    else if (!string.IsNullOrWhiteSpace(email))
+                    {
+                        var employee = await _context.EmployeeDetails
+                            .FirstOrDefaultAsync(e => e.Email.ToLower() == email.ToLower());
+                        if (employee != null)
+                        {
+                            employeeId = employee.EmployeeId;
+                            name = string.IsNullOrWhiteSpace(name) ? $"{employee.FirstName} {employee.LastName}" : name;
+                        }
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(email))
+                    {
+                        attendeeEmails.Add(email);
+                        interviewers.Add(new InterviewInterviewer
+                        {
+                            EmployeeId = employeeId,
+                            Email = email,
+                            Name = name
+                        });
+                    }
+                }
+            }
+
             var meetingLink = await _teamsMeetingService.CreateTeamsMeetingAsync(
                 $"Interview: {app.ApplicantName} - {app.JobPosting?.Title ?? "Position"}",
-                dto.ScheduledFor, endTime, "hr@wigweuniversity.edu.ng");
+                dto.ScheduledFor, endTime, "hr@wigweuniversity.edu.ng", attendeeEmails);
 
             var interview = new InterviewSchedule
             {
-                ApplicationId = applicationId, Type = dto.Type, ScheduledFor = dto.ScheduledFor,
-                MeetingLink = meetingLink, Notes = dto.Notes, Status = "Scheduled"
+                ApplicationId = applicationId,
+                Type = dto.Type,
+                ScheduledFor = dto.ScheduledFor,
+                MeetingLink = meetingLink,
+                Notes = dto.Notes,
+                Status = "Scheduled",
+                Interviewers = interviewers
             };
             _context.InterviewSchedules.Add(interview);
 
@@ -391,6 +448,17 @@ namespace WUIAM.Services
             }
 
             await _context.SaveChangesAsync();
+
+            // Explicitly load navigation properties for return mapping
+            await _context.Entry(interview).Collection(i => i.Interviewers).LoadAsync();
+            foreach (var interviewer in interview.Interviewers)
+            {
+                if (interviewer.EmployeeId.HasValue)
+                {
+                    await _context.Entry(interviewer).Reference(ii => ii.Employee).LoadAsync();
+                }
+            }
+
             interview.Application = app;
             return interview;
         }
@@ -399,6 +467,8 @@ namespace WUIAM.Services
         {
             return await _context.InterviewSchedules
                 .Include(i => i.Application)
+                .Include(i => i.Interviewers)
+                    .ThenInclude(ii => ii.Employee)
                 .Where(i => i.ApplicationId == applicationId)
                 .OrderBy(i => i.ScheduledFor).ToListAsync();
         }
@@ -407,6 +477,8 @@ namespace WUIAM.Services
         {
             var interview = await _context.InterviewSchedules
                 .Include(i => i.Application)
+                .Include(i => i.Interviewers)
+                    .ThenInclude(ii => ii.Employee)
                 .FirstOrDefaultAsync(i => i.Id == id)
                 ?? throw new InvalidOperationException("Interview not found.");
             interview.Status = status;

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using WUIAM.Attributes;
@@ -20,15 +21,21 @@ namespace WUIAM.Controllers
     {
         private readonly IRecruitmentService _recruitmentService;
         private readonly INotifyService _notifyService;
+        private readonly INotificationService _notificationService;
+        private readonly WUIAMDbContext _context;
         private readonly Microsoft.AspNetCore.Hosting.IWebHostEnvironment _env;
 
         public RecruitmentController(
             IRecruitmentService recruitmentService, 
             INotifyService notifyService,
+            INotificationService notificationService,
+            WUIAMDbContext context,
             Microsoft.AspNetCore.Hosting.IWebHostEnvironment env)
         {
             _recruitmentService = recruitmentService;
             _notifyService = notifyService;
+            _notificationService = notificationService;
+            _context = context;
             _env = env;
         }
 
@@ -363,13 +370,63 @@ namespace WUIAM.Controllers
                     TeamsMeetingId = interview.TeamsMeetingId,
                     Status = interview.Status,
                     Notes = interview.Notes,
-                    CreatedAt = interview.CreatedAt
+                    CreatedAt = interview.CreatedAt,
+                    Interviewers = interview.Interviewers?.Select(ii => new InterviewerDto
+                    {
+                        Id = ii.Id,
+                        EmployeeId = ii.EmployeeId,
+                        EmployeeName = ii.Employee != null ? $"{ii.Employee.FirstName} {ii.Employee.LastName}" : null,
+                        Email = ii.Email,
+                        Name = ii.Name
+                    }).ToList() ?? new List<InterviewerDto>()
                 };
 
-                // Notify the applicant of the scheduled interview
+                // Notify the applicant and the interviewers of the scheduled interview
                 if (interview.Application != null)
                 {
                     await SendInterviewScheduledEmailAsync(interview.Application, interviewDto);
+
+                    if (interviewDto.Interviewers != null)
+                    {
+                        foreach (var interviewer in interviewDto.Interviewers)
+                        {
+                            // Send email invite to the interviewer (internal or external)
+                            await SendInterviewScheduledEmailToInterviewerAsync(
+                                interviewer.Email,
+                                interviewer.EmployeeName ?? interviewer.Name,
+                                interview.Application,
+                                interviewDto
+                            );
+
+                            // Send in-app notification to internal staff
+                            Guid? interviewerUserId = null;
+                            if (interviewer.EmployeeId.HasValue)
+                            {
+                                var emp = await _context.EmployeeDetails
+                                    .FirstOrDefaultAsync(e => e.EmployeeId == interviewer.EmployeeId.Value);
+                                if (emp != null)
+                                {
+                                    interviewerUserId = emp.UserId;
+                                }
+                            }
+                            else
+                            {
+                                var usr = await _context.Users
+                                    .FirstOrDefaultAsync(u => u.UserEmail.ToLower() == interviewer.Email.ToLower());
+                                if (usr != null)
+                                {
+                                    interviewerUserId = usr.Id;
+                                }
+                            }
+
+                            if (interviewerUserId.HasValue)
+                            {
+                                var notifyTitle = "New Interview Scheduled";
+                                var notifyMsg = $"You have been scheduled as an interviewer for {interview.Application.ApplicantName} ({interview.Type}) on {interview.ScheduledFor:f}.";
+                                await _notificationService.NotifyUserAsync(interviewerUserId.Value, notifyTitle, notifyMsg, "info", "InterviewSchedule", interview.Id);
+                            }
+                        }
+                    }
                 }
 
                 return Ok(ApiResponse<InterviewDto>.Success("Interview scheduled successfully.", interviewDto));
@@ -388,7 +445,7 @@ namespace WUIAM.Controllers
         {
             var interviews = await _recruitmentService.GetInterviewsByApplicationIdAsync(id);
 
-            var dtos = interviews.Select(i => new InterviewDto
+             var dtos = interviews.Select(i => new InterviewDto
             {
                 Id = i.Id,
                 ApplicationId = i.ApplicationId,
@@ -399,7 +456,15 @@ namespace WUIAM.Controllers
                 TeamsMeetingId = i.TeamsMeetingId,
                 Status = i.Status,
                 Notes = i.Notes,
-                CreatedAt = i.CreatedAt
+                CreatedAt = i.CreatedAt,
+                Interviewers = i.Interviewers?.Select(ii => new InterviewerDto
+                {
+                    Id = ii.Id,
+                    EmployeeId = ii.EmployeeId,
+                    EmployeeName = ii.Employee != null ? $"{ii.Employee.FirstName} {ii.Employee.LastName}" : null,
+                    Email = ii.Email,
+                    Name = ii.Name
+                }).ToList() ?? new List<InterviewerDto>()
             }).ToList();
 
             return Ok(ApiResponse<List<InterviewDto>>.Success("Interviews retrieved.", dtos));
@@ -427,7 +492,15 @@ namespace WUIAM.Controllers
                     TeamsMeetingId = interview.TeamsMeetingId,
                     Status = interview.Status,
                     Notes = interview.Notes,
-                    CreatedAt = interview.CreatedAt
+                    CreatedAt = interview.CreatedAt,
+                    Interviewers = interview.Interviewers?.Select(ii => new InterviewerDto
+                    {
+                        Id = ii.Id,
+                        EmployeeId = ii.EmployeeId,
+                        EmployeeName = ii.Employee != null ? $"{ii.Employee.FirstName} {ii.Employee.LastName}" : null,
+                        Email = ii.Email,
+                        Name = ii.Name
+                    }).ToList() ?? new List<InterviewerDto>()
                 };
 
                 return Ok(ApiResponse<InterviewDto>.Success("Interview status updated.", interviewDto));
@@ -783,6 +856,49 @@ namespace WUIAM.Controllers
 </div>";
 
             await SendApplicantEmailAsync(application, subject, body);
+        }
+
+        private async Task SendInterviewScheduledEmailToInterviewerAsync(string interviewerEmail, string? interviewerName, JobApplication application, InterviewDto interview)
+        {
+            try
+            {
+                var jobTitle = application.JobPosting?.Title ?? "Position";
+                var subject = $"Interview Assignment: {application.ApplicantName} - {jobTitle}";
+                var notesBlock = !string.IsNullOrEmpty(interview.Notes) 
+                    ? $"<li><strong>Notes:</strong> {interview.Notes}</li>" 
+                    : "";
+
+                var body = $@"
+<div style=""font-family: sans-serif; line-height: 1.5; color: #333;"">
+  <p>Dear {interviewerName ?? "Colleague"},</p>
+  <p>You have been scheduled as an interviewer for <strong>{application.ApplicantName}</strong> who is applying for the position of <strong>{jobTitle}</strong>.</p>
+  <p><strong>Interview Details:</strong></p>
+  <ul>
+    <li><strong>Candidate Name:</strong> {application.ApplicantName}</li>
+    <li><strong>Type:</strong> {interview.Type}</li>
+    <li><strong>Date & Time:</strong> {interview.ScheduledFor:dddd, MMMM dd, yyyy} at {interview.ScheduledFor:hh:mm tt} (UTC)</li>
+    {notesBlock}
+  </ul>
+  <p>Please join the interview meeting using the link below:</p>
+  <p style=""margin: 20px 0;"">
+    <a href=""{interview.MeetingLink}"" style=""background-color: #1d4ed8; color: white; padding: 10px 16px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: bold;"">Join Interview Meeting</a>
+  </p>
+  <p>If you have any conflicts or need to reschedule, please coordinate with the recruitment team.</p>
+  <p>Best regards,</p>
+  <p><strong>Recruitment System</strong><br/>Wigwe University</p>
+</div>";
+
+                var receiver = new EmailReceiver
+                {
+                    Email = interviewerEmail,
+                    Name = interviewerName ?? "Interviewer"
+                };
+                await _notifyService.SendEmailAsync(new List<EmailReceiver> { receiver }, subject, body);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Failed to send email to interviewer {interviewerEmail}: {ex.Message}");
+            }
         }
 
         private async Task SendOfferLetterSentEmailAsync(JobApplication application)

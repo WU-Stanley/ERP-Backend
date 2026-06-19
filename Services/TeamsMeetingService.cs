@@ -23,7 +23,7 @@ namespace WUIAM.Services
             _clientSecret = configuration["MicrosoftIdentity:ClientSecret"] ?? "";
         }
 
-        public async Task<string?> CreateTeamsMeetingAsync(string title, DateTime startTime, DateTime endTime, string organizerEmail)
+        public async Task<string?> CreateTeamsMeetingAsync(string title, DateTime startTime, DateTime endTime, string organizerEmail, List<string>? attendeeEmails = null)
         {
             try
             {
@@ -36,6 +36,12 @@ namespace WUIAM.Services
 
                 var requestUrl = "https://graph.microsoft.com/v1.0/users/" + Uri.EscapeDataString(organizerEmail) + "/events";
 
+                var attendees = attendeeEmails?.Select(email => new
+                {
+                    emailAddress = new { address = email },
+                    type = "required"
+                }).ToList();
+
                 var meetingBody = new
                 {
                     subject = title,
@@ -44,7 +50,8 @@ namespace WUIAM.Services
                     end = new { dateTime = endTime.ToString("yyyy-MM-ddTHH:mm:ss"), timeZone = "UTC" },
                     location = new { displayName = "Microsoft Teams Meeting" },
                     isOnlineMeeting = true,
-                    onlineMeetingProvider = "teamsForBusiness"
+                    onlineMeetingProvider = "teamsForBusiness",
+                    attendees = attendees
                 };
 
                 var jsonContent = new StringContent(

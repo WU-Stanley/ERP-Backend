@@ -136,6 +136,22 @@ namespace WUIAM.DTOs
         public DateTime ScannedAt { get; set; }
     }
 
+    public class CreateInterviewerDto
+    {
+        public Guid? EmployeeId { get; set; }
+        public string Email { get; set; } = string.Empty;
+        public string? Name { get; set; }
+    }
+
+    public class InterviewerDto
+    {
+        public Guid Id { get; set; }
+        public Guid? EmployeeId { get; set; }
+        public string? EmployeeName { get; set; }
+        public string Email { get; set; } = string.Empty;
+        public string? Name { get; set; }
+    }
+
     // ==================== Interview DTOs ====================
     public class CreateInterviewDto
     {
@@ -148,6 +164,8 @@ namespace WUIAM.DTOs
 
         [MaxLength(2000)]
         public string? Notes { get; set; }
+
+        public List<CreateInterviewerDto> Interviewers { get; set; } = new();
     }
 
     public class InterviewDto
@@ -162,6 +180,7 @@ namespace WUIAM.DTOs
         public string Status { get; set; } = "Scheduled";
         public string? Notes { get; set; }
         public DateTime CreatedAt { get; set; }
+        public List<InterviewerDto> Interviewers { get; set; } = new();
     }
 
     // ==================== Offer Letter DTOs ====================

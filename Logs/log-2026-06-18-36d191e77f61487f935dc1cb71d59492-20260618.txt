@@ -1,0 +1,381 @@
+[2026-06-18 15:40:12.622 WRN] [] No store type was specified for the decimal property 'PurchaseCost' on entity type 'FacilityAsset'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.633 WRN] [] No store type was specified for the decimal property 'UnitCost' on entity type 'InventoryItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.633 WRN] [] No store type was specified for the decimal property 'GrossPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.633 WRN] [] No store type was specified for the decimal property 'NetPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.633 WRN] [] No store type was specified for the decimal property 'EstimatedAmount' on entity type 'ProcurementRequest'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.633 WRN] [] No store type was specified for the decimal property 'BasePay' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.633 WRN] [] No store type was specified for the decimal property 'HousingAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.634 WRN] [] No store type was specified for the decimal property 'OtherAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.634 WRN] [] No store type was specified for the decimal property 'PensionRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.634 WRN] [] No store type was specified for the decimal property 'TaxRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:12.634 WRN] [] No store type was specified for the decimal property 'TransportAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-18 15:40:13.423 INF] [] Start installing Hangfire SQL objects...
+[2026-06-18 15:40:13.457 INF] [] Hangfire SQL objects installed.
+[2026-06-18 15:40:13.679 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.
+[2026-06-18 15:40:13.800 INF] [] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@WUIAM'
+[2026-06-18 15:40:13.800 INF] [] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2026-06-18 15:40:13.801 INF] [] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-06-18 15:40:13.813 INF] [] Server macbook-pro:34196:73b27f8d successfully announced in 7.1341 ms
+[2026-06-18 15:40:13.814 INF] [] Server macbook-pro:34196:73b27f8d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-18 15:40:13.817 INF] [] Server macbook-pro:34196:73b27f8d all the dispatchers started
+[2026-06-18 15:40:19.808 INF] [110d08d2-05bf-4c58-ae87-de07612332bf] [Perf] POST /api/notificationsHub/negotiate -> 200 in 34.59ms
+[2026-06-18 15:40:19.810 INF] [110d08d2-05bf-4c58-ae87-de07612332bf] [CorrelationId: 110d08d2-05bf-4c58-ae87-de07612332bf] POST /api/notificationsHub/negotiate completed in 38.13ms with status 200
+[2026-06-18 15:40:22.444 INF] [dfbe7b3f-df30-444c-836b-bf2247d3118b] [Perf] POST /api/notificationsHub/negotiate -> 200 in 9.81ms
+[2026-06-18 15:40:22.445 INF] [dfbe7b3f-df30-444c-836b-bf2247d3118b] [CorrelationId: dfbe7b3f-df30-444c-836b-bf2247d3118b] POST /api/notificationsHub/negotiate completed in 10.35ms with status 200
+[2026-06-18 15:40:22.450 INF] [f09f7845-1bcd-4609-968d-1fad0da63ed8] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.72ms
+[2026-06-18 15:40:22.450 INF] [f09f7845-1bcd-4609-968d-1fad0da63ed8] [CorrelationId: f09f7845-1bcd-4609-968d-1fad0da63ed8] POST /api/notificationsHub/negotiate completed in 1.07ms with status 200
+[2026-06-18 15:40:22.475 INF] [4c8e04f1-176d-421e-be5c-6906b4f60e23] [Perf] POST /api/notificationsHub/negotiate -> 200 in 1.42ms
+[2026-06-18 15:40:22.475 INF] [4c8e04f1-176d-421e-be5c-6906b4f60e23] [CorrelationId: 4c8e04f1-176d-421e-be5c-6906b4f60e23] POST /api/notificationsHub/negotiate completed in 1.79ms with status 200
+[2026-06-18 15:40:50.020 WRN] [6e5b4ea7-c7cf-4e67-8fbc-7000ac1ca7cb] [Perf] GET /api/notificationsHub -> 101 in 30180.40ms
+[2026-06-18 15:40:50.020 INF] [6e5b4ea7-c7cf-4e67-8fbc-7000ac1ca7cb] [CorrelationId: 6e5b4ea7-c7cf-4e67-8fbc-7000ac1ca7cb] GET /api/notificationsHub completed in 30180.67ms with status 101
+[2026-06-18 15:40:50.020 WRN] [6e5b4ea7-c7cf-4e67-8fbc-7000ac1ca7cb] [CorrelationId: 6e5b4ea7-c7cf-4e67-8fbc-7000ac1ca7cb] SLOW REQUEST: GET /api/notificationsHub took 30180.67ms (threshold: 1000ms)
+[2026-06-18 15:40:50.021 ERR] [6e5b4ea7-c7cf-4e67-8fbc-7000ac1ca7cb] [CorrelationId: 6e5b4ea7-c7cf-4e67-8fbc-7000ac1ca7cb] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 30180.67ms (threshold: 5000ms)
+[2026-06-18 15:41:27.081 INF] [872d5798-9f28-42c6-aa6a-d20eb335de63] [Perf] GET /api/notifications/unread-count -> 200 in 62.94ms
+[2026-06-18 15:41:27.081 INF] [872d5798-9f28-42c6-aa6a-d20eb335de63] [CorrelationId: 872d5798-9f28-42c6-aa6a-d20eb335de63] GET /api/notifications/unread-count completed in 63.16ms with status 200
+[2026-06-18 15:41:27.116 INF] [92afdf63-6c29-41dc-8b84-cfff4dad46b4] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score -> 200 in 44.58ms
+[2026-06-18 15:41:27.117 INF] [92afdf63-6c29-41dc-8b84-cfff4dad46b4] [CorrelationId: 92afdf63-6c29-41dc-8b84-cfff4dad46b4] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score completed in 44.77ms with status 200
+[2026-06-18 15:41:27.118 INF] [3fe10a37-9dec-48b6-9a70-c8ff087cb736] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.24ms
+[2026-06-18 15:41:27.118 INF] [3fe10a37-9dec-48b6-9a70-c8ff087cb736] [CorrelationId: 3fe10a37-9dec-48b6-9a70-c8ff087cb736] POST /api/notificationsHub/negotiate completed in 0.38ms with status 200
+[2026-06-18 15:41:27.140 INF] [2aaacf87-07fb-4fea-9d52-efa22ffd3afa] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter -> 200 in 58.26ms
+[2026-06-18 15:41:27.140 INF] [2aaacf87-07fb-4fea-9d52-efa22ffd3afa] [CorrelationId: 2aaacf87-07fb-4fea-9d52-efa22ffd3afa] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter completed in 58.42ms with status 200
+[2026-06-18 15:41:27.143 INF] [02fbb2ec-30bd-479e-a40d-d65f9b3b5297] [Perf] GET /api/notifications/unread-count -> 200 in 2.59ms
+[2026-06-18 15:41:27.144 INF] [02fbb2ec-30bd-479e-a40d-d65f9b3b5297] [CorrelationId: 02fbb2ec-30bd-479e-a40d-d65f9b3b5297] GET /api/notifications/unread-count completed in 2.71ms with status 200
+[2026-06-18 15:41:27.152 INF] [00614d8c-4938-4547-afe4-dcc1325faf11] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b -> 200 in 90.14ms
+[2026-06-18 15:41:27.152 INF] [00614d8c-4938-4547-afe4-dcc1325faf11] [CorrelationId: 00614d8c-4938-4547-afe4-dcc1325faf11] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b completed in 90.31ms with status 200
+[2026-06-18 15:41:27.154 INF] [e9b253d9-bb47-44d9-b64a-8251b3d5a300] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews -> 200 in 76.74ms
+[2026-06-18 15:41:27.154 INF] [e9b253d9-bb47-44d9-b64a-8251b3d5a300] [CorrelationId: e9b253d9-bb47-44d9-b64a-8251b3d5a300] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews completed in 76.86ms with status 200
+[2026-06-18 15:41:27.154 INF] [795f1e41-8a32-4ddc-93b5-f5cbf1ef82de] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries -> 200 in 38.77ms
+[2026-06-18 15:41:27.155 INF] [795f1e41-8a32-4ddc-93b5-f5cbf1ef82de] [CorrelationId: 795f1e41-8a32-4ddc-93b5-f5cbf1ef82de] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries completed in 38.86ms with status 200
+[2026-06-18 15:41:27.157 INF] [e23d0505-2e39-4516-a689-85690765541c] [Perf] GET /api/notifications -> 200 in 15.27ms
+[2026-06-18 15:41:27.157 INF] [e23d0505-2e39-4516-a689-85690765541c] [CorrelationId: e23d0505-2e39-4516-a689-85690765541c] GET /api/notifications completed in 15.37ms with status 200
+[2026-06-18 15:41:27.174 INF] [1177a974-9584-4d8e-a77f-c94851d2a0e2] [Perf] GET /api/auth/users -> 200 in 55.87ms
+[2026-06-18 15:41:27.174 INF] [1177a974-9584-4d8e-a77f-c94851d2a0e2] [CorrelationId: 1177a974-9584-4d8e-a77f-c94851d2a0e2] GET /api/auth/users completed in 56.00ms with status 200
+[2026-06-18 15:45:13.833 INF] [] 2 servers were removed due to timeout
+[2026-06-18 16:01:13.644 WRN] [32dd3f47-d4fd-4d4d-aada-917e743671e6] [Perf] GET /api/notificationsHub -> 101 in 1251138.02ms
+[2026-06-18 16:01:13.644 INF] [32dd3f47-d4fd-4d4d-aada-917e743671e6] [CorrelationId: 32dd3f47-d4fd-4d4d-aada-917e743671e6] GET /api/notificationsHub completed in 1251138.60ms with status 101
+[2026-06-18 16:01:13.644 WRN] [32dd3f47-d4fd-4d4d-aada-917e743671e6] [CorrelationId: 32dd3f47-d4fd-4d4d-aada-917e743671e6] SLOW REQUEST: GET /api/notificationsHub took 1251138.60ms (threshold: 1000ms)
+[2026-06-18 16:01:13.644 ERR] [32dd3f47-d4fd-4d4d-aada-917e743671e6] [CorrelationId: 32dd3f47-d4fd-4d4d-aada-917e743671e6] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 1251138.60ms (threshold: 5000ms)
+[2026-06-18 16:38:01.731 WRN] [6aefe2c6-a143-4deb-812c-06d92c5bbcbf] [Perf] GET /api/notificationsHub -> 101 in 3394539.62ms
+[2026-06-18 16:38:01.732 INF] [6aefe2c6-a143-4deb-812c-06d92c5bbcbf] [CorrelationId: 6aefe2c6-a143-4deb-812c-06d92c5bbcbf] GET /api/notificationsHub completed in 3394540.12ms with status 101
+[2026-06-18 16:38:01.736 WRN] [6aefe2c6-a143-4deb-812c-06d92c5bbcbf] [CorrelationId: 6aefe2c6-a143-4deb-812c-06d92c5bbcbf] SLOW REQUEST: GET /api/notificationsHub took 3394540.12ms (threshold: 1000ms)
+[2026-06-18 16:38:01.736 ERR] [6aefe2c6-a143-4deb-812c-06d92c5bbcbf] [CorrelationId: 6aefe2c6-a143-4deb-812c-06d92c5bbcbf] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 3394540.12ms (threshold: 5000ms)
+[2026-06-18 16:38:01.993 INF] [b9a6a111-527f-4217-b748-5e0e15eaa26e] [Perf] GET /api/notifications/unread-count -> 200 in 32.64ms
+[2026-06-18 16:38:01.993 INF] [b9a6a111-527f-4217-b748-5e0e15eaa26e] [CorrelationId: b9a6a111-527f-4217-b748-5e0e15eaa26e] GET /api/notifications/unread-count completed in 32.78ms with status 200
+[2026-06-18 16:38:02.003 INF] [7ce097d7-72b7-4f98-a078-61902edc6b44] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews -> 200 in 8.96ms
+[2026-06-18 16:38:02.003 INF] [7ce097d7-72b7-4f98-a078-61902edc6b44] [CorrelationId: 7ce097d7-72b7-4f98-a078-61902edc6b44] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews completed in 9.11ms with status 200
+[2026-06-18 16:38:02.013 INF] [940b6598-0c6a-4e67-a167-617df58fe569] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries -> 200 in 9.32ms
+[2026-06-18 16:38:02.014 INF] [940b6598-0c6a-4e67-a167-617df58fe569] [CorrelationId: 940b6598-0c6a-4e67-a167-617df58fe569] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries completed in 9.46ms with status 200
+[2026-06-18 16:38:02.016 INF] [c31523db-a268-4d88-a093-877f2db45986] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.54ms
+[2026-06-18 16:38:02.016 INF] [c31523db-a268-4d88-a093-877f2db45986] [CorrelationId: c31523db-a268-4d88-a093-877f2db45986] POST /api/notificationsHub/negotiate completed in 0.66ms with status 200
+[2026-06-18 16:38:02.025 INF] [562e16df-c8e2-4393-9ad6-19fcdc87d39a] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b -> 200 in 57.91ms
+[2026-06-18 16:38:02.025 INF] [f0b03b23-f9ac-438c-91f1-c939d40d1ad1] [Perf] GET /api/auth/users -> 200 in 12.78ms
+[2026-06-18 16:38:02.025 INF] [f0b03b23-f9ac-438c-91f1-c939d40d1ad1] [CorrelationId: f0b03b23-f9ac-438c-91f1-c939d40d1ad1] GET /api/auth/users completed in 12.95ms with status 200
+[2026-06-18 16:38:02.025 INF] [562e16df-c8e2-4393-9ad6-19fcdc87d39a] [CorrelationId: 562e16df-c8e2-4393-9ad6-19fcdc87d39a] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b completed in 58.03ms with status 200
+[2026-06-18 16:38:02.040 INF] [9d9974eb-20c2-4c0f-80a3-87ab7f705c5e] [Perf] GET /api/notifications/unread-count -> 200 in 3.95ms
+[2026-06-18 16:38:02.040 INF] [9d9974eb-20c2-4c0f-80a3-87ab7f705c5e] [CorrelationId: 9d9974eb-20c2-4c0f-80a3-87ab7f705c5e] GET /api/notifications/unread-count completed in 4.10ms with status 200
+[2026-06-18 16:38:02.043 INF] [6cf6aab7-dc81-4dd1-8831-69c2123286b1] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter -> 200 in 48.20ms
+[2026-06-18 16:38:02.043 INF] [6cf6aab7-dc81-4dd1-8831-69c2123286b1] [CorrelationId: 6cf6aab7-dc81-4dd1-8831-69c2123286b1] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter completed in 48.33ms with status 200
+[2026-06-18 16:38:02.044 INF] [42573519-bed9-4fe6-a762-f756e150430c] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score -> 200 in 70.38ms
+[2026-06-18 16:38:02.044 INF] [42573519-bed9-4fe6-a762-f756e150430c] [CorrelationId: 42573519-bed9-4fe6-a762-f756e150430c] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score completed in 70.43ms with status 200
+[2026-06-18 16:38:02.044 INF] [e09beb70-0229-48dc-8b44-969f46cacc3a] [Perf] GET /api/notifications -> 200 in 8.33ms
+[2026-06-18 16:38:02.045 INF] [e09beb70-0229-48dc-8b44-969f46cacc3a] [CorrelationId: e09beb70-0229-48dc-8b44-969f46cacc3a] GET /api/notifications completed in 8.41ms with status 200
+[2026-06-18 16:38:03.911 WRN] [bfc1f878-d8ec-42a1-b503-f474316f70df] [Perf] GET /api/notificationsHub -> 101 in 1884.13ms
+[2026-06-18 16:38:03.913 INF] [bfc1f878-d8ec-42a1-b503-f474316f70df] [CorrelationId: bfc1f878-d8ec-42a1-b503-f474316f70df] GET /api/notificationsHub completed in 1884.66ms with status 101
+[2026-06-18 16:38:03.914 WRN] [bfc1f878-d8ec-42a1-b503-f474316f70df] [CorrelationId: bfc1f878-d8ec-42a1-b503-f474316f70df] SLOW REQUEST: GET /api/notificationsHub took 1884.66ms (threshold: 1000ms)
+[2026-06-18 16:38:04.060 INF] [d0198e1f-6c4d-4f44-a3c5-e5abddb3e1d4] [Perf] GET /api/notifications/unread-count -> 200 in 10.65ms
+[2026-06-18 16:38:04.060 INF] [d0198e1f-6c4d-4f44-a3c5-e5abddb3e1d4] [CorrelationId: d0198e1f-6c4d-4f44-a3c5-e5abddb3e1d4] GET /api/notifications/unread-count completed in 10.75ms with status 200
+[2026-06-18 16:38:04.065 INF] [95a0b586-1687-4913-93ea-b98bd139226a] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score -> 200 in 11.24ms
+[2026-06-18 16:38:04.065 INF] [95a0b586-1687-4913-93ea-b98bd139226a] [CorrelationId: 95a0b586-1687-4913-93ea-b98bd139226a] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score completed in 11.34ms with status 200
+[2026-06-18 16:38:04.066 INF] [be8f0ddd-7888-4974-a014-f262a5ff3d9e] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries -> 200 in 10.81ms
+[2026-06-18 16:38:04.066 INF] [be8f0ddd-7888-4974-a014-f262a5ff3d9e] [CorrelationId: be8f0ddd-7888-4974-a014-f262a5ff3d9e] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries completed in 10.83ms with status 200
+[2026-06-18 16:38:04.069 INF] [98e0a23e-0a55-4463-9cc2-31525b60d3cc] [Perf] POST /api/notificationsHub/negotiate -> 200 in 1.02ms
+[2026-06-18 16:38:04.069 INF] [98e0a23e-0a55-4463-9cc2-31525b60d3cc] [CorrelationId: 98e0a23e-0a55-4463-9cc2-31525b60d3cc] POST /api/notificationsHub/negotiate completed in 1.13ms with status 200
+[2026-06-18 16:38:04.081 INF] [27e22bc8-8530-4fd1-b37a-70549377e8cd] [Perf] GET /api/auth/users -> 200 in 15.90ms
+[2026-06-18 16:38:04.081 INF] [27e22bc8-8530-4fd1-b37a-70549377e8cd] [CorrelationId: 27e22bc8-8530-4fd1-b37a-70549377e8cd] GET /api/auth/users completed in 16.00ms with status 200
+[2026-06-18 16:38:04.086 INF] [c9e6ef29-3587-43e7-ad53-37bc7c3c8949] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews -> 200 in 31.59ms
+[2026-06-18 16:38:04.087 INF] [c9e6ef29-3587-43e7-ad53-37bc7c3c8949] [CorrelationId: c9e6ef29-3587-43e7-ad53-37bc7c3c8949] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews completed in 31.80ms with status 200
+[2026-06-18 16:38:04.087 INF] [03395f4a-424c-49b9-b84b-b89a09ef39dc] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter -> 200 in 32.06ms
+[2026-06-18 16:38:04.087 INF] [03395f4a-424c-49b9-b84b-b89a09ef39dc] [CorrelationId: 03395f4a-424c-49b9-b84b-b89a09ef39dc] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter completed in 32.09ms with status 200
+[2026-06-18 16:38:04.089 INF] [94bb1126-52bd-4995-a791-c4f3fd012f08] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b -> 200 in 34.71ms
+[2026-06-18 16:38:04.089 INF] [94bb1126-52bd-4995-a791-c4f3fd012f08] [CorrelationId: 94bb1126-52bd-4995-a791-c4f3fd012f08] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b completed in 34.81ms with status 200
+[2026-06-18 16:38:04.111 INF] [e62b6117-10e1-446d-b0eb-17559fcb75f2] [Perf] GET /api/notifications -> 200 in 2.52ms
+[2026-06-18 16:38:04.111 INF] [a379b6e6-ba4e-4cac-a213-1070f7652802] [Perf] GET /api/notifications/unread-count -> 200 in 2.46ms
+[2026-06-18 16:38:04.111 INF] [e62b6117-10e1-446d-b0eb-17559fcb75f2] [CorrelationId: e62b6117-10e1-446d-b0eb-17559fcb75f2] GET /api/notifications completed in 2.60ms with status 200
+[2026-06-18 16:38:04.111 INF] [a379b6e6-ba4e-4cac-a213-1070f7652802] [CorrelationId: a379b6e6-ba4e-4cac-a213-1070f7652802] GET /api/notifications/unread-count completed in 2.61ms with status 200
+[2026-06-18 16:38:17.627 WRN] [29d60a3d-49fc-4d38-8064-65e16109fd96] [Perf] GET /api/notificationsHub -> 101 in 13521.72ms
+[2026-06-18 16:38:17.627 INF] [29d60a3d-49fc-4d38-8064-65e16109fd96] [CorrelationId: 29d60a3d-49fc-4d38-8064-65e16109fd96] GET /api/notificationsHub completed in 13521.86ms with status 101
+[2026-06-18 16:38:17.627 WRN] [29d60a3d-49fc-4d38-8064-65e16109fd96] [CorrelationId: 29d60a3d-49fc-4d38-8064-65e16109fd96] SLOW REQUEST: GET /api/notificationsHub took 13521.86ms (threshold: 1000ms)
+[2026-06-18 16:38:17.627 ERR] [29d60a3d-49fc-4d38-8064-65e16109fd96] [CorrelationId: 29d60a3d-49fc-4d38-8064-65e16109fd96] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 13521.86ms (threshold: 5000ms)
+[2026-06-18 16:38:17.786 INF] [77f4d756-8f62-4699-b05d-d0b8ec22e712] [Perf] GET /api/notifications/unread-count -> 200 in 6.68ms
+[2026-06-18 16:38:17.786 INF] [77f4d756-8f62-4699-b05d-d0b8ec22e712] [CorrelationId: 77f4d756-8f62-4699-b05d-d0b8ec22e712] GET /api/notifications/unread-count completed in 6.80ms with status 200
+[2026-06-18 16:38:17.789 INF] [5e87d53d-2264-4e13-97c3-dbc7aec28f12] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries -> 200 in 5.41ms
+[2026-06-18 16:38:17.789 INF] [5e87d53d-2264-4e13-97c3-dbc7aec28f12] [CorrelationId: 5e87d53d-2264-4e13-97c3-dbc7aec28f12] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries completed in 5.48ms with status 200
+[2026-06-18 16:38:17.789 INF] [ea4275cd-e504-46aa-b054-78bfd55e9dc9] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score -> 200 in 5.74ms
+[2026-06-18 16:38:17.789 INF] [ea4275cd-e504-46aa-b054-78bfd55e9dc9] [CorrelationId: ea4275cd-e504-46aa-b054-78bfd55e9dc9] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score completed in 5.77ms with status 200
+[2026-06-18 16:38:17.792 INF] [02ccf40a-ee79-4b7c-bb3c-6b9232009f78] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.42ms
+[2026-06-18 16:38:17.792 INF] [02ccf40a-ee79-4b7c-bb3c-6b9232009f78] [CorrelationId: 02ccf40a-ee79-4b7c-bb3c-6b9232009f78] POST /api/notificationsHub/negotiate completed in 0.50ms with status 200
+[2026-06-18 16:38:17.793 INF] [26f9f9d2-9b68-425c-a2df-09f4715b4efc] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b -> 200 in 10.59ms
+[2026-06-18 16:38:17.793 INF] [26f9f9d2-9b68-425c-a2df-09f4715b4efc] [CorrelationId: 26f9f9d2-9b68-425c-a2df-09f4715b4efc] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b completed in 10.66ms with status 200
+[2026-06-18 16:38:17.795 INF] [047bad9a-c279-4f95-bff2-b0cfda6272c6] [Perf] GET /api/auth/users -> 200 in 6.06ms
+[2026-06-18 16:38:17.795 INF] [047bad9a-c279-4f95-bff2-b0cfda6272c6] [CorrelationId: 047bad9a-c279-4f95-bff2-b0cfda6272c6] GET /api/auth/users completed in 6.11ms with status 200
+[2026-06-18 16:38:17.806 INF] [02a52402-bab4-431e-8d59-72a40607f8dd] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter -> 200 in 22.25ms
+[2026-06-18 16:38:17.806 INF] [02a52402-bab4-431e-8d59-72a40607f8dd] [CorrelationId: 02a52402-bab4-431e-8d59-72a40607f8dd] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter completed in 22.37ms with status 200
+[2026-06-18 16:38:17.806 INF] [9e7c5969-3ea3-464c-917a-025c2e3562b6] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews -> 200 in 22.86ms
+[2026-06-18 16:38:17.806 INF] [9e7c5969-3ea3-464c-917a-025c2e3562b6] [CorrelationId: 9e7c5969-3ea3-464c-917a-025c2e3562b6] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews completed in 22.90ms with status 200
+[2026-06-18 16:38:17.830 INF] [445daa3e-fac9-46e0-996a-dd933f4b57ca] [Perf] GET /api/notifications -> 200 in 2.06ms
+[2026-06-18 16:38:17.830 INF] [98943ef3-1b88-4a78-84a8-2a97630dd7cb] [Perf] GET /api/notifications/unread-count -> 200 in 2.59ms
+[2026-06-18 16:38:17.831 INF] [445daa3e-fac9-46e0-996a-dd933f4b57ca] [CorrelationId: 445daa3e-fac9-46e0-996a-dd933f4b57ca] GET /api/notifications completed in 2.18ms with status 200
+[2026-06-18 16:38:17.831 INF] [98943ef3-1b88-4a78-84a8-2a97630dd7cb] [CorrelationId: 98943ef3-1b88-4a78-84a8-2a97630dd7cb] GET /api/notifications/unread-count completed in 2.77ms with status 200
+[2026-06-18 16:39:02.090 INF] [b9c54363-2017-4daa-b9d6-11d428932981] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/resume -> 200 in 20.13ms
+[2026-06-18 16:39:02.090 INF] [b9c54363-2017-4daa-b9d6-11d428932981] [CorrelationId: b9c54363-2017-4daa-b9d6-11d428932981] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/resume completed in 20.43ms with status 200
+[2026-06-18 16:39:04.711 INF] [7cdb584b-d0f8-4882-bdf3-01f7b41811b3] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/resume -> 200 in 17.46ms
+[2026-06-18 16:39:04.711 INF] [7cdb584b-d0f8-4882-bdf3-01f7b41811b3] [CorrelationId: 7cdb584b-d0f8-4882-bdf3-01f7b41811b3] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/resume completed in 17.70ms with status 200
+[2026-06-18 16:39:04.741 INF] [e6766a40-b67e-4250-b0ec-dfcca00b3f43] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/resume -> 200 in 14.67ms
+[2026-06-18 16:39:04.741 INF] [e6766a40-b67e-4250-b0ec-dfcca00b3f43] [CorrelationId: e6766a40-b67e-4250-b0ec-dfcca00b3f43] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/resume completed in 14.81ms with status 200
+[2026-06-18 16:39:20.702 INF] [ed8a004d-5ee4-4a7e-a5f3-5563175a24e2] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/resume -> 200 in 8.99ms
+[2026-06-18 16:39:20.703 INF] [ed8a004d-5ee4-4a7e-a5f3-5563175a24e2] [CorrelationId: ed8a004d-5ee4-4a7e-a5f3-5563175a24e2] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/resume completed in 9.20ms with status 200
+[2026-06-18 16:39:30.370 INF] [77717b8d-19d5-46b6-8728-77182c80aa14] [Perf] GET /api/v1/recruitment/applications -> 200 in 69.51ms
+[2026-06-18 16:39:30.370 INF] [77717b8d-19d5-46b6-8728-77182c80aa14] [CorrelationId: 77717b8d-19d5-46b6-8728-77182c80aa14] GET /api/v1/recruitment/applications completed in 69.61ms with status 200
+[2026-06-18 16:39:38.677 INF] [99ea2d9c-06db-4b7c-a62a-0ec09f30ad86] [Perf] GET /api/v1/recruitment/applications -> 200 in 78.47ms
+[2026-06-18 16:39:38.677 INF] [99ea2d9c-06db-4b7c-a62a-0ec09f30ad86] [CorrelationId: 99ea2d9c-06db-4b7c-a62a-0ec09f30ad86] GET /api/v1/recruitment/applications completed in 78.77ms with status 200
+[2026-06-18 16:39:48.212 INF] [9075fb24-5fd7-46a3-b4b1-e25071bb8813] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 200 in 7.22ms
+[2026-06-18 16:39:48.212 INF] [9075fb24-5fd7-46a3-b4b1-e25071bb8813] [CorrelationId: 9075fb24-5fd7-46a3-b4b1-e25071bb8813] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 7.32ms with status 200
+[2026-06-18 16:39:48.212 INF] [83f50b2b-fbac-4319-a5c9-510bd25c6314] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 7.10ms
+[2026-06-18 16:39:48.213 INF] [83f50b2b-fbac-4319-a5c9-510bd25c6314] [CorrelationId: 83f50b2b-fbac-4319-a5c9-510bd25c6314] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 7.65ms with status 200
+[2026-06-18 16:39:48.212 INF] [8d400bc3-a938-4da6-82e7-ca7f3d99c329] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 200 in 7.05ms
+[2026-06-18 16:39:48.213 INF] [8d400bc3-a938-4da6-82e7-ca7f3d99c329] [CorrelationId: 8d400bc3-a938-4da6-82e7-ca7f3d99c329] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 8.28ms with status 200
+[2026-06-18 16:39:48.214 INF] [b3bdbd3d-f953-4460-b137-9a55a2bc912c] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 9.06ms
+[2026-06-18 16:39:48.214 INF] [b3bdbd3d-f953-4460-b137-9a55a2bc912c] [CorrelationId: b3bdbd3d-f953-4460-b137-9a55a2bc912c] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 9.13ms with status 200
+[2026-06-18 16:39:48.225 INF] [72fd37f9-468c-4c28-bb37-a95c8d08d3cc] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 19.24ms
+[2026-06-18 16:39:48.225 INF] [72fd37f9-468c-4c28-bb37-a95c8d08d3cc] [CorrelationId: 72fd37f9-468c-4c28-bb37-a95c8d08d3cc] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 19.34ms with status 200
+[2026-06-18 16:39:48.234 INF] [4426f641-0132-41db-a9f5-fdc2762424e4] [Perf] GET /api/auth/users -> 200 in 27.96ms
+[2026-06-18 16:39:48.234 INF] [4426f641-0132-41db-a9f5-fdc2762424e4] [CorrelationId: 4426f641-0132-41db-a9f5-fdc2762424e4] GET /api/auth/users completed in 28.06ms with status 200
+[2026-06-18 16:47:08.734 INF] [58fcfca5-6db6-40e3-b921-7efe5a16518e] [Perf] GET /api/Employees -> 200 in 104.17ms
+[2026-06-18 16:47:08.734 INF] [58fcfca5-6db6-40e3-b921-7efe5a16518e] [CorrelationId: 58fcfca5-6db6-40e3-b921-7efe5a16518e] GET /api/Employees completed in 104.26ms with status 200
+[2026-06-18 16:47:25.052 INF] [c17e1858-b102-45a2-8b49-ffd47540f60e] [Perf] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 200 in 40.48ms
+[2026-06-18 16:47:25.052 INF] [c17e1858-b102-45a2-8b49-ffd47540f60e] [CorrelationId: c17e1858-b102-45a2-8b49-ffd47540f60e] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 40.60ms with status 200
+[2026-06-18 16:47:27.885 INF] [a0388c49-40e5-4c74-964e-4358549aa0a0] [Perf] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 200 in 14.96ms
+[2026-06-18 16:47:27.885 INF] [a0388c49-40e5-4c74-964e-4358549aa0a0] [CorrelationId: a0388c49-40e5-4c74-964e-4358549aa0a0] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 15.13ms with status 200
+[2026-06-18 16:47:39.320 INF] [243fffa9-fd5f-49ba-ab1f-c1dd7125a01e] [Perf] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 400 in 37.85ms
+[2026-06-18 16:47:39.320 INF] [243fffa9-fd5f-49ba-ab1f-c1dd7125a01e] [CorrelationId: 243fffa9-fd5f-49ba-ab1f-c1dd7125a01e] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 37.96ms with status 400
+[2026-06-18 16:52:42.831 INF] [7292aa13-0056-4a87-a05c-897b6abd307c] [Perf] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 401 in 3.27ms
+[2026-06-18 16:52:42.831 INF] [7292aa13-0056-4a87-a05c-897b6abd307c] [CorrelationId: 7292aa13-0056-4a87-a05c-897b6abd307c] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 3.43ms with status 401
+[2026-06-18 16:52:44.842 INF] [07e076d7-df82-4fd1-a0b1-f5473ad8436a] [Perf] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 401 in 2.38ms
+[2026-06-18 16:52:44.842 INF] [07e076d7-df82-4fd1-a0b1-f5473ad8436a] [CorrelationId: 07e076d7-df82-4fd1-a0b1-f5473ad8436a] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 2.62ms with status 401
+[2026-06-18 16:52:46.359 INF] [963a31e5-4687-413c-be77-b2429675ed06] [Perf] POST /api/auth/logout -> 401 in 0.84ms
+[2026-06-18 16:52:46.359 INF] [963a31e5-4687-413c-be77-b2429675ed06] [CorrelationId: 963a31e5-4687-413c-be77-b2429675ed06] POST /api/auth/logout completed in 0.94ms with status 401
+[2026-06-18 16:52:48.370 INF] [82371279-f1b6-49f8-a90d-8be4b1246792] [Perf] POST /api/auth/logout -> 401 in 0.54ms
+[2026-06-18 16:52:48.370 INF] [82371279-f1b6-49f8-a90d-8be4b1246792] [CorrelationId: 82371279-f1b6-49f8-a90d-8be4b1246792] POST /api/auth/logout completed in 0.78ms with status 401
+[2026-06-18 16:52:48.600 WRN] [a1d6e8f5-9f24-455f-8d98-bf7f9b5d8a86] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-18 16:52:48.879 INF] [25f2db6c-6613-4657-8b56-fd8ee24159f7] [Perf] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 401 in 0.16ms
+[2026-06-18 16:52:48.879 INF] [25f2db6c-6613-4657-8b56-fd8ee24159f7] [CorrelationId: 25f2db6c-6613-4657-8b56-fd8ee24159f7] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 0.27ms with status 401
+[2026-06-18 16:52:48.911 WRN] [a19faf97-c565-427b-9398-d4bfec11f3c9] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-18 16:52:49.026 INF] [a19faf97-c565-427b-9398-d4bfec11f3c9] [Perf] POST /api/auth/refresh-token -> 200 in 141.68ms
+[2026-06-18 16:52:49.027 INF] [a19faf97-c565-427b-9398-d4bfec11f3c9] [CorrelationId: a19faf97-c565-427b-9398-d4bfec11f3c9] POST /api/auth/refresh-token completed in 141.76ms with status 200
+[2026-06-18 16:52:49.038 INF] [6e7a09fd-4ffc-4911-9f8a-4db797b3d425] [Perf] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 400 in 4.85ms
+[2026-06-18 16:52:49.039 INF] [6e7a09fd-4ffc-4911-9f8a-4db797b3d425] [CorrelationId: 6e7a09fd-4ffc-4911-9f8a-4db797b3d425] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 4.94ms with status 400
+[2026-06-18 16:52:50.612 WRN] [a1d6e8f5-9f24-455f-8d98-bf7f9b5d8a86] [Perf] POST /api/auth/login -> 200 in 2053.53ms
+[2026-06-18 16:52:50.612 INF] [a1d6e8f5-9f24-455f-8d98-bf7f9b5d8a86] [CorrelationId: a1d6e8f5-9f24-455f-8d98-bf7f9b5d8a86] POST /api/auth/login completed in 2053.78ms with status 200
+[2026-06-18 16:52:50.612 WRN] [a1d6e8f5-9f24-455f-8d98-bf7f9b5d8a86] [CorrelationId: a1d6e8f5-9f24-455f-8d98-bf7f9b5d8a86] SLOW REQUEST: POST /api/auth/login took 2053.78ms (threshold: 1000ms)
+[2026-06-18 16:52:52.382 INF] [0dec21c9-fb64-403c-b481-674fc9f542d0] [Perf] POST /api/auth/logout -> 401 in 0.57ms
+[2026-06-18 16:52:52.382 INF] [0dec21c9-fb64-403c-b481-674fc9f542d0] [CorrelationId: 0dec21c9-fb64-403c-b481-674fc9f542d0] POST /api/auth/logout completed in 0.89ms with status 401
+[2026-06-18 16:52:52.431 INF] [0909d9d7-224b-4cb9-b1ce-fb5c189caa64] [Perf] POST /api/auth/refresh-token -> 200 in 42.39ms
+[2026-06-18 16:52:52.431 INF] [0909d9d7-224b-4cb9-b1ce-fb5c189caa64] [CorrelationId: 0909d9d7-224b-4cb9-b1ce-fb5c189caa64] POST /api/auth/refresh-token completed in 42.49ms with status 200
+[2026-06-18 16:52:52.451 INF] [393bf4ca-c992-4bed-81fe-0be0699bc1d7] [Perf] POST /api/auth/logout -> 200 in 17.04ms
+[2026-06-18 16:52:52.453 ERR] [393bf4ca-c992-4bed-81fe-0be0699bc1d7] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<RefreshToken>()
+    .Where(r => r.UserId == @userId && r.RevokedOn == null && r.IsExpired == False)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-18 16:53:42.390 INF] [17abe844-99ae-43c0-9112-8a0b116909cf] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.37ms
+[2026-06-18 16:53:42.390 INF] [17abe844-99ae-43c0-9112-8a0b116909cf] [CorrelationId: 17abe844-99ae-43c0-9112-8a0b116909cf] POST /api/notificationsHub/negotiate completed in 0.48ms with status 200
+[2026-06-18 16:53:50.455 INF] [aff160ae-ba4e-4084-bfd8-4467993485a4] [Perf] POST /api/auth/verify-login-token -> 200 in 456.93ms
+[2026-06-18 16:53:50.455 INF] [aff160ae-ba4e-4084-bfd8-4467993485a4] [CorrelationId: aff160ae-ba4e-4084-bfd8-4467993485a4] POST /api/auth/verify-login-token completed in 457.04ms with status 200
+[2026-06-18 16:53:54.819 INF] [1e9fcca4-cb5e-4e7f-a8aa-f473ec3e69cc] [Perf] GET /api/dashboard/admin-summary -> 200 in 57.27ms
+[2026-06-18 16:53:54.819 INF] [1e9fcca4-cb5e-4e7f-a8aa-f473ec3e69cc] [CorrelationId: 1e9fcca4-cb5e-4e7f-a8aa-f473ec3e69cc] GET /api/dashboard/admin-summary completed in 57.39ms with status 200
+[2026-06-18 16:54:03.373 INF] [458ae434-0f0b-49e2-bea6-75d53f1c13ae] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.23ms
+[2026-06-18 16:54:03.373 INF] [458ae434-0f0b-49e2-bea6-75d53f1c13ae] [CorrelationId: 458ae434-0f0b-49e2-bea6-75d53f1c13ae] POST /api/notificationsHub/negotiate completed in 0.34ms with status 200
+[2026-06-18 16:54:03.378 INF] [243be272-3a4d-4378-ab40-e7386e38f543] [Perf] GET /api/notifications/unread-count -> 200 in 10.82ms
+[2026-06-18 16:54:03.378 INF] [243be272-3a4d-4378-ab40-e7386e38f543] [CorrelationId: 243be272-3a4d-4378-ab40-e7386e38f543] GET /api/notifications/unread-count completed in 10.91ms with status 200
+[2026-06-18 16:54:03.410 INF] [6ef878ba-0743-4454-9e51-e207a090efc0] [Perf] GET /api/notifications/unread-count -> 200 in 3.32ms
+[2026-06-18 16:54:03.410 INF] [6ef878ba-0743-4454-9e51-e207a090efc0] [CorrelationId: 6ef878ba-0743-4454-9e51-e207a090efc0] GET /api/notifications/unread-count completed in 3.41ms with status 200
+[2026-06-18 16:54:03.414 INF] [9c4f857d-b655-4857-8dec-1a802025416b] [Perf] GET /api/notifications -> 200 in 7.29ms
+[2026-06-18 16:54:03.414 INF] [9c4f857d-b655-4857-8dec-1a802025416b] [CorrelationId: 9c4f857d-b655-4857-8dec-1a802025416b] GET /api/notifications completed in 7.37ms with status 200
+[2026-06-18 16:54:07.239 INF] [b7a18057-8cbe-474f-ba96-a0ca2a701e9c] [Perf] GET /api/Employees -> 200 in 13.20ms
+[2026-06-18 16:54:07.239 INF] [b7a18057-8cbe-474f-ba96-a0ca2a701e9c] [CorrelationId: b7a18057-8cbe-474f-ba96-a0ca2a701e9c] GET /api/Employees completed in 13.31ms with status 200
+[2026-06-18 16:54:12.794 INF] [7c50e231-5a97-4436-a404-92b7e4a91c5a] [Perf] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 200 in 14.80ms
+[2026-06-18 16:54:12.794 INF] [7c50e231-5a97-4436-a404-92b7e4a91c5a] [CorrelationId: 7c50e231-5a97-4436-a404-92b7e4a91c5a] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 14.92ms with status 200
+[2026-06-18 16:54:14.703 INF] [e4e96c93-d1b8-467e-9418-d92d47cef58b] [Perf] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 200 in 6.32ms
+[2026-06-18 16:54:14.703 INF] [e4e96c93-d1b8-467e-9418-d92d47cef58b] [CorrelationId: e4e96c93-d1b8-467e-9418-d92d47cef58b] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 6.43ms with status 200
+[2026-06-18 16:54:29.999 INF] [45f213be-796d-4162-ac39-0daba171edfc] [Perf] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 400 in 0.94ms
+[2026-06-18 16:54:29.999 INF] [45f213be-796d-4162-ac39-0daba171edfc] [CorrelationId: 45f213be-796d-4162-ac39-0daba171edfc] PUT /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 1.06ms with status 400
+[2026-06-18 17:01:33.191 ERR] [7b92a56e-a67a-4b44-9b59-434a8986d2d8] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:01:33.193 INF] [7b92a56e-a67a-4b44-9b59-434a8986d2d8] [Perf] GET /api/dashboard/admin-summary -> 200 in 2.63ms
+[2026-06-18 17:01:33.193 ERR] [7b92a56e-a67a-4b44-9b59-434a8986d2d8] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/dashboard/admin-summary | Client IP: ::1
+[2026-06-18 17:01:35.199 ERR] [551da136-987f-44fa-b400-03caee284dde] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:01:35.199 INF] [551da136-987f-44fa-b400-03caee284dde] [Perf] GET /api/dashboard/admin-summary -> 200 in 0.63ms
+[2026-06-18 17:01:35.199 ERR] [551da136-987f-44fa-b400-03caee284dde] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/dashboard/admin-summary | Client IP: ::1
+[2026-06-18 17:01:39.203 ERR] [e558496c-a00f-4e86-96a6-6b59cded786e] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:01:39.203 INF] [e558496c-a00f-4e86-96a6-6b59cded786e] [Perf] GET /api/dashboard/admin-summary -> 200 in 0.51ms
+[2026-06-18 17:01:39.203 ERR] [e558496c-a00f-4e86-96a6-6b59cded786e] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/dashboard/admin-summary | Client IP: ::1
+[2026-06-18 17:02:07.228 ERR] [12905244-4e52-4180-a1ca-90ee6fafb159] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:02:07.229 INF] [12905244-4e52-4180-a1ca-90ee6fafb159] [Perf] GET /api/dashboard/admin-summary -> 200 in 1.30ms
+[2026-06-18 17:02:07.229 ERR] [12905244-4e52-4180-a1ca-90ee6fafb159] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/dashboard/admin-summary | Client IP: ::1
+[2026-06-18 17:02:09.234 ERR] [3530cea4-5b6f-4edb-a500-87e95e30a127] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:02:09.235 INF] [3530cea4-5b6f-4edb-a500-87e95e30a127] [Perf] GET /api/dashboard/admin-summary -> 200 in 0.49ms
+[2026-06-18 17:02:09.235 ERR] [3530cea4-5b6f-4edb-a500-87e95e30a127] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/dashboard/admin-summary | Client IP: ::1
+[2026-06-18 17:02:13.238 ERR] [8116b13c-3b54-4693-950f-792bd03b3a20] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:02:13.239 INF] [8116b13c-3b54-4693-950f-792bd03b3a20] [Perf] GET /api/dashboard/admin-summary -> 200 in 0.49ms
+[2026-06-18 17:02:13.239 ERR] [8116b13c-3b54-4693-950f-792bd03b3a20] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/dashboard/admin-summary | Client IP: ::1
+[2026-06-18 17:02:14.964 ERR] [77784bce-425f-46ba-b8d3-053d66684802] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:02:14.964 INF] [77784bce-425f-46ba-b8d3-053d66684802] [Perf] POST /api/auth/logout -> 200 in 0.51ms
+[2026-06-18 17:02:14.964 ERR] [77784bce-425f-46ba-b8d3-053d66684802] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-18 17:02:16.968 ERR] [fbb6e81f-76ff-4c1b-9a0d-f6ac7079be9d] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:02:16.968 INF] [fbb6e81f-76ff-4c1b-9a0d-f6ac7079be9d] [Perf] POST /api/auth/logout -> 200 in 0.53ms
+[2026-06-18 17:02:16.968 ERR] [fbb6e81f-76ff-4c1b-9a0d-f6ac7079be9d] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-18 17:02:20.973 ERR] [349a39de-d51f-46f3-a6dd-3b1be25ba2b9] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:02:20.973 INF] [349a39de-d51f-46f3-a6dd-3b1be25ba2b9] [Perf] POST /api/auth/logout -> 200 in 0.50ms
+[2026-06-18 17:02:20.973 ERR] [349a39de-d51f-46f3-a6dd-3b1be25ba2b9] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-18 17:05:39.123 ERR] [8a5b08cc-7f63-4b4a-ba72-1422c9fb55b8] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:05:39.124 INF] [8a5b08cc-7f63-4b4a-ba72-1422c9fb55b8] [Perf] POST /api/auth/login -> 200 in 0.50ms
+[2026-06-18 17:05:39.124 ERR] [8a5b08cc-7f63-4b4a-ba72-1422c9fb55b8] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/login | Client IP: ::1
+[2026-06-18 17:05:41.127 ERR] [c8376c94-3ce0-40c2-8fe0-c2b16e7cdd35] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:05:41.127 INF] [c8376c94-3ce0-40c2-8fe0-c2b16e7cdd35] [Perf] POST /api/auth/login -> 200 in 0.48ms
+[2026-06-18 17:05:41.127 ERR] [c8376c94-3ce0-40c2-8fe0-c2b16e7cdd35] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/login | Client IP: ::1
+[2026-06-18 17:05:45.132 ERR] [1e451470-9777-47ec-be5a-3a876be1116b] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:05:45.132 INF] [1e451470-9777-47ec-be5a-3a876be1116b] [Perf] POST /api/auth/login -> 200 in 0.48ms
+[2026-06-18 17:05:45.132 ERR] [1e451470-9777-47ec-be5a-3a876be1116b] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/login | Client IP: ::1
+[2026-06-18 17:06:53.577 ERR] [48d491da-db59-4098-a1c1-6359a64bb813] An unhandled exception has occurred while executing the request.
+System.ArgumentException: A BadImageFormatException has been thrown while parsing the signature. This is likely due to lack of a generic context. Ensure genericTypeArguments and genericMethodArguments are provided and contain enough context.
+ ---> System.BadImageFormatException: An attempt was made to load a program with an incorrect format.
+ (0x8007000B)
+   at System.ModuleHandle.ResolveType(QCallModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandle(Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   --- End of inner exception stack trace ---
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType)
+   at System.Attribute.InternalParamGetCustomAttributes(ParameterInfo param, Type type, Boolean inherit)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.EndpointMetadataApiDescriptionProvider.GetBindingSourceAndName(IParameterBindingMetadata parameter, RouteEndpoint routeEndpoint, Boolean disableInferredBody)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.EndpointMetadataApiDescriptionProvider.CreateApiParameterDescription(IParameterBindingMetadata parameter, RouteEndpoint routeEndpoint, Boolean disableInferredBody)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.EndpointMetadataApiDescriptionProvider.CreateApiDescription(RouteEndpoint routeEndpoint, String httpMethod, MethodInfo methodInfo, Boolean disableInferredBody)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.EndpointMetadataApiDescriptionProvider.OnProvidersExecuting(ApiDescriptionProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.GetCollection(ActionDescriptorCollection actionDescriptors)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.get_ApiDescriptionGroups()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutPaths(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-06-18 17:07:07.132 ERR] [e1af0216-d825-475c-a5cb-6b4cbf254b3b] An unhandled exception has occurred while executing the request.
+System.ArgumentException: A BadImageFormatException has been thrown while parsing the signature. This is likely due to lack of a generic context. Ensure genericTypeArguments and genericMethodArguments are provided and contain enough context.
+ ---> System.BadImageFormatException: An attempt was made to load a program with an incorrect format.
+ (0x8007000B)
+   at System.ModuleHandle.ResolveType(QCallModule module, Int32 typeToken, IntPtr* typeInstArgs, Int32 typeInstCount, IntPtr* methodInstArgs, Int32 methodInstCount, ObjectHandleOnStack type)
+   at System.ModuleHandle.ResolveTypeHandle(Int32 typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext)
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   --- End of inner exception stack trace ---
+   at System.Reflection.RuntimeModule.ResolveType(Int32 metadataToken, Type[] genericTypeArguments, Type[] genericMethodArguments)
+   at System.Reflection.CustomAttribute.AddCustomAttributes(ListBuilder`1& attributes, RuntimeModule decoratedModule, Int32 decoratedMetadataToken, RuntimeType attributeFilterType, Boolean mustBeInheritable, ListBuilder`1 derivedAttributes)
+   at System.Reflection.CustomAttribute.GetCustomAttributes(RuntimeModule decoratedModule, Int32 decoratedMetadataToken, Int32 pcaCount, RuntimeType attributeFilterType)
+   at System.Attribute.InternalParamGetCustomAttributes(ParameterInfo param, Type type, Boolean inherit)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.EndpointMetadataApiDescriptionProvider.GetBindingSourceAndName(IParameterBindingMetadata parameter, RouteEndpoint routeEndpoint, Boolean disableInferredBody)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.EndpointMetadataApiDescriptionProvider.CreateApiParameterDescription(IParameterBindingMetadata parameter, RouteEndpoint routeEndpoint, Boolean disableInferredBody)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.EndpointMetadataApiDescriptionProvider.CreateApiDescription(RouteEndpoint routeEndpoint, String httpMethod, MethodInfo methodInfo, Boolean disableInferredBody)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.EndpointMetadataApiDescriptionProvider.OnProvidersExecuting(ApiDescriptionProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.GetCollection(ActionDescriptorCollection actionDescriptors)
+   at Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider.get_ApiDescriptionGroups()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutPaths(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[2026-06-18 17:07:07.157 ERR] [f913eceb-e30c-4ab3-887d-7356096065e7] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:07:07.157 INF] [f913eceb-e30c-4ab3-887d-7356096065e7] [Perf] GET /favicon.ico -> 200 in 0.51ms
+[2026-06-18 17:07:07.157 ERR] [f913eceb-e30c-4ab3-887d-7356096065e7] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /favicon.ico | Client IP: ::1
+[2026-06-18 17:07:46.631 ERR] [51a1af5f-c52b-4874-bc68-32a6e5bd60d9] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:07:46.631 INF] [51a1af5f-c52b-4874-bc68-32a6e5bd60d9] [Perf] GET /api/auth/me -> 200 in 0.47ms
+[2026-06-18 17:07:46.631 ERR] [51a1af5f-c52b-4874-bc68-32a6e5bd60d9] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /api/auth/me | Client IP: ::1
+[2026-06-18 17:07:46.648 ERR] [31a42282-377e-42cf-aad3-baa91abe391a] Exception occurred while processing message.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c.Main>$>b__1
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-06-18 17:07:46.648 INF] [31a42282-377e-42cf-aad3-baa91abe391a] [Perf] GET /favicon.ico -> 200 in 0.45ms
+[2026-06-18 17:07:46.648 ERR] [31a42282-377e-42cf-aad3-baa91abe391a] Unhandled exception: BadImageFormatException: Bad binary signature. (0x80131192) | Response: An unexpected error occurred. Please try again later. | Path: /favicon.ico | Client IP: ::1
+[2026-06-18 17:08:57.054 WRN] [] Failed to process the job '10069': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:34.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c__DisplayClass0_0._0_13
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.CreateDbContextOptions[TContext](IServiceProvider applicationServiceProvider)
+   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
+   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
+   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetServiceOrCreateInstance(IServiceProvider provider, Type type)
+   at Hangfire.AspNetCore.AspNetCoreJobActivatorScope.Resolve(Type type) in C:\projects\hangfire-525\src\Hangfire.NetCore\AspNetCore\AspNetCoreJobActivatorScope.cs:line 34
+   at Hangfire.Server.CoreBackgroundJobPerformer.Perform(PerformContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\CoreBackgroundJobPerformer.cs:line 60
+   at Hangfire.Server.BackgroundJobPerformer.InvokeNextServerFilter(Enumerator& enumerator, IBackgroundJobPerformer innerPerformer, PerformContext context, PerformingContext preContext) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 133
+   at Hangfire.Server.BackgroundJobPerformer.InvokeServerFilter(Enumerator& enumerator, IBackgroundJobPerformer innerPerformer, PerformContext context, PerformingContext preContext) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 164
+   at Hangfire.Server.BackgroundJobPerformer.InvokeNextServerFilter(Enumerator& enumerator, IBackgroundJobPerformer innerPerformer, PerformContext context, PerformingContext preContext) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 130
+   at Hangfire.Server.BackgroundJobPerformer.PerformJobWithFilters(PerformContext context, FilterCollection`1 filters) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 119
+   at Hangfire.Server.BackgroundJobPerformer.Perform(PerformContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 78
+   at Hangfire.Server.Worker.PerformJob(BackgroundProcessContext context, IStorageConnection connection, String jobId, BackgroundJob backgroundJob, IReadOnlyDictionary`2& customData) in C:\projects\hangfire-525\src\Hangfire.Core\Server\Worker.cs:line 320
+[2026-06-18 17:08:57.054 WRN] [] Failed to process the job '10070': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:32.
+System.BadImageFormatException: Bad binary signature. (0x80131192)
+   at Program.<>c__DisplayClass0_0._0_13
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.CreateDbContextOptions[TContext](IServiceProvider applicationServiceProvider)
+   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
+   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
+   at ResolveService(ILEmitResolverBuilderRuntimeContext, ServiceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetServiceOrCreateInstance(IServiceProvider provider, Type type)
+   at Hangfire.AspNetCore.AspNetCoreJobActivatorScope.Resolve(Type type) in C:\projects\hangfire-525\src\Hangfire.NetCore\AspNetCore\AspNetCoreJobActivatorScope.cs:line 34
+   at Hangfire.Server.CoreBackgroundJobPerformer.Perform(PerformContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\CoreBackgroundJobPerformer.cs:line 60
+   at Hangfire.Server.BackgroundJobPerformer.InvokeNextServerFilter(Enumerator& enumerator, IBackgroundJobPerformer innerPerformer, PerformContext context, PerformingContext preContext) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 133
+   at Hangfire.Server.BackgroundJobPerformer.InvokeServerFilter(Enumerator& enumerator, IBackgroundJobPerformer innerPerformer, PerformContext context, PerformingContext preContext) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 164
+   at Hangfire.Server.BackgroundJobPerformer.InvokeNextServerFilter(Enumerator& enumerator, IBackgroundJobPerformer innerPerformer, PerformContext context, PerformingContext preContext) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 130
+   at Hangfire.Server.BackgroundJobPerformer.PerformJobWithFilters(PerformContext context, FilterCollection`1 filters) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 119
+   at Hangfire.Server.BackgroundJobPerformer.Perform(PerformContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundJobPerformer.cs:line 78
+   at Hangfire.Server.Worker.PerformJob(BackgroundProcessContext context, IStorageConnection connection, String jobId, BackgroundJob backgroundJob, IReadOnlyDictionary`2& customData) in C:\projects\hangfire-525\src\Hangfire.Core\Server\Worker.cs:line 320

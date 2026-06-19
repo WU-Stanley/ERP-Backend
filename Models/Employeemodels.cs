@@ -47,8 +47,8 @@ namespace WUIAM.Models
         public string LastName { get; set; } = string.Empty;
         public string MiddleName { get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }
-        public string Gender { get; set; } = string.Empty;
-        public string MaritalStatus { get; set; } = string.Empty;
+        public Gender Gender { get; set; }
+        public MaritalStatus MaritalStatus { get; set; }
         public string Nationality { get; set; } = string.Empty;
 
         // Contact Information
@@ -109,9 +109,9 @@ namespace WUIAM.Models
         public string TransferHistory { get; set; } = string.Empty;
 
         // Navigation
-        public EmployeeDetails Employee { get; set; } = null!;
-        public Department Department { get; set; } = null!;
-        public EmploymentType EmploymentType { get; set; } = null!;
+        public EmployeeDetails? Employee { get; set; }
+        public Department? Department { get; set; }
+        public EmploymentType? EmploymentType { get; set; }
         // Lifecycle
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }

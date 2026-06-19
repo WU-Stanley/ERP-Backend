@@ -29,5 +29,7 @@ namespace WUIAM.Models
 
         public Guid? CreatedBy { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public ICollection<InterviewInterviewer> Interviewers { get; set; } = new List<InterviewInterviewer>();
     }
 }

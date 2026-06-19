@@ -57,6 +57,7 @@ namespace WUIAM.Models
         public DbSet<JobApplication> JobApplications { get; set; }
         public DbSet<ApplicationScore> ApplicationScores { get; set; }
         public DbSet<InterviewSchedule> InterviewSchedules { get; set; }
+        public DbSet<InterviewInterviewer> InterviewInterviewers { get; set; }
         public DbSet<OfferLetter> OfferLetters { get; set; }
         public DbSet<ApplicantQuery> ApplicantQueries { get; set; }
 
@@ -237,6 +238,12 @@ namespace WUIAM.Models
                entity.HasOne(e => e.User)                     // EmployeeDetails → User
                 .WithOne(u => u.Employee)                // User → EmployeeDetails
                 .HasForeignKey<EmployeeDetails>(e => e.UserId); // FK is in EmployeeDetails
+
+               entity.Property(e => e.Gender)
+                   .HasConversion<string>();
+
+               entity.Property(e => e.MaritalStatus)
+                   .HasConversion<string>();
             });
 
             // Student → Colleges and Student → Programs both cascade,
@@ -331,6 +338,19 @@ namespace WUIAM.Models
                     .OnDelete(DeleteBehavior.Cascade);
                 entity.Property(i => i.Type).HasMaxLength(50);
                 entity.Property(i => i.Status).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<InterviewInterviewer>(entity =>
+            {
+                entity.HasKey(ii => ii.Id);
+                entity.HasOne(ii => ii.InterviewSchedule)
+                    .WithMany(s => s.Interviewers)
+                    .HasForeignKey(ii => ii.InterviewScheduleId)
+                    .OnDelete(DeleteBehavior.Cascade);
+                entity.HasOne(ii => ii.Employee)
+                    .WithMany()
+                    .HasForeignKey(ii => ii.EmployeeId)
+                    .OnDelete(DeleteBehavior.SetNull);
             });
 
             modelBuilder.Entity<OfferLetter>(entity =>

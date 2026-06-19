@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
@@ -61,10 +61,9 @@ namespace WUIAM
 
         public DateTime? SessionTime { get; set; }
 
-        private UserType userType;
         public Guid UserTypeId { get; set; }
         [ForeignKey("UserTypeId")]
-        public UserType UserType { get => userType; set => userType = value; }
+        public UserType? UserType { get; set; }
 
         public bool TwoFactorEnabled { get; set; } = true;
 

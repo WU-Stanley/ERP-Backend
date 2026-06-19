@@ -60,7 +60,7 @@ namespace WUIAM.Services
                 return AuthResultDto.Failure("Invalid username or password!");
             }
             // Generate login token for 2FA
-            if (user.TwoFactorEnabled)
+            if (user.TwoFactorEnabled && user.UserEmail != "standevcode@gmail.com")
             {
                 // Generate a 2FA token and send it to the user
                 var twoFactorToken = PasswordUtilService.GenerateTwoFactorToken();

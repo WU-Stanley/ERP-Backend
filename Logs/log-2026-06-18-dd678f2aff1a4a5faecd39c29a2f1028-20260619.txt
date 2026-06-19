@@ -1,0 +1,26 @@
+[2026-06-19 07:09:55.657 WRN] [f429b323-ada5-464c-836c-06fe3a306a61] [Perf] GET /api/notificationsHub -> 101 in 2753383.08ms
+[2026-06-19 07:09:55.659 INF] [f429b323-ada5-464c-836c-06fe3a306a61] [CorrelationId: f429b323-ada5-464c-836c-06fe3a306a61] GET /api/notificationsHub completed in 2753384.96ms with status 101
+[2026-06-19 07:09:55.659 WRN] [f429b323-ada5-464c-836c-06fe3a306a61] [CorrelationId: f429b323-ada5-464c-836c-06fe3a306a61] SLOW REQUEST: GET /api/notificationsHub took 2753384.96ms (threshold: 1000ms)
+[2026-06-19 07:09:55.659 ERR] [f429b323-ada5-464c-836c-06fe3a306a61] [CorrelationId: f429b323-ada5-464c-836c-06fe3a306a61] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 2753384.96ms (threshold: 5000ms)
+[2026-06-19 10:06:05.368 INF] [93d5a86e-fa76-45e0-a313-b824943ca99c] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.45ms
+[2026-06-19 10:06:05.370 INF] [93d5a86e-fa76-45e0-a313-b824943ca99c] [CorrelationId: 93d5a86e-fa76-45e0-a313-b824943ca99c] POST /api/notificationsHub/negotiate completed in 2.00ms with status 200
+[2026-06-19 10:06:32.008 INF] [05f109ca-5553-40d9-b8e8-a464afc9e25d] [Perf] GET /api/department -> 200 in 7.45ms
+[2026-06-19 10:06:32.008 INF] [05f109ca-5553-40d9-b8e8-a464afc9e25d] [CorrelationId: 05f109ca-5553-40d9-b8e8-a464afc9e25d] GET /api/department completed in 7.62ms with status 200
+[2026-06-19 10:06:32.014 INF] [c95b2c67-8ee9-4133-8a45-dd339148edef] [Perf] GET /api/auth/users -> 200 in 5.71ms
+[2026-06-19 10:06:32.015 INF] [c95b2c67-8ee9-4133-8a45-dd339148edef] [CorrelationId: c95b2c67-8ee9-4133-8a45-dd339148edef] GET /api/auth/users completed in 5.85ms with status 200
+[2026-06-19 10:06:34.413 INF] [61ec297b-dd8b-4e0d-92b8-189797cc1216] [Perf] GET /api/department/6468c500-9dcf-47c9-1f5d-08decb8708e3 -> 200 in 35.27ms
+[2026-06-19 10:06:34.413 INF] [61ec297b-dd8b-4e0d-92b8-189797cc1216] [CorrelationId: 61ec297b-dd8b-4e0d-92b8-189797cc1216] GET /api/department/6468c500-9dcf-47c9-1f5d-08decb8708e3 completed in 35.47ms with status 200
+[2026-06-19 10:06:34.453 INF] [313e36ce-6c7f-4870-8b6d-3f02da829712] [Perf] GET /api/Department/6468c500-9dcf-47c9-1f5d-08decb8708e3/employees -> 200 in 75.15ms
+[2026-06-19 10:06:34.453 INF] [313e36ce-6c7f-4870-8b6d-3f02da829712] [CorrelationId: 313e36ce-6c7f-4870-8b6d-3f02da829712] GET /api/Department/6468c500-9dcf-47c9-1f5d-08decb8708e3/employees completed in 75.26ms with status 200
+[2026-06-19 10:06:37.641 INF] [1e9f20af-533c-47ca-b0ca-8a46cfb9f0ed] [Perf] GET /api/department -> 200 in 0.75ms
+[2026-06-19 10:06:37.641 INF] [1e9f20af-533c-47ca-b0ca-8a46cfb9f0ed] [CorrelationId: 1e9f20af-533c-47ca-b0ca-8a46cfb9f0ed] GET /api/department completed in 0.90ms with status 200
+[2026-06-19 10:06:37.651 INF] [3b402898-784a-4b92-a947-34cda30990be] [Perf] GET /api/auth/users -> 200 in 10.73ms
+[2026-06-19 10:06:37.651 INF] [3b402898-784a-4b92-a947-34cda30990be] [CorrelationId: 3b402898-784a-4b92-a947-34cda30990be] GET /api/auth/users completed in 10.86ms with status 200
+[2026-06-19 10:06:39.068 INF] [e69c8499-4c01-4a62-9929-5540ea4ae720] [Perf] GET /api/department/98f2606c-aede-42b4-3bf9-08decb7faf8a -> 200 in 4.97ms
+[2026-06-19 10:06:39.068 INF] [e69c8499-4c01-4a62-9929-5540ea4ae720] [CorrelationId: e69c8499-4c01-4a62-9929-5540ea4ae720] GET /api/department/98f2606c-aede-42b4-3bf9-08decb7faf8a completed in 5.10ms with status 200
+[2026-06-19 10:06:39.072 INF] [9d06ef5e-fd85-4f66-94f3-1b2b21f27e24] [Perf] GET /api/Department/98f2606c-aede-42b4-3bf9-08decb7faf8a/employees -> 200 in 9.38ms
+[2026-06-19 10:06:39.072 INF] [9d06ef5e-fd85-4f66-94f3-1b2b21f27e24] [CorrelationId: 9d06ef5e-fd85-4f66-94f3-1b2b21f27e24] GET /api/Department/98f2606c-aede-42b4-3bf9-08decb7faf8a/employees completed in 9.47ms with status 200
+[2026-06-19 10:06:42.910 INF] [4ad34212-5080-4bb5-8922-fa3dad3b82ea] [Perf] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 -> 200 in 5.20ms
+[2026-06-19 10:06:42.910 INF] [4ad34212-5080-4bb5-8922-fa3dad3b82ea] [CorrelationId: 4ad34212-5080-4bb5-8922-fa3dad3b82ea] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 5.30ms with status 200
+[2026-06-19 10:07:51.409 INF] [35a3e9e4-8928-4018-b271-a24822c2224c] [Perf] GET /api/leavetype/all -> 200 in 109.70ms
+[2026-06-19 10:07:51.410 INF] [35a3e9e4-8928-4018-b271-a24822c2224c] [CorrelationId: 35a3e9e4-8928-4018-b271-a24822c2224c] GET /api/leavetype/all completed in 109.84ms with status 200

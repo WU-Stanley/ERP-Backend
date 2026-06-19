@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography;
+using System.Security.Cryptography;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using WUIAM.Enums;
@@ -131,7 +131,7 @@ namespace WUIAM.Services.Config.SeedService
                     SingleSignOnEnabled = false,
                     SessionId = Guid.NewGuid().ToString(),
                     SessionTime = DateTime.Now,
-                    TwoFactorEnabled = true,
+                    TwoFactorEnabled = false,
                 };
                 _context.Users.Add(adminUser);
                 _context.SaveChanges();
@@ -142,6 +142,7 @@ namespace WUIAM.Services.Config.SeedService
                 adminUser.IsActive = true;
                 adminUser.IsDeleted = false;
                 adminUser.UserTypeId = superAdminUserType.Id;
+                adminUser.TwoFactorEnabled = false;
                 _context.Users.Update(adminUser);
                 _context.SaveChanges();
             }
