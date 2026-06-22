@@ -1,0 +1,227 @@
+[2026-06-21 22:55:22.370 WRN] [] No store type was specified for the decimal property 'PurchaseCost' on entity type 'FacilityAsset'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'UnitCost' on entity type 'InventoryItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'GrossPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'NetPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'EstimatedAmount' on entity type 'ProcurementRequest'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'BasePay' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'HousingAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'OtherAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'PensionRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'TaxRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:22.386 WRN] [] No store type was specified for the decimal property 'TransportAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-21 22:55:23.337 INF] [] Start installing Hangfire SQL objects...
+[2026-06-21 22:55:23.381 INF] [] Hangfire SQL objects installed.
+[2026-06-21 22:55:23.644 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.
+[2026-06-21 22:55:23.809 INF] [] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@WUIAM'
+[2026-06-21 22:55:23.809 INF] [] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2026-06-21 22:55:23.809 INF] [] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-06-21 22:55:23.826 INF] [] Server macbookpro:908:061666a2 successfully announced in 9.6674 ms
+[2026-06-21 22:55:23.828 INF] [] Server macbookpro:908:061666a2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-21 22:55:23.834 INF] [] Server macbookpro:908:061666a2 all the dispatchers started
+[2026-06-21 22:55:53.522 INF] [4d83b0a8-c3ec-4b8e-831c-6846df760e72] [Perf] POST /api/notificationsHub/negotiate -> 200 in 46.20ms
+[2026-06-21 22:55:53.525 INF] [4d83b0a8-c3ec-4b8e-831c-6846df760e72] [CorrelationId: 4d83b0a8-c3ec-4b8e-831c-6846df760e72] POST /api/notificationsHub/negotiate completed in 51.10ms with status 200
+[2026-06-21 22:58:30.079 WRN] [b4638800-0ab2-4031-9d45-4f69fdc0b28d] [Perf] GET /api/notificationsHub -> 101 in 156524.05ms
+[2026-06-21 22:58:30.079 INF] [b4638800-0ab2-4031-9d45-4f69fdc0b28d] [CorrelationId: b4638800-0ab2-4031-9d45-4f69fdc0b28d] GET /api/notificationsHub completed in 156524.51ms with status 101
+[2026-06-21 22:58:30.080 WRN] [b4638800-0ab2-4031-9d45-4f69fdc0b28d] [CorrelationId: b4638800-0ab2-4031-9d45-4f69fdc0b28d] SLOW REQUEST: GET /api/notificationsHub took 156524.51ms (threshold: 1000ms)
+[2026-06-21 22:58:30.080 ERR] [b4638800-0ab2-4031-9d45-4f69fdc0b28d] [CorrelationId: b4638800-0ab2-4031-9d45-4f69fdc0b28d] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 156524.51ms (threshold: 5000ms)
+[2026-06-21 22:58:30.881 INF] [daf71ce6-0dac-4319-9fe4-ba039aa1d3b8] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 200 in 72.95ms
+[2026-06-21 22:58:30.881 INF] [daf71ce6-0dac-4319-9fe4-ba039aa1d3b8] [CorrelationId: daf71ce6-0dac-4319-9fe4-ba039aa1d3b8] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 73.14ms with status 200
+[2026-06-21 22:58:30.882 INF] [69d12f84-059f-4bbb-bae2-816def1df89b] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 200 in 73.61ms
+[2026-06-21 22:58:30.882 INF] [69d12f84-059f-4bbb-bae2-816def1df89b] [CorrelationId: 69d12f84-059f-4bbb-bae2-816def1df89b] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 73.73ms with status 200
+[2026-06-21 22:58:30.884 INF] [a1b1c685-e61a-475a-bcbb-dfec7eda44f9] [Perf] POST /api/notificationsHub/negotiate -> 200 in 1.53ms
+[2026-06-21 22:58:30.884 INF] [a1b1c685-e61a-475a-bcbb-dfec7eda44f9] [CorrelationId: a1b1c685-e61a-475a-bcbb-dfec7eda44f9] POST /api/notificationsHub/negotiate completed in 1.73ms with status 200
+[2026-06-21 22:58:30.905 INF] [3a56fb99-4406-4499-b93c-365bc63347e3] [Perf] GET /api/notifications/unread-count -> 200 in 107.74ms
+[2026-06-21 22:58:30.905 INF] [3a56fb99-4406-4499-b93c-365bc63347e3] [CorrelationId: 3a56fb99-4406-4499-b93c-365bc63347e3] GET /api/notifications/unread-count completed in 108.04ms with status 200
+[2026-06-21 22:58:30.955 INF] [c176a832-5f41-485d-9c84-b4eabcde68db] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 146.91ms
+[2026-06-21 22:58:30.956 INF] [c176a832-5f41-485d-9c84-b4eabcde68db] [CorrelationId: c176a832-5f41-485d-9c84-b4eabcde68db] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 147.09ms with status 200
+[2026-06-21 22:58:30.957 INF] [338ec59b-de42-4d7d-8db6-656311b14610] [Perf] GET /api/notifications/unread-count -> 200 in 12.78ms
+[2026-06-21 22:58:30.957 INF] [338ec59b-de42-4d7d-8db6-656311b14610] [CorrelationId: 338ec59b-de42-4d7d-8db6-656311b14610] GET /api/notifications/unread-count completed in 12.90ms with status 200
+[2026-06-21 22:58:30.960 INF] [73a38ff6-ab9c-4d9c-87c6-cecb44436bba] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 144.19ms
+[2026-06-21 22:58:30.960 INF] [73a38ff6-ab9c-4d9c-87c6-cecb44436bba] [CorrelationId: 73a38ff6-ab9c-4d9c-87c6-cecb44436bba] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 144.39ms with status 200
+[2026-06-21 22:58:30.977 INF] [6583994a-9c15-4d8b-bb2e-1eb81ecc75c4] [Perf] GET /api/notifications -> 200 in 33.34ms
+[2026-06-21 22:58:30.977 INF] [6583994a-9c15-4d8b-bb2e-1eb81ecc75c4] [CorrelationId: 6583994a-9c15-4d8b-bb2e-1eb81ecc75c4] GET /api/notifications completed in 33.52ms with status 200
+[2026-06-21 22:58:30.985 INF] [4c040989-cebe-432d-a74d-a8a73dc3c416] [Perf] GET /api/auth/users -> 200 in 98.16ms
+[2026-06-21 22:58:30.985 INF] [4c040989-cebe-432d-a74d-a8a73dc3c416] [CorrelationId: 4c040989-cebe-432d-a74d-a8a73dc3c416] GET /api/auth/users completed in 98.32ms with status 200
+[2026-06-21 22:58:30.989 INF] [294fcc87-caf1-4157-aad4-278904d39aef] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 193.05ms
+[2026-06-21 22:58:30.989 INF] [294fcc87-caf1-4157-aad4-278904d39aef] [CorrelationId: 294fcc87-caf1-4157-aad4-278904d39aef] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 193.20ms with status 200
+[2026-06-21 22:59:09.339 INF] [137d3a4c-d87c-48fe-b7f5-22f6b65c6ca6] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 200 in 155.14ms
+[2026-06-21 22:59:09.339 INF] [137d3a4c-d87c-48fe-b7f5-22f6b65c6ca6] [CorrelationId: 137d3a4c-d87c-48fe-b7f5-22f6b65c6ca6] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 155.42ms with status 200
+[2026-06-21 22:59:09.357 INF] [0f5a76a7-23ad-4650-99b6-1f3f8922818b] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 200 in 9.14ms
+[2026-06-21 22:59:09.357 INF] [0f5a76a7-23ad-4650-99b6-1f3f8922818b] [CorrelationId: 0f5a76a7-23ad-4650-99b6-1f3f8922818b] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 9.32ms with status 200
+[2026-06-21 22:59:09.361 INF] [9275c398-cac9-4d78-b770-3c57fa36fd24] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 8.74ms
+[2026-06-21 22:59:09.361 INF] [76e7d174-8852-4a5d-9a73-53f604047ab1] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 15.02ms
+[2026-06-21 22:59:09.362 INF] [76e7d174-8852-4a5d-9a73-53f604047ab1] [CorrelationId: 76e7d174-8852-4a5d-9a73-53f604047ab1] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 15.88ms with status 200
+[2026-06-21 22:59:09.363 INF] [9275c398-cac9-4d78-b770-3c57fa36fd24] [CorrelationId: 9275c398-cac9-4d78-b770-3c57fa36fd24] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 8.96ms with status 200
+[2026-06-21 22:59:09.364 INF] [f701c396-e671-41bd-9d7e-bfb17945fd2f] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 10.28ms
+[2026-06-21 22:59:09.364 INF] [f701c396-e671-41bd-9d7e-bfb17945fd2f] [CorrelationId: f701c396-e671-41bd-9d7e-bfb17945fd2f] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 10.36ms with status 200
+[2026-06-21 22:59:09.372 INF] [1062600a-cd1f-4b43-b263-870be9c12be4] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 200 in 20.08ms
+[2026-06-21 22:59:09.372 INF] [1062600a-cd1f-4b43-b263-870be9c12be4] [CorrelationId: 1062600a-cd1f-4b43-b263-870be9c12be4] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 20.25ms with status 200
+[2026-06-21 22:59:09.417 INF] [61cd8264-5e1a-4ea5-80cb-ea79ddf90165] [Perf] GET /api/auth/users -> 200 in 62.98ms
+[2026-06-21 22:59:09.417 INF] [61cd8264-5e1a-4ea5-80cb-ea79ddf90165] [CorrelationId: 61cd8264-5e1a-4ea5-80cb-ea79ddf90165] GET /api/auth/users completed in 63.18ms with status 200
+[2026-06-21 22:59:22.564 WRN] [a46d195f-2e68-4cf3-a884-9fc00dfd849c] [Perf] PATCH /api/v1/recruitment/offers/92f10204-0c3e-4888-96de-6d83fbee972c/status -> 200 in 3082.00ms
+[2026-06-21 22:59:22.564 INF] [a46d195f-2e68-4cf3-a884-9fc00dfd849c] [CorrelationId: a46d195f-2e68-4cf3-a884-9fc00dfd849c] PATCH /api/v1/recruitment/offers/92f10204-0c3e-4888-96de-6d83fbee972c/status completed in 3082.18ms with status 200
+[2026-06-21 22:59:22.564 WRN] [a46d195f-2e68-4cf3-a884-9fc00dfd849c] [CorrelationId: a46d195f-2e68-4cf3-a884-9fc00dfd849c] SLOW REQUEST: PATCH /api/v1/recruitment/offers/92f10204-0c3e-4888-96de-6d83fbee972c/status took 3082.18ms (threshold: 1000ms)
+[2026-06-21 22:59:22.586 INF] [5f61067c-a0bc-4482-ab10-6ecff85dbc77] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 10.46ms
+[2026-06-21 22:59:22.586 INF] [5f61067c-a0bc-4482-ab10-6ecff85dbc77] [CorrelationId: 5f61067c-a0bc-4482-ab10-6ecff85dbc77] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 10.60ms with status 200
+[2026-06-21 22:59:22.586 INF] [7b58b44b-1bb6-4543-bee5-dc1c8dbeb443] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 200 in 10.78ms
+[2026-06-21 22:59:22.586 INF] [7b58b44b-1bb6-4543-bee5-dc1c8dbeb443] [CorrelationId: 7b58b44b-1bb6-4543-bee5-dc1c8dbeb443] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 10.83ms with status 200
+[2026-06-21 22:59:22.586 INF] [d7f60d33-2185-4a11-a7e2-a6ed4503929e] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 200 in 12.48ms
+[2026-06-21 22:59:22.586 INF] [d7f60d33-2185-4a11-a7e2-a6ed4503929e] [CorrelationId: d7f60d33-2185-4a11-a7e2-a6ed4503929e] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 13.03ms with status 200
+[2026-06-21 22:59:22.589 INF] [0bf2b1a5-7d46-463d-97a3-3f656c07c11f] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 12.08ms
+[2026-06-21 22:59:22.590 INF] [0bf2b1a5-7d46-463d-97a3-3f656c07c11f] [CorrelationId: 0bf2b1a5-7d46-463d-97a3-3f656c07c11f] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 13.31ms with status 200
+[2026-06-21 22:59:22.593 INF] [bac72d9b-db9c-446b-a823-9d079562f822] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 19.26ms
+[2026-06-21 22:59:22.593 INF] [bac72d9b-db9c-446b-a823-9d079562f822] [CorrelationId: bac72d9b-db9c-446b-a823-9d079562f822] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 19.48ms with status 200
+[2026-06-21 22:59:22.614 INF] [923a290c-480a-4be3-9803-7d8806be0e96] [Perf] GET /api/auth/users -> 200 in 35.81ms
+[2026-06-21 22:59:22.614 INF] [923a290c-480a-4be3-9803-7d8806be0e96] [CorrelationId: 923a290c-480a-4be3-9803-7d8806be0e96] GET /api/auth/users completed in 35.95ms with status 200
+[2026-06-21 23:00:08.005 INF] [a439c56f-c094-4f53-9d93-dba4b71af028] [Perf] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track -> 200 in 55.42ms
+[2026-06-21 23:00:08.005 INF] [a439c56f-c094-4f53-9d93-dba4b71af028] [CorrelationId: a439c56f-c094-4f53-9d93-dba4b71af028] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track completed in 55.58ms with status 200
+[2026-06-21 23:00:46.089 INF] [797693bc-dd79-488d-9cae-7db666f21202] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 401 in 2.80ms
+[2026-06-21 23:00:46.089 INF] [797693bc-dd79-488d-9cae-7db666f21202] [CorrelationId: 797693bc-dd79-488d-9cae-7db666f21202] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 3.01ms with status 401
+[2026-06-21 23:00:48.098 INF] [17d76209-2d99-4f63-be75-25739c5b9159] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 401 in 0.17ms
+[2026-06-21 23:00:48.098 INF] [17d76209-2d99-4f63-be75-25739c5b9159] [CorrelationId: 17d76209-2d99-4f63-be75-25739c5b9159] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 0.35ms with status 401
+[2026-06-21 23:00:52.109 INF] [f8b2f3f0-34a6-473b-9d28-c4ed9d3c29d3] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 401 in 0.31ms
+[2026-06-21 23:00:52.109 INF] [f8b2f3f0-34a6-473b-9d28-c4ed9d3c29d3] [CorrelationId: f8b2f3f0-34a6-473b-9d28-c4ed9d3c29d3] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 0.55ms with status 401
+[2026-06-21 23:00:52.127 INF] [0097e953-4bab-4d9f-b555-44128abe10c4] [Perf] POST /api/auth/refresh-token -> 401 in 9.18ms
+[2026-06-21 23:00:52.127 INF] [0097e953-4bab-4d9f-b555-44128abe10c4] [CorrelationId: 0097e953-4bab-4d9f-b555-44128abe10c4] POST /api/auth/refresh-token completed in 9.33ms with status 401
+[2026-06-21 23:00:54.133 INF] [e5feb165-7070-4686-bdc6-921375009e5d] [Perf] POST /api/auth/refresh-token -> 401 in 1.15ms
+[2026-06-21 23:00:54.133 INF] [e5feb165-7070-4686-bdc6-921375009e5d] [CorrelationId: e5feb165-7070-4686-bdc6-921375009e5d] POST /api/auth/refresh-token completed in 1.28ms with status 401
+[2026-06-21 23:00:58.146 INF] [0c036f92-f70c-40b2-b772-9597efcf48ee] [Perf] POST /api/auth/refresh-token -> 401 in 0.82ms
+[2026-06-21 23:00:58.146 INF] [0c036f92-f70c-40b2-b772-9597efcf48ee] [CorrelationId: 0c036f92-f70c-40b2-b772-9597efcf48ee] POST /api/auth/refresh-token completed in 1.06ms with status 401
+[2026-06-21 23:01:41.108 INF] [5036efe1-3d71-4d87-8dff-21a661cdba39] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 401 in 0.24ms
+[2026-06-21 23:01:41.108 INF] [5036efe1-3d71-4d87-8dff-21a661cdba39] [CorrelationId: 5036efe1-3d71-4d87-8dff-21a661cdba39] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 0.57ms with status 401
+[2026-06-21 23:01:43.117 INF] [97fc7f90-51d0-43bc-93e2-6d3fffd90b8b] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 401 in 0.11ms
+[2026-06-21 23:01:43.117 INF] [97fc7f90-51d0-43bc-93e2-6d3fffd90b8b] [CorrelationId: 97fc7f90-51d0-43bc-93e2-6d3fffd90b8b] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 0.23ms with status 401
+[2026-06-21 23:01:47.127 INF] [be99152b-7607-433b-8647-b7c03b320b6f] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 401 in 0.29ms
+[2026-06-21 23:01:47.127 INF] [be99152b-7607-433b-8647-b7c03b320b6f] [CorrelationId: be99152b-7607-433b-8647-b7c03b320b6f] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 0.40ms with status 401
+[2026-06-21 23:01:47.138 INF] [f1281238-0835-4fa5-a193-2995c5ebc507] [Perf] POST /api/auth/refresh-token -> 401 in 0.55ms
+[2026-06-21 23:01:47.138 INF] [f1281238-0835-4fa5-a193-2995c5ebc507] [CorrelationId: f1281238-0835-4fa5-a193-2995c5ebc507] POST /api/auth/refresh-token completed in 0.65ms with status 401
+[2026-06-21 23:01:49.148 INF] [d39f74c1-5cbb-4ab6-b5eb-318bb11668d0] [Perf] POST /api/auth/refresh-token -> 401 in 1.92ms
+[2026-06-21 23:01:49.148 INF] [d39f74c1-5cbb-4ab6-b5eb-318bb11668d0] [CorrelationId: d39f74c1-5cbb-4ab6-b5eb-318bb11668d0] POST /api/auth/refresh-token completed in 2.02ms with status 401
+[2026-06-21 23:01:53.161 INF] [309e9161-7eae-4604-8420-a83290f21935] [Perf] POST /api/auth/refresh-token -> 401 in 0.92ms
+[2026-06-21 23:01:53.161 INF] [309e9161-7eae-4604-8420-a83290f21935] [CorrelationId: 309e9161-7eae-4604-8420-a83290f21935] POST /api/auth/refresh-token completed in 1.03ms with status 401
+[2026-06-21 23:02:34.578 INF] [6f3490b8-053d-4310-ae90-5aba4a408ef6] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 401 in 0.13ms
+[2026-06-21 23:02:34.578 INF] [6f3490b8-053d-4310-ae90-5aba4a408ef6] [CorrelationId: 6f3490b8-053d-4310-ae90-5aba4a408ef6] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 0.24ms with status 401
+[2026-06-21 23:02:36.589 INF] [5ac9f0c3-ec42-4002-b778-24648e71cb08] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 401 in 0.13ms
+[2026-06-21 23:02:36.589 INF] [5ac9f0c3-ec42-4002-b778-24648e71cb08] [CorrelationId: 5ac9f0c3-ec42-4002-b778-24648e71cb08] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 0.36ms with status 401
+[2026-06-21 23:02:40.602 INF] [1ac2d77c-251a-4850-b143-1a5e32be4f5a] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 401 in 0.52ms
+[2026-06-21 23:02:40.602 INF] [1ac2d77c-251a-4850-b143-1a5e32be4f5a] [CorrelationId: 1ac2d77c-251a-4850-b143-1a5e32be4f5a] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 1.41ms with status 401
+[2026-06-21 23:02:40.612 INF] [a95ae845-649b-48d4-9e5e-944692cf1e96] [Perf] POST /api/auth/refresh-token -> 401 in 0.44ms
+[2026-06-21 23:02:40.612 INF] [a95ae845-649b-48d4-9e5e-944692cf1e96] [CorrelationId: a95ae845-649b-48d4-9e5e-944692cf1e96] POST /api/auth/refresh-token completed in 0.73ms with status 401
+[2026-06-21 23:02:42.618 INF] [a2ae08cf-2132-4be3-8fa7-b127d30bd3d8] [Perf] POST /api/auth/refresh-token -> 401 in 0.75ms
+[2026-06-21 23:02:42.618 INF] [a2ae08cf-2132-4be3-8fa7-b127d30bd3d8] [CorrelationId: a2ae08cf-2132-4be3-8fa7-b127d30bd3d8] POST /api/auth/refresh-token completed in 0.84ms with status 401
+[2026-06-21 23:02:44.578 INF] [7b39bc57-384a-4354-93b7-9da0d871a186] [Perf] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track -> 200 in 47.89ms
+[2026-06-21 23:02:44.579 INF] [7b39bc57-384a-4354-93b7-9da0d871a186] [CorrelationId: 7b39bc57-384a-4354-93b7-9da0d871a186] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track completed in 48.00ms with status 200
+[2026-06-21 23:03:07.420 INF] [40e9db37-5b27-44d0-87e0-152623eda1c9] [Perf] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query -> 200 in 45.55ms
+[2026-06-21 23:03:07.420 INF] [40e9db37-5b27-44d0-87e0-152623eda1c9] [CorrelationId: 40e9db37-5b27-44d0-87e0-152623eda1c9] POST /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/query completed in 45.67ms with status 200
+[2026-06-21 23:03:07.471 INF] [ca4463d1-698c-436d-888e-90cf9443ef05] [Perf] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track -> 200 in 42.22ms
+[2026-06-21 23:03:07.471 INF] [ca4463d1-698c-436d-888e-90cf9443ef05] [CorrelationId: ca4463d1-698c-436d-888e-90cf9443ef05] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track completed in 42.34ms with status 200
+[2026-06-21 23:03:28.776 WRN] [30b21ae6-6663-4f1a-8041-bc01081d7f72] [Perf] GET /api/notificationsHub -> 101 in 297872.54ms
+[2026-06-21 23:03:28.776 INF] [30b21ae6-6663-4f1a-8041-bc01081d7f72] [CorrelationId: 30b21ae6-6663-4f1a-8041-bc01081d7f72] GET /api/notificationsHub completed in 297872.64ms with status 101
+[2026-06-21 23:03:28.776 WRN] [30b21ae6-6663-4f1a-8041-bc01081d7f72] [CorrelationId: 30b21ae6-6663-4f1a-8041-bc01081d7f72] SLOW REQUEST: GET /api/notificationsHub took 297872.64ms (threshold: 1000ms)
+[2026-06-21 23:03:28.776 ERR] [30b21ae6-6663-4f1a-8041-bc01081d7f72] [CorrelationId: 30b21ae6-6663-4f1a-8041-bc01081d7f72] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 297872.64ms (threshold: 5000ms)
+[2026-06-21 23:03:29.498 INF] [55ff2c1a-f08e-45e1-81a1-09265f23369f] [Perf] GET /api/notifications/unread-count -> 200 in 7.72ms
+[2026-06-21 23:03:29.499 INF] [55ff2c1a-f08e-45e1-81a1-09265f23369f] [CorrelationId: 55ff2c1a-f08e-45e1-81a1-09265f23369f] GET /api/notifications/unread-count completed in 7.81ms with status 200
+[2026-06-21 23:03:29.508 INF] [f940f47d-b718-45d6-bcf3-3211feb5e953] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 200 in 7.97ms
+[2026-06-21 23:03:29.508 INF] [f940f47d-b718-45d6-bcf3-3211feb5e953] [CorrelationId: f940f47d-b718-45d6-bcf3-3211feb5e953] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 8.08ms with status 200
+[2026-06-21 23:03:29.510 INF] [0abf6d55-120e-4353-a2d7-292210ea4ad9] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 12.33ms
+[2026-06-21 23:03:29.510 INF] [0abf6d55-120e-4353-a2d7-292210ea4ad9] [CorrelationId: 0abf6d55-120e-4353-a2d7-292210ea4ad9] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 12.42ms with status 200
+[2026-06-21 23:03:29.528 INF] [4b49ff53-c59c-4500-bdbe-1a90ce73e8d4] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 200 in 16.21ms
+[2026-06-21 23:03:29.528 INF] [4b49ff53-c59c-4500-bdbe-1a90ce73e8d4] [CorrelationId: 4b49ff53-c59c-4500-bdbe-1a90ce73e8d4] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 16.54ms with status 200
+[2026-06-21 23:03:29.539 INF] [e83d8109-468e-47c8-a258-1e76284689d6] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 9.81ms
+[2026-06-21 23:03:29.539 INF] [e83d8109-468e-47c8-a258-1e76284689d6] [CorrelationId: e83d8109-468e-47c8-a258-1e76284689d6] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 9.90ms with status 200
+[2026-06-21 23:03:29.539 INF] [aa7890c2-1459-4a5f-b6c2-d81ff72b259e] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 30.20ms
+[2026-06-21 23:03:29.539 INF] [aa7890c2-1459-4a5f-b6c2-d81ff72b259e] [CorrelationId: aa7890c2-1459-4a5f-b6c2-d81ff72b259e] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 30.40ms with status 200
+[2026-06-21 23:03:29.542 INF] [b8cd9c97-b536-4e32-b5a0-b4b7e47bc6e9] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.41ms
+[2026-06-21 23:03:29.542 INF] [b8cd9c97-b536-4e32-b5a0-b4b7e47bc6e9] [CorrelationId: b8cd9c97-b536-4e32-b5a0-b4b7e47bc6e9] POST /api/notificationsHub/negotiate completed in 0.51ms with status 200
+[2026-06-21 23:03:29.559 INF] [a28079c3-1d1a-472c-a30a-c59ed34662aa] [Perf] GET /api/auth/users -> 200 in 14.15ms
+[2026-06-21 23:03:29.559 INF] [a28079c3-1d1a-472c-a30a-c59ed34662aa] [CorrelationId: a28079c3-1d1a-472c-a30a-c59ed34662aa] GET /api/auth/users completed in 14.25ms with status 200
+[2026-06-21 23:03:29.573 INF] [20f46441-ebea-40f0-a8e2-8f199e54136b] [Perf] GET /api/notifications/unread-count -> 200 in 3.85ms
+[2026-06-21 23:03:29.573 INF] [20f46441-ebea-40f0-a8e2-8f199e54136b] [CorrelationId: 20f46441-ebea-40f0-a8e2-8f199e54136b] GET /api/notifications/unread-count completed in 3.97ms with status 200
+[2026-06-21 23:03:29.578 INF] [20e06d4d-e95d-4a01-9742-21a13b7883c0] [Perf] GET /api/notifications -> 200 in 8.92ms
+[2026-06-21 23:03:29.578 INF] [20e06d4d-e95d-4a01-9742-21a13b7883c0] [CorrelationId: 20e06d4d-e95d-4a01-9742-21a13b7883c0] GET /api/notifications completed in 9.05ms with status 200
+[2026-06-21 23:04:59.072 INF] [1b0a776d-13f2-4e89-8a55-dddc36a5c479] [Perf] PATCH /api/v1/recruitment/offers/92f10204-0c3e-4888-96de-6d83fbee972c/respond -> 200 in 47.70ms
+[2026-06-21 23:04:59.072 INF] [1b0a776d-13f2-4e89-8a55-dddc36a5c479] [CorrelationId: 1b0a776d-13f2-4e89-8a55-dddc36a5c479] PATCH /api/v1/recruitment/offers/92f10204-0c3e-4888-96de-6d83fbee972c/respond completed in 47.82ms with status 200
+[2026-06-21 23:04:59.094 INF] [4bd3b37e-8235-49a6-8c84-0ab0d2e95e5d] [Perf] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track -> 200 in 11.13ms
+[2026-06-21 23:04:59.094 INF] [4bd3b37e-8235-49a6-8c84-0ab0d2e95e5d] [CorrelationId: 4bd3b37e-8235-49a6-8c84-0ab0d2e95e5d] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track completed in 11.24ms with status 200
+[2026-06-21 23:05:16.454 WRN] [a46f18bb-2b55-4aea-943e-4f6c38c0bbc4] [Perf] GET /api/notificationsHub -> 101 in 106890.49ms
+[2026-06-21 23:05:16.454 INF] [a46f18bb-2b55-4aea-943e-4f6c38c0bbc4] [CorrelationId: a46f18bb-2b55-4aea-943e-4f6c38c0bbc4] GET /api/notificationsHub completed in 106890.82ms with status 101
+[2026-06-21 23:05:16.454 WRN] [a46f18bb-2b55-4aea-943e-4f6c38c0bbc4] [CorrelationId: a46f18bb-2b55-4aea-943e-4f6c38c0bbc4] SLOW REQUEST: GET /api/notificationsHub took 106890.82ms (threshold: 1000ms)
+[2026-06-21 23:05:16.454 ERR] [a46f18bb-2b55-4aea-943e-4f6c38c0bbc4] [CorrelationId: a46f18bb-2b55-4aea-943e-4f6c38c0bbc4] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 106890.82ms (threshold: 5000ms)
+[2026-06-21 23:05:17.106 INF] [26d2deb4-4def-4a72-8868-f6371820d6ed] [Perf] GET /api/notifications/unread-count -> 200 in 5.90ms
+[2026-06-21 23:05:17.106 INF] [26d2deb4-4def-4a72-8868-f6371820d6ed] [CorrelationId: 26d2deb4-4def-4a72-8868-f6371820d6ed] GET /api/notifications/unread-count completed in 6.02ms with status 200
+[2026-06-21 23:05:17.124 INF] [beeb4a6a-f397-434b-ba0d-3fcd24d258fc] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 200 in 9.27ms
+[2026-06-21 23:05:17.124 INF] [beeb4a6a-f397-434b-ba0d-3fcd24d258fc] [CorrelationId: beeb4a6a-f397-434b-ba0d-3fcd24d258fc] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 9.36ms with status 200
+[2026-06-21 23:05:17.130 INF] [86baafd4-1460-4ed4-86a0-44ebd7d82791] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 16.05ms
+[2026-06-21 23:05:17.130 INF] [86baafd4-1460-4ed4-86a0-44ebd7d82791] [CorrelationId: 86baafd4-1460-4ed4-86a0-44ebd7d82791] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 16.19ms with status 200
+[2026-06-21 23:05:17.134 INF] [efe90e86-965a-4091-a9b8-25d0446b8277] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 8.05ms
+[2026-06-21 23:05:17.134 INF] [efe90e86-965a-4091-a9b8-25d0446b8277] [CorrelationId: efe90e86-965a-4091-a9b8-25d0446b8277] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 8.16ms with status 200
+[2026-06-21 23:05:17.138 INF] [88eea50a-77fe-441c-bed2-ee6f94972bea] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 200 in 5.51ms
+[2026-06-21 23:05:17.138 INF] [88eea50a-77fe-441c-bed2-ee6f94972bea] [CorrelationId: 88eea50a-77fe-441c-bed2-ee6f94972bea] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 5.61ms with status 200
+[2026-06-21 23:05:17.141 INF] [24456611-6490-492c-b3e1-d1f5f69a6551] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 5.54ms
+[2026-06-21 23:05:17.141 INF] [24456611-6490-492c-b3e1-d1f5f69a6551] [CorrelationId: 24456611-6490-492c-b3e1-d1f5f69a6551] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 5.65ms with status 200
+[2026-06-21 23:05:17.142 INF] [f1bcb376-f75c-44fa-8a34-f8027b534836] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.25ms
+[2026-06-21 23:05:17.142 INF] [f1bcb376-f75c-44fa-8a34-f8027b534836] [CorrelationId: f1bcb376-f75c-44fa-8a34-f8027b534836] POST /api/notificationsHub/negotiate completed in 0.30ms with status 200
+[2026-06-21 23:05:17.145 INF] [af217456-ac0a-447b-b8c1-987388a72370] [Perf] GET /api/auth/users -> 200 in 5.28ms
+[2026-06-21 23:05:17.145 INF] [af217456-ac0a-447b-b8c1-987388a72370] [CorrelationId: af217456-ac0a-447b-b8c1-987388a72370] GET /api/auth/users completed in 5.37ms with status 200
+[2026-06-21 23:05:17.202 INF] [cc3e20e1-e08f-40b4-b534-be3272d7d24b] [Perf] GET /api/notifications/unread-count -> 200 in 4.39ms
+[2026-06-21 23:05:17.202 INF] [3997997e-d08c-4f3d-abfa-81823f57d288] [Perf] GET /api/notifications -> 200 in 5.10ms
+[2026-06-21 23:05:17.202 INF] [cc3e20e1-e08f-40b4-b534-be3272d7d24b] [CorrelationId: cc3e20e1-e08f-40b4-b534-be3272d7d24b] GET /api/notifications/unread-count completed in 4.51ms with status 200
+[2026-06-21 23:05:17.202 INF] [3997997e-d08c-4f3d-abfa-81823f57d288] [CorrelationId: 3997997e-d08c-4f3d-abfa-81823f57d288] GET /api/notifications completed in 5.28ms with status 200
+[2026-06-21 23:05:54.134 WRN] [7a2a2edb-2989-4a66-9cd6-139f33dced89] [Perf] GET /api/notificationsHub -> 101 in 36944.75ms
+[2026-06-21 23:05:54.134 INF] [7a2a2edb-2989-4a66-9cd6-139f33dced89] [CorrelationId: 7a2a2edb-2989-4a66-9cd6-139f33dced89] GET /api/notificationsHub completed in 36944.87ms with status 101
+[2026-06-21 23:05:54.134 WRN] [7a2a2edb-2989-4a66-9cd6-139f33dced89] [CorrelationId: 7a2a2edb-2989-4a66-9cd6-139f33dced89] SLOW REQUEST: GET /api/notificationsHub took 36944.87ms (threshold: 1000ms)
+[2026-06-21 23:05:54.134 ERR] [7a2a2edb-2989-4a66-9cd6-139f33dced89] [CorrelationId: 7a2a2edb-2989-4a66-9cd6-139f33dced89] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 36944.87ms (threshold: 5000ms)
+[2026-06-21 23:05:54.243 INF] [7f9f309d-477a-4139-b53e-9db50b07caf7] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.31ms
+[2026-06-21 23:05:54.243 INF] [7f9f309d-477a-4139-b53e-9db50b07caf7] [CorrelationId: 7f9f309d-477a-4139-b53e-9db50b07caf7] POST /api/notificationsHub/negotiate completed in 0.38ms with status 200
+[2026-06-21 23:46:17.094 WRN] [] Server macbookpro:908:061666a2 encountered an exception while sending heartbeat
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=66; handshake=15101; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[TContext,TResult](DbConnection dedicatedConnection, Func`4 func, TContext context) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 291
+   at Hangfire.SqlServer.SqlServerConnection.Heartbeat(String serverId) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 548
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 50
+ClientConnectionId:9403aea7-7a79-49fa-bedb-4d43801f7529
+Error Number:-2,State:0,Class:11
+[2026-06-21 23:46:17.210 ERR] [] Execution DelayedJobScheduler is in the Failed state now due to an exception, execution will be retried in no more than 00:00:04
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=66; handshake=15101; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerConnection.AcquireLock(String resource, TimeSpan timeout) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 800
+   at Hangfire.Server.DelayedJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action) in C:\projects\hangfire-525\src\Hangfire.Core\Server\DelayedJobScheduler.cs:line 411
+   at Hangfire.Server.DelayedJobScheduler.EnqueueNextScheduledJobs(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\DelayedJobScheduler.cs:line 167
+   at Hangfire.Server.DelayedJobScheduler.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\DelayedJobScheduler.cs:line 148
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundProcessDispatcherBuilder.cs:line 82
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Processing\BackgroundExecution.cs:line 118
+ClientConnectionId:9403aea7-7a79-49fa-bedb-4d43801f7529
+Error Number:-2,State:0,Class:11
+[2026-06-21 23:46:17.214 ERR] [] Execution RecurringJobScheduler is in the Failed state now due to an exception, execution will be retried in no more than 00:00:04
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=66; handshake=15101; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerConnection.AcquireLock(String resource, TimeSpan timeout) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 800
+   at Hangfire.Server.RecurringJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 423
+   at Hangfire.Server.RecurringJobScheduler.EnqueueNextRecurringJobs(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 203
+   at Hangfire.Server.RecurringJobScheduler.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\RecurringJobScheduler.cs:line 176
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundProcessDispatcherBuilder.cs:line 82
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Processing\BackgroundExecution.cs:line 118
+ClientConnectionId:9403aea7-7a79-49fa-bedb-4d43801f7529
+Error Number:-2,State:0,Class:11

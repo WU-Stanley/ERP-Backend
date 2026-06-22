@@ -24,3 +24,13 @@
 [2026-06-19 10:06:42.910 INF] [4ad34212-5080-4bb5-8922-fa3dad3b82ea] [CorrelationId: 4ad34212-5080-4bb5-8922-fa3dad3b82ea] GET /api/Employees/1e25abee-b7dd-4b9c-8729-08decc86c983 completed in 5.30ms with status 200
 [2026-06-19 10:07:51.409 INF] [35a3e9e4-8928-4018-b271-a24822c2224c] [Perf] GET /api/leavetype/all -> 200 in 109.70ms
 [2026-06-19 10:07:51.410 INF] [35a3e9e4-8928-4018-b271-a24822c2224c] [CorrelationId: 35a3e9e4-8928-4018-b271-a24822c2224c] GET /api/leavetype/all completed in 109.84ms with status 200
+[2026-06-19 10:41:37.591 INF] [992581ea-a650-46ce-b4e0-7c7ef223d867] [Perf] POST /api/auth/logout -> 200 in 43.73ms
+[2026-06-19 10:41:37.593 ERR] [992581ea-a650-46ce-b4e0-7c7ef223d867] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<RefreshToken>()
+    .Where(r => r.UserId == @userId && r.RevokedOn == null && r.IsExpired == False)
+    .ToList()' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/auth/logout | Client IP: ::1
+[2026-06-19 10:41:41.867 WRN] [c09e8ada-bb93-4e48-83a9-51ab89c81881] [Perf] GET /api/notificationsHub -> 101 in 2136486.81ms
+[2026-06-19 10:41:41.867 INF] [c09e8ada-bb93-4e48-83a9-51ab89c81881] [CorrelationId: c09e8ada-bb93-4e48-83a9-51ab89c81881] GET /api/notificationsHub completed in 2136486.93ms with status 101
+[2026-06-19 10:41:41.867 WRN] [c09e8ada-bb93-4e48-83a9-51ab89c81881] [CorrelationId: c09e8ada-bb93-4e48-83a9-51ab89c81881] SLOW REQUEST: GET /api/notificationsHub took 2136486.93ms (threshold: 1000ms)
+[2026-06-19 10:41:41.867 ERR] [c09e8ada-bb93-4e48-83a9-51ab89c81881] [CorrelationId: c09e8ada-bb93-4e48-83a9-51ab89c81881] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 2136486.93ms (threshold: 5000ms)
+[2026-06-19 12:23:41.747 INF] [] Server macbookpro:47856:70fa3743 caught stopping signal...
+[2026-06-19 12:23:42.610 INF] [] Server macbookpro:47856:70fa3743 caught stopped signal...

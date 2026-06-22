@@ -1,0 +1,340 @@
+[2026-06-22 00:01:48.312 INF] [] Server macbookpro:908:061666a2 is now able to continue sending heartbeats
+[2026-06-22 00:01:49.316 INF] [] Execution RecurringJobScheduler recovered from the Failed state after 00:00:30.8601614 and is in the Running state now
+[2026-06-22 00:01:49.496 INF] [] Execution DelayedJobScheduler recovered from the Failed state after 00:00:31.1015622 and is in the Running state now
+[2026-06-22 00:28:50.160 INF] [] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:19.9865820 and is in the Running state now
+[2026-06-22 01:30:43.524 INF] [] 1 servers were removed due to timeout
+[2026-06-22 01:30:45.399 WRN] [] Server macbookpro:908:061666a2 was considered dead by other servers, restarting...
+[2026-06-22 01:30:45.400 INF] [] Server macbookpro:908:061666a2 caught restart signal...
+[2026-06-22 01:30:45.401 WRN] [] Server macbookpro:908:061666a2 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-22 01:30:45.413 INF] [] Server macbookpro:908:061666a2 successfully reported itself as stopped in 8.5733 ms
+[2026-06-22 01:30:45.414 INF] [] Server macbookpro:908:061666a2 has been stopped in total 13.2628 ms
+[2026-06-22 01:30:45.424 INF] [] Server macbookpro:908:04eaf80d successfully announced in 10.3236 ms
+[2026-06-22 01:30:45.426 INF] [] Server macbookpro:908:04eaf80d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-22 01:30:45.485 INF] [] Server macbookpro:908:04eaf80d all the dispatchers started
+[2026-06-22 02:39:56.473 INF] [] 1 servers were removed due to timeout
+[2026-06-22 02:39:57.255 WRN] [] Server macbookpro:908:04eaf80d was considered dead by other servers, restarting...
+[2026-06-22 02:39:57.255 INF] [] Server macbookpro:908:04eaf80d caught restart signal...
+[2026-06-22 02:39:57.272 WRN] [] Server macbookpro:908:04eaf80d stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-22 02:39:57.501 INF] [] Server macbookpro:908:04eaf80d successfully reported itself as stopped in 228.1518 ms
+[2026-06-22 02:39:57.501 INF] [] Server macbookpro:908:04eaf80d has been stopped in total 245.6872 ms
+[2026-06-22 02:39:57.875 INF] [] Server macbookpro:908:0c2fa43b successfully announced in 373.3576 ms
+[2026-06-22 02:39:57.900 INF] [] Server macbookpro:908:0c2fa43b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-22 02:39:58.245 INF] [] Server macbookpro:908:0c2fa43b all the dispatchers started
+[2026-06-22 03:54:08.282 INF] [] 1 servers were removed due to timeout
+[2026-06-22 03:54:09.050 WRN] [] Server macbookpro:908:0c2fa43b was considered dead by other servers, restarting...
+[2026-06-22 03:54:09.052 INF] [] Server macbookpro:908:0c2fa43b caught restart signal...
+[2026-06-22 03:54:09.056 WRN] [] Server macbookpro:908:0c2fa43b stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-22 03:54:09.071 INF] [] Server macbookpro:908:0c2fa43b successfully reported itself as stopped in 14.2822 ms
+[2026-06-22 03:54:09.072 INF] [] Server macbookpro:908:0c2fa43b has been stopped in total 15.962 ms
+[2026-06-22 03:54:09.113 INF] [] Server macbookpro:908:588afcd2 successfully announced in 40.3725 ms
+[2026-06-22 03:54:09.115 INF] [] Server macbookpro:908:588afcd2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-22 03:54:09.241 INF] [] Server macbookpro:908:588afcd2 all the dispatchers started
+[2026-06-22 04:09:32.014 ERR] [] Execution DelayedJobScheduler is in the Failed state now due to an exception, execution will be retried in no more than 00:00:04
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=45; handshake=15032; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerConnection.AcquireLock(String resource, TimeSpan timeout) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 800
+   at Hangfire.Server.DelayedJobScheduler.UseConnectionDistributedLock[T](JobStorage storage, Func`2 action) in C:\projects\hangfire-525\src\Hangfire.Core\Server\DelayedJobScheduler.cs:line 407
+   at Hangfire.Server.DelayedJobScheduler.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\DelayedJobScheduler.cs:line 148
+   at Hangfire.Server.BackgroundProcessDispatcherBuilder.ExecuteProcess(Guid executionId, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Server\BackgroundProcessDispatcherBuilder.cs:line 68
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state) in C:\projects\hangfire-525\src\Hangfire.Core\Processing\BackgroundExecution.cs:line 118
+ClientConnectionId:d64be110-7eb2-46df-b542-0a22542ebae3
+Error Number:-2,State:0,Class:11
+[2026-06-22 04:09:34.325 WRN] [] Server macbookpro:908:588afcd2 encountered an exception while sending heartbeat
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=45; handshake=15032; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerConnection.Heartbeat(String serverId) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 546
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:d64be110-7eb2-46df-b542-0a22542ebae3
+Error Number:-2,State:0,Class:11
+[2026-06-22 04:25:02.166 INF] [] Execution DelayedJobScheduler recovered from the Failed state after 00:00:28.0892429 and is in the Running state now
+[2026-06-22 04:25:06.392 INF] [] Server macbookpro:908:588afcd2 is now able to continue sending heartbeats
+[2026-06-22 04:37:21.697 WRN] [] Server macbookpro:908:588afcd2 encountered an exception while sending heartbeat
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=14; handshake=14986; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerConnection.Heartbeat(String serverId) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 546
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:93abfb84-f1be-406f-b9da-7f62f87a348b
+Error Number:-2,State:0,Class:11
+[2026-06-22 04:43:50.820 INF] [] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:27.5903348 and is in the Running state now
+[2026-06-22 04:43:51.265 INF] [] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:36.5471787 and is in the Running state now
+[2026-06-22 04:43:53.114 INF] [] Server macbookpro:908:588afcd2 is now able to continue sending heartbeats
+[2026-06-22 04:44:07.516 INF] [] 1 servers were removed due to timeout
+[2026-06-22 04:44:23.129 WRN] [] Server macbookpro:908:588afcd2 was considered dead by other servers, restarting...
+[2026-06-22 04:44:23.129 INF] [] Server macbookpro:908:588afcd2 caught restart signal...
+[2026-06-22 04:44:23.129 WRN] [] Server macbookpro:908:588afcd2 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-22 04:44:23.131 INF] [] Server macbookpro:908:588afcd2 successfully reported itself as stopped in 1.754 ms
+[2026-06-22 04:44:23.131 INF] [] Server macbookpro:908:588afcd2 has been stopped in total 1.9088 ms
+[2026-06-22 04:44:23.136 INF] [] Server macbookpro:908:34fb1e50 successfully announced in 4.774 ms
+[2026-06-22 04:44:23.137 INF] [] Server macbookpro:908:34fb1e50 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-22 04:44:23.140 INF] [] Server macbookpro:908:34fb1e50 all the dispatchers started
+[2026-06-22 06:10:32.522 INF] [] 1 servers were removed due to timeout
+[2026-06-22 06:10:33.953 WRN] [] Server macbookpro:908:34fb1e50 was considered dead by other servers, restarting...
+[2026-06-22 06:10:33.953 INF] [] Server macbookpro:908:34fb1e50 caught restart signal...
+[2026-06-22 06:10:34.031 WRN] [] Server macbookpro:908:34fb1e50 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-22 06:10:34.055 INF] [] Server macbookpro:908:34fb1e50 successfully reported itself as stopped in 18.2768 ms
+[2026-06-22 06:10:34.056 INF] [] Server macbookpro:908:34fb1e50 has been stopped in total 23.8741 ms
+[2026-06-22 06:10:34.067 INF] [] Server macbookpro:908:8a6a52db successfully announced in 10.9645 ms
+[2026-06-22 06:10:34.068 INF] [] Server macbookpro:908:8a6a52db is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-22 06:10:34.181 INF] [] Server macbookpro:908:8a6a52db all the dispatchers started
+[2026-06-22 06:51:53.757 WRN] [] Server macbookpro:908:8a6a52db encountered an exception while sending heartbeat
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=19; handshake=14982; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerConnection.Heartbeat(String serverId) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 546
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:4303c791-bc7d-41b8-84c7-23e9601af34a
+Error Number:-2,State:0,Class:11
+[2026-06-22 07:00:48.441 INF] [] Server macbookpro:908:8a6a52db is now able to continue sending heartbeats
+[2026-06-22 07:17:06.829 INF] [] 1 servers were removed due to timeout
+[2026-06-22 07:17:25.529 WRN] [] Server macbookpro:908:8a6a52db was considered dead by other servers, restarting...
+[2026-06-22 07:17:25.540 INF] [] Server macbookpro:908:8a6a52db caught restart signal...
+[2026-06-22 07:17:25.542 WRN] [] Server macbookpro:908:8a6a52db stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-22 07:17:29.512 INF] [] Server macbookpro:908:8a6a52db successfully reported itself as stopped in 3969.4541 ms
+[2026-06-22 07:17:29.512 INF] [] Server macbookpro:908:8a6a52db has been stopped in total 3970.8805 ms
+[2026-06-22 07:17:36.600 INF] [] Server macbookpro:908:6d7fa721 successfully announced in 7087.1248 ms
+[2026-06-22 07:17:36.600 INF] [] Server macbookpro:908:6d7fa721 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-22 07:17:36.608 INF] [] Server macbookpro:908:6d7fa721 all the dispatchers started
+[2026-06-22 09:18:49.107 WRN] [] Server macbookpro:908:6d7fa721 encountered an exception while sending heartbeat
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=35; handshake=14996; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerConnection.Heartbeat(String serverId) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 546
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:32924ecd-b1db-4f17-b6a9-28e952f3bd1c
+Error Number:-2,State:0,Class:11
+[2026-06-22 09:34:26.919 INF] [] Server macbookpro:908:6d7fa721 is now able to continue sending heartbeats
+[2026-06-22 11:29:45.988 WRN] [4fdb0146-caeb-4bbd-bd2e-b12786927691] [Perf] GET /api/notificationsHub -> 101 in 4197420.21ms
+[2026-06-22 11:29:45.999 INF] [4fdb0146-caeb-4bbd-bd2e-b12786927691] [CorrelationId: 4fdb0146-caeb-4bbd-bd2e-b12786927691] GET /api/notificationsHub completed in 4197431.63ms with status 101
+[2026-06-22 11:29:45.999 WRN] [4fdb0146-caeb-4bbd-bd2e-b12786927691] [CorrelationId: 4fdb0146-caeb-4bbd-bd2e-b12786927691] SLOW REQUEST: GET /api/notificationsHub took 4197431.63ms (threshold: 1000ms)
+[2026-06-22 11:29:45.999 ERR] [4fdb0146-caeb-4bbd-bd2e-b12786927691] [CorrelationId: 4fdb0146-caeb-4bbd-bd2e-b12786927691] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 4197431.63ms (threshold: 5000ms)
+[2026-06-22 11:29:46.805 INF] [ed7d56d1-130c-41b7-a8c7-a21c5d0657c3] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 28.22ms
+[2026-06-22 11:29:46.805 INF] [ed7d56d1-130c-41b7-a8c7-a21c5d0657c3] [CorrelationId: ed7d56d1-130c-41b7-a8c7-a21c5d0657c3] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 28.36ms with status 200
+[2026-06-22 11:29:47.004 INF] [d40c9142-8491-43e2-8bcd-d1799ec80151] [Perf] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track -> 200 in 43.90ms
+[2026-06-22 11:29:47.005 INF] [d40c9142-8491-43e2-8bcd-d1799ec80151] [CorrelationId: d40c9142-8491-43e2-8bcd-d1799ec80151] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track completed in 44.02ms with status 200
+[2026-06-22 11:29:47.242 INF] [d7e1dbde-4949-498e-aa47-b2b059484fc2] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 10.44ms
+[2026-06-22 11:29:47.242 INF] [d7e1dbde-4949-498e-aa47-b2b059484fc2] [CorrelationId: d7e1dbde-4949-498e-aa47-b2b059484fc2] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 10.55ms with status 200
+[2026-06-22 11:29:47.251 INF] [594a1cea-20ee-41c5-8a52-7fbf8914aa7d] [Perf] GET /api/notifications/unread-count -> 200 in 3.86ms
+[2026-06-22 11:29:47.251 INF] [594a1cea-20ee-41c5-8a52-7fbf8914aa7d] [CorrelationId: 594a1cea-20ee-41c5-8a52-7fbf8914aa7d] GET /api/notifications/unread-count completed in 4.08ms with status 200
+[2026-06-22 11:29:47.263 INF] [37ce748e-8cfd-438a-aedc-b6af5b6aeafc] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 5.84ms
+[2026-06-22 11:29:47.263 INF] [37ce748e-8cfd-438a-aedc-b6af5b6aeafc] [CorrelationId: 37ce748e-8cfd-438a-aedc-b6af5b6aeafc] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 5.97ms with status 200
+[2026-06-22 11:29:47.269 INF] [c5e54b09-35a6-4591-bdf7-6e5990b8ce1e] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.29ms
+[2026-06-22 11:29:47.269 INF] [c5e54b09-35a6-4591-bdf7-6e5990b8ce1e] [CorrelationId: c5e54b09-35a6-4591-bdf7-6e5990b8ce1e] POST /api/notificationsHub/negotiate completed in 0.40ms with status 200
+[2026-06-22 11:29:47.274 INF] [27fb4edd-7ca9-45b0-bd4d-095ff7d924f7] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 3.94ms
+[2026-06-22 11:29:47.274 INF] [27fb4edd-7ca9-45b0-bd4d-095ff7d924f7] [CorrelationId: 27fb4edd-7ca9-45b0-bd4d-095ff7d924f7] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 4.03ms with status 200
+[2026-06-22 11:29:47.283 INF] [2ac981e8-7fcc-4d0c-9511-80c1a1bb8dbd] [Perf] GET /api/auth/users -> 200 in 6.17ms
+[2026-06-22 11:29:47.283 INF] [2ac981e8-7fcc-4d0c-9511-80c1a1bb8dbd] [CorrelationId: 2ac981e8-7fcc-4d0c-9511-80c1a1bb8dbd] GET /api/auth/users completed in 6.27ms with status 200
+[2026-06-22 11:29:47.287 INF] [c97e39a3-d0c8-4137-850d-66fd5fd07400] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 200 in 37.42ms
+[2026-06-22 11:29:47.287 INF] [c97e39a3-d0c8-4137-850d-66fd5fd07400] [CorrelationId: c97e39a3-d0c8-4137-850d-66fd5fd07400] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 37.52ms with status 200
+[2026-06-22 11:29:47.337 INF] [45ee72db-a205-4ee2-9834-a7c0c8f8b35a] [Perf] GET /api/notifications -> 200 in 8.35ms
+[2026-06-22 11:29:47.337 INF] [45ee72db-a205-4ee2-9834-a7c0c8f8b35a] [CorrelationId: 45ee72db-a205-4ee2-9834-a7c0c8f8b35a] GET /api/notifications completed in 8.51ms with status 200
+[2026-06-22 11:29:47.337 INF] [731f7522-a864-4890-8808-4c3c488491d0] [Perf] GET /api/notifications/unread-count -> 200 in 8.47ms
+[2026-06-22 11:29:47.337 INF] [731f7522-a864-4890-8808-4c3c488491d0] [CorrelationId: 731f7522-a864-4890-8808-4c3c488491d0] GET /api/notifications/unread-count completed in 8.62ms with status 200
+[2026-06-22 11:29:47.337 INF] [c406bbd5-6ac0-4af1-aded-d3b6eb4df59a] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 200 in 75.27ms
+[2026-06-22 11:29:47.337 INF] [c406bbd5-6ac0-4af1-aded-d3b6eb4df59a] [CorrelationId: c406bbd5-6ac0-4af1-aded-d3b6eb4df59a] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 75.30ms with status 200
+[2026-06-22 11:33:33.079 WRN] [effb3f18-9ca0-459c-b26a-01f2b5583c21] [Perf] GET /api/notificationsHub -> 101 in 225781.83ms
+[2026-06-22 11:33:33.087 INF] [effb3f18-9ca0-459c-b26a-01f2b5583c21] [CorrelationId: effb3f18-9ca0-459c-b26a-01f2b5583c21] GET /api/notificationsHub completed in 225789.53ms with status 101
+[2026-06-22 11:33:33.087 WRN] [effb3f18-9ca0-459c-b26a-01f2b5583c21] [CorrelationId: effb3f18-9ca0-459c-b26a-01f2b5583c21] SLOW REQUEST: GET /api/notificationsHub took 225789.53ms (threshold: 1000ms)
+[2026-06-22 11:33:33.087 ERR] [effb3f18-9ca0-459c-b26a-01f2b5583c21] [CorrelationId: effb3f18-9ca0-459c-b26a-01f2b5583c21] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 225789.53ms (threshold: 5000ms)
+[2026-06-22 11:33:34.093 INF] [fac9015f-c345-490b-a6a2-b4a17cef21cc] [Perf] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track -> 200 in 69.18ms
+[2026-06-22 11:33:34.094 INF] [fac9015f-c345-490b-a6a2-b4a17cef21cc] [CorrelationId: fac9015f-c345-490b-a6a2-b4a17cef21cc] GET /api/v1/recruitment/public/applications/e2032707-6af4-42d4-83dd-fff05df0a426/track completed in 69.30ms with status 200
+[2026-06-22 11:33:34.137 INF] [9e543f1e-9fd2-4bcb-9e99-0c21dd4b8ca5] [Perf] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track -> 200 in 28.40ms
+[2026-06-22 11:33:34.137 INF] [9e543f1e-9fd2-4bcb-9e99-0c21dd4b8ca5] [CorrelationId: 9e543f1e-9fd2-4bcb-9e99-0c21dd4b8ca5] GET /api/v1/recruitment/public/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/track completed in 28.51ms with status 200
+[2026-06-22 11:33:36.261 INF] [4c6ab2d0-3a4b-48a7-bbd8-31609076e616] [Perf] GET /api/notifications/unread-count -> 200 in 3.46ms
+[2026-06-22 11:33:36.261 INF] [4c6ab2d0-3a4b-48a7-bbd8-31609076e616] [CorrelationId: 4c6ab2d0-3a4b-48a7-bbd8-31609076e616] GET /api/notifications/unread-count completed in 3.57ms with status 200
+[2026-06-22 11:33:36.268 INF] [a599a766-a1fc-4953-9bbd-1c8aa2189a4b] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score -> 200 in 4.73ms
+[2026-06-22 11:33:36.268 INF] [a599a766-a1fc-4953-9bbd-1c8aa2189a4b] [CorrelationId: a599a766-a1fc-4953-9bbd-1c8aa2189a4b] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/score completed in 4.83ms with status 200
+[2026-06-22 11:33:36.269 INF] [38670db2-3611-4cff-bcaf-190eccd4b5b7] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 -> 200 in 7.32ms
+[2026-06-22 11:33:36.269 INF] [38670db2-3611-4cff-bcaf-190eccd4b5b7] [CorrelationId: 38670db2-3611-4cff-bcaf-190eccd4b5b7] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426 completed in 7.52ms with status 200
+[2026-06-22 11:33:36.272 INF] [983601fa-7744-4389-aedb-d43c4219fd56] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews -> 200 in 2.96ms
+[2026-06-22 11:33:36.272 INF] [983601fa-7744-4389-aedb-d43c4219fd56] [CorrelationId: 983601fa-7744-4389-aedb-d43c4219fd56] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/interviews completed in 3.08ms with status 200
+[2026-06-22 11:33:36.273 INF] [9ca5bbc1-5c32-477c-b618-90f11013307c] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter -> 200 in 2.89ms
+[2026-06-22 11:33:36.273 INF] [9ca5bbc1-5c32-477c-b618-90f11013307c] [CorrelationId: 9ca5bbc1-5c32-477c-b618-90f11013307c] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/offer-letter completed in 3.22ms with status 200
+[2026-06-22 11:33:36.278 INF] [483e19d1-c3af-4dc1-ba62-326092915b30] [Perf] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries -> 200 in 3.81ms
+[2026-06-22 11:33:36.278 INF] [483e19d1-c3af-4dc1-ba62-326092915b30] [CorrelationId: 483e19d1-c3af-4dc1-ba62-326092915b30] GET /api/v1/recruitment/applications/e2032707-6af4-42d4-83dd-fff05df0a426/queries completed in 3.98ms with status 200
+[2026-06-22 11:33:36.282 INF] [f78cf0f4-8902-4354-95a2-091f09fdd495] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.70ms
+[2026-06-22 11:33:36.282 INF] [f78cf0f4-8902-4354-95a2-091f09fdd495] [CorrelationId: f78cf0f4-8902-4354-95a2-091f09fdd495] POST /api/notificationsHub/negotiate completed in 2.48ms with status 200
+[2026-06-22 11:33:36.283 INF] [b495aabd-027c-4375-bd76-82520c9ed726] [Perf] GET /api/auth/users -> 200 in 8.27ms
+[2026-06-22 11:33:36.283 INF] [b495aabd-027c-4375-bd76-82520c9ed726] [CorrelationId: b495aabd-027c-4375-bd76-82520c9ed726] GET /api/auth/users completed in 8.62ms with status 200
+[2026-06-22 11:33:36.362 INF] [5d5f4a6e-36bb-469e-b5ff-41dbf582abbf] [Perf] GET /api/notifications -> 200 in 8.01ms
+[2026-06-22 11:33:36.362 INF] [5d5f4a6e-36bb-469e-b5ff-41dbf582abbf] [CorrelationId: 5d5f4a6e-36bb-469e-b5ff-41dbf582abbf] GET /api/notifications completed in 8.11ms with status 200
+[2026-06-22 11:33:36.363 INF] [d5cb3dc7-57a3-41f1-966b-8d5959c9b44c] [Perf] GET /api/notifications/unread-count -> 200 in 7.84ms
+[2026-06-22 11:33:36.363 INF] [d5cb3dc7-57a3-41f1-966b-8d5959c9b44c] [CorrelationId: d5cb3dc7-57a3-41f1-966b-8d5959c9b44c] GET /api/notifications/unread-count completed in 7.92ms with status 200
+[2026-06-22 11:35:42.570 INF] [d304e9c9-1887-40ef-b7a3-898a0b461493] [Perf] GET /api/v1/recruitment/applications -> 200 in 50.38ms
+[2026-06-22 11:35:42.570 INF] [d304e9c9-1887-40ef-b7a3-898a0b461493] [CorrelationId: d304e9c9-1887-40ef-b7a3-898a0b461493] GET /api/v1/recruitment/applications completed in 50.48ms with status 200
+[2026-06-22 11:35:44.175 INF] [f5e994eb-e5c0-42aa-ba49-27ae44940de3] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score -> 200 in 7.56ms
+[2026-06-22 11:35:44.175 INF] [f5e994eb-e5c0-42aa-ba49-27ae44940de3] [CorrelationId: f5e994eb-e5c0-42aa-ba49-27ae44940de3] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score completed in 7.69ms with status 200
+[2026-06-22 11:35:44.177 INF] [62c77a00-860b-4898-a3ef-267ab1420f13] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b -> 200 in 10.77ms
+[2026-06-22 11:35:44.177 INF] [62c77a00-860b-4898-a3ef-267ab1420f13] [CorrelationId: 62c77a00-860b-4898-a3ef-267ab1420f13] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b completed in 10.85ms with status 200
+[2026-06-22 11:35:44.179 INF] [9e643c42-f1d8-409c-ae04-875384a7159a] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter -> 200 in 2.67ms
+[2026-06-22 11:35:44.179 INF] [9e643c42-f1d8-409c-ae04-875384a7159a] [CorrelationId: 9e643c42-f1d8-409c-ae04-875384a7159a] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter completed in 2.75ms with status 200
+[2026-06-22 11:35:44.179 INF] [f9a956df-1408-42a6-afc7-3c073b7a07c7] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries -> 200 in 1.86ms
+[2026-06-22 11:35:44.179 INF] [f9a956df-1408-42a6-afc7-3c073b7a07c7] [CorrelationId: f9a956df-1408-42a6-afc7-3c073b7a07c7] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries completed in 2.11ms with status 200
+[2026-06-22 11:35:44.184 INF] [128e1919-0b38-4095-b24f-8a01572765b5] [Perf] GET /api/auth/users -> 200 in 3.93ms
+[2026-06-22 11:35:44.184 INF] [128e1919-0b38-4095-b24f-8a01572765b5] [CorrelationId: 128e1919-0b38-4095-b24f-8a01572765b5] GET /api/auth/users completed in 4.01ms with status 200
+[2026-06-22 11:35:44.190 INF] [ef1e9712-9320-458f-902b-4c858c062af0] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews -> 200 in 22.81ms
+[2026-06-22 11:35:44.190 INF] [ef1e9712-9320-458f-902b-4c858c062af0] [CorrelationId: ef1e9712-9320-458f-902b-4c858c062af0] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews completed in 22.91ms with status 200
+[2026-06-22 11:35:51.601 WRN] [d0ba5ff7-7a86-46fc-9d64-b0244a0e58dd] [Perf] GET /api/notificationsHub -> 101 in 135253.83ms
+[2026-06-22 11:35:51.601 INF] [d0ba5ff7-7a86-46fc-9d64-b0244a0e58dd] [CorrelationId: d0ba5ff7-7a86-46fc-9d64-b0244a0e58dd] GET /api/notificationsHub completed in 135253.96ms with status 101
+[2026-06-22 11:35:51.601 WRN] [d0ba5ff7-7a86-46fc-9d64-b0244a0e58dd] [CorrelationId: d0ba5ff7-7a86-46fc-9d64-b0244a0e58dd] SLOW REQUEST: GET /api/notificationsHub took 135253.96ms (threshold: 1000ms)
+[2026-06-22 11:35:51.601 ERR] [d0ba5ff7-7a86-46fc-9d64-b0244a0e58dd] [CorrelationId: d0ba5ff7-7a86-46fc-9d64-b0244a0e58dd] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 135253.96ms (threshold: 5000ms)
+[2026-06-22 11:35:51.767 INF] [43860bf7-832d-404e-aaa1-22e8180cf0c8] [Perf] GET /api/notifications/unread-count -> 200 in 4.11ms
+[2026-06-22 11:35:51.767 INF] [43860bf7-832d-404e-aaa1-22e8180cf0c8] [CorrelationId: 43860bf7-832d-404e-aaa1-22e8180cf0c8] GET /api/notifications/unread-count completed in 4.22ms with status 200
+[2026-06-22 11:35:51.778 INF] [d062f222-76b6-4c7e-b0bc-3939c1759f27] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score -> 200 in 6.92ms
+[2026-06-22 11:35:51.778 INF] [d062f222-76b6-4c7e-b0bc-3939c1759f27] [CorrelationId: d062f222-76b6-4c7e-b0bc-3939c1759f27] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/score completed in 7.02ms with status 200
+[2026-06-22 11:35:51.779 INF] [a9cb5da2-0431-4526-96b2-520453b6724f] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter -> 200 in 7.03ms
+[2026-06-22 11:35:51.779 INF] [a9cb5da2-0431-4526-96b2-520453b6724f] [CorrelationId: a9cb5da2-0431-4526-96b2-520453b6724f] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/offer-letter completed in 7.30ms with status 200
+[2026-06-22 11:35:51.781 INF] [c8739bde-3739-4b8e-876f-94e183e86b60] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.94ms
+[2026-06-22 11:35:51.781 INF] [c8739bde-3739-4b8e-876f-94e183e86b60] [CorrelationId: c8739bde-3739-4b8e-876f-94e183e86b60] POST /api/notificationsHub/negotiate completed in 1.01ms with status 200
+[2026-06-22 11:35:51.783 INF] [ffecaacd-081f-4d3c-a1b6-f1947e927874] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b -> 200 in 11.76ms
+[2026-06-22 11:35:51.783 INF] [ffecaacd-081f-4d3c-a1b6-f1947e927874] [CorrelationId: ffecaacd-081f-4d3c-a1b6-f1947e927874] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b completed in 11.86ms with status 200
+[2026-06-22 11:35:51.803 INF] [35d3ad93-e75b-49ca-a77c-6aa04ff64cb3] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries -> 200 in 31.10ms
+[2026-06-22 11:35:51.803 INF] [35d3ad93-e75b-49ca-a77c-6aa04ff64cb3] [CorrelationId: 35d3ad93-e75b-49ca-a77c-6aa04ff64cb3] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/queries completed in 31.21ms with status 200
+[2026-06-22 11:35:51.803 INF] [4067b5a7-57e5-477c-a42a-fea3a5a83646] [Perf] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews -> 200 in 32.30ms
+[2026-06-22 11:35:51.803 INF] [4067b5a7-57e5-477c-a42a-fea3a5a83646] [CorrelationId: 4067b5a7-57e5-477c-a42a-fea3a5a83646] GET /api/v1/recruitment/applications/e6f7e023-aa54-4df9-ae03-658418945d8b/interviews completed in 32.32ms with status 200
+[2026-06-22 11:35:51.805 INF] [7ffcd57b-64d6-4d9e-8747-b01126997329] [Perf] GET /api/auth/users -> 200 in 33.18ms
+[2026-06-22 11:35:51.805 INF] [7ffcd57b-64d6-4d9e-8747-b01126997329] [CorrelationId: 7ffcd57b-64d6-4d9e-8747-b01126997329] GET /api/auth/users completed in 33.27ms with status 200
+[2026-06-22 11:35:51.824 INF] [4142a51c-d574-4275-a789-fe6bd8f2d77b] [Perf] GET /api/notifications/unread-count -> 200 in 2.53ms
+[2026-06-22 11:35:51.824 INF] [4142a51c-d574-4275-a789-fe6bd8f2d77b] [CorrelationId: 4142a51c-d574-4275-a789-fe6bd8f2d77b] GET /api/notifications/unread-count completed in 2.62ms with status 200
+[2026-06-22 11:35:51.824 INF] [76164348-a102-47fd-8b00-58162506ab1d] [Perf] GET /api/notifications -> 200 in 2.22ms
+[2026-06-22 11:35:51.824 INF] [76164348-a102-47fd-8b00-58162506ab1d] [CorrelationId: 76164348-a102-47fd-8b00-58162506ab1d] GET /api/notifications completed in 2.27ms with status 200
+[2026-06-22 11:35:52.949 INF] [86676d89-baf9-46fe-a73e-a0b2af7dc007] [Perf] GET /api/auth/users -> 200 in 11.54ms
+[2026-06-22 11:35:52.949 INF] [86676d89-baf9-46fe-a73e-a0b2af7dc007] [CorrelationId: 86676d89-baf9-46fe-a73e-a0b2af7dc007] GET /api/auth/users completed in 11.63ms with status 200
+[2026-06-22 11:35:52.956 INF] [34c54164-e011-447c-a97b-684a6afee550] [Perf] GET /api/department -> 200 in 17.86ms
+[2026-06-22 11:35:52.957 INF] [34c54164-e011-447c-a97b-684a6afee550] [CorrelationId: 34c54164-e011-447c-a97b-684a6afee550] GET /api/department completed in 17.98ms with status 200
+[2026-06-22 11:36:00.732 INF] [38978f88-f53b-4a35-bd42-f722960ef6d9] [Perf] GET /api/Employees -> 200 in 58.07ms
+[2026-06-22 11:36:00.732 INF] [38978f88-f53b-4a35-bd42-f722960ef6d9] [CorrelationId: 38978f88-f53b-4a35-bd42-f722960ef6d9] GET /api/Employees completed in 58.19ms with status 200
+[2026-06-22 11:36:22.224 INF] [9e648267-8e72-4789-849a-12fe3366bdf0] [Perf] GET /api/v1/recruitment/stats -> 200 in 77.33ms
+[2026-06-22 11:36:22.224 INF] [9e648267-8e72-4789-849a-12fe3366bdf0] [CorrelationId: 9e648267-8e72-4789-849a-12fe3366bdf0] GET /api/v1/recruitment/stats completed in 77.47ms with status 200
+[2026-06-22 11:36:28.020 INF] [2796db53-e576-48f6-94ee-21907545093f] [Perf] GET /api/v1/recruitment/applications -> 200 in 12.21ms
+[2026-06-22 11:36:28.020 INF] [2796db53-e576-48f6-94ee-21907545093f] [CorrelationId: 2796db53-e576-48f6-94ee-21907545093f] GET /api/v1/recruitment/applications completed in 12.31ms with status 200
+[2026-06-22 11:38:02.974 WRN] [6d848f52-bc76-45fb-9a3c-3e4761369930] [Perf] GET /api/notificationsHub -> 101 in 131156.35ms
+[2026-06-22 11:38:02.974 INF] [6d848f52-bc76-45fb-9a3c-3e4761369930] [CorrelationId: 6d848f52-bc76-45fb-9a3c-3e4761369930] GET /api/notificationsHub completed in 131156.46ms with status 101
+[2026-06-22 11:38:02.974 WRN] [6d848f52-bc76-45fb-9a3c-3e4761369930] [CorrelationId: 6d848f52-bc76-45fb-9a3c-3e4761369930] SLOW REQUEST: GET /api/notificationsHub took 131156.46ms (threshold: 1000ms)
+[2026-06-22 11:38:02.974 ERR] [6d848f52-bc76-45fb-9a3c-3e4761369930] [CorrelationId: 6d848f52-bc76-45fb-9a3c-3e4761369930] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 131156.46ms (threshold: 5000ms)
+[2026-06-22 11:38:03.106 INF] [29b8af74-2189-48ee-868c-03365eecd4dd] [Perf] GET /api/v1/recruitment/ict-onboarding -> 404 in 0.22ms
+[2026-06-22 11:38:03.106 INF] [29b8af74-2189-48ee-868c-03365eecd4dd] [CorrelationId: 29b8af74-2189-48ee-868c-03365eecd4dd] GET /api/v1/recruitment/ict-onboarding completed in 0.32ms with status 404
+[2026-06-22 11:38:03.107 INF] [5017dab1-d5c7-41e3-8ec5-c4ebdf0710fd] [Perf] GET /api/notifications/unread-count -> 200 in 5.16ms
+[2026-06-22 11:38:03.107 INF] [5017dab1-d5c7-41e3-8ec5-c4ebdf0710fd] [CorrelationId: 5017dab1-d5c7-41e3-8ec5-c4ebdf0710fd] GET /api/notifications/unread-count completed in 5.23ms with status 200
+[2026-06-22 11:38:03.108 INF] [30d058a1-6d71-40b5-819e-04485afac9b5] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.19ms
+[2026-06-22 11:38:03.108 INF] [30d058a1-6d71-40b5-819e-04485afac9b5] [CorrelationId: 30d058a1-6d71-40b5-819e-04485afac9b5] POST /api/notificationsHub/negotiate completed in 0.23ms with status 200
+[2026-06-22 11:38:03.152 INF] [66d9d38c-c7a6-46ab-bab8-2978a17131b3] [Perf] GET /api/notifications/unread-count -> 200 in 5.41ms
+[2026-06-22 11:38:03.152 INF] [66d9d38c-c7a6-46ab-bab8-2978a17131b3] [CorrelationId: 66d9d38c-c7a6-46ab-bab8-2978a17131b3] GET /api/notifications/unread-count completed in 5.54ms with status 200
+[2026-06-22 11:38:03.153 INF] [d98e72b8-db5e-4d61-a8d5-8341dda578c2] [Perf] GET /api/notifications -> 200 in 5.59ms
+[2026-06-22 11:38:03.153 INF] [d98e72b8-db5e-4d61-a8d5-8341dda578c2] [CorrelationId: d98e72b8-db5e-4d61-a8d5-8341dda578c2] GET /api/notifications completed in 5.66ms with status 200
+[2026-06-22 11:38:13.360 WRN] [4ce8e504-3936-4535-9dd6-c5c9bfbc016f] [Perf] GET /api/notificationsHub -> 101 in 10214.97ms
+[2026-06-22 11:38:13.360 INF] [4ce8e504-3936-4535-9dd6-c5c9bfbc016f] [CorrelationId: 4ce8e504-3936-4535-9dd6-c5c9bfbc016f] GET /api/notificationsHub completed in 10215.11ms with status 101
+[2026-06-22 11:38:13.360 WRN] [4ce8e504-3936-4535-9dd6-c5c9bfbc016f] [CorrelationId: 4ce8e504-3936-4535-9dd6-c5c9bfbc016f] SLOW REQUEST: GET /api/notificationsHub took 10215.11ms (threshold: 1000ms)
+[2026-06-22 11:38:13.360 ERR] [4ce8e504-3936-4535-9dd6-c5c9bfbc016f] [CorrelationId: 4ce8e504-3936-4535-9dd6-c5c9bfbc016f] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 10215.11ms (threshold: 5000ms)
+[2026-06-22 11:38:14.061 INF] [f38552a4-76c9-4665-bb84-1ab4bad1ea82] [Perf] GET /api/notifications/unread-count -> 200 in 4.53ms
+[2026-06-22 11:38:14.061 INF] [f38552a4-76c9-4665-bb84-1ab4bad1ea82] [CorrelationId: f38552a4-76c9-4665-bb84-1ab4bad1ea82] GET /api/notifications/unread-count completed in 4.65ms with status 200
+[2026-06-22 11:38:14.067 INF] [f9b1ffe7-0302-43b5-b3e5-04cdf0bfb568] [Perf] GET /api/v1/recruitment/ict-onboarding -> 404 in 0.25ms
+[2026-06-22 11:38:14.067 INF] [f9b1ffe7-0302-43b5-b3e5-04cdf0bfb568] [CorrelationId: f9b1ffe7-0302-43b5-b3e5-04cdf0bfb568] GET /api/v1/recruitment/ict-onboarding completed in 0.38ms with status 404
+[2026-06-22 11:38:14.068 INF] [199996a8-cb8d-4709-a24f-27c07cd61f46] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.37ms
+[2026-06-22 11:38:14.068 INF] [199996a8-cb8d-4709-a24f-27c07cd61f46] [CorrelationId: 199996a8-cb8d-4709-a24f-27c07cd61f46] POST /api/notificationsHub/negotiate completed in 0.44ms with status 200
+[2026-06-22 11:38:14.123 INF] [459a0515-dc85-4919-9403-5c8c70f21e32] [Perf] GET /api/notifications/unread-count -> 200 in 2.38ms
+[2026-06-22 11:38:14.123 INF] [459a0515-dc85-4919-9403-5c8c70f21e32] [CorrelationId: 459a0515-dc85-4919-9403-5c8c70f21e32] GET /api/notifications/unread-count completed in 2.51ms with status 200
+[2026-06-22 11:38:14.123 INF] [e8bb6409-9422-4022-acf0-264f4d29da42] [Perf] GET /api/notifications -> 200 in 3.49ms
+[2026-06-22 11:38:14.123 INF] [e8bb6409-9422-4022-acf0-264f4d29da42] [CorrelationId: e8bb6409-9422-4022-acf0-264f4d29da42] GET /api/notifications completed in 3.75ms with status 200
+[2026-06-22 11:38:43.383 INF] [9f634f6c-4590-4036-a9b1-91265fa324fa] [Perf] GET /api/v1/recruitment/ict-onboarding -> 401 in 0.08ms
+[2026-06-22 11:38:43.383 INF] [9f634f6c-4590-4036-a9b1-91265fa324fa] [CorrelationId: 9f634f6c-4590-4036-a9b1-91265fa324fa] GET /api/v1/recruitment/ict-onboarding completed in 0.15ms with status 401
+[2026-06-22 11:41:25.430 INF] [] Server macbookpro:908:6d7fa721 caught stopping signal...
+[2026-06-22 11:41:25.432 WRN] [2f7420de-923c-4875-99df-ce5a6217fb0d] [Perf] GET /api/notificationsHub -> 101 in 191440.56ms
+[2026-06-22 11:41:25.432 INF] [2f7420de-923c-4875-99df-ce5a6217fb0d] [CorrelationId: 2f7420de-923c-4875-99df-ce5a6217fb0d] GET /api/notificationsHub completed in 191440.62ms with status 101
+[2026-06-22 11:41:25.432 WRN] [2f7420de-923c-4875-99df-ce5a6217fb0d] [CorrelationId: 2f7420de-923c-4875-99df-ce5a6217fb0d] SLOW REQUEST: GET /api/notificationsHub took 191440.62ms (threshold: 1000ms)
+[2026-06-22 11:41:25.432 ERR] [2f7420de-923c-4875-99df-ce5a6217fb0d] [CorrelationId: 2f7420de-923c-4875-99df-ce5a6217fb0d] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 191440.62ms (threshold: 5000ms)
+[2026-06-22 11:41:25.934 INF] [] Server macbookpro:908:6d7fa721 caught stopped signal...
+[2026-06-22 11:41:25.955 INF] [] Server macbookpro:908:6d7fa721 All dispatchers stopped
+[2026-06-22 11:41:25.961 INF] [] Server macbookpro:908:6d7fa721 successfully reported itself as stopped in 5.9416 ms
+[2026-06-22 11:41:25.961 INF] [] Server macbookpro:908:6d7fa721 has been stopped in total 530.541 ms

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WUIAM.Models;
 
@@ -11,9 +12,11 @@ using WUIAM.Models;
 namespace WUIAM.Migrations
 {
     [DbContext(typeof(WUIAMDbContext))]
-    partial class WUIAMDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260621212010_AddSignatureToOfferLetters")]
+    partial class AddSignatureToOfferLetters
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -934,31 +937,8 @@ namespace WUIAM.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<string>("IctOnboardingStatus")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<Guid>("JobPostingId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("MicrosoftAccountProvisionedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("MicrosoftAccountProvisionedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("MicrosoftProvisioningError")
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
-
-                    b.Property<string>("MicrosoftUserId")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("MicrosoftUserPrincipalName")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Phone")
                         .HasMaxLength(50)
@@ -980,10 +960,6 @@ namespace WUIAM.Migrations
                     b.HasIndex("AssignedTo");
 
                     b.HasIndex("JobPostingId");
-
-                    b.HasIndex("MicrosoftUserPrincipalName")
-                        .IsUnique()
-                        .HasFilter("[MicrosoftUserPrincipalName] IS NOT NULL");
 
                     b.ToTable("JobApplications");
                 });
@@ -1438,8 +1414,8 @@ namespace WUIAM.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Benefits")
-                        .HasMaxLength(2147483647)
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("CompanyName")
                         .IsRequired()

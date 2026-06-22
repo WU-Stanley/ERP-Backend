@@ -22,6 +22,7 @@ namespace WUIAM.Controllers
         private readonly IRecruitmentService _recruitmentService;
         private readonly INotifyService _notifyService;
         private readonly INotificationService _notificationService;
+        private readonly IMicrosoftAccountProvisioningService _microsoftAccountProvisioningService;
         private readonly WUIAMDbContext _context;
         private readonly Microsoft.AspNetCore.Hosting.IWebHostEnvironment _env;
 
@@ -29,12 +30,14 @@ namespace WUIAM.Controllers
             IRecruitmentService recruitmentService, 
             INotifyService notifyService,
             INotificationService notificationService,
+            IMicrosoftAccountProvisioningService microsoftAccountProvisioningService,
             WUIAMDbContext context,
             Microsoft.AspNetCore.Hosting.IWebHostEnvironment env)
         {
             _recruitmentService = recruitmentService;
             _notifyService = notifyService;
             _notificationService = notificationService;
+            _microsoftAccountProvisioningService = microsoftAccountProvisioningService;
             _context = context;
             _env = env;
         }
@@ -299,12 +302,38 @@ namespace WUIAM.Controllers
         [HttpPatch("applications/{id}/status")]
         public async Task<ActionResult<ApiResponse<JobApplication>>> UpdateApplicationStatus(Guid id, [FromBody] UpdateApplicationStatusDto dto)
         {
+            var previousStatus = await _context.JobApplications
+                .AsNoTracking()
+                .Where(application => application.Id == id)
+                .Select(application => application.Status)
+                .FirstOrDefaultAsync();
             var application = await _recruitmentService.UpdateApplicationStatusAsync(id, dto);
             if (application == null)
                 return NotFound(ApiResponse<JobApplication>.Failure("Application not found."));
 
             // Notify the applicant of the status update
             await SendStatusUpdateEmailAsync(application);
+
+            if (!string.Equals(previousStatus, "Hired", StringComparison.OrdinalIgnoreCase) &&
+                string.Equals(application.Status, "Hired", StringComparison.OrdinalIgnoreCase))
+            {
+                application.IctOnboardingStatus = "Pending";
+                application.MicrosoftProvisioningError = null;
+                await _context.SaveChangesAsync();
+
+                var acceptedOffer = await _context.OfferLetters
+                    .AsNoTracking()
+                    .Where(offer => offer.ApplicationId == application.Id)
+                    .OrderByDescending(offer => offer.CreatedAt)
+                    .Select(offer => new { offer.Position, offer.StartDate })
+                    .FirstOrDefaultAsync();
+
+                await _notificationService.NotifyIctOnboardingTeamAsync(
+                    application.Id,
+                    application.ApplicantName,
+                    acceptedOffer?.Position ?? application.JobPosting?.Title ?? "New employee",
+                    acceptedOffer?.StartDate);
+            }
 
             return Ok(ApiResponse<JobApplication>.Success("Application status updated.", application));
         }
@@ -539,7 +568,9 @@ namespace WUIAM.Controllers
                     SentAt = offer.SentAt,
                     ExpiresAt = offer.ExpiresAt,
                     SignedAt = offer.SignedAt,
-                    CreatedAt = offer.CreatedAt
+                    CreatedAt = offer.CreatedAt,
+                    SignedName = offer.SignedName,
+                    SignatureData = offer.SignatureData
                 };
 
                 return Ok(ApiResponse<OfferLetterDto>.Success("Offer letter created successfully.", offerDto));
@@ -575,7 +606,9 @@ namespace WUIAM.Controllers
                 SentAt = offer.SentAt,
                 ExpiresAt = offer.ExpiresAt,
                 SignedAt = offer.SignedAt,
-                CreatedAt = offer.CreatedAt
+                CreatedAt = offer.CreatedAt,
+                SignedName = offer.SignedName,
+                SignatureData = offer.SignatureData
             };
 
             return Ok(ApiResponse<OfferLetterDto>.Success("Offer letter retrieved.", offerDto));
@@ -607,7 +640,9 @@ namespace WUIAM.Controllers
                     SentAt = offer.SentAt,
                     ExpiresAt = offer.ExpiresAt,
                     SignedAt = offer.SignedAt,
-                    CreatedAt = offer.CreatedAt
+                    CreatedAt = offer.CreatedAt,
+                    SignedName = offer.SignedName,
+                    SignatureData = offer.SignatureData
                 };
 
                 // Notify the applicant when an offer letter is sent
@@ -633,7 +668,23 @@ namespace WUIAM.Controllers
         {
             try
             {
-                var offer = await _recruitmentService.RespondToOfferAsync(id, dto.Response, dto.Comments);
+                var offer = await _recruitmentService.RespondToOfferAsync(id, dto.Response, dto.Comments, dto.SignedName, dto.SignatureData);
+
+                if (string.Equals(offer.Status, "Accepted", StringComparison.OrdinalIgnoreCase) && offer.Application != null)
+                {
+                    if (offer.Application.IctOnboardingStatus == "NotStarted")
+                    {
+                        offer.Application.IctOnboardingStatus = "Pending";
+                        offer.Application.MicrosoftProvisioningError = null;
+                        await _context.SaveChangesAsync();
+                    }
+
+                    await _notificationService.NotifyIctOnboardingTeamAsync(
+                        offer.ApplicationId,
+                        offer.Application.ApplicantName,
+                        offer.Position,
+                        offer.StartDate);
+                }
 
                 var offerDto = new OfferLetterDto
                 {
@@ -650,7 +701,9 @@ namespace WUIAM.Controllers
                     SentAt = offer.SentAt,
                     ExpiresAt = offer.ExpiresAt,
                     SignedAt = offer.SignedAt,
-                    CreatedAt = offer.CreatedAt
+                    CreatedAt = offer.CreatedAt,
+                    SignedName = offer.SignedName,
+                    SignatureData = offer.SignatureData
                 };
 
                 return Ok(ApiResponse<OfferLetterDto>.Success($"Offer {dto.Response.ToLower()} successfully.", offerDto));
@@ -661,11 +714,146 @@ namespace WUIAM.Controllers
             }
         }
 
+        /// <summary>
+        /// ICT onboarding queue for hired employees awaiting Microsoft account provisioning.
+        /// </summary>
+        [HasPermission([Permissions.AdminAccess, Permissions.SuperAdminAccess, Permissions.InitiateOnboarding, Permissions.CompleteOnboarding])]
+        [HttpGet("ict-onboarding")]
+        public async Task<ActionResult<ApiResponse<List<IctOnboardingDto>>>> GetIctOnboardingQueue()
+        {
+            var applications = await _context.JobApplications
+                .AsNoTracking()
+                .Include(application => application.JobPosting)
+                .Where(application => application.Status == "Hired")
+                .OrderBy(application => application.MicrosoftAccountProvisionedAt.HasValue)
+                .ThenByDescending(application => application.UpdatedAt ?? application.CreatedAt)
+                .ToListAsync();
+            var applicationIds = applications.Select(application => application.Id).ToList();
+            var offers = await _context.OfferLetters
+                .AsNoTracking()
+                .Where(offer => applicationIds.Contains(offer.ApplicationId))
+                .GroupBy(offer => offer.ApplicationId)
+                .Select(group => group.OrderByDescending(offer => offer.CreatedAt).First())
+                .ToDictionaryAsync(offer => offer.ApplicationId);
+
+            var result = applications.Select(application =>
+            {
+                offers.TryGetValue(application.Id, out var offer);
+                return MapIctOnboarding(application, offer);
+            }).ToList();
+            return Ok(ApiResponse<List<IctOnboardingDto>>.Success("ICT onboarding queue retrieved.", result));
+        }
+
+        /// <summary>
+        /// Explicitly provision the hired employee's Microsoft account. The temporary password is returned once.
+        /// </summary>
+        [HasPermission([Permissions.AdminAccess, Permissions.SuperAdminAccess, Permissions.CompleteOnboarding])]
+        [HttpPost("applications/{id}/ict-onboarding/microsoft-account")]
+        public async Task<ActionResult<ApiResponse<MicrosoftAccountProvisioningDto>>> ProvisionMicrosoftAccount(
+            Guid id,
+            CancellationToken cancellationToken)
+        {
+            var application = await _context.JobApplications
+                .Include(item => item.JobPosting)
+                .FirstOrDefaultAsync(item => item.Id == id, cancellationToken);
+            if (application == null)
+                return NotFound(ApiResponse<MicrosoftAccountProvisioningDto>.Failure("Application not found."));
+            if (!string.Equals(application.Status, "Hired", StringComparison.OrdinalIgnoreCase))
+                return BadRequest(ApiResponse<MicrosoftAccountProvisioningDto>.Failure("Only hired employees can be provisioned."));
+            if (application.IctOnboardingStatus == "Provisioned")
+                return Ok(ApiResponse<MicrosoftAccountProvisioningDto>.Success(
+                    "The Microsoft account has already been provisioned.",
+                    MapMicrosoftProvisioning(application, null, null)));
+
+            var acquired = await _context.JobApplications
+                .Where(item => item.Id == id && item.IctOnboardingStatus != "Provisioning" && item.IctOnboardingStatus != "Provisioned")
+                .ExecuteUpdateAsync(setters => setters
+                    .SetProperty(item => item.IctOnboardingStatus, "Provisioning")
+                    .SetProperty(item => item.MicrosoftProvisioningError, (string?)null), cancellationToken);
+            if (acquired == 0)
+                return Conflict(ApiResponse<MicrosoftAccountProvisioningDto>.Failure("Microsoft account provisioning is already in progress."));
+
+            try
+            {
+                var offer = await _context.OfferLetters
+                    .AsNoTracking()
+                    .Where(item => item.ApplicationId == id)
+                    .OrderByDescending(item => item.CreatedAt)
+                    .FirstOrDefaultAsync(cancellationToken);
+                var account = await _microsoftAccountProvisioningService.CreateAccountAsync(
+                    application.ApplicantName,
+                    offer?.Position ?? application.JobPosting?.Title,
+                    cancellationToken);
+                var provisionedByClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+                application.IctOnboardingStatus = "Provisioned";
+                application.MicrosoftUserId = account.UserId;
+                application.MicrosoftUserPrincipalName = account.UserPrincipalName;
+                application.MicrosoftAccountProvisionedAt = DateTime.UtcNow;
+                application.MicrosoftAccountProvisionedBy = Guid.TryParse(provisionedByClaim, out var provisionedBy) ? provisionedBy : null;
+                application.MicrosoftProvisioningError = null;
+                await _context.SaveChangesAsync(cancellationToken);
+
+                return Ok(ApiResponse<MicrosoftAccountProvisioningDto>.Success(
+                    "Microsoft account created. Copy the temporary password now; it will not be shown again.",
+                    MapMicrosoftProvisioning(application, offer, account.TemporaryPassword)));
+            }
+            catch (InvalidOperationException exception)
+            {
+                application.IctOnboardingStatus = "Failed";
+                application.MicrosoftProvisioningError = exception.Message;
+                await _context.SaveChangesAsync(CancellationToken.None);
+                return BadRequest(ApiResponse<MicrosoftAccountProvisioningDto>.Failure(exception.Message));
+            }
+            catch (Exception)
+            {
+                application.IctOnboardingStatus = "Failed";
+                application.MicrosoftProvisioningError = "Microsoft account provisioning encountered an unexpected error. Verify the account in Microsoft 365 before retrying.";
+                await _context.SaveChangesAsync(CancellationToken.None);
+                return StatusCode(
+                    StatusCodes.Status502BadGateway,
+                    ApiResponse<MicrosoftAccountProvisioningDto>.Failure(application.MicrosoftProvisioningError));
+            }
+        }
+
+        private static IctOnboardingDto MapIctOnboarding(JobApplication application, OfferLetter? offer) => new()
+        {
+            ApplicationId = application.Id,
+            EmployeeName = application.ApplicantName,
+            PersonalEmail = application.Email,
+            Position = offer?.Position ?? application.JobPosting?.Title ?? "New employee",
+            StartDate = offer?.StartDate,
+            Status = application.IctOnboardingStatus,
+            MicrosoftEmail = application.MicrosoftUserPrincipalName,
+            MicrosoftUserId = application.MicrosoftUserId,
+            ProvisionedAt = application.MicrosoftAccountProvisionedAt,
+            Error = application.MicrosoftProvisioningError
+        };
+
+        private static MicrosoftAccountProvisioningDto MapMicrosoftProvisioning(
+            JobApplication application,
+            OfferLetter? offer,
+            string? temporaryPassword) => new()
+        {
+            ApplicationId = application.Id,
+            EmployeeName = application.ApplicantName,
+            PersonalEmail = application.Email,
+            Position = offer?.Position ?? application.JobPosting?.Title ?? "New employee",
+            StartDate = offer?.StartDate,
+            Status = application.IctOnboardingStatus,
+            MicrosoftEmail = application.MicrosoftUserPrincipalName,
+            MicrosoftUserId = application.MicrosoftUserId,
+            ProvisionedAt = application.MicrosoftAccountProvisionedAt,
+            Error = application.MicrosoftProvisioningError,
+            TemporaryPassword = temporaryPassword
+        };
+
         // ==================== Queries ====================
 
         /// <summary>
         /// Create a query (from applicant or HR).
         /// </summary>
+        [AllowAnonymous]
         [HttpPost("applications/{id}/query")]
         public async Task<ActionResult<ApiResponse<QueryDto>>> CreateQuery(Guid id, [FromBody] CreateQueryDto dto)
         {

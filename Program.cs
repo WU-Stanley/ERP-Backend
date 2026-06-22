@@ -181,6 +181,7 @@ builder.Services.AddScoped<ILeaveApprovalService, LeaveApprovalService>();
         builder.Services.AddScoped<IRecruitmentService, RecruitmentService>();
         builder.Services.AddScoped<IAiResumeScanningService, AiResumeScanningService>();
         builder.Services.AddScoped<ITeamsMeetingService, TeamsMeetingService>();
+        builder.Services.AddHttpClient<IMicrosoftAccountProvisioningService, MicrosoftAccountProvisioningService>();
         builder.Services.AddHttpClient<IAiResumeScanningService, AiResumeScanningService>();
         builder.Services.AddHttpClient<ITeamsMeetingService, TeamsMeetingService>();
 

@@ -198,7 +198,7 @@ namespace WUIAM.DTOs
         [Required]
         public DateTime StartDate { get; set; }
 
-        [MaxLength(2000)]
+        [MaxLength(int.MaxValue)]
         public string Benefits { get; set; } = string.Empty;
 
         [MaxLength(5000)]
@@ -223,6 +223,8 @@ namespace WUIAM.DTOs
         public DateTime? ExpiresAt { get; set; }
         public DateTime? SignedAt { get; set; }
         public DateTime CreatedAt { get; set; }
+        public string? SignedName { get; set; }
+        public string? SignatureData { get; set; }
     }
 
     public class OfferResponseDto
@@ -233,6 +235,12 @@ namespace WUIAM.DTOs
 
         [MaxLength(1000)]
         public string? Comments { get; set; }
+
+        [MaxLength(200)]
+        public string? SignedName { get; set; }
+
+        [MaxLength(int.MaxValue)]
+        public string? SignatureData { get; set; }
     }
 
     // ==================== Query DTOs ====================

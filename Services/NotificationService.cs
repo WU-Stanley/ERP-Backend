@@ -151,6 +151,76 @@ namespace WUIAM.Services
             return notifications;
         }
 
+        public async Task<List<NotificationDto>> NotifyIctOnboardingTeamAsync(
+            Guid applicationId,
+            string employeeName,
+            string position,
+            DateTime? startDate = null)
+        {
+            const string entityType = "EmployeeOnboarding";
+            var roleNames = new[]
+            {
+                "System Administrator",
+                "Systems Administrator",
+                "System Admin",
+                "Systems Admin",
+                "ITAdmin",
+                "IT Admin",
+                "ICT Admin",
+                "Web Asset Manager"
+            };
+
+            var recipientIds = await _context.Users
+                .AsNoTracking()
+                .Where(user => user.IsActive && !user.IsDeleted &&
+                    (user.UserRoles.Any(userRole =>
+                        userRole.Role != null && roleNames.Contains(userRole.Role.Name)) ||
+                     user.Employee != null && user.Employee.Employments.Any(employment =>
+                        employment.IsActive &&
+                        employment.Department != null &&
+                        (employment.Department.Code.ToLower() == "ict" ||
+                         employment.Department.Name.ToLower().Contains("ict") ||
+                         employment.Department.Name.ToLower().Contains("information and communication technology")) &&
+                        (employment.JobTitle.ToLower().Contains("system administrator") ||
+                         employment.JobTitle.ToLower().Contains("systems administrator") ||
+                         employment.JobTitle.ToLower().Contains("system admin") ||
+                         employment.JobTitle.ToLower().Contains("systems admin") ||
+                         employment.JobTitle.ToLower().Contains("web asset manager")))))
+                .Select(user => user.Id)
+                .Distinct()
+                .ToListAsync();
+
+            var alreadyNotified = await _context.Notifications
+                .AsNoTracking()
+                .Where(notification =>
+                    notification.EntityType == entityType &&
+                    notification.EntityId == applicationId &&
+                    recipientIds.Contains(notification.UserId))
+                .Select(notification => notification.UserId)
+                .Distinct()
+                .ToListAsync();
+
+            var startDateText = startDate.HasValue
+                ? $" Their start date is {startDate.Value:dd MMM yyyy}."
+                : string.Empty;
+            var title = "New employee ready for ICT onboarding";
+            var message = $"{employeeName} has been hired as {position}. Please prepare their system access, account and web assets.{startDateText}";
+            var notifications = new List<NotificationDto>();
+
+            foreach (var userId in recipientIds.Except(alreadyNotified))
+            {
+                notifications.Add(await NotifyUserAsync(
+                    userId,
+                    title,
+                    message,
+                    "action_required",
+                    entityType,
+                    applicationId));
+            }
+
+            return notifications;
+        }
+
         private async Task<List<Guid>> GetAdminUserIdsAsync()
         {
             var adminPermission = Permissions.AdminAccess.ToString();

@@ -313,6 +313,11 @@ namespace WUIAM.Models
                 entity.Property(a => a.ApplicantName).IsRequired().HasMaxLength(200);
                 entity.Property(a => a.Email).IsRequired().HasMaxLength(200);
                 entity.Property(a => a.Status).HasMaxLength(50);
+                entity.Property(a => a.IctOnboardingStatus).HasMaxLength(50);
+                entity.Property(a => a.MicrosoftUserPrincipalName).HasMaxLength(200);
+                entity.Property(a => a.MicrosoftUserId).HasMaxLength(100);
+                entity.Property(a => a.MicrosoftProvisioningError).HasMaxLength(2000);
+                entity.HasIndex(a => a.MicrosoftUserPrincipalName).IsUnique().HasFilter("[MicrosoftUserPrincipalName] IS NOT NULL");
             });
 
             modelBuilder.Entity<ApplicationScore>(entity =>

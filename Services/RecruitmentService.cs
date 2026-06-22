@@ -252,7 +252,9 @@ namespace WUIAM.Services
                     SentAt = offer.SentAt,
                     ExpiresAt = offer.ExpiresAt,
                     SignedAt = offer.SignedAt,
-                    CreatedAt = offer.CreatedAt
+                    CreatedAt = offer.CreatedAt,
+                    SignedName = offer.SignedName,
+                    SignatureData = offer.SignatureData
                 },
                 Queries = queries.Select(q => new QueryDto
                 {
@@ -530,7 +532,7 @@ namespace WUIAM.Services
             return offer;
         }
 
-        public async Task<OfferLetter> RespondToOfferAsync(Guid id, string response, string? comments = null)
+        public async Task<OfferLetter> RespondToOfferAsync(Guid id, string response, string? comments = null, string? signedName = null, string? signatureData = null)
         {
             var offer = await _context.OfferLetters
                 .Include(o => o.Application)
@@ -545,9 +547,27 @@ namespace WUIAM.Services
                 "Decline" => "Declined",
                 _ => throw new InvalidOperationException("Offer response must be Accept or Decline.")
             };
-            if (response == "Accept") offer.SignedAt = DateTime.UtcNow;
+            if (response == "Accept")
+            {
+                offer.SignedAt = DateTime.UtcNow;
+                offer.SignedName = signedName;
+                offer.SignatureData = signatureData;
+            }
             if (offer.Application != null)
                 offer.Application.Status = response == "Accept" ? "Hired" : "Rejected";
+
+            if (response == "Decline" && !string.IsNullOrWhiteSpace(comments))
+            {
+                var declineQuery = new ApplicantQuery
+                {
+                    ApplicationId = offer.ApplicationId,
+                    Message = comments.Trim(),
+                    MessageFrom = "Applicant",
+                    CreatedAt = DateTime.UtcNow
+                };
+                _context.ApplicantQueries.Add(declineQuery);
+            }
+
             await _context.SaveChangesAsync();
             return offer;
         }

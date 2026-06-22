@@ -36,6 +36,7 @@ namespace WUIAM.Models
         public int ApplicationsCount { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
+
     }
 
     // ==================== Applications ====================
@@ -69,6 +70,21 @@ namespace WUIAM.Models
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
+
+        [MaxLength(50)]
+        public string IctOnboardingStatus { get; set; } = "NotStarted";
+
+        [MaxLength(200)]
+        public string? MicrosoftUserPrincipalName { get; set; }
+
+        [MaxLength(100)]
+        public string? MicrosoftUserId { get; set; }
+
+        public DateTime? MicrosoftAccountProvisionedAt { get; set; }
+        public Guid? MicrosoftAccountProvisionedBy { get; set; }
+
+        [MaxLength(2000)]
+        public string? MicrosoftProvisioningError { get; set; }
     }
 
     // ==================== AI Resume Scores ====================
@@ -142,7 +158,7 @@ namespace WUIAM.Models
 
         public decimal Salary { get; set; }
 
-        [MaxLength(500)]
+        [MaxLength(int.MaxValue)]
         public string? Benefits { get; set; }
 
         [Required]
@@ -158,6 +174,12 @@ namespace WUIAM.Models
 
         public Guid? SignedBy { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        [MaxLength(200)]
+        public string? SignedName { get; set; }
+
+        [MaxLength(int.MaxValue)]
+        public string? SignatureData { get; set; }
     }
 
     // ==================== Queries ====================

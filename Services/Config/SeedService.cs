@@ -91,7 +91,40 @@ namespace WUIAM.Services.Config.SeedService
             }
             _context.SaveChanges();
 
+            EnsureIctOnboardingAccess();
             EnsureSuperAdminAccess();
+        }
+
+        private void EnsureIctOnboardingAccess()
+        {
+            var ictRoleNames = new[]
+            {
+                "ITAdmin", "IT Admin", "ICT Admin", "System Administrator",
+                "Systems Administrator", "System Admin", "Systems Admin", "Web Asset Manager"
+            };
+            var roles = _context.Roles.Where(role => ictRoleNames.Contains(role.Name)).ToList();
+            var permissionNames = new[]
+            {
+                Permissions.InitiateOnboarding.ToString(),
+                Permissions.CompleteOnboarding.ToString()
+            };
+            var permissions = _context.Permissions.Where(permission => permissionNames.Contains(permission.Name)).ToList();
+
+            foreach (var role in roles)
+            foreach (var permission in permissions)
+            {
+                if (!_context.RolePermissions.Any(item => item.RoleId == role.Id && item.PermissionId == permission.Id))
+                {
+                    _context.RolePermissions.Add(new RolePermission
+                    {
+                        RoleId = role.Id,
+                        PermissionId = permission.Id,
+                        GrantedAt = DateTime.UtcNow
+                    });
+                }
+            }
+
+            _context.SaveChanges();
         }
 
         private void EnsureSuperAdminAccess()

@@ -11,5 +11,6 @@ namespace WUIAM.Interfaces
         Task<NotificationDto> NotifyUserAsync(Guid userId, string title, string message, string type = "info", string? entityType = null, Guid? entityId = null);
         Task<List<NotificationDto>> NotifyAdminsAsync(string title, string message, string type = "info", string? entityType = null, Guid? entityId = null);
         Task<List<NotificationDto>> NotifyRecruitmentTeamAsync(string title, string message, string type = "info", string? entityType = null, Guid? entityId = null);
+        Task<List<NotificationDto>> NotifyIctOnboardingTeamAsync(Guid applicationId, string employeeName, string position, DateTime? startDate = null);
     }
 }

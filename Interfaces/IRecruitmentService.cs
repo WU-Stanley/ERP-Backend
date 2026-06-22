@@ -32,7 +32,7 @@ namespace WUIAM.Interfaces
         Task<OfferLetter> CreateOfferLetterAsync(Guid applicationId, CreateOfferLetterDto dto);
         Task<OfferLetter?> GetOfferLetterByApplicationIdAsync(Guid applicationId);
         Task<OfferLetter> UpdateOfferLetterStatusAsync(Guid id, string status);
-        Task<OfferLetter> RespondToOfferAsync(Guid id, string response, string? comments = null);
+        Task<OfferLetter> RespondToOfferAsync(Guid id, string response, string? comments = null, string? signedName = null, string? signatureData = null);
 
         // Queries
         Task<ApplicantQuery> CreateQueryAsync(Guid applicationId, string message, string fromType, Guid? fromUserId = null);
