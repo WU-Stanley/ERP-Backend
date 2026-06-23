@@ -29,6 +29,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf 
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
+USER root
 WORKDIR /app
 COPY --from=publish /app/publish .
 COPY --from=curl-install /usr/bin/curl /usr/bin/curl
