@@ -90,6 +90,12 @@ namespace WUIAM.Repositories
 
         public async Task<bool> AssignUserToRoleAsync(Guid userId, Guid roleId)
         {
+            var exists = await _context.UserRoles.AnyAsync(ur => ur.UserId == userId && ur.RoleId == roleId);
+            if (exists)
+            {
+                return true;
+            }
+
             var userRole = new UserRole { UserId = userId, RoleId = roleId };
             _context.UserRoles.Add(userRole);
             return await _context.SaveChangesAsync() > 0;

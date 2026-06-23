@@ -128,6 +128,13 @@ namespace WUIAM.Repositories
                 return false; // Permission does not exist
             }
 
+            var exists = await dbContext.UserPermissions
+                .AnyAsync(up => up.UserId == userId && up.PermissionId == existingPermission.Id);
+            if (exists)
+            {
+                return true;
+            }
+
             var userPermission = new UserPermission
             {
                 UserId = userId,
@@ -150,6 +157,14 @@ namespace WUIAM.Repositories
             if (existingPermission == null)
             {
                 return null; // Permission does not exist
+            }
+
+            var exists = await dbContext.RolePermissions
+                .AnyAsync(rp => rp.RoleId == roleId && rp.PermissionId == existingPermission.Id);
+            if (exists)
+            {
+                return await dbContext.RolePermissions
+                    .FirstOrDefaultAsync(rp => rp.RoleId == roleId && rp.PermissionId == existingPermission.Id);
             }
 
             var rolePermission = new RolePermission
