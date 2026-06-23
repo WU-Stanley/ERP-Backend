@@ -15,7 +15,7 @@ namespace WUIAM.Interfaces
         // Applications
         Task<JobApplication> CreateApplicationAsync(Guid jobId, CreateApplicationDto dto, Microsoft.AspNetCore.Http.IFormFile? resume);
         Task<JobApplication?> GetApplicationByIdAsync(Guid id);
-        Task<ApplicantTrackingDto?> GetApplicantTrackingAsync(Guid applicationId, string email);
+        Task<ApplicantTrackingDto?> GetApplicantTrackingAsync(string applicationReference, string email);
         Task<ApplicationListDto> GetApplicationsAsync(int pageNumber, int pageSize, string? statusFilter, string? search);
         Task<JobApplication> UpdateApplicationStatusAsync(Guid id, UpdateApplicationStatusDto dto);
 

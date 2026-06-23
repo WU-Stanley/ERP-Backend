@@ -63,25 +63,23 @@ namespace WUIAM.Repositories
                     .FirstOrDefault());
 
         // Compiled query for active refresh tokens
-        private static readonly Func<WUIAMDbContext, Guid, Task<List<RefreshToken>>> _getActiveTokens =
+        private static readonly Func<WUIAMDbContext, Guid, IAsyncEnumerable<RefreshToken>> _getActiveTokens =
             EF.CompileAsyncQuery((WUIAMDbContext db, Guid userId) =>
                 db.RefreshTokens
-                    .Where(rt => rt.UserId == userId && rt.RevokedOn == null && rt.IsExpired == false)
-                    .ToList());
+                    .Where(rt => rt.UserId == userId && rt.RevokedOn == null && rt.IsExpired == false));
 
         // Compiled query for users by role
-        private static readonly Func<WUIAMDbContext, string, Task<List<UserDto>>> _getUsersByRole =
-            EF.CompileAsyncQuery((WUIAMDbContext db, string roleId) =>
+        private static readonly Func<WUIAMDbContext, Guid, IAsyncEnumerable<UserDto>> _getUsersByRole =
+            EF.CompileAsyncQuery((WUIAMDbContext db, Guid roleId) =>
                 db.Users
-                    .Where(u => !u.IsDeleted && u.UserRoles.Any(ur => ur.RoleId.ToString() == roleId))
+                    .Where(u => !u.IsDeleted && u.UserRoles.Any(ur => ur.RoleId == roleId))
                     .Select(u => new UserDto
                     {
                         Id = u.Id,
                         FullName = u.FullName,
                         Email = u.UserEmail,
                         UserTypeId = u.UserTypeId,
-                    })
-                    .ToList());
+                    }));
 
         public AuthRepository(WUIAMDbContext context)
         {
@@ -213,12 +211,17 @@ namespace WUIAM.Repositories
                 .ToListAsync();
         }
 
-        public Task<List<UserDto>> GetUsersByRoleAsync(string approverValue)
+        public async Task<List<UserDto>> GetUsersByRoleAsync(string approverValue)
         {
-            if (string.IsNullOrWhiteSpace(approverValue))
-                return Task.FromResult(new List<UserDto>());
+            if (string.IsNullOrWhiteSpace(approverValue) || !Guid.TryParse(approverValue, out var roleId))
+                return new List<UserDto>();
 
-            return _getUsersByRole(_dbContext, approverValue);
+            var list = new List<UserDto>();
+            await foreach (var user in _getUsersByRole(_dbContext, roleId))
+            {
+                list.Add(user);
+            }
+            return list;
         }
 
         public async Task<IEnumerable<EmploymentType>> GetEmploymentTypes()
@@ -241,7 +244,12 @@ namespace WUIAM.Repositories
 
         public async Task<IEnumerable<RefreshToken>> GetActiveRefreshTokensByUserIdAsync(Guid userId)
         {
-            return await _getActiveTokens(_dbContext, userId);
+            var list = new List<RefreshToken>();
+            await foreach (var token in _getActiveTokens(_dbContext, userId))
+            {
+                list.Add(token);
+            }
+            return list;
         }
 
         public async Task UpdateRefreshTokensAsync(IEnumerable<RefreshToken> tokens)

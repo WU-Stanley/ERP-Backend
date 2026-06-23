@@ -68,6 +68,41 @@ namespace WUIAM.Controllers
             return Ok(ApiResponse<EmployeeDetails>.Success("Employee profile retrieved successfully", employee));
         }
 
+        [HttpPost("me/upload-document")]
+        [AllowAuthenticatedUsers]
+        public async Task<ActionResult<ApiResponse<string>>> UploadDocument(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest(ApiResponse<string>.Failure("No file was uploaded."));
+            }
+
+            try
+            {
+                var uploadsDir = Path.Combine(Directory.GetCurrentDirectory(), "uploads", "employees");
+                if (!Directory.Exists(uploadsDir))
+                {
+                    Directory.CreateDirectory(uploadsDir);
+                }
+
+                var extension = Path.GetExtension(file.FileName);
+                var fileName = $"{Guid.NewGuid()}{extension}";
+                var filePath = Path.Combine(uploadsDir, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+
+                var relativePath = $"uploads/employees/{fileName}";
+                return Ok(ApiResponse<string>.Success("File uploaded successfully", relativePath));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ApiResponse<string>.Failure("File upload failed", ex.Message));
+            }
+        }
+
         [HttpPatch("me/self-service")]
         [AllowAuthenticatedUsers]
         public async Task<ActionResult<ApiResponse<EmployeeDetails>>> UpdateOwnEmployee([FromBody] EmployeeSelfServiceUpdateDto update)
@@ -212,17 +247,38 @@ namespace WUIAM.Controllers
 
         [HttpPut("{id:guid}")]
         [HasPermission(Permissions.AdminAccess, Permissions.UpdateEmployeeProfiles, Permissions.ManageUsers, Permissions.SuperAdminAccess)]
-        public async Task<ActionResult<ApiResponse<EmployeeDetails>>> UpdateEmployee(Guid id, EmployeeDetails employee)
+        public async Task<ActionResult<ApiResponse<EmployeeDetails>>> UpdateEmployee(Guid id, [FromBody] EmployeeUpdateDto update)
         {
-            if (id != employee.EmployeeId)
+            if (id != update.EmployeeId)
             {
                 return BadRequest(ApiResponse<EmployeeDetails>.Failure("Employee ID mismatch"));
             }
 
             try
             {
-                await _employeeService.UpdateEmployeeAsync(employee);
-                return Ok(ApiResponse<EmployeeDetails>.Success("Employee updated successfully", employee));
+                var employee = new EmployeeDetails
+                {
+                    EmployeeId = update.EmployeeId,
+                    FirstName = update.FirstName,
+                    LastName = update.LastName,
+                    MiddleName = update.MiddleName,
+                    DateOfBirth = update.DateOfBirth,
+                    Gender = update.Gender,
+                    MaritalStatus = update.MaritalStatus,
+                    Nationality = update.Nationality,
+                    Address = update.Address,
+                    PhoneNumber = update.PhoneNumber,
+                    Email = update.Email,
+                    EmergencyContactName = update.EmergencyContactName,
+                    EmergencyContactPhone = update.EmergencyContactPhone,
+                    Relationship = update.Relationship,
+                    BankName = update.BankName,
+                    BankAccountNumber = update.BankAccountNumber,
+                    ProfilePicture = update.ProfilePicture
+                };
+
+                var updated = await _employeeService.UpdateEmployeeAsync(employee);
+                return Ok(ApiResponse<EmployeeDetails>.Success("Employee updated successfully", updated));
             }
             catch (Exception ex)
             {

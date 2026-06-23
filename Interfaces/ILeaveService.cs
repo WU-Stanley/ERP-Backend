@@ -15,6 +15,7 @@ namespace WUIAM.Interfaces
         Task<ApiResponse<ApprovalDelegation>> DelegateApprovalAsync(ApprovalDelegationDto approvalDelegationDto);
         Task<ApiResponse<ApprovalDelegation>> RevokeApprovalDelegationAsync(Guid approvalDelegationId);
         Task<ApiResponse<LeaveRequest>> UpdateLeaveRequestAsync(Guid id, LeaveRequestCreateDto leaveRequestCreateDto);
+        Task<ApiResponse<LeaveRequest>> DeleteLeaveRequestAsync(Guid id);
         Task<ApiResponse<IEnumerable<LeaveRequestApproval>>> GetLeaveRequestApprovals(Guid leaveRequestId);
     }
 }

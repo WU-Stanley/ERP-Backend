@@ -1,0 +1,62 @@
+[2026-06-23 01:30:10.894 INF] [] 1 servers were removed due to timeout
+[2026-06-23 01:30:11.426 WRN] [] Server macbookpro:54713:0779fba4 was considered dead by other servers, restarting...
+[2026-06-23 01:30:11.426 INF] [] Server macbookpro:54713:0779fba4 caught restart signal...
+[2026-06-23 01:30:11.426 WRN] [] Server macbookpro:54713:0779fba4 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-23 01:30:11.430 INF] [] Server macbookpro:54713:0779fba4 successfully reported itself as stopped in 2.1163 ms
+[2026-06-23 01:30:11.430 INF] [] Server macbookpro:54713:0779fba4 has been stopped in total 2.9814 ms
+[2026-06-23 01:30:11.434 INF] [] Server macbookpro:54713:a39af90b successfully announced in 3.698 ms
+[2026-06-23 01:30:11.434 INF] [] Server macbookpro:54713:a39af90b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-23 01:30:11.436 INF] [] Server macbookpro:54713:a39af90b all the dispatchers started
+[2026-06-23 03:15:16.164 INF] [] 1 servers were removed due to timeout
+[2026-06-23 03:15:16.276 WRN] [] Server macbookpro:54713:a39af90b was considered dead by other servers, restarting...
+[2026-06-23 03:15:16.277 INF] [] Server macbookpro:54713:a39af90b caught restart signal...
+[2026-06-23 03:15:16.278 WRN] [] Server macbookpro:54713:a39af90b stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-23 03:15:16.281 INF] [] Server macbookpro:54713:a39af90b successfully reported itself as stopped in 2.9312 ms
+[2026-06-23 03:15:16.281 INF] [] Server macbookpro:54713:a39af90b has been stopped in total 3.702 ms
+[2026-06-23 03:15:16.290 INF] [] Server macbookpro:54713:eacb07c3 successfully announced in 8.6654 ms
+[2026-06-23 03:15:16.290 INF] [] Server macbookpro:54713:eacb07c3 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-23 03:15:16.295 INF] [] Server macbookpro:54713:eacb07c3 all the dispatchers started
+[2026-06-23 05:01:40.002 INF] [] 1 servers were removed due to timeout
+[2026-06-23 05:01:40.120 WRN] [] Server macbookpro:54713:eacb07c3 was considered dead by other servers, restarting...
+[2026-06-23 05:01:40.120 INF] [] Server macbookpro:54713:eacb07c3 caught restart signal...
+[2026-06-23 05:01:40.121 WRN] [] Server macbookpro:54713:eacb07c3 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-23 05:01:40.123 INF] [] Server macbookpro:54713:eacb07c3 successfully reported itself as stopped in 1.9349 ms
+[2026-06-23 05:01:40.124 INF] [] Server macbookpro:54713:eacb07c3 has been stopped in total 2.275 ms
+[2026-06-23 05:01:40.131 INF] [] Server macbookpro:54713:8ee09050 successfully announced in 7.6364 ms
+[2026-06-23 05:01:40.132 INF] [] Server macbookpro:54713:8ee09050 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-23 05:01:40.139 INF] [] Server macbookpro:54713:8ee09050 all the dispatchers started
+[2026-06-23 06:57:26.338 INF] [] 1 servers were removed due to timeout
+[2026-06-23 06:57:26.444 WRN] [] Server macbookpro:54713:8ee09050 was considered dead by other servers, restarting...
+[2026-06-23 06:57:26.444 INF] [] Server macbookpro:54713:8ee09050 caught restart signal...
+[2026-06-23 06:57:26.445 WRN] [] Server macbookpro:54713:8ee09050 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-23 06:57:26.479 INF] [] Server macbookpro:54713:8ee09050 successfully reported itself as stopped in 2.4028 ms
+[2026-06-23 06:57:26.479 INF] [] Server macbookpro:54713:8ee09050 has been stopped in total 34.2408 ms
+[2026-06-23 06:57:26.483 INF] [] Server macbookpro:54713:a99dfd52 successfully announced in 4.3687 ms
+[2026-06-23 06:57:26.483 INF] [] Server macbookpro:54713:a99dfd52 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-23 06:57:26.485 INF] [] Server macbookpro:54713:a99dfd52 all the dispatchers started
+[2026-06-23 08:25:09.435 INF] [] 1 servers were removed due to timeout
+[2026-06-23 08:25:09.540 WRN] [] Server macbookpro:54713:a99dfd52 was considered dead by other servers, restarting...
+[2026-06-23 08:25:09.541 INF] [] Server macbookpro:54713:a99dfd52 caught restart signal...
+[2026-06-23 08:25:09.542 WRN] [] Server macbookpro:54713:a99dfd52 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-06-23 08:25:09.548 INF] [] Server macbookpro:54713:a99dfd52 successfully reported itself as stopped in 3.3454 ms
+[2026-06-23 08:25:09.548 INF] [] Server macbookpro:54713:a99dfd52 has been stopped in total 6.6379 ms
+[2026-06-23 08:25:09.555 INF] [] Server macbook-pro:54713:ed4a2ba2 successfully announced in 6.0426 ms
+[2026-06-23 08:25:09.555 INF] [] Server macbook-pro:54713:ed4a2ba2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-23 08:25:09.560 INF] [] Server macbook-pro:54713:ed4a2ba2 all the dispatchers started
+[2026-06-23 09:42:17.822 INF] [] Server macbook-pro:54713:ed4a2ba2 caught stopping signal...
+[2026-06-23 09:42:17.826 WRN] [fe7f5784-51bc-4543-bd45-4d6afdcd9a76] [Perf] GET /api/notificationsHub -> 101 in 2124153.38ms
+[2026-06-23 09:42:17.826 INF] [fe7f5784-51bc-4543-bd45-4d6afdcd9a76] [CorrelationId: fe7f5784-51bc-4543-bd45-4d6afdcd9a76] GET /api/notificationsHub completed in 2124153.52ms with status 101
+[2026-06-23 09:42:17.826 WRN] [fe7f5784-51bc-4543-bd45-4d6afdcd9a76] [CorrelationId: fe7f5784-51bc-4543-bd45-4d6afdcd9a76] SLOW REQUEST: GET /api/notificationsHub took 2124153.52ms (threshold: 1000ms)
+[2026-06-23 09:42:17.826 ERR] [fe7f5784-51bc-4543-bd45-4d6afdcd9a76] [CorrelationId: fe7f5784-51bc-4543-bd45-4d6afdcd9a76] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 2124153.52ms (threshold: 5000ms)
+[2026-06-23 09:42:17.827 WRN] [c625cfc4-d6e4-4cf6-9418-72103cfcdbb9] [Perf] GET /api/notificationsHub -> 101 in 2124167.30ms
+[2026-06-23 09:42:17.827 WRN] [c6bfa970-fcc8-40df-9d36-ce69484d3f35] [Perf] GET /api/notificationsHub -> 101 in 2124184.81ms
+[2026-06-23 09:42:17.827 INF] [c625cfc4-d6e4-4cf6-9418-72103cfcdbb9] [CorrelationId: c625cfc4-d6e4-4cf6-9418-72103cfcdbb9] GET /api/notificationsHub completed in 2124167.43ms with status 101
+[2026-06-23 09:42:17.827 WRN] [c625cfc4-d6e4-4cf6-9418-72103cfcdbb9] [CorrelationId: c625cfc4-d6e4-4cf6-9418-72103cfcdbb9] SLOW REQUEST: GET /api/notificationsHub took 2124167.43ms (threshold: 1000ms)
+[2026-06-23 09:42:17.827 INF] [c6bfa970-fcc8-40df-9d36-ce69484d3f35] [CorrelationId: c6bfa970-fcc8-40df-9d36-ce69484d3f35] GET /api/notificationsHub completed in 2124184.90ms with status 101
+[2026-06-23 09:42:17.827 ERR] [c625cfc4-d6e4-4cf6-9418-72103cfcdbb9] [CorrelationId: c625cfc4-d6e4-4cf6-9418-72103cfcdbb9] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 2124167.43ms (threshold: 5000ms)
+[2026-06-23 09:42:17.827 WRN] [c6bfa970-fcc8-40df-9d36-ce69484d3f35] [CorrelationId: c6bfa970-fcc8-40df-9d36-ce69484d3f35] SLOW REQUEST: GET /api/notificationsHub took 2124184.90ms (threshold: 1000ms)
+[2026-06-23 09:42:17.828 ERR] [c6bfa970-fcc8-40df-9d36-ce69484d3f35] [CorrelationId: c6bfa970-fcc8-40df-9d36-ce69484d3f35] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 2124184.90ms (threshold: 5000ms)
+[2026-06-23 09:42:18.334 INF] [] Server macbook-pro:54713:ed4a2ba2 caught stopped signal...
+[2026-06-23 09:42:18.800 INF] [] Server macbook-pro:54713:ed4a2ba2 All dispatchers stopped
+[2026-06-23 09:42:18.812 INF] [] Server macbook-pro:54713:ed4a2ba2 successfully reported itself as stopped in 11.3246 ms
+[2026-06-23 09:42:18.812 INF] [] Server macbook-pro:54713:ed4a2ba2 has been stopped in total 987.2317 ms

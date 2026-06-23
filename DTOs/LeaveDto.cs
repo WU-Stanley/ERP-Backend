@@ -1,4 +1,4 @@
-﻿using WUIAM.Models;
+using WUIAM.Models;
 
 namespace WUIAM.DTOs
 {
@@ -78,7 +78,8 @@ public class LeavePolicyDto
 { 
     
     public Guid LeaveTypeId { get; set; }
-        public Guid EmploymentTypeId { get; set; } // e.g., "FullTime", "Contract" — optional
+    public Guid? DependentLeaveTypeId { get; set; }
+    public Guid EmploymentTypeId { get; set; } // e.g., "FullTime", "Contract" — optional
     public string? RoleName { get; set; }       // Optional: if some roles have custom entitlement
 
     public int AnnualEntitlement { get; set; } = 20;

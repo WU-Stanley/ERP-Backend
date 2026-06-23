@@ -54,6 +54,13 @@ namespace WUIAM.Controllers
                 return Ok(request); 
         }
 
+        [HttpDelete("delete-leave-request/{id:guid}")]
+        public async Task<ActionResult<ApiResponse<LeaveRequest>>> DeleteLeaveRequest(Guid id)
+        {
+            var result = await _leaveService.DeleteLeaveRequestAsync(id);
+            return result.Status ? Ok(result) : BadRequest(result);
+        }
+
       
         /// <summary>
         /// Get all leave requests with pagination.

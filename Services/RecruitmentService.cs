@@ -172,18 +172,34 @@ namespace WUIAM.Services
                 .FirstOrDefaultAsync(a => a.Id == id);
         }
 
-        public async Task<ApplicantTrackingDto?> GetApplicantTrackingAsync(Guid applicationId, string email)
+        public async Task<ApplicantTrackingDto?> GetApplicantTrackingAsync(string applicationReference, string email)
         {
-            if (string.IsNullOrWhiteSpace(email))
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(applicationReference))
             {
                 return null;
             }
 
             var normalizedEmail = email.Trim().ToLower();
-            var application = await _context.JobApplications
-                .Include(a => a.JobPosting)
-                .Include(a => a.AssignedToUser)
-                .FirstOrDefaultAsync(a => a.Id == applicationId && a.Email.ToLower() == normalizedEmail);
+            JobApplication? application = null;
+
+            if (Guid.TryParse(applicationReference, out var appGuid))
+            {
+                application = await _context.JobApplications
+                    .Include(a => a.JobPosting)
+                    .Include(a => a.AssignedToUser)
+                    .FirstOrDefaultAsync(a => a.Id == appGuid && a.Email.ToLower() == normalizedEmail);
+            }
+            else if (applicationReference.Length >= 8)
+            {
+                var prefix = applicationReference.Substring(0, 8).ToLower();
+                var appsByEmail = await _context.JobApplications
+                    .Include(a => a.JobPosting)
+                    .Include(a => a.AssignedToUser)
+                    .Where(a => a.Email.ToLower() == normalizedEmail)
+                    .ToListAsync();
+
+                application = appsByEmail.FirstOrDefault(a => a.Id.ToString().StartsWith(prefix, StringComparison.OrdinalIgnoreCase));
+            }
 
             if (application == null)
             {
@@ -221,6 +237,7 @@ namespace WUIAM.Services
                     AssignedToName = application.AssignedToUser?.UserName,
                     CreatedAt = application.CreatedAt,
                     UpdatedAt = application.UpdatedAt ?? application.CreatedAt,
+                    IctOnboardingStatus = application.IctOnboardingStatus,
                     OverallMatch = latestScore?.OverallMatch,
                     ScoredAt = latestScore?.ScannedAt
                 },
@@ -248,6 +265,8 @@ namespace WUIAM.Services
                     StartDate = offer.StartDate,
                     Benefits = offer.Benefits ?? string.Empty,
                     Content = offer.Content,
+                    GradeLevel = offer.GradeLevel,
+                    AttachmentPath = offer.AttachmentPath,
                     Status = offer.Status,
                     SentAt = offer.SentAt,
                     ExpiresAt = offer.ExpiresAt,
@@ -312,6 +331,7 @@ namespace WUIAM.Services
                     AssignedToName = a.AssignedToUser?.UserName,
                     CreatedAt = a.CreatedAt,
                     UpdatedAt = a.UpdatedAt ?? DateTime.UtcNow,
+                    IctOnboardingStatus = a.IctOnboardingStatus,
                     OverallMatch = latestScore?.OverallMatch,
                     ScoredAt = latestScore?.ScannedAt
                 };
@@ -499,12 +519,36 @@ namespace WUIAM.Services
             if (dto.StartDate <= DateTime.UtcNow.Date)
                 throw new InvalidOperationException("Offer start date must be in the future.");
 
+            string? attachmentPath = null;
+            if (dto.Attachment != null && dto.Attachment.Length > 0)
+            {
+                var uploadDir = Path.Combine(_env.ContentRootPath, "uploads", "offers");
+                if (!Directory.Exists(uploadDir))
+                {
+                    Directory.CreateDirectory(uploadDir);
+                }
+                var fileName = $"{Guid.NewGuid()}{Path.GetExtension(dto.Attachment.FileName).ToLowerInvariant()}";
+                var filePath = Path.Combine(uploadDir, fileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await dto.Attachment.CopyToAsync(stream);
+                }
+                attachmentPath = $"/uploads/offers/{fileName}";
+            }
+
             var offer = new OfferLetter
             {
-                ApplicationId = applicationId, CompanyName = dto.CompanyName, Position = dto.Position,
+                ApplicationId = applicationId,
+                CompanyName = dto.CompanyName,
+                Position = dto.Position,
                 Salary = ParseSalary(dto.Salary),
-                Benefits = dto.Benefits, Content = dto.Content,
-                Status = "Draft", StartDate = dto.StartDate, ExpiresAt = dto.ExpiresAt
+                Benefits = dto.Benefits,
+                Content = dto.Content,
+                GradeLevel = dto.GradeLevel,
+                AttachmentPath = attachmentPath,
+                Status = "Draft",
+                StartDate = dto.StartDate,
+                ExpiresAt = dto.ExpiresAt
             };
             _context.OfferLetters.Add(offer);
             app.Status = "Offer";

@@ -64,5 +64,21 @@ namespace WUIAM.Repositories
             await _context.SaveChangesAsync();
             return await GetByIdAsync(l.Entity.Id);
         }
+
+        public async Task DeleteAsync(Guid id)
+        {
+            var request = await _context.LeaveRequests.FindAsync(id);
+            if (request == null)
+            {
+                return;
+            }
+
+            var approvals = await _context.LeaveRequestApprovals
+                .Where(approval => approval.LeaveRequestId == id)
+                .ToListAsync();
+            _context.LeaveRequestApprovals.RemoveRange(approvals);
+            _context.LeaveRequests.Remove(request);
+            await _context.SaveChangesAsync();
+        }
     }
 }

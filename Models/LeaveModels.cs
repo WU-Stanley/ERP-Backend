@@ -1,4 +1,4 @@
-﻿namespace WUIAM.Models
+namespace WUIAM.Models
 {
     public class LeaveType
     {
@@ -162,6 +162,9 @@
 
         public Guid LeaveTypeId { get; set; }
         public LeaveType? LeaveType { get; set; }
+
+        public Guid? DependentLeaveTypeId { get; set; }
+        public LeaveType? DependentLeaveType { get; set; }
 
         public Guid? EmploymentTypeId { get; set; } // e.g., "FullTime", "Contract" — optional
         public string? RoleName { get; set; }       // Optional: if some roles have custom entitlement

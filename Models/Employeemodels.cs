@@ -42,6 +42,9 @@ namespace WUIAM.Models
         [Key]
         public Guid EmployeeId { get; set; }
 
+        [Required, MaxLength(50)]
+        public string EmployeeCode { get; set; } = string.Empty;
+
         // Personal Information
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
@@ -67,6 +70,9 @@ namespace WUIAM.Models
 
         // Optional
         public string? ProfilePicture { get; set; }
+        public string? CvUrl { get; set; }
+        public string? IdentificationUrl { get; set; }
+        public string? CertificateUrl { get; set; }
         public Guid UserId { get; set; }
 
         // Navigation  

@@ -43,6 +43,7 @@ namespace WUIAM.Repositories
                 AccrualRatePerMonth = leavePolicy.AccrualRatePerMonth,
                 MaxCarryOverDays = leavePolicy.MaxCarryOverDays,
                 AllowNegativeBalance = leavePolicy.AllowNegativeBalance,
+                DependentLeaveTypeId = leavePolicy.DependentLeaveTypeId,
                 CreatedAt = leavePolicy.CreatedAt
             };
 
@@ -78,22 +79,41 @@ namespace WUIAM.Repositories
         {
             var userRoleNames = user.UserRoles.Select(ur => ur.Role.Name).ToList();
             var employee = await _context.EmployeeDetails.Include(e => e.Employments).FirstOrDefaultAsync(a => a.UserId == user.Id);
-            
+
+            System.Console.WriteLine($"[DEBUG GetApplicablePolicyAsync] User ID: {user.Id}, LeaveTypeId: {leaveTypeId}");
+            System.Console.WriteLine($"[DEBUG GetApplicablePolicyAsync] UserRoles count: {user.UserRoles.Count}, Roles: {string.Join(", ", userRoleNames)}");
+            System.Console.WriteLine($"[DEBUG GetApplicablePolicyAsync] Employee found: {employee != null}, EmployeeCode: {employee?.EmployeeCode}");
+            if (employee != null)
+            {
+                foreach (var emp in employee.Employments)
+                {
+                    System.Console.WriteLine($"[DEBUG GetApplicablePolicyAsync] Employment: Active={emp.IsActive}, EmploymentTypeId={emp.EmploymentTypeId}");
+                }
+            }
 
             var policies = await _context.LeavePolicies
-                .Where(p => p.LeaveTypeId == leaveTypeId).Include(em =>em.EmploymentType)
+                .Where(p => p.LeaveTypeId == leaveTypeId)
+                .Include(p => p.LeaveType)
+                .Include(em => em.EmploymentType)
                 .ToListAsync();
+
+            System.Console.WriteLine($"[DEBUG GetApplicablePolicyAsync] Total policies found for this leave type: {policies.Count}");
+            foreach (var p in policies)
+            {
+                System.Console.WriteLine($"[DEBUG GetApplicablePolicyAsync] Policy ID: {p.Id}, EmploymentTypeId: {p.EmploymentTypeId}, RoleName: {p.RoleName}");
+            }
 
             // Prioritize policies that match both employment type and role
             var matchedPolicy = policies
                 .Where(p =>
-                    (string.IsNullOrEmpty(p.EmploymentTypeId.ToString()) ||employee.Employments.Any(a=>a.EmployeeId == p.EmploymentType.Id ) )&&
+                    (p.EmploymentTypeId == null || (employee != null && employee.Employments.Any(a => a.EmploymentTypeId == p.EmploymentTypeId))) &&
                     (string.IsNullOrEmpty(p.RoleName) || userRoleNames.Contains(p.RoleName))
                 )
-                .OrderByDescending(p => !string.IsNullOrEmpty(p.LeaveType.Name.ToString()))
+                .OrderByDescending(p => p.LeaveType != null && !string.IsNullOrEmpty(p.LeaveType.Name))
                 .ThenByDescending(p => !string.IsNullOrEmpty(p.RoleName))
                 .FirstOrDefault();
 
+            System.Console.WriteLine($"[DEBUG GetApplicablePolicyAsync] MatchedPolicy ID: {matchedPolicy?.Id}");
             return matchedPolicy;
         }
 

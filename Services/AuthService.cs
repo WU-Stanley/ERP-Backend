@@ -28,7 +28,8 @@ namespace WUIAM.Services
         private readonly string _jwtSecret;
         private readonly string _jwtIssuer;
         private readonly string _jwtAudience;
-        IHttpContextAccessor _context;
+        private readonly IHttpContextAccessor _context;
+        private static readonly System.Collections.Concurrent.ConcurrentDictionary<string, ConfigurationManager<OpenIdConnectConfiguration>> _configurationManagers = new();
         public AuthService(IAuthRepository authRepository, INotifyService notifyService,
         IAuditLogService auditLogService, IRoleService roleService, IConfiguration configuration,
          IHttpContextAccessor httpContextAccessor, WUIAMDbContext dbContext)
@@ -249,11 +250,14 @@ namespace WUIAM.Services
                 .ToArray() ?? new[] { clientId };
 
             var authority = $"https://login.microsoftonline.com/{tenantId}/v2.0";
-            var configurationManager = new ConfigurationManager<OpenIdConnectConfiguration>(
-                $"{authority}/.well-known/openid-configuration",
-                new OpenIdConnectConfigurationRetriever()
+            var configurationManager = _configurationManagers.GetOrAdd(authority, auth =>
+                new ConfigurationManager<OpenIdConnectConfiguration>(
+                    $"{auth}/.well-known/openid-configuration",
+                    new OpenIdConnectConfigurationRetriever()
+                )
             );
-            var openIdConfig = await configurationManager.GetConfigurationAsync(CancellationToken.None);
+            using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(15));
+            var openIdConfig = await configurationManager.GetConfigurationAsync(cts.Token);
 
             var validationParameters = new TokenValidationParameters
             {

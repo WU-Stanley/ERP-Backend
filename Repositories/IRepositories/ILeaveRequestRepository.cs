@@ -11,5 +11,6 @@ namespace WUIAM.Repositories.IRepositories
         Task<LeaveRequest> AddAsync(LeaveRequest request);
 
         Task<LeaveRequest> UpdateAsync(LeaveRequest request);
+        Task DeleteAsync(Guid id);
     }
 }

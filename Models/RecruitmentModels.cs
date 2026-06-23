@@ -161,8 +161,13 @@ namespace WUIAM.Models
         [MaxLength(int.MaxValue)]
         public string? Benefits { get; set; }
 
-        [Required]
-        public string Content { get; set; } = string.Empty;
+        public string? Content { get; set; }
+
+        [MaxLength(100)]
+        public string? GradeLevel { get; set; }
+
+        [MaxLength(500)]
+        public string? AttachmentPath { get; set; }
 
         [MaxLength(50)]
         public string Status { get; set; } = "Draft"; // Draft, Sent, Viewed, Accepted, Declined, Expired

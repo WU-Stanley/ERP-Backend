@@ -46,6 +46,7 @@ namespace WUIAM.Repositories
                 .Select(e => new EmployeeDetails
                 {
                     EmployeeId = e.EmployeeId,
+                    EmployeeCode = e.EmployeeCode,
                     FirstName = e.FirstName,
                     LastName = e.LastName,
                     MiddleName = e.MiddleName,
@@ -120,6 +121,7 @@ namespace WUIAM.Repositories
                 .Select(e => new EmployeeDetails
                 {
                     EmployeeId = e.EmployeeId,
+                    EmployeeCode = e.EmployeeCode,
                     FirstName = e.FirstName,
                     LastName = e.LastName,
                     MiddleName = e.MiddleName,

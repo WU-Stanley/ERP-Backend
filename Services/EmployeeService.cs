@@ -195,7 +195,10 @@ namespace WUIAM.Services
                 EmergencyContactPhone = employee.EmergencyContactPhone,
                 Relationship = employee.Relationship,
                 BankName = employee.BankName,
-                BankAccountNumber = employee.BankAccountNumber
+                BankAccountNumber = employee.BankAccountNumber,
+                CvUrl = employee.CvUrl,
+                IdentificationUrl = employee.IdentificationUrl,
+                CertificateUrl = employee.CertificateUrl
             };
         }
 
@@ -208,6 +211,9 @@ namespace WUIAM.Services
             employee.Relationship = update.Relationship;
             employee.BankName = update.BankName;
             employee.BankAccountNumber = update.BankAccountNumber;
+            employee.CvUrl = update.CvUrl;
+            employee.IdentificationUrl = update.IdentificationUrl;
+            employee.CertificateUrl = update.CertificateUrl;
         }
 
         private static EmployeeProfileUpdateRequestDto MapProfileUpdateRequest(EmployeeProfileUpdateRequest request)
@@ -234,6 +240,28 @@ namespace WUIAM.Services
             return JsonSerializer.Deserialize<EmployeeSelfServiceUpdateDto>(json) ?? new EmployeeSelfServiceUpdateDto();
         }
 
+        private async Task<string> GenerateNextEmployeeCodeAsync()
+        {
+            var existingCodes = await _context.EmployeeDetails
+                .Where(e => !string.IsNullOrEmpty(e.EmployeeCode) && e.EmployeeCode.StartsWith("WU-"))
+                .Select(e => e.EmployeeCode)
+                .ToListAsync();
+
+            var maxNum = 0;
+            foreach (var code in existingCodes)
+            {
+                var numStr = code.Substring(3);
+                if (int.TryParse(numStr, out var val))
+                {
+                    if (val > maxNum)
+                    {
+                        maxNum = val;
+                    }
+                }
+            }
+            return $"WU-{maxNum + 1:D4}";
+        }
+
         public async Task<EmployeeDetails> CreateEmployeeAsync(CreateUserDto userDto)
         {
             if (userDto.DepartmentId == null)
@@ -244,6 +272,7 @@ namespace WUIAM.Services
                 FirstName = userDto.FirstName,
                 LastName = userDto.LastName,
                 Email = userDto.UserEmail,
+                EmployeeCode = await GenerateNextEmployeeCodeAsync(),
                 CreatedAt = DateTime.UtcNow
                 // UserId will be set after user creation
             };

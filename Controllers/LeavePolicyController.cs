@@ -63,13 +63,21 @@ public class LeavePolicyController : ControllerBase
 
     [HttpDelete("{id}")]
     [HasPermission(Permissions.AdminAccess, Permissions.ManageLeaveRequests, Permissions.SuperAdminAccess)]
-    public async Task<IActionResult> Delete(Guid id)
+    public async Task<ActionResult<ApiResponse<LeavePolicy>>> Delete(Guid id)
     {
         var existing = await _policyRepo.GetByIdAsync(id);
         if (existing == null)
-            return NotFound();
+            return NotFound(ApiResponse<LeavePolicy>.Failure("Leave policy not found."));
 
         await _policyRepo.DeleteAsync(id);
-        return NoContent();
+        return Ok(ApiResponse<LeavePolicy>.Success("Leave policy deleted successfully.", existing));
+    }
+
+    [HttpGet("anonymous-all")]
+    [Microsoft.AspNetCore.Authorization.AllowAnonymous]
+    public async Task<ActionResult> GetAnonymousAll()
+    {
+        var policies = await _policyRepo.GetAllAsync();
+        return Ok(policies);
     }
 }

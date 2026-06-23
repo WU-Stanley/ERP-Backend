@@ -1,8 +1,34 @@
 using System;
 using System.Collections.Generic;
+using WUIAM.Enums;
 
 namespace WUIAM.DTOs
 {
+    /// <summary>
+    /// Editable employee profile fields. Server-managed fields such as
+    /// EmployeeCode, UserId and audit timestamps are intentionally excluded.
+    /// </summary>
+    public class EmployeeUpdateDto
+    {
+        public Guid EmployeeId { get; set; }
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string MiddleName { get; set; } = string.Empty;
+        public DateTime DateOfBirth { get; set; }
+        public Gender Gender { get; set; }
+        public MaritalStatus MaritalStatus { get; set; }
+        public string Nationality { get; set; } = string.Empty;
+        public string Address { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string EmergencyContactName { get; set; } = string.Empty;
+        public string EmergencyContactPhone { get; set; } = string.Empty;
+        public string Relationship { get; set; } = string.Empty;
+        public string BankName { get; set; } = string.Empty;
+        public string BankAccountNumber { get; set; } = string.Empty;
+        public string? ProfilePicture { get; set; }
+    }
+
     /// <summary>
     /// DTO for row-level errors during bulk staff upload.
     /// </summary>
@@ -55,6 +81,9 @@ namespace WUIAM.DTOs
         public string Relationship { get; set; } = string.Empty;
         public string BankName { get; set; } = string.Empty;
         public string BankAccountNumber { get; set; } = string.Empty;
+        public string? CvUrl { get; set; }
+        public string? IdentificationUrl { get; set; }
+        public string? CertificateUrl { get; set; }
     }
 
     /// <summary>

@@ -111,6 +111,7 @@ namespace WUIAM.DTOs
         public decimal? OverallMatch { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
+        public string IctOnboardingStatus { get; set; } = "NotStarted";
     }
 
     public class ApplicationListDto
@@ -202,7 +203,10 @@ namespace WUIAM.DTOs
         public string Benefits { get; set; } = string.Empty;
 
         [MaxLength(5000)]
-        public string Content { get; set; } = string.Empty;
+        public string? Content { get; set; }
+
+        public string? GradeLevel { get; set; }
+        public Microsoft.AspNetCore.Http.IFormFile? Attachment { get; set; }
 
         public DateTime? ExpiresAt { get; set; }
     }
@@ -217,7 +221,9 @@ namespace WUIAM.DTOs
         public decimal Salary { get; set; }
         public DateTime StartDate { get; set; }
         public string Benefits { get; set; } = string.Empty;
-        public string Content { get; set; } = string.Empty;
+        public string? Content { get; set; }
+        public string? GradeLevel { get; set; }
+        public string? AttachmentPath { get; set; }
         public string Status { get; set; } = "Draft";
         public DateTime? SentAt { get; set; }
         public DateTime? ExpiresAt { get; set; }

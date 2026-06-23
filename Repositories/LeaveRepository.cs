@@ -20,19 +20,17 @@ namespace WUIAM.Repositories
                 db.LeaveRequests.FirstOrDefault(lr => lr.Id == id));
 
         // Compiled query: get leave requests by user
-        private static readonly Func<WUIAMDbContext, Guid, Task<List<LeaveRequest>>> _getByUser =
-            EF.CompileAsyncQuery((WUIAMDbContext db, Guid userId) =>
+        private static readonly Func<WUIAMDbContext, Guid, IAsyncEnumerable<LeaveRequest>> _getByUser =
+            EF.CompileAsyncQuery<WUIAMDbContext, Guid, LeaveRequest>((WUIAMDbContext db, Guid userId) =>
                 db.LeaveRequests
                     .Where(r => r.UserId == userId)
-                    .OrderByDescending(r => r.AppliedAt)
-                    .ToList());
+                    .OrderByDescending(r => r.AppliedAt));
 
         // Compiled query: get active leaves
-        private static readonly Func<WUIAMDbContext, DateTime, Task<List<Leave>>> _getActiveLeaves =
+        private static readonly Func<WUIAMDbContext, DateTime, IAsyncEnumerable<Leave>> _getActiveLeaves =
             EF.CompileAsyncQuery((WUIAMDbContext db, DateTime today) =>
                 db.Leaves
-                    .Where(l => !l.IsCancelled && l.EndDate >= today)
-                    .ToList());
+                    .Where(l => !l.IsCancelled && l.EndDate >= today));
 
         // Compiled query: count public holidays in date range
         private static readonly Func<WUIAMDbContext, DateTime, DateTime, Task<int>> _countHolidaysInRange =
@@ -121,9 +119,14 @@ namespace WUIAM.Repositories
             return await _context.LeaveRequests.ToListAsync();
         }
 
-        public Task<List<LeaveRequest>> GetLeaveRequestsByUserAsync(Guid userId)
+        public async Task<List<LeaveRequest>> GetLeaveRequestsByUserAsync(Guid userId)
         {
-            return _getByUser(_context, userId);
+            var list = new List<LeaveRequest>();
+            await foreach (var request in _getByUser(_context, userId))
+            {
+                list.Add(request);
+            }
+            return list;
         }
 
         public async Task<Leave> CreateLeaveFromApprovedRequestAsync(LeaveRequest request)
@@ -153,9 +156,14 @@ namespace WUIAM.Repositories
             return leave;
         }
 
-        public Task<List<Leave>> GetActiveLeavesAsync()
+        public async Task<List<Leave>> GetActiveLeavesAsync()
         {
-            return _getActiveLeaves(_context, DateTime.UtcNow.Date);
+            var list = new List<Leave>();
+            await foreach (var leave in _getActiveLeaves(_context, DateTime.UtcNow.Date))
+            {
+                list.Add(leave);
+            }
+            return list;
         }
 
         public async Task CancelLeaveAsync(Guid leaveId)

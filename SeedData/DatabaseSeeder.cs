@@ -27,7 +27,6 @@ namespace WUIAM.SeedData
                 }
                 await context.SaveChangesAsync();
             }
-
             // Seed User Types
             if (!context.UserTypes.Any())
             {
@@ -126,6 +125,40 @@ namespace WUIAM.SeedData
                         Description = desc
                     });
                 }
+                await context.SaveChangesAsync();
+            }
+
+            // Backfill employee codes if any are null/empty
+            var employeesWithoutCode = await context.EmployeeDetails
+                .Where(e => string.IsNullOrEmpty(e.EmployeeCode))
+                .ToListAsync();
+
+            if (employeesWithoutCode.Any())
+            {
+                var existingCodes = await context.EmployeeDetails
+                    .Where(e => !string.IsNullOrEmpty(e.EmployeeCode) && e.EmployeeCode.StartsWith("WU-"))
+                    .Select(e => e.EmployeeCode)
+                    .ToListAsync();
+
+                var maxNum = 0;
+                foreach (var code in existingCodes)
+                {
+                    var numStr = code.Substring(3);
+                    if (int.TryParse(numStr, out var val))
+                    {
+                        if (val > maxNum)
+                        {
+                            maxNum = val;
+                        }
+                    }
+                }
+
+                foreach (var employee in employeesWithoutCode)
+                {
+                    maxNum++;
+                    employee.EmployeeCode = $"WU-{maxNum:D4}";
+                }
+
                 await context.SaveChangesAsync();
             }
         }

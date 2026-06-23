@@ -1,0 +1,172 @@
+[2026-06-22 23:36:45.772 WRN] [] No store type was specified for the decimal property 'PurchaseCost' on entity type 'FacilityAsset'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'UnitCost' on entity type 'InventoryItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'GrossPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'NetPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'EstimatedAmount' on entity type 'ProcurementRequest'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'BasePay' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'HousingAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'OtherAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'PensionRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'TaxRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:45.786 WRN] [] No store type was specified for the decimal property 'TransportAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-22 23:36:46.769 INF] [] Start installing Hangfire SQL objects...
+[2026-06-22 23:36:46.807 INF] [] Hangfire SQL objects installed.
+[2026-06-22 23:36:47.072 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.
+[2026-06-22 23:36:47.222 INF] [] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@WUIAM'
+[2026-06-22 23:36:47.222 INF] [] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2026-06-22 23:36:47.222 INF] [] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-06-22 23:36:47.236 INF] [] Server macbookpro:54713:0779fba4 successfully announced in 8.4286 ms
+[2026-06-22 23:36:47.237 INF] [] Server macbookpro:54713:0779fba4 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-22 23:36:47.241 INF] [] Server macbookpro:54713:0779fba4 all the dispatchers started
+[2026-06-22 23:36:54.868 INF] [706c2704-c127-4768-975a-5a9965d20c16] [Perf] DELETE /api/leave/delete-leave-request/029b1a46-27f6-4e8a-a586-43da4b427d06 -> 200 in 237.58ms
+[2026-06-22 23:36:54.870 INF] [706c2704-c127-4768-975a-5a9965d20c16] [CorrelationId: 706c2704-c127-4768-975a-5a9965d20c16] DELETE /api/leave/delete-leave-request/029b1a46-27f6-4e8a-a586-43da4b427d06 completed in 241.81ms with status 200
+[2026-06-22 23:37:06.677 INF] [a72f899b-bb28-40fa-80a1-98b82db9c234] [Perf] DELETE /api/leave/delete-leave-request/7424802a-7992-4623-9ca3-f65f94f3222b -> 200 in 28.17ms
+[2026-06-22 23:37:06.678 INF] [a72f899b-bb28-40fa-80a1-98b82db9c234] [CorrelationId: a72f899b-bb28-40fa-80a1-98b82db9c234] DELETE /api/leave/delete-leave-request/7424802a-7992-4623-9ca3-f65f94f3222b completed in 28.47ms with status 200
+[2026-06-22 23:37:14.383 INF] [11c46f72-6ce2-4dd2-89fb-dabff3894930] [Perf] DELETE /api/leave/delete-leave-request/b3d688e1-b697-4c68-81b3-88d1e09c3481 -> 200 in 39.97ms
+[2026-06-22 23:37:14.384 INF] [11c46f72-6ce2-4dd2-89fb-dabff3894930] [CorrelationId: 11c46f72-6ce2-4dd2-89fb-dabff3894930] DELETE /api/leave/delete-leave-request/b3d688e1-b697-4c68-81b3-88d1e09c3481 completed in 40.27ms with status 200
+[2026-06-22 23:37:14.814 INF] [ff118c42-8fb3-4e96-a7c3-07b1b38ff4cd] [Perf] POST /api/notificationsHub/negotiate -> 200 in 4.01ms
+[2026-06-22 23:37:14.815 INF] [ff118c42-8fb3-4e96-a7c3-07b1b38ff4cd] [CorrelationId: ff118c42-8fb3-4e96-a7c3-07b1b38ff4cd] POST /api/notificationsHub/negotiate completed in 4.19ms with status 200
+[2026-06-22 23:37:17.618 INF] [aacdd15a-44d9-47d8-b63f-9b434393ddb1] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.71ms
+[2026-06-22 23:37:17.618 INF] [aacdd15a-44d9-47d8-b63f-9b434393ddb1] [CorrelationId: aacdd15a-44d9-47d8-b63f-9b434393ddb1] POST /api/notificationsHub/negotiate completed in 0.88ms with status 200
+[2026-06-22 23:37:17.666 INF] [0f09427a-2699-4f52-8637-090d7055fb96] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.45ms
+[2026-06-22 23:37:17.666 INF] [0f09427a-2699-4f52-8637-090d7055fb96] [CorrelationId: 0f09427a-2699-4f52-8637-090d7055fb96] POST /api/notificationsHub/negotiate completed in 0.67ms with status 200
+[2026-06-22 23:37:23.218 INF] [2caf7739-9fd3-42c8-ac1b-886bb641b67c] [Perf] DELETE /api/leave/delete-leave-request/9eb806a6-4309-4499-bc0b-02c431630aff -> 200 in 26.40ms
+[2026-06-22 23:37:23.221 INF] [2caf7739-9fd3-42c8-ac1b-886bb641b67c] [CorrelationId: 2caf7739-9fd3-42c8-ac1b-886bb641b67c] DELETE /api/leave/delete-leave-request/9eb806a6-4309-4499-bc0b-02c431630aff completed in 29.49ms with status 200
+[2026-06-22 23:37:26.708 INF] [eac6b530-7d0e-4d18-bb11-286ad050213d] [Perf] GET /api/leavetype/available -> 200 in 144.03ms
+[2026-06-22 23:37:26.709 INF] [eac6b530-7d0e-4d18-bb11-286ad050213d] [CorrelationId: eac6b530-7d0e-4d18-bb11-286ad050213d] GET /api/leavetype/available completed in 144.23ms with status 200
+[2026-06-22 23:37:40.516 WRN] [cd901e8a-f1fb-4737-b64c-7c71e1283da1] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-22 23:37:40.641 INF] [cd901e8a-f1fb-4737-b64c-7c71e1283da1] [Perf] PUT /api/leave/update-leave-request/c1a8c7b8-9ba4-42ba-af07-5fea6839646b -> 200 in 192.15ms
+[2026-06-22 23:37:40.641 INF] [cd901e8a-f1fb-4737-b64c-7c71e1283da1] [CorrelationId: cd901e8a-f1fb-4737-b64c-7c71e1283da1] PUT /api/leave/update-leave-request/c1a8c7b8-9ba4-42ba-af07-5fea6839646b completed in 192.30ms with status 200
+[2026-06-22 23:38:59.880 WRN] [3786f315-49f2-4efa-a8d1-892937022ccb] [Perf] GET /api/notificationsHub -> 101 in 102193.17ms
+[2026-06-22 23:38:59.880 INF] [3786f315-49f2-4efa-a8d1-892937022ccb] [CorrelationId: 3786f315-49f2-4efa-a8d1-892937022ccb] GET /api/notificationsHub completed in 102193.38ms with status 101
+[2026-06-22 23:38:59.880 WRN] [3786f315-49f2-4efa-a8d1-892937022ccb] [CorrelationId: 3786f315-49f2-4efa-a8d1-892937022ccb] SLOW REQUEST: GET /api/notificationsHub took 102193.38ms (threshold: 1000ms)
+[2026-06-22 23:38:59.880 ERR] [3786f315-49f2-4efa-a8d1-892937022ccb] [CorrelationId: 3786f315-49f2-4efa-a8d1-892937022ccb] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 102193.38ms (threshold: 5000ms)
+[2026-06-22 23:38:59.883 WRN] [131ed878-fc49-41ad-bb23-0add3bd08375] [Perf] GET /api/notificationsHub -> 101 in 102233.46ms
+[2026-06-22 23:38:59.883 INF] [131ed878-fc49-41ad-bb23-0add3bd08375] [CorrelationId: 131ed878-fc49-41ad-bb23-0add3bd08375] GET /api/notificationsHub completed in 102233.61ms with status 101
+[2026-06-22 23:38:59.883 WRN] [131ed878-fc49-41ad-bb23-0add3bd08375] [CorrelationId: 131ed878-fc49-41ad-bb23-0add3bd08375] SLOW REQUEST: GET /api/notificationsHub took 102233.61ms (threshold: 1000ms)
+[2026-06-22 23:38:59.883 ERR] [131ed878-fc49-41ad-bb23-0add3bd08375] [CorrelationId: 131ed878-fc49-41ad-bb23-0add3bd08375] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 102233.61ms (threshold: 5000ms)
+[2026-06-22 23:38:59.883 WRN] [c22511ee-3510-45e3-8a43-64a1af8465fa] [Perf] GET /api/notificationsHub -> 101 in 105036.85ms
+[2026-06-22 23:38:59.883 INF] [c22511ee-3510-45e3-8a43-64a1af8465fa] [CorrelationId: c22511ee-3510-45e3-8a43-64a1af8465fa] GET /api/notificationsHub completed in 105036.90ms with status 101
+[2026-06-22 23:38:59.883 WRN] [c22511ee-3510-45e3-8a43-64a1af8465fa] [CorrelationId: c22511ee-3510-45e3-8a43-64a1af8465fa] SLOW REQUEST: GET /api/notificationsHub took 105036.90ms (threshold: 1000ms)
+[2026-06-22 23:38:59.884 ERR] [c22511ee-3510-45e3-8a43-64a1af8465fa] [CorrelationId: c22511ee-3510-45e3-8a43-64a1af8465fa] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 105036.90ms (threshold: 5000ms)
+[2026-06-22 23:39:00.657 INF] [a59bc5ce-5c72-49c1-8748-10ad4860531f] [Perf] GET /api/notifications/unread-count -> 200 in 47.75ms
+[2026-06-22 23:39:00.657 INF] [69c8bf6e-dc29-412b-a891-e0b1ee4402f1] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.35ms
+[2026-06-22 23:39:00.658 INF] [a59bc5ce-5c72-49c1-8748-10ad4860531f] [CorrelationId: a59bc5ce-5c72-49c1-8748-10ad4860531f] GET /api/notifications/unread-count completed in 47.96ms with status 200
+[2026-06-22 23:39:00.658 INF] [69c8bf6e-dc29-412b-a891-e0b1ee4402f1] [CorrelationId: 69c8bf6e-dc29-412b-a891-e0b1ee4402f1] POST /api/notificationsHub/negotiate completed in 0.44ms with status 200
+[2026-06-22 23:39:00.730 INF] [fbb0d4b6-0530-4864-83b1-5f7ed1923d17] [Perf] GET /api/leave/user-requests/6b41e844-22ea-4756-f145-08ded063b0d5 -> 200 in 82.66ms
+[2026-06-22 23:39:00.731 INF] [fbb0d4b6-0530-4864-83b1-5f7ed1923d17] [CorrelationId: fbb0d4b6-0530-4864-83b1-5f7ed1923d17] GET /api/leave/user-requests/6b41e844-22ea-4756-f145-08ded063b0d5 completed in 82.82ms with status 200
+[2026-06-22 23:39:00.733 INF] [a1f65960-b6b9-47d4-b3aa-c4d1b955eed5] [Perf] GET /api/notifications/unread-count -> 200 in 45.64ms
+[2026-06-22 23:39:00.734 INF] [a1f65960-b6b9-47d4-b3aa-c4d1b955eed5] [CorrelationId: a1f65960-b6b9-47d4-b3aa-c4d1b955eed5] GET /api/notifications/unread-count completed in 46.22ms with status 200
+[2026-06-22 23:39:00.739 INF] [04754918-48f3-4de7-a4eb-b58d95013c1f] [Perf] GET /api/notifications -> 200 in 52.05ms
+[2026-06-22 23:39:00.740 INF] [04754918-48f3-4de7-a4eb-b58d95013c1f] [CorrelationId: 04754918-48f3-4de7-a4eb-b58d95013c1f] GET /api/notifications completed in 52.18ms with status 200
+[2026-06-22 23:39:02.146 INF] [f2eb8160-3c5f-43dc-b232-b86e42d2d925] [Perf] GET /api/notifications/unread-count -> 200 in 14.04ms
+[2026-06-22 23:39:02.146 INF] [f2eb8160-3c5f-43dc-b232-b86e42d2d925] [CorrelationId: f2eb8160-3c5f-43dc-b232-b86e42d2d925] GET /api/notifications/unread-count completed in 14.19ms with status 200
+[2026-06-22 23:39:02.161 INF] [b79bb693-751b-4757-8f45-410729b02c10] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.40ms
+[2026-06-22 23:39:02.161 INF] [b79bb693-751b-4757-8f45-410729b02c10] [CorrelationId: b79bb693-751b-4757-8f45-410729b02c10] POST /api/notificationsHub/negotiate completed in 0.54ms with status 200
+[2026-06-22 23:39:02.257 INF] [4135f17e-b185-4da5-99bd-9bb5787fcbab] [Perf] GET /api/v1/recruitment/ict-onboarding -> 200 in 95.74ms
+[2026-06-22 23:39:02.257 INF] [4135f17e-b185-4da5-99bd-9bb5787fcbab] [CorrelationId: 4135f17e-b185-4da5-99bd-9bb5787fcbab] GET /api/v1/recruitment/ict-onboarding completed in 95.87ms with status 200
+[2026-06-22 23:39:02.321 INF] [d4dbc692-2226-4eb6-a3f3-14b336acfd83] [Perf] GET /api/notifications/unread-count -> 200 in 9.82ms
+[2026-06-22 23:39:02.321 INF] [937f2f42-ba9e-4b81-9913-e6baa3115a1d] [Perf] GET /api/notifications -> 200 in 9.92ms
+[2026-06-22 23:39:02.321 INF] [d4dbc692-2226-4eb6-a3f3-14b336acfd83] [CorrelationId: d4dbc692-2226-4eb6-a3f3-14b336acfd83] GET /api/notifications/unread-count completed in 9.96ms with status 200
+[2026-06-22 23:39:02.321 INF] [937f2f42-ba9e-4b81-9913-e6baa3115a1d] [CorrelationId: 937f2f42-ba9e-4b81-9913-e6baa3115a1d] GET /api/notifications completed in 10.13ms with status 200
+[2026-06-22 23:39:02.622 INF] [f8799006-bc30-42fc-ae46-e2202e6beaa1] [Perf] GET /api/v1/recruitment/public/applications/75f598e2-2aae-401d-a561-4240f82dcab7/track -> 200 in 167.05ms
+[2026-06-22 23:39:02.622 INF] [f8799006-bc30-42fc-ae46-e2202e6beaa1] [CorrelationId: f8799006-bc30-42fc-ae46-e2202e6beaa1] GET /api/v1/recruitment/public/applications/75f598e2-2aae-401d-a561-4240f82dcab7/track completed in 167.17ms with status 200
+[2026-06-22 23:39:03.789 INF] [ae569b66-a3b9-48da-a679-eec196cb2877] [Perf] GET /api/notifications/unread-count -> 200 in 5.50ms
+[2026-06-22 23:39:03.789 INF] [ae569b66-a3b9-48da-a679-eec196cb2877] [CorrelationId: ae569b66-a3b9-48da-a679-eec196cb2877] GET /api/notifications/unread-count completed in 5.69ms with status 200
+[2026-06-22 23:39:03.812 INF] [11f06b1a-0382-4060-a0f5-f5cd09d783d9] [Perf] GET /api/leave/user-requests/c3617a52-d409-4220-397f-08ded04ae128 -> 200 in 5.43ms
+[2026-06-22 23:39:03.812 INF] [11f06b1a-0382-4060-a0f5-f5cd09d783d9] [CorrelationId: 11f06b1a-0382-4060-a0f5-f5cd09d783d9] GET /api/leave/user-requests/c3617a52-d409-4220-397f-08ded04ae128 completed in 5.58ms with status 200
+[2026-06-22 23:39:03.813 INF] [10ecbcef-3f92-4b89-92a7-624d270773f2] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.39ms
+[2026-06-22 23:39:03.813 INF] [10ecbcef-3f92-4b89-92a7-624d270773f2] [CorrelationId: 10ecbcef-3f92-4b89-92a7-624d270773f2] POST /api/notificationsHub/negotiate completed in 0.46ms with status 200
+[2026-06-22 23:39:03.854 INF] [66fb97c4-0b7a-47f1-a9fb-750b4872f8f5] [Perf] GET /api/v1/recruitment/public/applications/75f598e2-2aae-401d-a561-4240f82dcab7/track -> 200 in 22.45ms
+[2026-06-22 23:39:03.854 INF] [66fb97c4-0b7a-47f1-a9fb-750b4872f8f5] [CorrelationId: 66fb97c4-0b7a-47f1-a9fb-750b4872f8f5] GET /api/v1/recruitment/public/applications/75f598e2-2aae-401d-a561-4240f82dcab7/track completed in 22.55ms with status 200
+[2026-06-22 23:39:03.859 INF] [cc9ef702-a51f-4a6b-b695-65cd7b55834c] [Perf] GET /api/notifications/unread-count -> 200 in 2.95ms
+[2026-06-22 23:39:03.859 INF] [2fd6e304-b259-4002-a138-2d359fd99eba] [Perf] GET /api/notifications -> 200 in 2.67ms
+[2026-06-22 23:39:03.859 INF] [cc9ef702-a51f-4a6b-b695-65cd7b55834c] [CorrelationId: cc9ef702-a51f-4a6b-b695-65cd7b55834c] GET /api/notifications/unread-count completed in 3.06ms with status 200
+[2026-06-22 23:39:03.859 INF] [2fd6e304-b259-4002-a138-2d359fd99eba] [CorrelationId: 2fd6e304-b259-4002-a138-2d359fd99eba] GET /api/notifications completed in 2.74ms with status 200
+[2026-06-22 23:45:51.512 WRN] [fdfeecd4-187b-4a00-82f4-14ed981f23f4] [Perf] GET /api/notificationsHub -> 101 in 409112.51ms
+[2026-06-22 23:45:51.512 INF] [fdfeecd4-187b-4a00-82f4-14ed981f23f4] [CorrelationId: fdfeecd4-187b-4a00-82f4-14ed981f23f4] GET /api/notificationsHub completed in 409113.32ms with status 101
+[2026-06-22 23:45:51.512 WRN] [fdfeecd4-187b-4a00-82f4-14ed981f23f4] [CorrelationId: fdfeecd4-187b-4a00-82f4-14ed981f23f4] SLOW REQUEST: GET /api/notificationsHub took 409113.32ms (threshold: 1000ms)
+[2026-06-22 23:45:51.512 ERR] [fdfeecd4-187b-4a00-82f4-14ed981f23f4] [CorrelationId: fdfeecd4-187b-4a00-82f4-14ed981f23f4] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 409113.32ms (threshold: 5000ms)
+[2026-06-22 23:45:51.513 WRN] [03818250-60e2-4d2b-8e21-cce222852384] [Perf] GET /api/notificationsHub -> 101 in 407569.99ms
+[2026-06-22 23:45:51.513 INF] [03818250-60e2-4d2b-8e21-cce222852384] [CorrelationId: 03818250-60e2-4d2b-8e21-cce222852384] GET /api/notificationsHub completed in 407570.03ms with status 101
+[2026-06-22 23:45:51.513 WRN] [03818250-60e2-4d2b-8e21-cce222852384] [CorrelationId: 03818250-60e2-4d2b-8e21-cce222852384] SLOW REQUEST: GET /api/notificationsHub took 407570.03ms (threshold: 1000ms)
+[2026-06-22 23:45:51.513 ERR] [03818250-60e2-4d2b-8e21-cce222852384] [CorrelationId: 03818250-60e2-4d2b-8e21-cce222852384] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 407570.03ms (threshold: 5000ms)
+[2026-06-22 23:45:51.513 WRN] [480a9e97-a08d-4e19-bdd5-0c797d3c9368] [Perf] GET /api/notificationsHub -> 101 in 410742.39ms
+[2026-06-22 23:45:51.514 INF] [480a9e97-a08d-4e19-bdd5-0c797d3c9368] [CorrelationId: 480a9e97-a08d-4e19-bdd5-0c797d3c9368] GET /api/notificationsHub completed in 410742.46ms with status 101
+[2026-06-22 23:45:51.514 WRN] [480a9e97-a08d-4e19-bdd5-0c797d3c9368] [CorrelationId: 480a9e97-a08d-4e19-bdd5-0c797d3c9368] SLOW REQUEST: GET /api/notificationsHub took 410742.46ms (threshold: 1000ms)
+[2026-06-22 23:45:51.514 ERR] [480a9e97-a08d-4e19-bdd5-0c797d3c9368] [CorrelationId: 480a9e97-a08d-4e19-bdd5-0c797d3c9368] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 410742.46ms (threshold: 5000ms)
+[2026-06-22 23:45:52.321 INF] [faf5ecd9-915c-456c-88b7-41ac21a113a2] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.35ms
+[2026-06-22 23:45:52.321 INF] [faf5ecd9-915c-456c-88b7-41ac21a113a2] [CorrelationId: faf5ecd9-915c-456c-88b7-41ac21a113a2] POST /api/notificationsHub/negotiate completed in 0.46ms with status 200
+[2026-06-22 23:45:52.326 INF] [b2958a8f-8081-4c56-9711-2b00ad80a2a1] [Perf] GET /api/notifications/unread-count -> 200 in 20.25ms
+[2026-06-22 23:45:52.326 INF] [b2958a8f-8081-4c56-9711-2b00ad80a2a1] [CorrelationId: b2958a8f-8081-4c56-9711-2b00ad80a2a1] GET /api/notifications/unread-count completed in 20.35ms with status 200
+[2026-06-22 23:45:52.362 INF] [391443c9-1d61-480b-b9e8-11a38a568520] [Perf] GET /api/notifications/unread-count -> 200 in 2.29ms
+[2026-06-22 23:45:52.362 INF] [391443c9-1d61-480b-b9e8-11a38a568520] [CorrelationId: 391443c9-1d61-480b-b9e8-11a38a568520] GET /api/notifications/unread-count completed in 2.39ms with status 200
+[2026-06-22 23:45:52.364 INF] [a29c3d9b-02ab-4bed-b0f5-cebc79a07711] [Perf] GET /api/notifications -> 200 in 4.60ms
+[2026-06-22 23:45:52.364 INF] [a29c3d9b-02ab-4bed-b0f5-cebc79a07711] [CorrelationId: a29c3d9b-02ab-4bed-b0f5-cebc79a07711] GET /api/notifications completed in 4.67ms with status 200
+[2026-06-22 23:45:52.365 INF] [e4412347-8f9e-448a-9298-ff8e35c60a01] [Perf] GET /api/leave/user-requests/6b41e844-22ea-4756-f145-08ded063b0d5 -> 200 in 52.18ms
+[2026-06-22 23:45:52.365 INF] [e4412347-8f9e-448a-9298-ff8e35c60a01] [CorrelationId: e4412347-8f9e-448a-9298-ff8e35c60a01] GET /api/leave/user-requests/6b41e844-22ea-4756-f145-08ded063b0d5 completed in 52.23ms with status 200
+[2026-06-22 23:45:52.555 INF] [14804be1-4653-4c9d-b36f-ed9892e3f182] [Perf] GET /api/v1/recruitment/public/applications/75f598e2-2aae-401d-a561-4240f82dcab7/track -> 200 in 14.60ms
+[2026-06-22 23:45:52.555 INF] [14804be1-4653-4c9d-b36f-ed9892e3f182] [CorrelationId: 14804be1-4653-4c9d-b36f-ed9892e3f182] GET /api/v1/recruitment/public/applications/75f598e2-2aae-401d-a561-4240f82dcab7/track completed in 14.70ms with status 200
+[2026-06-22 23:45:52.568 INF] [5ad2dada-10d8-4e2c-a4ff-cc3d3593bde9] [Perf] GET /api/notifications/unread-count -> 200 in 4.95ms
+[2026-06-22 23:45:52.568 INF] [5ad2dada-10d8-4e2c-a4ff-cc3d3593bde9] [CorrelationId: 5ad2dada-10d8-4e2c-a4ff-cc3d3593bde9] GET /api/notifications/unread-count completed in 5.07ms with status 200
+[2026-06-22 23:45:52.572 INF] [9c589682-ef8c-4792-8f55-fa69271b44f6] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.46ms
+[2026-06-22 23:45:52.572 INF] [9c589682-ef8c-4792-8f55-fa69271b44f6] [CorrelationId: 9c589682-ef8c-4792-8f55-fa69271b44f6] POST /api/notificationsHub/negotiate completed in 0.55ms with status 200
+[2026-06-22 23:45:52.594 INF] [fb949dbe-0de5-4fa3-bd73-b9cd175b897b] [Perf] GET /api/v1/recruitment/ict-onboarding -> 200 in 23.84ms
+[2026-06-22 23:45:52.594 INF] [fb949dbe-0de5-4fa3-bd73-b9cd175b897b] [CorrelationId: fb949dbe-0de5-4fa3-bd73-b9cd175b897b] GET /api/v1/recruitment/ict-onboarding completed in 23.92ms with status 200
+[2026-06-22 23:45:52.989 INF] [8ed7ec96-f022-4022-b32e-e55024059d28] [Perf] GET /api/notifications -> 200 in 14.01ms
+[2026-06-22 23:45:52.989 INF] [25065a70-af81-4058-ba4a-c03d1d8376d2] [Perf] GET /api/notifications/unread-count -> 200 in 13.82ms
+[2026-06-22 23:45:52.989 INF] [8ed7ec96-f022-4022-b32e-e55024059d28] [CorrelationId: 8ed7ec96-f022-4022-b32e-e55024059d28] GET /api/notifications completed in 14.20ms with status 200
+[2026-06-22 23:45:52.990 INF] [25065a70-af81-4058-ba4a-c03d1d8376d2] [CorrelationId: 25065a70-af81-4058-ba4a-c03d1d8376d2] GET /api/notifications/unread-count completed in 14.08ms with status 200
+[2026-06-22 23:45:53.416 INF] [4fd1aa87-7898-48f0-8103-ad20808e3967] [Perf] GET /api/notifications/unread-count -> 200 in 5.01ms
+[2026-06-22 23:45:53.416 INF] [4fd1aa87-7898-48f0-8103-ad20808e3967] [CorrelationId: 4fd1aa87-7898-48f0-8103-ad20808e3967] GET /api/notifications/unread-count completed in 5.11ms with status 200
+[2026-06-22 23:45:53.417 INF] [df0c1ef2-c7fe-4558-adf7-5586754844cc] [Perf] GET /api/leave/user-requests/c3617a52-d409-4220-397f-08ded04ae128 -> 200 in 4.77ms
+[2026-06-22 23:45:53.417 INF] [df0c1ef2-c7fe-4558-adf7-5586754844cc] [CorrelationId: df0c1ef2-c7fe-4558-adf7-5586754844cc] GET /api/leave/user-requests/c3617a52-d409-4220-397f-08ded04ae128 completed in 4.81ms with status 200
+[2026-06-22 23:45:53.423 INF] [16a159d8-8ff8-4967-9ddc-a8996fe030b6] [Perf] POST /api/notificationsHub/negotiate -> 200 in 5.15ms
+[2026-06-22 23:45:53.423 INF] [16a159d8-8ff8-4967-9ddc-a8996fe030b6] [CorrelationId: 16a159d8-8ff8-4967-9ddc-a8996fe030b6] POST /api/notificationsHub/negotiate completed in 5.25ms with status 200
+[2026-06-22 23:45:53.461 INF] [bfb48194-6c96-4a4e-b95b-f63de84cb64d] [Perf] GET /api/notifications/unread-count -> 200 in 3.09ms
+[2026-06-22 23:45:53.461 INF] [bfb48194-6c96-4a4e-b95b-f63de84cb64d] [CorrelationId: bfb48194-6c96-4a4e-b95b-f63de84cb64d] GET /api/notifications/unread-count completed in 3.19ms with status 200
+[2026-06-22 23:45:53.467 INF] [e21b6ed1-22f0-4684-a253-4f42ed2b5dab] [Perf] GET /api/v1/recruitment/public/applications/75f598e2-2aae-401d-a561-4240f82dcab7/track -> 200 in 10.69ms
+[2026-06-22 23:45:53.467 INF] [e21b6ed1-22f0-4684-a253-4f42ed2b5dab] [CorrelationId: e21b6ed1-22f0-4684-a253-4f42ed2b5dab] GET /api/v1/recruitment/public/applications/75f598e2-2aae-401d-a561-4240f82dcab7/track completed in 10.78ms with status 200
+[2026-06-22 23:45:53.495 INF] [ce606cf3-3cff-4c2b-a965-45b2ae380c1a] [Perf] GET /api/notifications -> 200 in 36.72ms
+[2026-06-22 23:45:53.495 INF] [ce606cf3-3cff-4c2b-a965-45b2ae380c1a] [CorrelationId: ce606cf3-3cff-4c2b-a965-45b2ae380c1a] GET /api/notifications completed in 36.78ms with status 200
+[2026-06-22 23:46:19.682 INF] [628c0586-ccaf-4066-b1df-bc6f908cc3ba] [Perf] GET /api/Employees/me -> 200 in 59.56ms
+[2026-06-22 23:46:19.683 INF] [628c0586-ccaf-4066-b1df-bc6f908cc3ba] [CorrelationId: 628c0586-ccaf-4066-b1df-bc6f908cc3ba] GET /api/Employees/me completed in 59.69ms with status 200
+[2026-06-22 23:46:19.715 INF] [926f8eaa-d7e8-4c13-b221-a6e65bcc1fe1] [Perf] GET /api/Employees/me/profile-update-requests -> 200 in 25.62ms
+[2026-06-22 23:46:19.715 INF] [926f8eaa-d7e8-4c13-b221-a6e65bcc1fe1] [CorrelationId: 926f8eaa-d7e8-4c13-b221-a6e65bcc1fe1] GET /api/Employees/me/profile-update-requests completed in 25.73ms with status 200
+[2026-06-22 23:46:26.877 INF] [2ec94e8b-af4f-43ba-b218-5788b10e6caf] [Perf] GET /api/v1/recruitment/ict-onboarding -> 200 in 35.17ms
+[2026-06-22 23:46:26.877 INF] [2ec94e8b-af4f-43ba-b218-5788b10e6caf] [CorrelationId: 2ec94e8b-af4f-43ba-b218-5788b10e6caf] GET /api/v1/recruitment/ict-onboarding completed in 35.39ms with status 200
+[2026-06-22 23:54:09.613 INF] [65f7ebda-1030-4db9-92ba-3c8ca3108a1a] [Perf] GET /api/leavetype/all -> 200 in 81.36ms
+[2026-06-22 23:54:09.613 INF] [65f7ebda-1030-4db9-92ba-3c8ca3108a1a] [CorrelationId: 65f7ebda-1030-4db9-92ba-3c8ca3108a1a] GET /api/leavetype/all completed in 81.46ms with status 200
+[2026-06-22 23:54:15.803 INF] [0d3e1cba-5c24-443c-b89a-da740a3964ec] [Perf] GET /api/auth/users -> 200 in 47.43ms
+[2026-06-22 23:54:15.803 INF] [0d3e1cba-5c24-443c-b89a-da740a3964ec] [CorrelationId: 0d3e1cba-5c24-443c-b89a-da740a3964ec] GET /api/auth/users completed in 47.54ms with status 200
+[2026-06-22 23:54:15.822 INF] [b275837c-30cb-41aa-a5bc-50177af2e05a] [Perf] GET /api/department -> 200 in 18.52ms
+[2026-06-22 23:54:15.823 INF] [b275837c-30cb-41aa-a5bc-50177af2e05a] [CorrelationId: b275837c-30cb-41aa-a5bc-50177af2e05a] GET /api/department completed in 18.62ms with status 200
+[2026-06-22 23:54:15.836 INF] [2d2386aa-4817-495e-8a63-f8e7396f1457] [Perf] GET /api/auth/get-user-type -> 200 in 12.93ms
+[2026-06-22 23:54:15.836 INF] [2d2386aa-4817-495e-8a63-f8e7396f1457] [CorrelationId: 2d2386aa-4817-495e-8a63-f8e7396f1457] GET /api/auth/get-user-type completed in 13.01ms with status 200
+[2026-06-22 23:54:15.837 WRN] [a27cc14b-dbb2-4a4a-95a4-744f1531fb3f] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-22 23:54:15.846 INF] [2dee399f-3f76-481f-a5cd-38a0a89d6978] [Perf] GET /api/auth/get-employment-types -> 200 in 8.68ms
+[2026-06-22 23:54:15.846 INF] [2dee399f-3f76-481f-a5cd-38a0a89d6978] [CorrelationId: 2dee399f-3f76-481f-a5cd-38a0a89d6978] GET /api/auth/get-employment-types completed in 8.79ms with status 200
+[2026-06-22 23:54:15.851 INF] [a27cc14b-dbb2-4a4a-95a4-744f1531fb3f] [Perf] GET /api/role -> 200 in 21.59ms
+[2026-06-22 23:54:15.851 INF] [a27cc14b-dbb2-4a4a-95a4-744f1531fb3f] [CorrelationId: a27cc14b-dbb2-4a4a-95a4-744f1531fb3f] GET /api/role completed in 21.66ms with status 200
+[2026-06-22 23:56:57.429 WRN] [d2e8fc62-f52b-4406-9253-07d07cd87719] [Perf] GET /api/notificationsHub -> 101 in 664493.76ms
+[2026-06-22 23:56:57.429 INF] [d2e8fc62-f52b-4406-9253-07d07cd87719] [CorrelationId: d2e8fc62-f52b-4406-9253-07d07cd87719] GET /api/notificationsHub completed in 664493.87ms with status 101
+[2026-06-22 23:56:57.429 WRN] [436a0cfb-556c-4263-9b03-32e98634dc41] [Perf] GET /api/notificationsHub -> 101 in 665111.26ms
+[2026-06-22 23:56:57.429 WRN] [d2e8fc62-f52b-4406-9253-07d07cd87719] [CorrelationId: d2e8fc62-f52b-4406-9253-07d07cd87719] SLOW REQUEST: GET /api/notificationsHub took 664493.87ms (threshold: 1000ms)
+[2026-06-22 23:56:57.429 WRN] [9abfcc95-990c-43b6-81f3-0024f0ede930] [Perf] GET /api/notificationsHub -> 101 in 664011.01ms
+[2026-06-22 23:56:57.429 INF] [436a0cfb-556c-4263-9b03-32e98634dc41] [CorrelationId: 436a0cfb-556c-4263-9b03-32e98634dc41] GET /api/notificationsHub completed in 665111.46ms with status 101
+[2026-06-22 23:56:57.430 ERR] [d2e8fc62-f52b-4406-9253-07d07cd87719] [CorrelationId: d2e8fc62-f52b-4406-9253-07d07cd87719] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 664493.87ms (threshold: 5000ms)
+[2026-06-22 23:56:57.430 WRN] [436a0cfb-556c-4263-9b03-32e98634dc41] [CorrelationId: 436a0cfb-556c-4263-9b03-32e98634dc41] SLOW REQUEST: GET /api/notificationsHub took 665111.46ms (threshold: 1000ms)
+[2026-06-22 23:56:57.430 ERR] [436a0cfb-556c-4263-9b03-32e98634dc41] [CorrelationId: 436a0cfb-556c-4263-9b03-32e98634dc41] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 665111.46ms (threshold: 5000ms)
+[2026-06-22 23:56:57.430 INF] [9abfcc95-990c-43b6-81f3-0024f0ede930] [CorrelationId: 9abfcc95-990c-43b6-81f3-0024f0ede930] GET /api/notificationsHub completed in 664011.60ms with status 101
+[2026-06-22 23:56:57.430 WRN] [9abfcc95-990c-43b6-81f3-0024f0ede930] [CorrelationId: 9abfcc95-990c-43b6-81f3-0024f0ede930] SLOW REQUEST: GET /api/notificationsHub took 664011.60ms (threshold: 1000ms)
+[2026-06-22 23:56:57.430 ERR] [9abfcc95-990c-43b6-81f3-0024f0ede930] [CorrelationId: 9abfcc95-990c-43b6-81f3-0024f0ede930] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 664011.60ms (threshold: 5000ms)
+[2026-06-22 23:56:57.471 INF] [3114fb2a-c4de-42e3-a267-ae518b648377] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.31ms
+[2026-06-22 23:56:57.471 INF] [3114fb2a-c4de-42e3-a267-ae518b648377] [CorrelationId: 3114fb2a-c4de-42e3-a267-ae518b648377] POST /api/notificationsHub/negotiate completed in 0.41ms with status 200
+[2026-06-22 23:56:57.491 INF] [fd1a4422-a236-415c-a093-4f0df86e99c2] [Perf] POST /api/notificationsHub/negotiate -> 200 in 3.82ms
+[2026-06-22 23:56:57.491 INF] [fd1a4422-a236-415c-a093-4f0df86e99c2] [CorrelationId: fd1a4422-a236-415c-a093-4f0df86e99c2] POST /api/notificationsHub/negotiate completed in 18.96ms with status 200
+[2026-06-22 23:56:57.514 INF] [7ade4d82-cf95-44df-877b-cbc603a59710] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.33ms
+[2026-06-22 23:56:57.514 INF] [7ade4d82-cf95-44df-877b-cbc603a59710] [CorrelationId: 7ade4d82-cf95-44df-877b-cbc603a59710] POST /api/notificationsHub/negotiate completed in 0.45ms with status 200

@@ -87,7 +87,35 @@ namespace WUIAM.Services
 
             var policy = await _leavePolicyRepo.GetApplicablePolicyAsync(user, dto.LeaveTypeId);
             if (policy == null)
-                return ApiResponse<LeaveRequest>.Failure("No leave policy found for this leave type.");
+            {
+                var hasActiveEmployment = user.Employee?.Employments.Any(e => e.IsActive) == true;
+                return ApiResponse<LeaveRequest>.Failure(hasActiveEmployment
+                    ? "No leave policy matches your employment type. Please contact HR."
+                    : "Your employment profile is incomplete. Ask HR to add an active employment type before requesting leave.");
+            }
+
+            if (policy.DependentLeaveTypeId.HasValue)
+            {
+                var dependentBalance = await _leaveBalanceRepo.GetByUserAndTypeAsync(user.Id, policy.DependentLeaveTypeId.Value);
+                double remainingDays = 0;
+                if (dependentBalance != null)
+                {
+                    remainingDays = dependentBalance.RemainingDays;
+                }
+                else
+                {
+                    var dependentPolicy = await _leavePolicyRepo.GetApplicablePolicyAsync(user, policy.DependentLeaveTypeId.Value);
+                    if (dependentPolicy != null)
+                    {
+                        remainingDays = dependentPolicy.AnnualEntitlement;
+                    }
+                }
+
+                if (remainingDays > 0)
+                {
+                    return ApiResponse<LeaveRequest>.Failure($"This leave type requires you to exhaust your dependent leave type first. You have {remainingDays} days remaining of the dependent leave.");
+                }
+            }
 
             int requestedDays = await _leaveDateCalculator.CalculateWorkingDaysAsync(
                 dto.StartDate,
@@ -436,13 +464,52 @@ namespace WUIAM.Services
             if (request.Status != StatusConstants.Pending)
                 return ApiResponse<LeaveRequest>.Failure("Only pending requests can be updated.");
 
+            if (request.LeaveTypeId != leaveRequestCreateDto.LeaveTypeId)
+                return ApiResponse<LeaveRequest>.Failure("The leave type cannot be changed after submission. Withdraw this request and create a new one instead.");
+
+            var user = await _userRepo.FindUserByIdAsync(userId);
+            if (user == null)
+                return ApiResponse<LeaveRequest>.Failure("User not found.");
+
+            var policy = await _leavePolicyRepo.GetApplicablePolicyAsync(user, request.LeaveTypeId);
+            if (policy == null)
+                return ApiResponse<LeaveRequest>.Failure("No applicable leave policy was found.");
+
+            var requestedDays = await _leaveDateCalculator.CalculateWorkingDaysAsync(
+                leaveRequestCreateDto.StartDate,
+                leaveRequestCreateDto.EndDate,
+                policy.IncludePublicHolidays);
+            if (requestedDays <= 0)
+                return ApiResponse<LeaveRequest>.Failure("Invalid leave duration.");
+
+            var balance = await _leaveBalanceRepo.GetByUserAndTypeAsync(userId, request.LeaveTypeId);
+            if (balance != null && requestedDays > balance.RemainingDays && !policy.AllowNegativeBalance)
+                return ApiResponse<LeaveRequest>.Failure($"Insufficient leave balance. Your leave balance is {balance.RemainingDays} days.");
+
             request.LeaveTypeId = leaveRequestCreateDto.LeaveTypeId;
             request.StartDate = leaveRequestCreateDto.StartDate;
             request.EndDate = leaveRequestCreateDto.EndDate;
             request.Reason = leaveRequestCreateDto.Reason;
+            request.TotalDays = requestedDays;
 
             await _leaveRequestRepo.UpdateAsync(request);
             return ApiResponse<LeaveRequest>.Success("Leave request updated successfully.", request);
+        }
+
+        public async Task<ApiResponse<LeaveRequest>> DeleteLeaveRequestAsync(Guid id)
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null || !Guid.TryParse(userIdClaim.Value, out var userId))
+                return ApiResponse<LeaveRequest>.Failure("Invalid or missing user identity.");
+
+            var request = await _leaveRequestRepo.GetByIdAsync(id);
+            if (request == null || request.UserId != userId)
+                return ApiResponse<LeaveRequest>.Failure("Leave request not found or unauthorized.");
+            if (request.Status != StatusConstants.Pending)
+                return ApiResponse<LeaveRequest>.Failure("Only pending requests can be withdrawn.");
+
+            await _leaveRequestRepo.DeleteAsync(id);
+            return ApiResponse<LeaveRequest>.Success("Leave request withdrawn successfully.", request);
         }
 
         public async Task<ApiResponse<IEnumerable<LeaveRequestApproval>>> GetLeaveRequestApprovals(Guid leaveRequestId)

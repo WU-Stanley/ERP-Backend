@@ -201,7 +201,7 @@ namespace WUIAM.Controllers
         /// </summary>
         [AllowAnonymous]
         [HttpGet("public/applications/{id}/track")]
-        public async Task<ActionResult<ApiResponse<ApplicantTrackingDto>>> TrackApplication(Guid id, [FromQuery] string email)
+        public async Task<ActionResult<ApiResponse<ApplicantTrackingDto>>> TrackApplication(string id, [FromQuery] string email)
         {
             var tracking = await _recruitmentService.GetApplicantTrackingAsync(id, email);
             if (tracking == null)
@@ -234,7 +234,8 @@ namespace WUIAM.Controllers
                 AssignedTo = application.AssignedTo,
                 AssignedToName = application.AssignedToUser?.UserName,
                 CreatedAt = application.CreatedAt,
-                UpdatedAt = application.UpdatedAt ?? DateTime.UtcNow
+                UpdatedAt = application.UpdatedAt ?? DateTime.UtcNow,
+                IctOnboardingStatus = application.IctOnboardingStatus
             };
 
             // Attach latest score
@@ -302,38 +303,12 @@ namespace WUIAM.Controllers
         [HttpPatch("applications/{id}/status")]
         public async Task<ActionResult<ApiResponse<JobApplication>>> UpdateApplicationStatus(Guid id, [FromBody] UpdateApplicationStatusDto dto)
         {
-            var previousStatus = await _context.JobApplications
-                .AsNoTracking()
-                .Where(application => application.Id == id)
-                .Select(application => application.Status)
-                .FirstOrDefaultAsync();
             var application = await _recruitmentService.UpdateApplicationStatusAsync(id, dto);
             if (application == null)
                 return NotFound(ApiResponse<JobApplication>.Failure("Application not found."));
 
             // Notify the applicant of the status update
             await SendStatusUpdateEmailAsync(application);
-
-            if (!string.Equals(previousStatus, "Hired", StringComparison.OrdinalIgnoreCase) &&
-                string.Equals(application.Status, "Hired", StringComparison.OrdinalIgnoreCase))
-            {
-                application.IctOnboardingStatus = "Pending";
-                application.MicrosoftProvisioningError = null;
-                await _context.SaveChangesAsync();
-
-                var acceptedOffer = await _context.OfferLetters
-                    .AsNoTracking()
-                    .Where(offer => offer.ApplicationId == application.Id)
-                    .OrderByDescending(offer => offer.CreatedAt)
-                    .Select(offer => new { offer.Position, offer.StartDate })
-                    .FirstOrDefaultAsync();
-
-                await _notificationService.NotifyIctOnboardingTeamAsync(
-                    application.Id,
-                    application.ApplicantName,
-                    acceptedOffer?.Position ?? application.JobPosting?.Title ?? "New employee",
-                    acceptedOffer?.StartDate);
-            }
 
             return Ok(ApiResponse<JobApplication>.Success("Application status updated.", application));
         }
@@ -547,7 +522,7 @@ namespace WUIAM.Controllers
         /// </summary>
         [HasPermission([Permissions.AdminAccess, Permissions.SuperAdminAccess, Permissions.ManageRecruitment])]
         [HttpPost("applications/{id}/offer-letter")]
-        public async Task<ActionResult<ApiResponse<OfferLetterDto>>> CreateOfferLetter(Guid id, [FromBody] CreateOfferLetterDto dto)
+        public async Task<ActionResult<ApiResponse<OfferLetterDto>>> CreateOfferLetter(Guid id, [FromForm] CreateOfferLetterDto dto)
         {
             try
             {
@@ -564,6 +539,8 @@ namespace WUIAM.Controllers
                     StartDate = offer.StartDate,
                     Benefits = offer.Benefits ?? string.Empty,
                     Content = offer.Content,
+                    GradeLevel = offer.GradeLevel,
+                    AttachmentPath = offer.AttachmentPath,
                     Status = offer.Status,
                     SentAt = offer.SentAt,
                     ExpiresAt = offer.ExpiresAt,
@@ -602,6 +579,8 @@ namespace WUIAM.Controllers
                 StartDate = offer.StartDate,
                 Benefits = offer.Benefits ?? string.Empty,
                 Content = offer.Content,
+                GradeLevel = offer.GradeLevel,
+                AttachmentPath = offer.AttachmentPath,
                 Status = offer.Status,
                 SentAt = offer.SentAt,
                 ExpiresAt = offer.ExpiresAt,
@@ -636,6 +615,8 @@ namespace WUIAM.Controllers
                     StartDate = offer.StartDate,
                     Benefits = offer.Benefits ?? string.Empty,
                     Content = offer.Content,
+                    GradeLevel = offer.GradeLevel,
+                    AttachmentPath = offer.AttachmentPath,
                     Status = offer.Status,
                     SentAt = offer.SentAt,
                     ExpiresAt = offer.ExpiresAt,
@@ -670,22 +651,6 @@ namespace WUIAM.Controllers
             {
                 var offer = await _recruitmentService.RespondToOfferAsync(id, dto.Response, dto.Comments, dto.SignedName, dto.SignatureData);
 
-                if (string.Equals(offer.Status, "Accepted", StringComparison.OrdinalIgnoreCase) && offer.Application != null)
-                {
-                    if (offer.Application.IctOnboardingStatus == "NotStarted")
-                    {
-                        offer.Application.IctOnboardingStatus = "Pending";
-                        offer.Application.MicrosoftProvisioningError = null;
-                        await _context.SaveChangesAsync();
-                    }
-
-                    await _notificationService.NotifyIctOnboardingTeamAsync(
-                        offer.ApplicationId,
-                        offer.Application.ApplicantName,
-                        offer.Position,
-                        offer.StartDate);
-                }
-
                 var offerDto = new OfferLetterDto
                 {
                     Id = offer.Id,
@@ -697,6 +662,8 @@ namespace WUIAM.Controllers
                     StartDate = offer.StartDate,
                     Benefits = offer.Benefits ?? string.Empty,
                     Content = offer.Content,
+                    GradeLevel = offer.GradeLevel,
+                    AttachmentPath = offer.AttachmentPath,
                     Status = offer.Status,
                     SentAt = offer.SentAt,
                     ExpiresAt = offer.ExpiresAt,
@@ -724,7 +691,7 @@ namespace WUIAM.Controllers
             var applications = await _context.JobApplications
                 .AsNoTracking()
                 .Include(application => application.JobPosting)
-                .Where(application => application.Status == "Hired")
+                .Where(application => application.Status == "Hired" && application.IctOnboardingStatus != "NotStarted")
                 .OrderBy(application => application.MicrosoftAccountProvisionedAt.HasValue)
                 .ThenByDescending(application => application.UpdatedAt ?? application.CreatedAt)
                 .ToListAsync();
@@ -848,6 +815,46 @@ namespace WUIAM.Controllers
             TemporaryPassword = temporaryPassword
         };
 
+        /// <summary>
+        /// Explicitly confirm resumption of a hired candidate. Only HR can perform this.
+        /// </summary>
+        [HasPermission([Permissions.AdminAccess, Permissions.SuperAdminAccess, Permissions.ManageRecruitment])]
+        [HttpPost("applications/{id}/confirm-resumption")]
+        public async Task<ActionResult<ApiResponse<JobApplication>>> ConfirmResumption(Guid id)
+        {
+            var application = await _context.JobApplications
+                .Include(a => a.JobPosting)
+                .FirstOrDefaultAsync(a => a.Id == id);
+
+            if (application == null)
+                return NotFound(ApiResponse<JobApplication>.Failure("Application not found."));
+
+            if (!string.Equals(application.Status, "Hired", StringComparison.OrdinalIgnoreCase))
+                return BadRequest(ApiResponse<JobApplication>.Failure("Resumption can only be confirmed for hired candidates."));
+
+            if (application.IctOnboardingStatus != "NotStarted")
+                return BadRequest(ApiResponse<JobApplication>.Failure($"Resumption has already been confirmed (Current Status: {application.IctOnboardingStatus})."));
+
+            application.IctOnboardingStatus = "Pending";
+            application.MicrosoftProvisioningError = null;
+            application.UpdatedAt = DateTime.UtcNow;
+            await _context.SaveChangesAsync();
+
+            var offer = await _context.OfferLetters
+                .AsNoTracking()
+                .Where(o => o.ApplicationId == id)
+                .OrderByDescending(o => o.CreatedAt)
+                .FirstOrDefaultAsync();
+
+            await _notificationService.NotifyIctOnboardingTeamAsync(
+                application.Id,
+                application.ApplicantName,
+                offer?.Position ?? application.JobPosting?.Title ?? "New employee",
+                offer?.StartDate);
+
+            return Ok(ApiResponse<JobApplication>.Success("Resumption confirmed and ICT onboarding initiated.", application));
+        }
+
         // ==================== Queries ====================
 
         /// <summary>
@@ -862,6 +869,19 @@ namespace WUIAM.Controllers
             var fromUserId = userIdClaim != null && Guid.TryParse(userIdClaim.Value, out var uid) ? (Guid?)uid : null;
 
             var query = await _recruitmentService.CreateQueryAsync(id, dto.Message, fromType, fromUserId);
+
+            if (fromType == "Applicant")
+            {
+                var application = await _context.JobApplications.FindAsync(id);
+                var applicantName = application?.ApplicantName ?? "Applicant";
+                await _notifyService.NotifyRecruitmentTeamAsync(
+                    "Offer Query",
+                    $"New query/renegotiation from {applicantName}: \"{dto.Message}\"",
+                    "info",
+                    "JobApplication",
+                    id
+                );
+            }
 
             var queryDto = new QueryDto
             {
