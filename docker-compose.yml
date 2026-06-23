@@ -11,7 +11,8 @@ services:
       ConnectionStrings__DefaultConnection: "Server=10.255.255.43,1433;Database=WUIAMDb;User=sa;Password=WU-2025,dfh;TrustServerCertificate=True;"
     restart: always
     volumes:
-      - ./logs:/app/logs
+      - ./Logs:/app/Logs
+      - ./uploads:/app/uploads
     container_name: wuiam-app
     networks:
       - wuiam-network
