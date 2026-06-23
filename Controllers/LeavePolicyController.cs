@@ -72,12 +72,4 @@ public class LeavePolicyController : ControllerBase
         await _policyRepo.DeleteAsync(id);
         return Ok(ApiResponse<LeavePolicy>.Success("Leave policy deleted successfully.", existing));
     }
-
-    [HttpGet("anonymous-all")]
-    [Microsoft.AspNetCore.Authorization.AllowAnonymous]
-    public async Task<ActionResult> GetAnonymousAll()
-    {
-        var policies = await _policyRepo.GetAllAsync();
-        return Ok(policies);
-    }
 }

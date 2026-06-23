@@ -68,18 +68,7 @@ namespace WUIAM.Repositories
                 db.RefreshTokens
                     .Where(rt => rt.UserId == userId && rt.RevokedOn == null && rt.IsExpired == false));
 
-        // Compiled query for users by role
-        private static readonly Func<WUIAMDbContext, Guid, IAsyncEnumerable<UserDto>> _getUsersByRole =
-            EF.CompileAsyncQuery((WUIAMDbContext db, Guid roleId) =>
-                db.Users
-                    .Where(u => !u.IsDeleted && u.UserRoles.Any(ur => ur.RoleId == roleId))
-                    .Select(u => new UserDto
-                    {
-                        Id = u.Id,
-                        FullName = u.FullName,
-                        Email = u.UserEmail,
-                        UserTypeId = u.UserTypeId,
-                    }));
+
 
         public AuthRepository(WUIAMDbContext context)
         {
@@ -216,12 +205,16 @@ namespace WUIAM.Repositories
             if (string.IsNullOrWhiteSpace(approverValue) || !Guid.TryParse(approverValue, out var roleId))
                 return new List<UserDto>();
 
-            var list = new List<UserDto>();
-            await foreach (var user in _getUsersByRole(_dbContext, roleId))
-            {
-                list.Add(user);
-            }
-            return list;
+            return await _dbContext.Users
+                .Where(u => !u.IsDeleted && u.UserRoles.Any(ur => ur.RoleId == roleId))
+                .Select(u => new UserDto
+                {
+                    Id = u.Id,
+                    FullName = u.FullName,
+                    Email = u.UserEmail,
+                    UserTypeId = u.UserTypeId,
+                })
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<EmploymentType>> GetEmploymentTypes()
