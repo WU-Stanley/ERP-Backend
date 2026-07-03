@@ -1,0 +1,285 @@
+[2026-06-30 15:16:10.034 WRN] [] No store type was specified for the decimal property 'PurchaseCost' on entity type 'FacilityAsset'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'UnitCost' on entity type 'InventoryItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'GrossPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'NetPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'EstimatedAmount' on entity type 'ProcurementRequest'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'BasePay' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'HousingAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'OtherAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'PensionRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'TaxRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:10.049 WRN] [] No store type was specified for the decimal property 'TransportAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-06-30 15:16:12.317 INF] [] Start installing Hangfire SQL objects...
+[2026-06-30 15:16:12.436 INF] [] Hangfire SQL objects installed.
+[2026-06-30 15:16:12.729 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.
+[2026-06-30 15:16:12.864 INF] [] Starting Hangfire Server using job storage: 'SQL Server: 10.255.255.43@WUIAMDb'
+[2026-06-30 15:16:12.864 INF] [] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2026-06-30 15:16:12.864 INF] [] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-06-30 15:16:12.919 INF] [] Server macbook-pro:74398:37866298 successfully announced in 50.4696 ms
+[2026-06-30 15:16:12.921 INF] [] Server macbook-pro:74398:37866298 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-06-30 15:16:12.923 INF] [] Server macbook-pro:74398:37866298 all the dispatchers started
+[2026-06-30 15:16:21.327 INF] [ac4fd31a-f488-4dea-9a75-f9d122c5a05b] [Perf] GET /api/department -> 200 in 113.37ms
+[2026-06-30 15:16:21.328 INF] [ac4fd31a-f488-4dea-9a75-f9d122c5a05b] [CorrelationId: ac4fd31a-f488-4dea-9a75-f9d122c5a05b] GET /api/department completed in 117.05ms with status 200
+[2026-06-30 15:16:21.345 INF] [8cf5c346-f427-46ba-b9ad-5308f5ee358b] [Perf] GET /api/auth/users -> 200 in 131.72ms
+[2026-06-30 15:16:21.345 INF] [8cf5c346-f427-46ba-b9ad-5308f5ee358b] [CorrelationId: 8cf5c346-f427-46ba-b9ad-5308f5ee358b] GET /api/auth/users completed in 131.93ms with status 200
+[2026-06-30 15:16:22.915 INF] [6787fc6f-98e2-457b-9a1a-4efa111cde6a] [Perf] GET /api/Employees -> 200 in 96.50ms
+[2026-06-30 15:16:22.915 INF] [6787fc6f-98e2-457b-9a1a-4efa111cde6a] [CorrelationId: 6787fc6f-98e2-457b-9a1a-4efa111cde6a] GET /api/Employees completed in 96.71ms with status 200
+[2026-06-30 15:16:25.828 WRN] [04cf3bfb-87f3-49a0-8b26-fb9c83b539d1] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-30 15:16:26.864 WRN] [04cf3bfb-87f3-49a0-8b26-fb9c83b539d1] [Perf] POST /api/auth/impersonate/employee/78509e56-106d-4f47-aaea-08ded113e514 -> 200 in 1108.14ms
+[2026-06-30 15:16:26.864 INF] [04cf3bfb-87f3-49a0-8b26-fb9c83b539d1] [CorrelationId: 04cf3bfb-87f3-49a0-8b26-fb9c83b539d1] POST /api/auth/impersonate/employee/78509e56-106d-4f47-aaea-08ded113e514 completed in 1108.32ms with status 200
+[2026-06-30 15:16:26.864 WRN] [04cf3bfb-87f3-49a0-8b26-fb9c83b539d1] [CorrelationId: 04cf3bfb-87f3-49a0-8b26-fb9c83b539d1] SLOW REQUEST: POST /api/auth/impersonate/employee/78509e56-106d-4f47-aaea-08ded113e514 took 1108.32ms (threshold: 1000ms)
+[2026-06-30 15:16:27.992 INF] [ec0b7677-cb19-4d13-ab0b-62cabacf31b6] [Perf] GET /api/notifications/unread-count -> 200 in 16.48ms
+[2026-06-30 15:16:27.993 INF] [ec0b7677-cb19-4d13-ab0b-62cabacf31b6] [CorrelationId: ec0b7677-cb19-4d13-ab0b-62cabacf31b6] GET /api/notifications/unread-count completed in 16.74ms with status 200
+[2026-06-30 15:16:27.995 INF] [04a92498-95d6-4715-88b6-56734689015f] [Perf] POST /api/notificationsHub/negotiate -> 200 in 1.90ms
+[2026-06-30 15:16:27.996 INF] [04a92498-95d6-4715-88b6-56734689015f] [CorrelationId: 04a92498-95d6-4715-88b6-56734689015f] POST /api/notificationsHub/negotiate completed in 2.03ms with status 200
+[2026-06-30 15:16:28.079 INF] [f8f2f0fa-ec3c-41c5-90cf-6103b1d06ec9] [Perf] GET /api/Employees -> 200 in 95.43ms
+[2026-06-30 15:16:28.079 INF] [d6810415-231b-4251-b6a3-7cf5f5433931] [Perf] GET /api/notifications/unread-count -> 200 in 34.00ms
+[2026-06-30 15:16:28.079 INF] [f8f2f0fa-ec3c-41c5-90cf-6103b1d06ec9] [CorrelationId: f8f2f0fa-ec3c-41c5-90cf-6103b1d06ec9] GET /api/Employees completed in 95.57ms with status 200
+[2026-06-30 15:16:28.079 INF] [d6810415-231b-4251-b6a3-7cf5f5433931] [CorrelationId: d6810415-231b-4251-b6a3-7cf5f5433931] GET /api/notifications/unread-count completed in 34.22ms with status 200
+[2026-06-30 15:16:28.179 INF] [971f9f61-86ef-4c8a-b137-92a7bb63601f] [Perf] GET /api/notifications -> 200 in 134.65ms
+[2026-06-30 15:16:28.179 INF] [971f9f61-86ef-4c8a-b137-92a7bb63601f] [CorrelationId: 971f9f61-86ef-4c8a-b137-92a7bb63601f] GET /api/notifications completed in 134.80ms with status 200
+[2026-06-30 15:16:39.347 INF] [b7780a80-d56c-4c90-ad7f-1a8b1606b681] [Perf] POST /api/notificationsHub/negotiate -> 200 in 1.17ms
+[2026-06-30 15:16:39.347 INF] [b7780a80-d56c-4c90-ad7f-1a8b1606b681] [CorrelationId: b7780a80-d56c-4c90-ad7f-1a8b1606b681] POST /api/notificationsHub/negotiate completed in 1.59ms with status 200
+[2026-06-30 15:16:59.461 INF] [4b34f5f5-6512-40f9-867f-f05bbcff8e74] [Perf] GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 -> 200 in 111.39ms
+[2026-06-30 15:16:59.461 INF] [4b34f5f5-6512-40f9-867f-f05bbcff8e74] [CorrelationId: 4b34f5f5-6512-40f9-867f-f05bbcff8e74] GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 completed in 111.62ms with status 200
+[2026-06-30 15:17:35.509 WRN] [1ec6bd75-257c-40c3-9b1f-2a07707bd138] [Perf] GET /api/notificationsHub -> 101 in 67479.37ms
+[2026-06-30 15:17:35.510 INF] [1ec6bd75-257c-40c3-9b1f-2a07707bd138] [CorrelationId: 1ec6bd75-257c-40c3-9b1f-2a07707bd138] GET /api/notificationsHub completed in 67479.59ms with status 101
+[2026-06-30 15:17:35.510 WRN] [1ec6bd75-257c-40c3-9b1f-2a07707bd138] [CorrelationId: 1ec6bd75-257c-40c3-9b1f-2a07707bd138] SLOW REQUEST: GET /api/notificationsHub took 67479.59ms (threshold: 1000ms)
+[2026-06-30 15:17:35.511 ERR] [1ec6bd75-257c-40c3-9b1f-2a07707bd138] [CorrelationId: 1ec6bd75-257c-40c3-9b1f-2a07707bd138] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 67479.59ms (threshold: 5000ms)
+[2026-06-30 15:17:35.670 INF] [8a793831-49ec-4009-bf5a-b0ec41df03dc] [Perf] GET /api/notifications/unread-count -> 200 in 13.75ms
+[2026-06-30 15:17:35.670 INF] [8a793831-49ec-4009-bf5a-b0ec41df03dc] [CorrelationId: 8a793831-49ec-4009-bf5a-b0ec41df03dc] GET /api/notifications/unread-count completed in 13.94ms with status 200
+[2026-06-30 15:17:35.675 INF] [f2da877e-b898-4b2f-9629-6ab752e76845] [Perf] POST /api/notificationsHub/negotiate -> 200 in 3.46ms
+[2026-06-30 15:17:35.677 INF] [f2da877e-b898-4b2f-9629-6ab752e76845] [CorrelationId: f2da877e-b898-4b2f-9629-6ab752e76845] POST /api/notificationsHub/negotiate completed in 5.07ms with status 200
+[2026-06-30 15:17:35.685 INF] [80788494-d615-4599-a868-c38839f78b35] [Perf] GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 -> 200 in 14.24ms
+[2026-06-30 15:17:35.685 INF] [80788494-d615-4599-a868-c38839f78b35] [CorrelationId: 80788494-d615-4599-a868-c38839f78b35] GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 completed in 14.40ms with status 200
+[2026-06-30 15:17:35.713 INF] [a8920cad-dedb-46c2-b7c3-559736e7b0b1] [Perf] GET /api/notifications/unread-count -> 200 in 3.96ms
+[2026-06-30 15:17:35.713 INF] [a8920cad-dedb-46c2-b7c3-559736e7b0b1] [CorrelationId: a8920cad-dedb-46c2-b7c3-559736e7b0b1] GET /api/notifications/unread-count completed in 4.14ms with status 200
+[2026-06-30 15:17:35.718 INF] [9132ecab-5ce5-4022-aff0-3062c69ef382] [Perf] GET /api/notifications -> 200 in 8.05ms
+[2026-06-30 15:17:35.718 INF] [9132ecab-5ce5-4022-aff0-3062c69ef382] [CorrelationId: 9132ecab-5ce5-4022-aff0-3062c69ef382] GET /api/notifications completed in 8.19ms with status 200
+[2026-06-30 15:17:46.037 INF] [7e97db52-caa8-4a9d-b429-262525aca26b] [Perf] GET /api/department -> 200 in 1.45ms
+[2026-06-30 15:17:46.037 INF] [7e97db52-caa8-4a9d-b429-262525aca26b] [CorrelationId: 7e97db52-caa8-4a9d-b429-262525aca26b] GET /api/department completed in 1.61ms with status 200
+[2026-06-30 15:17:46.144 INF] [7bb08c55-358a-4eff-84c5-3041dccc9a3a] [Perf] GET /api/auth/users -> 200 in 108.67ms
+[2026-06-30 15:17:46.145 INF] [7bb08c55-358a-4eff-84c5-3041dccc9a3a] [CorrelationId: 7bb08c55-358a-4eff-84c5-3041dccc9a3a] GET /api/auth/users completed in 109.27ms with status 200
+[2026-06-30 15:17:55.324 ERR] [83197198-de03-4f5f-87c5-181e6ac4daaa] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'Unexpected entry.EntityState: Detached')
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.<CreateModificationCommands>g__ProcessEntry|11_0(IUpdateEntry entry, ITableMapping tableMapping, List`1 commands, IUpdateAdapter updateAdapter, Func`1 generateParameterName, Dictionary`2& sharedTablesCommandsMap)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.CreateModificationCommands(IList`1 entries, IUpdateAdapter updateAdapter, Func`1 generateParameterName)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.BatchCommands(IList`1 entries, IUpdateAdapter updateAdapter)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'Unexpected entry.EntityState: Detached')
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.<CreateModificationCommands>g__ProcessEntry|11_0(IUpdateEntry entry, ITableMapping tableMapping, List`1 commands, IUpdateAdapter updateAdapter, Func`1 generateParameterName, Dictionary`2& sharedTablesCommandsMap)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.CreateModificationCommands(IList`1 entries, IUpdateAdapter updateAdapter, Func`1 generateParameterName)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.BatchCommands(IList`1 entries, IUpdateAdapter updateAdapter)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-30 15:17:55.325 INF] [83197198-de03-4f5f-87c5-181e6ac4daaa] [Perf] PUT /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 -> 200 in 135.80ms
+[2026-06-30 15:17:55.326 ERR] [83197198-de03-4f5f-87c5-181e6ac4daaa] Unhandled exception: InvalidOperationException: The instance of entity type 'Department' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values. | Response: Invalid operation. | Path: /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 | Client IP: ::1
+[2026-06-30 15:18:09.598 ERR] [ff31bd9b-d5e9-4b5b-89b9-5377e6f6c4f0] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'Unexpected entry.EntityState: Detached')
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.<CreateModificationCommands>g__ProcessEntry|11_0(IUpdateEntry entry, ITableMapping tableMapping, List`1 commands, IUpdateAdapter updateAdapter, Func`1 generateParameterName, Dictionary`2& sharedTablesCommandsMap)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.CreateModificationCommands(IList`1 entries, IUpdateAdapter updateAdapter, Func`1 generateParameterName)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.BatchCommands(IList`1 entries, IUpdateAdapter updateAdapter)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'Unexpected entry.EntityState: Detached')
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.<CreateModificationCommands>g__ProcessEntry|11_0(IUpdateEntry entry, ITableMapping tableMapping, List`1 commands, IUpdateAdapter updateAdapter, Func`1 generateParameterName, Dictionary`2& sharedTablesCommandsMap)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.CreateModificationCommands(IList`1 entries, IUpdateAdapter updateAdapter, Func`1 generateParameterName)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.BatchCommands(IList`1 entries, IUpdateAdapter updateAdapter)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-30 15:18:09.599 INF] [ff31bd9b-d5e9-4b5b-89b9-5377e6f6c4f0] [Perf] PUT /api/department/c9f7e8fb-f68f-4c63-8e62-08ded11f1a74 -> 200 in 42.69ms
+[2026-06-30 15:18:09.599 ERR] [ff31bd9b-d5e9-4b5b-89b9-5377e6f6c4f0] Unhandled exception: InvalidOperationException: The instance of entity type 'Department' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values. | Response: Invalid operation. | Path: /api/department/c9f7e8fb-f68f-4c63-8e62-08ded11f1a74 | Client IP: ::1
+[2026-06-30 15:18:23.483 ERR] [19c0fdfa-8e55-4b47-89f5-d3e5f54efd2a] An exception occurred in the database while saving changes for context type 'WUIAM.Models.WUIAMDbContext'.
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'Unexpected entry.EntityState: Detached')
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.<CreateModificationCommands>g__ProcessEntry|11_0(IUpdateEntry entry, ITableMapping tableMapping, List`1 commands, IUpdateAdapter updateAdapter, Func`1 generateParameterName, Dictionary`2& sharedTablesCommandsMap)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.CreateModificationCommands(IList`1 entries, IUpdateAdapter updateAdapter, Func`1 generateParameterName)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.BatchCommands(IList`1 entries, IUpdateAdapter updateAdapter)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter 'Unexpected entry.EntityState: Detached')
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.<CreateModificationCommands>g__ProcessEntry|11_0(IUpdateEntry entry, ITableMapping tableMapping, List`1 commands, IUpdateAdapter updateAdapter, Func`1 generateParameterName, Dictionary`2& sharedTablesCommandsMap)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.CreateModificationCommands(IList`1 entries, IUpdateAdapter updateAdapter, Func`1 generateParameterName)
+   at Microsoft.EntityFrameworkCore.Update.Internal.CommandBatchPreparer.BatchCommands(IList`1 entries, IUpdateAdapter updateAdapter)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2026-06-30 15:18:23.484 INF] [19c0fdfa-8e55-4b47-89f5-d3e5f54efd2a] [Perf] PUT /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 -> 200 in 32.08ms
+[2026-06-30 15:18:23.484 ERR] [19c0fdfa-8e55-4b47-89f5-d3e5f54efd2a] Unhandled exception: InvalidOperationException: The instance of entity type 'Department' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values. | Response: Invalid operation. | Path: /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 | Client IP: ::1
+[2026-06-30 15:36:44.203 WRN] [bca5c0aa-e3c6-4e1c-aab7-8153c1f62e99] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-06-30 15:36:45.118 INF] [bca5c0aa-e3c6-4e1c-aab7-8153c1f62e99] [Perf] POST /api/auth/login -> 200 in 926.96ms
+[2026-06-30 15:36:45.118 INF] [bca5c0aa-e3c6-4e1c-aab7-8153c1f62e99] [CorrelationId: bca5c0aa-e3c6-4e1c-aab7-8153c1f62e99] POST /api/auth/login completed in 927.08ms with status 200
+[2026-06-30 15:42:25.220 INF] [facfb099-3280-484c-82e5-4bc1b988b8ab] [Perf] PUT /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 -> 200 in 136.82ms
+[2026-06-30 15:42:25.222 INF] [facfb099-3280-484c-82e5-4bc1b988b8ab] [CorrelationId: facfb099-3280-484c-82e5-4bc1b988b8ab] PUT /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 completed in 138.05ms with status 200
+[2026-06-30 15:42:25.239 INF] [336f6b27-c744-49b4-9c55-29d9880946c6] [Perf] GET /api/department -> 200 in 10.96ms
+[2026-06-30 15:42:25.239 INF] [336f6b27-c744-49b4-9c55-29d9880946c6] [CorrelationId: 336f6b27-c744-49b4-9c55-29d9880946c6] GET /api/department completed in 11.11ms with status 200
+[2026-06-30 15:42:33.381 INF] [c0ac4f26-3ac7-4f25-9a4d-28d6aa7f8267] [Perf] PUT /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 -> 200 in 64.17ms
+[2026-06-30 15:42:33.382 INF] [c0ac4f26-3ac7-4f25-9a4d-28d6aa7f8267] [CorrelationId: c0ac4f26-3ac7-4f25-9a4d-28d6aa7f8267] PUT /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 completed in 64.39ms with status 200
+[2026-06-30 15:42:33.532 INF] [9191f083-9b98-478b-8e1b-b0d2cebd9e76] [Perf] GET /api/department -> 200 in 146.11ms
+[2026-06-30 15:42:33.533 INF] [9191f083-9b98-478b-8e1b-b0d2cebd9e76] [CorrelationId: 9191f083-9b98-478b-8e1b-b0d2cebd9e76] GET /api/department completed in 146.32ms with status 200
+[2026-06-30 15:42:50.716 INF] [d58fd79c-c7c4-4a4e-9494-05602ae8a92b] [Perf] PUT /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 -> 200 in 67.81ms
+[2026-06-30 15:42:50.716 INF] [d58fd79c-c7c4-4a4e-9494-05602ae8a92b] [CorrelationId: d58fd79c-c7c4-4a4e-9494-05602ae8a92b] PUT /api/department/e6ddb5af-19c4-487e-81b3-08ded107c540 completed in 67.92ms with status 200
+[2026-06-30 15:42:50.725 INF] [fe6b91e2-1e21-400c-ab1d-98aeebe8cb37] [Perf] GET /api/department -> 200 in 4.66ms
+[2026-06-30 15:42:50.725 INF] [fe6b91e2-1e21-400c-ab1d-98aeebe8cb37] [CorrelationId: fe6b91e2-1e21-400c-ab1d-98aeebe8cb37] GET /api/department completed in 4.78ms with status 200
+[2026-06-30 15:43:00.689 WRN] [8ea5a48f-933b-46a5-8fda-c3ca44ecc72b] [Perf] GET /api/notificationsHub -> 101 in 1525056.47ms
+[2026-06-30 15:43:00.689 INF] [8ea5a48f-933b-46a5-8fda-c3ca44ecc72b] [CorrelationId: 8ea5a48f-933b-46a5-8fda-c3ca44ecc72b] GET /api/notificationsHub completed in 1525056.61ms with status 101
+[2026-06-30 15:43:00.689 WRN] [8ea5a48f-933b-46a5-8fda-c3ca44ecc72b] [CorrelationId: 8ea5a48f-933b-46a5-8fda-c3ca44ecc72b] SLOW REQUEST: GET /api/notificationsHub took 1525056.61ms (threshold: 1000ms)
+[2026-06-30 15:43:00.689 ERR] [8ea5a48f-933b-46a5-8fda-c3ca44ecc72b] [CorrelationId: 8ea5a48f-933b-46a5-8fda-c3ca44ecc72b] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 1525056.61ms (threshold: 5000ms)
+[2026-06-30 15:43:01.957 INF] [a1e33bbb-364a-4096-85c5-009f38327f0c] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.41ms
+[2026-06-30 15:43:01.957 INF] [a1e33bbb-364a-4096-85c5-009f38327f0c] [CorrelationId: a1e33bbb-364a-4096-85c5-009f38327f0c] POST /api/notificationsHub/negotiate completed in 0.55ms with status 200
+[2026-06-30 15:43:01.958 INF] [9132459f-d217-47d3-84f2-21351277f50e] [Perf] GET /api/department -> 200 in 0.73ms
+[2026-06-30 15:43:01.958 INF] [9132459f-d217-47d3-84f2-21351277f50e] [CorrelationId: 9132459f-d217-47d3-84f2-21351277f50e] GET /api/department completed in 0.78ms with status 200
+[2026-06-30 15:43:02.077 INF] [ef72ab6b-db02-49dc-af5d-b7fb0bf1d001] [Perf] GET /api/notifications/unread-count -> 200 in 171.14ms
+[2026-06-30 15:43:02.077 INF] [ef72ab6b-db02-49dc-af5d-b7fb0bf1d001] [CorrelationId: ef72ab6b-db02-49dc-af5d-b7fb0bf1d001] GET /api/notifications/unread-count completed in 171.29ms with status 200
+[2026-06-30 15:43:03.519 WRN] [18128323-cbe7-46c7-ba4b-ea4a11da10e5] [Perf] GET /api/notifications/unread-count -> 200 in 1541.90ms
+[2026-06-30 15:43:03.520 INF] [18128323-cbe7-46c7-ba4b-ea4a11da10e5] [CorrelationId: 18128323-cbe7-46c7-ba4b-ea4a11da10e5] GET /api/notifications/unread-count completed in 1542.29ms with status 200
+[2026-06-30 15:43:03.520 WRN] [18128323-cbe7-46c7-ba4b-ea4a11da10e5] [CorrelationId: 18128323-cbe7-46c7-ba4b-ea4a11da10e5] SLOW REQUEST: GET /api/notifications/unread-count took 1542.29ms (threshold: 1000ms)
+[2026-06-30 15:43:05.161 WRN] [e8b0e714-8aec-4520-9117-d3e096299470] [Perf] GET /api/auth/users -> 200 in 3200.68ms
+[2026-06-30 15:43:05.161 INF] [e8b0e714-8aec-4520-9117-d3e096299470] [CorrelationId: e8b0e714-8aec-4520-9117-d3e096299470] GET /api/auth/users completed in 3200.99ms with status 200
+[2026-06-30 15:43:05.161 WRN] [e8b0e714-8aec-4520-9117-d3e096299470] [CorrelationId: e8b0e714-8aec-4520-9117-d3e096299470] SLOW REQUEST: GET /api/auth/users took 3200.99ms (threshold: 1000ms)
+[2026-06-30 15:43:06.138 WRN] [107c9cda-c3f1-4160-bad0-2c855872fb99] [Perf] GET /api/notifications -> 200 in 4160.65ms
+[2026-06-30 15:43:06.139 INF] [107c9cda-c3f1-4160-bad0-2c855872fb99] [CorrelationId: 107c9cda-c3f1-4160-bad0-2c855872fb99] GET /api/notifications completed in 4161.06ms with status 200
+[2026-06-30 15:43:06.139 WRN] [107c9cda-c3f1-4160-bad0-2c855872fb99] [CorrelationId: 107c9cda-c3f1-4160-bad0-2c855872fb99] SLOW REQUEST: GET /api/notifications took 4161.06ms (threshold: 1000ms)
+[2026-06-30 15:44:29.003 WRN] [e287ac80-b444-402b-a913-3d5e94d3d7b5] [Perf] GET /api/notificationsHub -> 101 in 87033.08ms
+[2026-06-30 15:44:29.003 INF] [e287ac80-b444-402b-a913-3d5e94d3d7b5] [CorrelationId: e287ac80-b444-402b-a913-3d5e94d3d7b5] GET /api/notificationsHub completed in 87033.57ms with status 101
+[2026-06-30 15:44:29.003 WRN] [e287ac80-b444-402b-a913-3d5e94d3d7b5] [CorrelationId: e287ac80-b444-402b-a913-3d5e94d3d7b5] SLOW REQUEST: GET /api/notificationsHub took 87033.57ms (threshold: 1000ms)
+[2026-06-30 15:44:29.003 ERR] [e287ac80-b444-402b-a913-3d5e94d3d7b5] [CorrelationId: e287ac80-b444-402b-a913-3d5e94d3d7b5] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 87033.57ms (threshold: 5000ms)
+[2026-06-30 15:44:29.008 WRN] [2bdf4713-f15d-4734-b500-bfcbc2bad5d9] [Perf] GET /api/notificationsHub -> 101 in 1669694.74ms
+[2026-06-30 15:44:29.008 INF] [2bdf4713-f15d-4734-b500-bfcbc2bad5d9] [CorrelationId: 2bdf4713-f15d-4734-b500-bfcbc2bad5d9] GET /api/notificationsHub completed in 1669694.87ms with status 101
+[2026-06-30 15:44:29.008 WRN] [2bdf4713-f15d-4734-b500-bfcbc2bad5d9] [CorrelationId: 2bdf4713-f15d-4734-b500-bfcbc2bad5d9] SLOW REQUEST: GET /api/notificationsHub took 1669694.87ms (threshold: 1000ms)
+[2026-06-30 15:44:29.008 ERR] [2bdf4713-f15d-4734-b500-bfcbc2bad5d9] [CorrelationId: 2bdf4713-f15d-4734-b500-bfcbc2bad5d9] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 1669694.87ms (threshold: 5000ms)
+[2026-06-30 15:44:29.975 INF] [5d7fa7f5-b26c-45ec-bff1-4f355331da8d] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.36ms
+[2026-06-30 15:44:29.975 INF] [5d7fa7f5-b26c-45ec-bff1-4f355331da8d] [CorrelationId: 5d7fa7f5-b26c-45ec-bff1-4f355331da8d] POST /api/notificationsHub/negotiate completed in 0.45ms with status 200
+[2026-06-30 15:44:30.040 INF] [5f84c7ce-a82d-4313-9b2b-eec8e7fc5ec7] [Perf] GET /api/notifications/unread-count -> 200 in 72.02ms
+[2026-06-30 15:44:30.040 INF] [5f84c7ce-a82d-4313-9b2b-eec8e7fc5ec7] [CorrelationId: 5f84c7ce-a82d-4313-9b2b-eec8e7fc5ec7] GET /api/notifications/unread-count completed in 72.22ms with status 200
+[2026-06-30 15:44:30.050 INF] [510ff59d-c449-4d9e-99da-f140a13be9c9] [Perf] GET /api/notifications -> 200 in 10.72ms
+[2026-06-30 15:44:30.050 INF] [510ff59d-c449-4d9e-99da-f140a13be9c9] [CorrelationId: 510ff59d-c449-4d9e-99da-f140a13be9c9] GET /api/notifications completed in 10.81ms with status 200
+[2026-06-30 15:44:30.056 INF] [cbc7e257-2cda-4f47-a4ca-0984d71d4091] [Perf] GET /api/notifications/unread-count -> 200 in 8.26ms
+[2026-06-30 15:44:30.056 INF] [cbc7e257-2cda-4f47-a4ca-0984d71d4091] [CorrelationId: cbc7e257-2cda-4f47-a4ca-0984d71d4091] GET /api/notifications/unread-count completed in 8.36ms with status 200
+[2026-06-30 15:44:30.120 INF] [ad1a139f-8ece-45cf-b230-5ca01929d0f7] [Perf] GET /api/leavetype/available -> 200 in 145.37ms
+[2026-06-30 15:44:30.120 INF] [ad1a139f-8ece-45cf-b230-5ca01929d0f7] [CorrelationId: ad1a139f-8ece-45cf-b230-5ca01929d0f7] GET /api/leavetype/available completed in 145.48ms with status 200
+[2026-06-30 15:44:30.896 INF] [c1286810-5fd9-4fed-9c94-9f06ffc82b06] [Perf] GET /api/department -> 200 in 1.52ms
+[2026-06-30 15:44:30.896 INF] [c1286810-5fd9-4fed-9c94-9f06ffc82b06] [CorrelationId: c1286810-5fd9-4fed-9c94-9f06ffc82b06] GET /api/department completed in 1.70ms with status 200
+[2026-06-30 15:44:30.898 INF] [8452ac31-0336-4d26-9016-aab3f2fb16f3] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.26ms
+[2026-06-30 15:44:30.898 INF] [8452ac31-0336-4d26-9016-aab3f2fb16f3] [CorrelationId: 8452ac31-0336-4d26-9016-aab3f2fb16f3] POST /api/notificationsHub/negotiate completed in 0.34ms with status 200
+[2026-06-30 15:44:30.940 INF] [30d8332a-410b-45ea-97a5-d0d344f50303] [Perf] GET /api/notifications/unread-count -> 200 in 59.29ms
+[2026-06-30 15:44:30.940 INF] [30d8332a-410b-45ea-97a5-d0d344f50303] [CorrelationId: 30d8332a-410b-45ea-97a5-d0d344f50303] GET /api/notifications/unread-count completed in 59.40ms with status 200
+[2026-06-30 15:44:30.945 INF] [39ebf6fb-7c15-4950-a7d6-365a7bf2fd5c] [Perf] GET /api/auth/users -> 200 in 50.97ms
+[2026-06-30 15:44:30.945 INF] [39ebf6fb-7c15-4950-a7d6-365a7bf2fd5c] [CorrelationId: 39ebf6fb-7c15-4950-a7d6-365a7bf2fd5c] GET /api/auth/users completed in 51.10ms with status 200
+[2026-06-30 15:44:31.014 INF] [a973d84b-3230-4056-ace7-2736dce1298a] [Perf] GET /api/notifications -> 200 in 57.67ms
+[2026-06-30 15:44:31.014 INF] [81e7701f-8208-42d2-998e-860c944b1491] [Perf] GET /api/notifications/unread-count -> 200 in 56.51ms
+[2026-06-30 15:44:31.014 INF] [a973d84b-3230-4056-ace7-2736dce1298a] [CorrelationId: a973d84b-3230-4056-ace7-2736dce1298a] GET /api/notifications completed in 58.11ms with status 200
+[2026-06-30 15:44:31.014 INF] [81e7701f-8208-42d2-998e-860c944b1491] [CorrelationId: 81e7701f-8208-42d2-998e-860c944b1491] GET /api/notifications/unread-count completed in 56.81ms with status 200
+[2026-06-30 15:49:57.890 INF] [] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:21.4469557 and is in the Running state now
+[2026-06-30 15:50:12.441 INF] [] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:32.6345168 and is in the Running state now
+[2026-06-30 15:51:04.391 WRN] [] Server macbook-pro:74398:37866298 encountered an exception while sending heartbeat
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=12967; handshake=2033; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerConnection.Heartbeat(String serverId) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 546
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:a65c1e3f-5975-40b2-9a28-c542bf3f6c71
+Error Number:-2,State:0,Class:11
+[2026-06-30 15:51:23.576 INF] [] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:30.0648874 and is in the Running state now
+[2026-06-30 15:51:33.214 INF] [] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:39.1946938 and is in the Running state now
+[2026-06-30 15:51:34.400 INF] [] Server macbook-pro:74398:37866298 is now able to continue sending heartbeats
+[2026-06-30 15:51:41.978 WRN] [98d8cb89-4de1-46f9-a201-f21be8254ac4] [Perf] GET /api/notificationsHub -> 101 in 431045.38ms
+[2026-06-30 15:51:41.978 INF] [98d8cb89-4de1-46f9-a201-f21be8254ac4] [CorrelationId: 98d8cb89-4de1-46f9-a201-f21be8254ac4] GET /api/notificationsHub completed in 431045.67ms with status 101
+[2026-06-30 15:51:41.978 WRN] [98d8cb89-4de1-46f9-a201-f21be8254ac4] [CorrelationId: 98d8cb89-4de1-46f9-a201-f21be8254ac4] SLOW REQUEST: GET /api/notificationsHub took 431045.67ms (threshold: 1000ms)
+[2026-06-30 15:51:41.978 ERR] [98d8cb89-4de1-46f9-a201-f21be8254ac4] [CorrelationId: 98d8cb89-4de1-46f9-a201-f21be8254ac4] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 431045.67ms (threshold: 5000ms)
+[2026-06-30 15:51:54.231 WRN] [e8114e77-083c-41d6-8a7d-10b0bb86da8f] [Perf] GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 -> 200 in 15942.97ms
+[2026-06-30 15:51:54.231 INF] [e8114e77-083c-41d6-8a7d-10b0bb86da8f] [CorrelationId: e8114e77-083c-41d6-8a7d-10b0bb86da8f] GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 completed in 15943.28ms with status 200
+[2026-06-30 15:51:54.231 WRN] [e8114e77-083c-41d6-8a7d-10b0bb86da8f] [CorrelationId: e8114e77-083c-41d6-8a7d-10b0bb86da8f] SLOW REQUEST: GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 took 15943.28ms (threshold: 1000ms)
+[2026-06-30 15:51:54.231 ERR] [e8114e77-083c-41d6-8a7d-10b0bb86da8f] [CorrelationId: e8114e77-083c-41d6-8a7d-10b0bb86da8f] CRITICAL SLOW REQUEST: GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 took 15943.28ms (threshold: 5000ms)
+[2026-06-30 15:52:04.369 INF] [6cad1f31-12ff-4fdb-890d-69e3ea4ab5dd] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.26ms
+[2026-06-30 15:52:04.369 INF] [6cad1f31-12ff-4fdb-890d-69e3ea4ab5dd] [CorrelationId: 6cad1f31-12ff-4fdb-890d-69e3ea4ab5dd] POST /api/notificationsHub/negotiate completed in 0.34ms with status 200
+[2026-06-30 15:52:05.088 INF] [60e9162b-6441-4e97-a631-2d94c6442cb3] [Perf] GET /api/notifications/unread-count -> 200 in 731.60ms
+[2026-06-30 15:52:05.088 INF] [60e9162b-6441-4e97-a631-2d94c6442cb3] [CorrelationId: 60e9162b-6441-4e97-a631-2d94c6442cb3] GET /api/notifications/unread-count completed in 731.76ms with status 200
+[2026-06-30 15:52:07.117 WRN] [4232209a-74aa-41e6-9658-c6f09404d74d] [Perf] GET /api/notifications -> 200 in 2710.15ms
+[2026-06-30 15:52:07.117 INF] [4232209a-74aa-41e6-9658-c6f09404d74d] [CorrelationId: 4232209a-74aa-41e6-9658-c6f09404d74d] GET /api/notifications completed in 2710.28ms with status 200
+[2026-06-30 15:52:07.117 WRN] [4232209a-74aa-41e6-9658-c6f09404d74d] [CorrelationId: 4232209a-74aa-41e6-9658-c6f09404d74d] SLOW REQUEST: GET /api/notifications took 2710.28ms (threshold: 1000ms)
+[2026-06-30 15:52:07.119 WRN] [a442352e-cd5d-4ba9-a859-f8c85c6bc483] [Perf] GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 -> 200 in 2756.47ms
+[2026-06-30 15:52:07.119 INF] [a442352e-cd5d-4ba9-a859-f8c85c6bc483] [CorrelationId: a442352e-cd5d-4ba9-a859-f8c85c6bc483] GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 completed in 2756.55ms with status 200
+[2026-06-30 15:52:07.119 WRN] [a442352e-cd5d-4ba9-a859-f8c85c6bc483] [CorrelationId: a442352e-cd5d-4ba9-a859-f8c85c6bc483] SLOW REQUEST: GET /api/leave/user-requests/feaf9ad5-759b-4ca7-179f-08ded113e497 took 2756.55ms (threshold: 1000ms)
+[2026-06-30 15:52:12.455 WRN] [742c4f13-1633-41ca-be3c-42e1696bc35f] [Perf] GET /api/notifications/unread-count -> 200 in 8039.41ms
+[2026-06-30 15:52:12.455 INF] [742c4f13-1633-41ca-be3c-42e1696bc35f] [CorrelationId: 742c4f13-1633-41ca-be3c-42e1696bc35f] GET /api/notifications/unread-count completed in 8039.72ms with status 200
+[2026-06-30 15:52:12.455 WRN] [742c4f13-1633-41ca-be3c-42e1696bc35f] [CorrelationId: 742c4f13-1633-41ca-be3c-42e1696bc35f] SLOW REQUEST: GET /api/notifications/unread-count took 8039.72ms (threshold: 1000ms)
+[2026-06-30 15:52:12.455 ERR] [742c4f13-1633-41ca-be3c-42e1696bc35f] [CorrelationId: 742c4f13-1633-41ca-be3c-42e1696bc35f] CRITICAL SLOW REQUEST: GET /api/notifications/unread-count took 8039.72ms (threshold: 5000ms)
+[2026-06-30 15:57:53.043 WRN] [] Server macbook-pro:74398:37866298 encountered an exception while sending heartbeat
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=9837; handshake=5164; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection() in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerStorage.cs:line 406
+   at Hangfire.SqlServer.SqlServerConnection.Heartbeat(String serverId) in C:\projects\hangfire-525\src\Hangfire.SqlServer\SqlServerConnection.cs:line 546
+   at Hangfire.Server.ServerHeartbeatProcess.Execute(BackgroundProcessContext context) in C:\projects\hangfire-525\src\Hangfire.Core\Server\ServerHeartbeatProcess.cs:line 42
+ClientConnectionId:1713a661-0b73-4d67-ad57-18fd0855df91
+Error Number:-2,State:0,Class:11
+[2026-06-30 15:58:23.391 INF] [] Server macbook-pro:74398:37866298 is now able to continue sending heartbeats

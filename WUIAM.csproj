@@ -8,7 +8,7 @@
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<DockerfileContext>.</DockerfileContext>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<NoWarn>$(NoWarn);1591</NoWarn>
+		<NoWarn>$(NoWarn);1591;1587;0168;0472;8073;8601;8602;8603;8604;8613;8618;8619;8625;8634</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>

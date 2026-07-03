@@ -23,6 +23,13 @@ namespace WUIAM.Models
         /// <summary>Foreign key to the user who performed the action (nullable for system actions).</summary>
         public Guid? UserId { get; set; }
 
+        /// <summary>Foreign key to the admin who impersonated the user (nullable).</summary>
+        public Guid? ImpersonatorId { get; set; }
+
+        /// <summary>Navigation to the admin who impersonated the user.</summary>
+        [ForeignKey("ImpersonatorId")]
+        public User? Impersonator { get; set; }
+
         /// <summary>Navigation to the user who performed the action.</summary>
         [ForeignKey("UserId")]
         public User? User { get; set; }

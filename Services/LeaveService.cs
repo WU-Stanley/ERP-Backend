@@ -161,17 +161,20 @@ namespace WUIAM.Services
                 foreach (var step in steps.OrderBy(s => s.StepOrder))
                 {
                     var approverId = await ResolveApprover(user, step);
-                    if (approverId.HasValue)
+                    if (!approverId.HasValue)
                     {
-                        await _approvalRepo.AddAsync(new LeaveRequestApproval
-                        {
-                            Id = Guid.NewGuid(),
-                            LeaveRequestId = leaveRequest.Id,
-                            ApprovalStepId = step.Id,
-                            ApproverPersonId = approverId.Value,
-                            Status = StatusConstants.Pending
-                        });
+                        await transaction.RollbackAsync();
+                        return ApiResponse<LeaveRequest>.Failure($"No approver is configured for the {step.ApproverType} approval step.");
                     }
+
+                    await _approvalRepo.AddAsync(new LeaveRequestApproval
+                    {
+                        Id = Guid.NewGuid(),
+                        LeaveRequestId = leaveRequest.Id,
+                        ApprovalStepId = step.Id,
+                        ApproverPersonId = approverId.Value,
+                        Status = StatusConstants.Pending
+                    });
                 }
 
                 await transaction.CommitAsync();
@@ -191,8 +194,15 @@ namespace WUIAM.Services
             switch (step.ApproverType)
             {
                 case "MANAGER":
-                    var dept = await _departmentRepo.GetByIdAsync(user.Employee!.Employments.FirstOrDefault()!.DepartmentId);
-                    return dept?.HeadId;
+                    var activeEmployment = user.Employee?.Employments.FirstOrDefault(e => e.IsActive)
+                        ?? user.Employee?.Employments.FirstOrDefault();
+                    if (activeEmployment == null)
+                    {
+                        return null;
+                    }
+
+                    var dept = await _departmentRepo.GetByIdAsync(activeEmployment.DepartmentId);
+                    return dept?.Head?.UserId;
 
                 case "USER":
                     return Guid.TryParse(step.ApproverValue, out var uid) ? uid : null;

@@ -88,16 +88,37 @@ namespace WUIAM.Controllers
 
         // PUT: api/Department/{id}
         [HttpPut("{id}")]
-        public async Task<ActionResult<ApiResponse<Department>>> Update(Guid id, [FromBody] Department department)
+        public async Task<ActionResult<ApiResponse<Department>>> Update(Guid id, [FromBody] CreateDepartmentDto updateDept)
         {
-            if (id != department.Id)
-                return ApiResponse<Department>.Failure("Department update failed!");
+            if (id != updateDept.Id)
+                return BadRequest(ApiResponse<Department>.Failure("Department update failed! ID mismatch."));
 
-            var updated = await _departmentService.UpdateDepartmentAsync(id, department);
+            Guid? headId = null;
+            if (!string.IsNullOrWhiteSpace(updateDept.HeadOfDepartmentId)
+                && updateDept.HeadOfDepartmentId != Guid.Empty.ToString())
+            {
+                if (!Guid.TryParse(updateDept.HeadOfDepartmentId, out var parsedHeadId)
+                    || !await _departmentService.EmployeeExistsAsync(parsedHeadId))
+                {
+                    return BadRequest(ApiResponse<Department>.Failure("Selected head of department is not a valid employee."));
+                }
+                headId = parsedHeadId;
+            }
+
+            var existingDepartment = await _departmentService.GetByIdAsync(id);
+            if (existingDepartment == null)
+                return NotFound(ApiResponse<Department>.Failure("Department not found!"));
+
+            // Update only fields provided by frontend
+            existingDepartment.Name = updateDept.Name;
+            existingDepartment.Description = updateDept.Description;
+            existingDepartment.HeadId = headId;
+
+            var updated = await _departmentService.UpdateDepartmentAsync(id, existingDepartment);
             if (updated == null)
-                return ApiResponse<Department>.Failure("Department not found!");
+                return NotFound(ApiResponse<Department>.Failure("Department not found!"));
 
-            return ApiResponse<Department>.Success($"Department with id {updated.Id} has been updated", updated);
+            return Ok(ApiResponse<Department>.Success($"Department with id {updated.Id} has been updated", updated));
         }
 
         // DELETE: api/Department/{id}

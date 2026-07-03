@@ -55,6 +55,44 @@ namespace WUIAM.Controllers
             return Ok(ApiResponse<dynamic>.Success(result.Message, result));
         }
 
+        [HasPermission(Permissions.ManageUsers, Permissions.SuperAdminAccess, Permissions.AdminAccess)]
+        [HttpPost("impersonate/{userId}")]
+        public async Task<IActionResult> Impersonate(Guid userId)
+        {
+            var adminIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrWhiteSpace(adminIdClaim) || !Guid.TryParse(adminIdClaim, out Guid adminId))
+            {
+                return Unauthorized(ApiResponse<dynamic>.Failure("Unauthenticated admin."));
+            }
+
+            var result = await _authService.ImpersonateAsync(userId, adminId);
+            if (!result.Success)
+                return Ok(ApiResponse<dynamic>.Failure(result.Message));
+
+            AppendRefreshTokenCookie(GetStringProperty(result, "refreshToken"));
+
+            return Ok(ApiResponse<dynamic>.Success(result.Message, result));
+        }
+
+        [HasPermission(Permissions.ManageUsers, Permissions.SuperAdminAccess, Permissions.AdminAccess)]
+        [HttpPost("impersonate/employee/{employeeId}")]
+        public async Task<IActionResult> ImpersonateEmployee(Guid employeeId)
+        {
+            var adminIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrWhiteSpace(adminIdClaim) || !Guid.TryParse(adminIdClaim, out Guid adminId))
+            {
+                return Unauthorized(ApiResponse<dynamic>.Failure("Unauthenticated admin."));
+            }
+
+            var result = await _authService.ImpersonateEmployeeAsync(employeeId, adminId);
+            if (!result.Success)
+                return Ok(ApiResponse<dynamic>.Failure(result.Message));
+
+            AppendRefreshTokenCookie(GetStringProperty(result, "refreshToken"));
+
+            return Ok(ApiResponse<dynamic>.Success(result.Message, result));
+        }
+
         [AllowAnonymous]
         [HttpPost("verify-login-token")]
         public async Task<IActionResult> VerifyLoginToken([FromBody] VerifyLoginTokenDto request)

@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 namespace WUIAM.Enums
 {
     public enum Roles
@@ -32,8 +32,6 @@ namespace WUIAM.Enums
         [Display(Name = "Line Manager")]
         LineManager,
 
-        [Display(Name = "Employee")]
-        Employee,
 
         [Display(Name = "Intern")]
         Intern,

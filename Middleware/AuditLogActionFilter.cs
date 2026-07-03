@@ -103,13 +103,59 @@ namespace WUIAM.Middleware
                     kvp => kvp.Key,
                     kvp => sensitiveKeys.Any(key => kvp.Key.Contains(key, StringComparison.OrdinalIgnoreCase))
                         ? "[redacted]"
-                        : RedactSensitiveJson(kvp.Value is string s ? s : kvp.Value is System.Text.Json.JsonElement je ? je.GetRawText() : System.Text.Json.JsonSerializer.Serialize(kvp.Value), sensitiveKeys)
+                        : NormalizeAuditValue(kvp.Value, sensitiveKeys)
                 );
                 return System.Text.Json.JsonSerializer.Serialize(filtered);
             }
             catch
             {
                 return "(serialization failed)";
+            }
+        }
+
+        private static object? NormalizeAuditValue(object? value, string[] sensitiveKeys)
+        {
+            if (value == null)
+            {
+                return null;
+            }
+
+            if (value is string stringValue)
+            {
+                return TryRedactJsonString(stringValue, sensitiveKeys, out var redacted)
+                    ? redacted
+                    : stringValue;
+            }
+
+            if (value is JsonElement jsonElement)
+            {
+                return RedactElement(jsonElement, sensitiveKeys);
+            }
+
+            try
+            {
+                var json = JsonSerializer.Serialize(value);
+                using var document = JsonDocument.Parse(json);
+                return RedactElement(document.RootElement, sensitiveKeys);
+            }
+            catch
+            {
+                return value.ToString();
+            }
+        }
+
+        private static bool TryRedactJsonString(string value, string[] sensitiveKeys, out object? redacted)
+        {
+            try
+            {
+                using var document = JsonDocument.Parse(value);
+                redacted = RedactElement(document.RootElement, sensitiveKeys);
+                return true;
+            }
+            catch
+            {
+                redacted = null;
+                return false;
             }
         }
 

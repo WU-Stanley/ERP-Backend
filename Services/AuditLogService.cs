@@ -30,11 +30,20 @@ namespace WUIAM.Services
             string? newValues = null, string? ipAddress = null, string? userAgent = null)
         {
             var validUserId = await ResolveExistingUserIdAsync(userId);
+            
+            Guid? impersonatorId = null;
+            var impersonatorClaim = _httpContextAccessor.HttpContext?.User?.FindFirst("ImpersonatorId");
+            if (impersonatorClaim != null && Guid.TryParse(impersonatorClaim.Value, out var parsedImpersonatorId))
+            {
+                impersonatorId = parsedImpersonatorId;
+            }
+
             var auditLog = new AuditLog
             {
                 Id = Guid.NewGuid(),
                 ActionType = actionType,
                 UserId = validUserId,
+                ImpersonatorId = impersonatorId,
                 EntityName = entityName,
                 EntityId = entityId,
                 Description = description,

@@ -158,6 +158,37 @@ namespace WUIAM.Services
             }
         }
 
+        public async Task<AuthResultDto> ImpersonateAsync(Guid targetUserId, Guid impersonatorId)
+        {
+            var targetUser = await _authRepository.FindUserByIdAsync(targetUserId);
+            if (targetUser == null)
+            {
+                return AuthResultDto.Failure("User not found.");
+            }
+
+            if (!targetUser.IsActive)
+            {
+                return AuthResultDto.Failure("User account is disabled.");
+            }
+
+            return await LoginTokenResponse(targetUser, sendEmail: false, generateRefToken: true, impersonatorId: impersonatorId);
+        }
+
+        public async Task<AuthResultDto> ImpersonateEmployeeAsync(Guid targetEmployeeId, Guid impersonatorId)
+        {
+            var employeeUserId = await _dbContext.EmployeeDetails
+                .Where(employee => employee.EmployeeId == targetEmployeeId)
+                .Select(employee => employee.UserId)
+                .FirstOrDefaultAsync();
+
+            if (employeeUserId == Guid.Empty)
+            {
+                return AuthResultDto.Failure("Employee is not linked to a user account.");
+            }
+
+            return await ImpersonateAsync(employeeUserId, impersonatorId);
+        }
+
         private async Task<User> CreateMicrosoftStaffUserAsync(ClaimsPrincipal principal, string email)
         {
             var userTypes = await _authRepository.getUserTypes();
@@ -275,11 +306,11 @@ namespace WUIAM.Services
             return handler.ValidateToken(idToken, validationParameters, out _);
         }
 
-        private async Task<AuthResultDto> LoginTokenResponse(User user, bool sendEmail = true, bool generateRefToken = true)
+        private async Task<AuthResultDto> LoginTokenResponse(User user, bool sendEmail = true, bool generateRefToken = true, Guid? impersonatorId = null)
         {
             await EnsureEmployeeProfileAsync(user);
 
-            var token = GenerateJwtToken(user);
+            var token = GenerateJwtToken(user, impersonatorId);
 
             user.SessionId = Guid.NewGuid().ToString();
             user.SessionTime = DateTime.Now;
@@ -443,7 +474,7 @@ namespace WUIAM.Services
                 userPermissions = userPermissions
             };
         }
-        private string GenerateJwtToken(User user)
+        private string GenerateJwtToken(User user, Guid? impersonatorId = null)
         {
             var claims = new List<Claim>
                 {
@@ -452,6 +483,11 @@ namespace WUIAM.Services
                     new Claim(JwtRegisteredClaimNames.Email, user.UserEmail ?? ""),
                     new Claim("id", user.Id.ToString())
                 };
+
+            if (impersonatorId.HasValue)
+            {
+                claims.Add(new Claim("ImpersonatorId", impersonatorId.Value.ToString()));
+            }
 
             // Add roles as claims
             if (user.UserRoles != null)
