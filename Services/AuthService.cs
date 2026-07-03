@@ -189,6 +189,22 @@ namespace WUIAM.Services
             return await ImpersonateAsync(employeeUserId, impersonatorId);
         }
 
+        public async Task<AuthResultDto> StopImpersonationAsync(Guid impersonatorId)
+        {
+            var impersonator = await _authRepository.FindUserByIdAsync(impersonatorId);
+            if (impersonator == null)
+            {
+                return AuthResultDto.Failure("Impersonator account not found.");
+            }
+
+            if (!impersonator.IsActive)
+            {
+                return AuthResultDto.Failure("Impersonator account is disabled.");
+            }
+
+            return await LoginTokenResponse(impersonator, sendEmail: false, generateRefToken: true);
+        }
+
         private async Task<User> CreateMicrosoftStaffUserAsync(ClaimsPrincipal principal, string email)
         {
             var userTypes = await _authRepository.getUserTypes();

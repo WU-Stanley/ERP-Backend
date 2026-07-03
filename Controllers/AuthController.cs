@@ -55,8 +55,26 @@ namespace WUIAM.Controllers
             return Ok(ApiResponse<dynamic>.Success(result.Message, result));
         }
 
+        [HttpPost("impersonate/stop")]
+        public async Task<IActionResult> StopImpersonation()
+        {
+            var impersonatorIdClaim = User.FindFirstValue("ImpersonatorId");
+            if (string.IsNullOrWhiteSpace(impersonatorIdClaim) || !Guid.TryParse(impersonatorIdClaim, out Guid impersonatorId))
+            {
+                return BadRequest(ApiResponse<dynamic>.Failure("Current session is not impersonating another user."));
+            }
+
+            var result = await _authService.StopImpersonationAsync(impersonatorId);
+            if (!result.Success)
+                return Ok(ApiResponse<dynamic>.Failure(result.Message));
+
+            AppendRefreshTokenCookie(GetStringProperty(result, "refreshToken"));
+
+            return Ok(ApiResponse<dynamic>.Success(result.Message, result));
+        }
+
         [HasPermission(Permissions.ManageUsers, Permissions.SuperAdminAccess, Permissions.AdminAccess)]
-        [HttpPost("impersonate/{userId}")]
+        [HttpPost("impersonate/{userId:guid}")]
         public async Task<IActionResult> Impersonate(Guid userId)
         {
             var adminIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -75,7 +93,7 @@ namespace WUIAM.Controllers
         }
 
         [HasPermission(Permissions.ManageUsers, Permissions.SuperAdminAccess, Permissions.AdminAccess)]
-        [HttpPost("impersonate/employee/{employeeId}")]
+        [HttpPost("impersonate/employee/{employeeId:guid}")]
         public async Task<IActionResult> ImpersonateEmployee(Guid employeeId)
         {
             var adminIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);

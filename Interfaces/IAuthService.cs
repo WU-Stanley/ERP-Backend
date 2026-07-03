@@ -13,6 +13,7 @@ namespace WUIAM.Interfaces
         public Task<AuthResultDto> MicrosoftLoginAsync(MicrosoftLoginDto loginDto);
         public Task<AuthResultDto> ImpersonateAsync(Guid targetUserId, Guid impersonatorId);
         public Task<AuthResultDto> ImpersonateEmployeeAsync(Guid targetEmployeeId, Guid impersonatorId);
+        public Task<AuthResultDto> StopImpersonationAsync(Guid impersonatorId);
         public Task<AuthResultDto> VerifyLoginTokenAsync(string email, string token);
         public Task<User> RegisterAsync(CreateUserDto createUserDto);
         public Task<(string message, bool status)> ResetPasswordAsync(ResetPasswordDTo resetPasswordDTo);

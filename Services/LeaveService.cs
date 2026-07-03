@@ -29,6 +29,8 @@ namespace WUIAM.Services
         private readonly ILeaveBalanceRepository _leaveBalanceRepo;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly WUIAMDbContext _dbContext;
+        private readonly INotificationService _notificationService;
+        private readonly INotifyService _notifyService;
 
         public LeaveService(
             ILeaveTypeRepository leaveTypeRepo,
@@ -43,7 +45,9 @@ namespace WUIAM.Services
             ILeaveDateCalculator leaveDateCalculator,
             ILeavePolicyRepository leavePolicyRepository,
             WUIAMDbContext dbContext,
-            IAuthRepository userRepo)
+            IAuthRepository userRepo,
+            INotificationService notificationService,
+            INotifyService notifyService)
         {
             _leaveTypeRepo = leaveTypeRepo;
             _leaveRequestRepo = leaveRequestRepo;
@@ -58,6 +62,8 @@ namespace WUIAM.Services
             _leavePolicyRepo = leavePolicyRepository;
             _httpContextAccessor = httpContextAccessor;
             _dbContext = dbContext;
+            _notificationService = notificationService;
+            _notifyService = notifyService;
         }
 
         async Task<IEnumerable<LeaveType>> GetUserVisibleLeaveTypes()
@@ -178,6 +184,63 @@ namespace WUIAM.Services
                 }
 
                 await transaction.CommitAsync();
+
+                var approvals = await _approvalRepo.GetByLeaveRequestIdAsync(leaveRequest.Id);
+                foreach (var approval in approvals)
+                {
+                    var approver = await _userRepo.FindUserByIdAsync(approval.ApproverPersonId);
+                    var approverName = approver?.FullName ?? "the assigned approver";
+
+                    await _notificationService.NotifyUserAsync(
+                        approval.ApproverPersonId,
+                        "New leave request awaiting approval",
+                        $"{user.FullName} submitted a {leaveType.Name} leave request from {dto.StartDate:dd MMM yyyy} to {dto.EndDate:dd MMM yyyy}. Please review it.",
+                        "action_required",
+                        "LeaveRequest",
+                        leaveRequest.Id);
+                }
+
+                await _notificationService.NotifyUserAsync(
+                    user.Id,
+                    "Leave request submitted",
+                    $"Your {leaveType.Name} leave request from {dto.StartDate:dd MMM yyyy} to {dto.EndDate:dd MMM yyyy} has been submitted and is pending approval.",
+                    "info",
+                    "LeaveRequest",
+                    leaveRequest.Id);
+
+                try
+                {
+                    await _notifyService.SendEmailAsync(
+                        new List<EmailReceiver> { new() { Email = user.UserEmail, Name = user.FullName } },
+                        "Leave request submitted",
+                        EmailTemplateService.GenerateLeaveRequestSubmittedEmailHtml(
+                            user.FullName,
+                            leaveType.Name,
+                            dto.StartDate.ToString("dd MMM yyyy"),
+                            dto.EndDate.ToString("dd MMM yyyy"),
+                            requestedDays));
+                }
+                catch
+                {
+                }
+
+                foreach (var approval in approvals)
+                {
+                    var approver = await _userRepo.FindUserByIdAsync(approval.ApproverPersonId);
+                    if (approver != null && !string.IsNullOrWhiteSpace(approver.UserEmail))
+                    {
+                        try
+                        {
+                            await _notifyService.SendEmailAsync(
+                                new List<EmailReceiver> { new() { Email = approver.UserEmail, Name = approver.FullName } },
+                                "New leave request awaiting your approval",
+                                $@"<html><body><p>Hello {approver.FullName},</p><p>{user.FullName} submitted a {leaveType.Name} leave request from {dto.StartDate:dd MMM yyyy} to {dto.EndDate:dd MMM yyyy}.</p><p>Please review and act on it in the ERP system.</p></body></html>");
+                        }
+                        catch
+                        {
+                        }
+                    }
+                }
 
                 return ApiResponse<LeaveRequest>.Success("Leave request submitted successfully.", leaveRequest);
             }
@@ -332,6 +395,68 @@ namespace WUIAM.Services
                 // notify requester of approval/rejection
 
                 await _leaveRequestRepo.UpdateAsync(request);
+
+                var requester = await _userRepo.FindUserByIdAsync(request.UserId);
+                var requesterName = requester?.FullName ?? "the requester";
+                var decisionText = dto.IsApproved ? "approved" : "rejected";
+                var decisionTone = dto.IsApproved ? "success" : "warning";
+
+                await _notificationService.NotifyUserAsync(
+                    request.UserId,
+                    $"Leave request {decisionText}",
+                    $"Your {request.LeaveType?.Name ?? "leave"} request from {request.StartDate:dd MMM yyyy} to {request.EndDate:dd MMM yyyy} has been {decisionText}.",
+                    decisionTone,
+                    "LeaveRequest",
+                    request.Id);
+
+                if (requester != null && !string.IsNullOrWhiteSpace(requester.UserEmail))
+                {
+                    try
+                    {
+                        if (dto.IsApproved)
+                        {
+                            await _notifyService.SendEmailAsync(
+                                new List<EmailReceiver> { new() { Email = requester.UserEmail, Name = requester.FullName } },
+                                "Leave request approved",
+                                EmailTemplateService.GenerateLeaveApprovedEmailHtml(
+                                    requester.FullName,
+                                    request.LeaveType?.Name ?? "Leave",
+                                    request.StartDate.ToString("dd MMM yyyy"),
+                                    request.EndDate.ToString("dd MMM yyyy"),
+                                    request.TotalDays));
+                        }
+                        else
+                        {
+                            await _notifyService.SendEmailAsync(
+                                new List<EmailReceiver> { new() { Email = requester.UserEmail, Name = requester.FullName } },
+                                "Leave request rejected",
+                                EmailTemplateService.GenerateLeaveRejectedEmailHtml(
+                                    requester.FullName,
+                                    request.LeaveType?.Name ?? "Leave",
+                                    request.StartDate.ToString("dd MMM yyyy"),
+                                    request.EndDate.ToString("dd MMM yyyy"),
+                                    dto.Comment ?? "No reason provided."));
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+
+                if (dto.IsApproved && request.Status != StatusConstants.Approved)
+                {
+                    var pendingApprovals = await _approvalRepo.GetByLeaveRequestIdAsync(request.Id);
+                    foreach (var nextApproval in pendingApprovals.Where(a => a.Status == StatusConstants.Pending && a.ApprovalStep != null && a.ApprovalStep.StepOrder > approval.ApprovalStep!.StepOrder).OrderBy(a => a.ApprovalStep!.StepOrder))
+                    {
+                        await _notificationService.NotifyUserAsync(
+                            nextApproval.ApproverPersonId,
+                            "Leave approval pending",
+                            $"{requesterName}'s leave request is awaiting your approval.",
+                            "action_required",
+                            "LeaveRequest",
+                            request.Id);
+                    }
+                }
 
                 await _dbContext.Database.CommitTransactionAsync(); // Optional depending on your architecture
 
