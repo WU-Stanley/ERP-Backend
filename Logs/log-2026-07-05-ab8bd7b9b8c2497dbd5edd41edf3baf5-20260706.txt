@@ -1,0 +1,27 @@
+[2026-07-06 01:40:25.649 INF] [] 1 servers were removed due to timeout
+[2026-07-06 01:40:27.341 WRN] [] Server macbookpro:2234:5a259cd8 was considered dead by other servers, restarting...
+[2026-07-06 01:40:27.341 INF] [] Server macbookpro:2234:5a259cd8 caught restart signal...
+[2026-07-06 01:40:27.341 WRN] [] Server macbookpro:2234:5a259cd8 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-07-06 01:40:27.346 INF] [] Server macbookpro:2234:5a259cd8 successfully reported itself as stopped in 3.5767 ms
+[2026-07-06 01:40:27.346 INF] [] Server macbookpro:2234:5a259cd8 has been stopped in total 4.8717 ms
+[2026-07-06 01:40:27.349 INF] [] Server macbookpro:2234:456e6db7 successfully announced in 3.1177 ms
+[2026-07-06 01:40:27.350 INF] [] Server macbookpro:2234:456e6db7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-07-06 01:40:27.352 INF] [] Server macbookpro:2234:456e6db7 all the dispatchers started
+[2026-07-06 08:17:34.552 WRN] [260fdb13-8d28-4fd2-821b-51040dc76b5f] [Perf] GET /api/notificationsHub -> 101 in 5440307.21ms
+[2026-07-06 08:17:34.553 INF] [260fdb13-8d28-4fd2-821b-51040dc76b5f] [CorrelationId: 260fdb13-8d28-4fd2-821b-51040dc76b5f] GET /api/notificationsHub completed in 5440307.79ms with status 101
+[2026-07-06 08:17:34.552 WRN] [92940a62-b179-40dd-bf5b-6a96d0ca9f1c] [Perf] GET /api/notificationsHub -> 101 in 5440334.27ms
+[2026-07-06 08:17:34.553 INF] [92940a62-b179-40dd-bf5b-6a96d0ca9f1c] [CorrelationId: 92940a62-b179-40dd-bf5b-6a96d0ca9f1c] GET /api/notificationsHub completed in 5440335.01ms with status 101
+[2026-07-06 08:17:34.553 WRN] [92940a62-b179-40dd-bf5b-6a96d0ca9f1c] [CorrelationId: 92940a62-b179-40dd-bf5b-6a96d0ca9f1c] SLOW REQUEST: GET /api/notificationsHub took 5440335.01ms (threshold: 1000ms)
+[2026-07-06 08:17:34.553 WRN] [260fdb13-8d28-4fd2-821b-51040dc76b5f] [CorrelationId: 260fdb13-8d28-4fd2-821b-51040dc76b5f] SLOW REQUEST: GET /api/notificationsHub took 5440307.79ms (threshold: 1000ms)
+[2026-07-06 08:17:34.553 ERR] [92940a62-b179-40dd-bf5b-6a96d0ca9f1c] [CorrelationId: 92940a62-b179-40dd-bf5b-6a96d0ca9f1c] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 5440335.01ms (threshold: 5000ms)
+[2026-07-06 08:17:34.553 ERR] [260fdb13-8d28-4fd2-821b-51040dc76b5f] [CorrelationId: 260fdb13-8d28-4fd2-821b-51040dc76b5f] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 5440307.79ms (threshold: 5000ms)
+[2026-07-06 08:17:34.554 WRN] [76c7d6c4-963a-4abf-b23d-06e3e242e274] [Perf] GET /api/notificationsHub -> 101 in 5440358.94ms
+[2026-07-06 08:17:34.554 INF] [76c7d6c4-963a-4abf-b23d-06e3e242e274] [CorrelationId: 76c7d6c4-963a-4abf-b23d-06e3e242e274] GET /api/notificationsHub completed in 5440359.49ms with status 101
+[2026-07-06 08:17:34.554 WRN] [76c7d6c4-963a-4abf-b23d-06e3e242e274] [CorrelationId: 76c7d6c4-963a-4abf-b23d-06e3e242e274] SLOW REQUEST: GET /api/notificationsHub took 5440359.49ms (threshold: 1000ms)
+[2026-07-06 08:17:34.554 ERR] [76c7d6c4-963a-4abf-b23d-06e3e242e274] [CorrelationId: 76c7d6c4-963a-4abf-b23d-06e3e242e274] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 5440359.49ms (threshold: 5000ms)
+[2026-07-06 08:17:34.595 INF] [61a0e729-a634-4ab2-8e2c-efc8b8486244] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.21ms
+[2026-07-06 08:17:34.595 INF] [61a0e729-a634-4ab2-8e2c-efc8b8486244] [CorrelationId: 61a0e729-a634-4ab2-8e2c-efc8b8486244] POST /api/notificationsHub/negotiate completed in 0.30ms with status 200
+[2026-07-06 08:17:34.595 INF] [ed85fb50-6062-4d12-b897-494af2d9ec2f] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.25ms
+[2026-07-06 08:17:34.595 INF] [ed85fb50-6062-4d12-b897-494af2d9ec2f] [CorrelationId: ed85fb50-6062-4d12-b897-494af2d9ec2f] POST /api/notificationsHub/negotiate completed in 0.30ms with status 200
+[2026-07-06 08:17:34.597 INF] [c2954e9f-c672-46ae-93ff-4c96bf9bc31a] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.18ms
+[2026-07-06 08:17:34.597 INF] [c2954e9f-c672-46ae-93ff-4c96bf9bc31a] [CorrelationId: c2954e9f-c672-46ae-93ff-4c96bf9bc31a] POST /api/notificationsHub/negotiate completed in 0.25ms with status 200

@@ -169,6 +169,7 @@ namespace WUIAM.Services
                     {
                         EmployeeId = employee.EmployeeId,
                         UserId = employee.UserId,
+                        EmployeeCode = employee.EmployeeCode,
                         FullName = $"{employee.FirstName} {employee.LastName}".Trim(),
                         Email = employee.Email,
                         PhoneNumber = employee.PhoneNumber,
@@ -259,7 +260,7 @@ namespace WUIAM.Services
                     }
                 }
             }
-            return $"WU-{maxNum + 1:D4}";
+            return $"WU-{(maxNum + 1):D3}";
         }
 
         public async Task<EmployeeDetails> CreateEmployeeAsync(CreateUserDto userDto)

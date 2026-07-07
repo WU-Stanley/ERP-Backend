@@ -514,6 +514,38 @@ namespace WUIAM.Controllers
                 return BadRequest(ApiResponse<InterviewDto>.Failure(ex.Message));
             }
         }
+        /// <summary>
+        /// Submit interview feedback.
+        /// </summary>
+        [HasPermission([Permissions.AdminAccess, Permissions.SuperAdminAccess, Permissions.ManageRecruitment])]
+        [HttpPost("interviews/feedback/{interviewerId}")]
+        public async Task<ActionResult<ApiResponse<InterviewerDto>>> SubmitInterviewFeedback(Guid interviewerId, [FromBody] SubmitInterviewFeedbackDto dto)
+        {
+            try
+            {
+                var interviewer = await _recruitmentService.SubmitInterviewFeedbackAsync(interviewerId, dto);
+
+                var interviewerDto = new InterviewerDto
+                {
+                    Id = interviewer.Id,
+                    EmployeeId = interviewer.EmployeeId,
+                    EmployeeName = interviewer.Employee != null ? $"{interviewer.Employee.FirstName} {interviewer.Employee.LastName}" : null,
+                    Email = interviewer.Email,
+                    Name = interviewer.Name,
+                    FeedbackStatus = interviewer.FeedbackStatus,
+                    Rating = interviewer.Rating,
+                    Comments = interviewer.Comments,
+                    Recommendation = interviewer.Recommendation,
+                    SubmittedAt = interviewer.SubmittedAt
+                };
+
+                return Ok(ApiResponse<InterviewerDto>.Success("Interview feedback submitted successfully.", interviewerDto));
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ApiResponse<InterviewerDto>.Failure(ex.Message));
+            }
+        }
 
         // ==================== Offer Letters ====================
 

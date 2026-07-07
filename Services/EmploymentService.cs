@@ -70,13 +70,23 @@ namespace WUIAM.Services
             return await AssignEmploymentAsync(employeeId, employment);
         }
 
-        public async Task EndEmploymentAsync(Guid employmentId, DateTime endDate)
+        public async Task EndEmploymentAsync(Guid employmentId, EndEmploymentDto dto)
         {
             var employment = await _employmentRepo.GetByIdAsync(employmentId);
             if (employment == null) return;
 
             employment.IsActive = false;
-            employment.EndDate = endDate;
+            employment.EndDate = dto.ExitDate;
+            employment.ExitDate = dto.ExitDate;
+            employment.EmploymentStatus = "Terminated";
+            
+            if (!string.IsNullOrEmpty(dto.ReasonForLeaving))
+            {
+                string exitNote = $"[EXIT] Reason: {dto.ReasonForLeaving}. Notes: {dto.Notes} (Date: {dto.ExitDate:yyyy-MM-dd})";
+                employment.PromotionHistory = string.IsNullOrEmpty(employment.PromotionHistory) 
+                    ? exitNote 
+                    : employment.PromotionHistory + "\n" + exitNote;
+            }
 
             await _employmentRepo.UpdateAsync(employment);
         }

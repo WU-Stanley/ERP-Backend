@@ -67,11 +67,11 @@ namespace WUIAM.Controllers
 
         [HttpPut("{employmentId:guid}/end")]
         [HasPermission(Permissions.AdminAccess, Permissions.UpdateEmployeeProfiles, Permissions.ManageUsers, Permissions.SuperAdminAccess)]
-        public async Task<ActionResult<ApiResponse<object>>> EndEmployment(Guid employmentId)
+        public async Task<ActionResult<ApiResponse<object>>> EndEmployment(Guid employmentId, [FromBody] EndEmploymentDto dto)
         {
             try
             {
-                await _employmentService.EndEmploymentAsync(employmentId, DateTime.UtcNow);
+                await _employmentService.EndEmploymentAsync(employmentId, dto);
                 return Ok(ApiResponse<object>.Success("Employment ended successfully", new { EmploymentId = employmentId }));
             }
             catch (Exception ex)

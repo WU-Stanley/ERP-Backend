@@ -625,6 +625,7 @@ namespace WUIAM.Services
             request.StartDate = leaveRequestCreateDto.StartDate;
             request.EndDate = leaveRequestCreateDto.EndDate;
             request.Reason = leaveRequestCreateDto.Reason;
+            request.SupportDocument = leaveRequestCreateDto.SupportDocument;
             request.TotalDays = requestedDays;
 
             await _leaveRequestRepo.UpdateAsync(request);
@@ -655,6 +656,19 @@ namespace WUIAM.Services
                 return ApiResponse<IEnumerable<LeaveRequestApproval>>.Success("Approvals found!", approvals);
             }
             return ApiResponse<IEnumerable<LeaveRequestApproval>>.Failure("No Approvals found!");
+        }
+
+        public async Task<ApiResponse<IEnumerable<LeaveBalance>>> GetMyBalancesAsync(int year)
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier);
+            if (userIdClaim == null || !Guid.TryParse(userIdClaim.Value, out Guid userId))
+                return ApiResponse<IEnumerable<LeaveBalance>>.Failure("Invalid or missing user identity.");
+
+            var balances = await _leaveBalanceRepo.GetByUserAsync(userId);
+            // Assuming LeaveBalance valid dates correspond to the leave year
+            var yearBalances = balances.Where(b => b.ValidFrom.Year <= year && b.ValidTo.Year >= year).ToList();
+            
+            return ApiResponse<IEnumerable<LeaveBalance>>.Success("Leave balances retrieved successfully", yearBalances);
         }
     }
 }

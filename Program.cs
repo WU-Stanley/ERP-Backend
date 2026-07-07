@@ -184,8 +184,14 @@ builder.Services.AddScoped<ILeaveApprovalService, LeaveApprovalService>();
         builder.Services.AddHttpClient<IMicrosoftAccountProvisioningService, MicrosoftAccountProvisioningService>();
         builder.Services.AddHttpClient<IAiResumeScanningService, AiResumeScanningService>();
         builder.Services.AddHttpClient<ITeamsMeetingService, TeamsMeetingService>();
+        
+        // Registry Integration
+        builder.Services.AddScoped<IRegistrySyncService, RegistrySyncService>();
+        builder.Services.AddHttpClient("RegistrySyncClient");
 
-
+        // Attendance Management
+        builder.Services.AddScoped<IAttendanceRepository, AttendanceRepository>();
+        builder.Services.AddScoped<IAttendanceService, AttendanceService>();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -511,15 +517,27 @@ if (hangfireEnabled)
         //Authorization = new[] { new LocalRequestsOnlyAuthorizationFilter() }
     });
 
-    BackgroundJob.Enqueue<SeedService>(s => s.SeedLeaveBalancesAsync());
-    BackgroundJob.Enqueue<SeedService>(s => s.SeedJobCategoriesAsync());
+    try
+    {
+        BackgroundJob.Enqueue<SeedService>(s => s.SeedLeaveBalancesAsync());
+        BackgroundJob.Enqueue<SeedService>(s => s.SeedJobCategoriesAsync());
 
+        RecurringJob.AddOrUpdate<LeaveBalanceJob>(
+            "generate-leave-balances-yearly",
+            job => job.GenerateLeaveBalancesForNewCycle(),
+            Cron.Yearly
+        );
 
-    RecurringJob.AddOrUpdate<LeaveBalanceJob>(
-        "generate-leave-balances-yearly",
-        job => job.GenerateLeaveBalancesForNewCycle(),
-        Cron.Yearly
-    );
+        RecurringJob.AddOrUpdate<WUIAM.Jobs.RegistrySyncJob>(
+            "registry-integration-sync-hourly",
+            job => job.ExecuteAsync(),
+            Cron.Hourly
+        );
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Failed to initialize Hangfire background jobs: {ex.Message}");
+    }
 }
 
 app.MapControllers();

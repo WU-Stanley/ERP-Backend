@@ -11,6 +11,6 @@ namespace WUIAM.Interfaces
 
         Task<EmploymentDetails> AssignEmploymentAsync(Guid employeeId, EmploymentDetails employment);
         Task<EmploymentDetails> AssignEmploymentAsync(Guid employeeId, EmploymentAssignmentDto employment);
-        Task EndEmploymentAsync(Guid employmentId, DateTime endDate);
+        Task EndEmploymentAsync(Guid employmentId, EndEmploymentDto dto);
     }
 }

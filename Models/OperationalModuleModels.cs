@@ -10,6 +10,7 @@ namespace WUIAM.Models
         public string Code { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string GradeLevel { get; set; } = string.Empty;
+        public int Step { get; set; } = 1;
         public decimal BasePay { get; set; }
         public decimal HousingAllowance { get; set; }
         public decimal TransportAllowance { get; set; }
@@ -34,6 +35,42 @@ namespace WUIAM.Models
         public decimal NetPayTotal { get; set; }
         public Guid? ProcessedByUserId { get; set; }
         public DateTime? ProcessedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; }
+    }
+
+    public class Payslip
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid PayrollRunId { get; set; }
+        public Guid EmployeeId { get; set; }
+        public string EmployeeName { get; set; } = string.Empty;
+        public string GradeLevel { get; set; } = string.Empty;
+        public int Step { get; set; }
+        public decimal BasePay { get; set; }
+        public decimal AllowancesTotal { get; set; }
+        public decimal BonusesTotal { get; set; }
+        public decimal DeductionsTotal { get; set; }
+        public decimal TaxAmount { get; set; }
+        public decimal PensionAmount { get; set; }
+        public decimal GrossPay { get; set; }
+        public decimal NetPay { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    }
+
+    public class PayrollAdjustment
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid EmployeeId { get; set; }
+        public string EmployeeName { get; set; } = string.Empty;
+        public string Type { get; set; } = string.Empty; // "Bonus" or "Deduction"
+        public string Description { get; set; } = string.Empty;
+        public decimal Amount { get; set; }
+        public DateTime ApplicableMonth { get; set; }
+        public bool IsProcessed { get; set; }
+        public Guid? PayrollRunId { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; }
     }
@@ -71,6 +108,69 @@ namespace WUIAM.Models
         public DateTime UpdatedAt { get; set; }
     }
 
+    public class Vendor
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string ContactEmail { get; set; } = string.Empty;
+        public string ContactPhone { get; set; } = string.Empty;
+        public string Address { get; set; } = string.Empty;
+        public string Status { get; set; } = "Active"; // Active, Inactive
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; }
+    }
+
+    public class PurchaseOrder
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public string PoNumber { get; set; } = string.Empty;
+        public Guid? ProcurementRequestId { get; set; }
+        public Guid VendorId { get; set; }
+        public decimal TotalAmount { get; set; }
+        public string Status { get; set; } = "Draft"; // Draft, Sent, Delivered, Cancelled
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; }
+        
+        public ICollection<PurchaseOrderLineItem> LineItems { get; set; } = new List<PurchaseOrderLineItem>();
+    }
+
+    public class PurchaseOrderLineItem
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid PurchaseOrderId { get; set; }
+        public Guid? InventoryItemId { get; set; } // If mapped to an inventory item
+        public string Description { get; set; } = string.Empty;
+        public int Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
+        public decimal TotalPrice { get; set; }
+    }
+
+    public class GoodsReceivedNote
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid PurchaseOrderId { get; set; }
+        public DateTime ReceivedDate { get; set; } = DateTime.UtcNow;
+        public Guid? ReceivedByUserId { get; set; }
+        public string Remarks { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    }
+
+    public class InventoryTransaction
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid InventoryItemId { get; set; }
+        public string TransactionType { get; set; } = "In"; // In, Out, Adjustment, Initial
+        public int Quantity { get; set; }
+        public Guid? ReferenceId { get; set; } // e.g. GoodsReceivedNote Id or Request Id
+        public string Remarks { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    }
+
     public class DocumentRecord
     {
         [Key]
@@ -101,9 +201,13 @@ namespace WUIAM.Models
         public Guid? AssigneeUserId { get; set; }
         public DateTime? DueAt { get; set; }
         public DateTime? ClosedAt { get; set; }
+        public Guid? FacilityAssetId { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; }
         public ICollection<HelpdeskTicketComment> Comments { get; set; } = new List<HelpdeskTicketComment>();
+
+        [ForeignKey("FacilityAssetId")]
+        public FacilityAsset? FacilityAsset { get; set; }
     }
 
     public class HelpdeskTicketComment
@@ -133,10 +237,48 @@ namespace WUIAM.Models
         public string Status { get; set; } = "InUse";
         public DateTime? PurchaseDate { get; set; }
         public decimal PurchaseCost { get; set; }
+        public int ExpectedLifeSpanMonths { get; set; } = 60; // default 5 years
+        public decimal SalvageValue { get; set; } = 0;
         public DateTime? WarrantyExpiryDate { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; }
+        
+        public ICollection<AssetAssignment> Assignments { get; set; } = new List<AssetAssignment>();
+        public ICollection<AssetMaintenanceRecord> MaintenanceRecords { get; set; } = new List<AssetMaintenanceRecord>();
     }
+
+    public class AssetAssignment
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid AssetId { get; set; }
+        public Guid EmployeeId { get; set; }
+        public DateTime AssignedAt { get; set; } = DateTime.UtcNow;
+        public DateTime? ReturnedAt { get; set; }
+        public string ConditionAtAssignment { get; set; } = "Good";
+        public string ConditionAtReturn { get; set; } = string.Empty;
+        public string Notes { get; set; } = string.Empty;
+
+        [ForeignKey("AssetId")]
+        public FacilityAsset? Asset { get; set; }
+    }
+
+    public class AssetMaintenanceRecord
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid AssetId { get; set; }
+        public DateTime ScheduledDate { get; set; }
+        public DateTime? CompletedDate { get; set; }
+        public decimal Cost { get; set; } = 0;
+        public string Description { get; set; } = string.Empty;
+        public string Status { get; set; } = "Scheduled"; // Scheduled, Completed, Cancelled
+        public string PerformedBy { get; set; } = string.Empty;
+
+        [ForeignKey("AssetId")]
+        public FacilityAsset? Asset { get; set; }
+    }
+
 
     public class RegistryIntegrationRecord
     {
@@ -150,5 +292,19 @@ namespace WUIAM.Models
         public string Notes { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; }
+    }
+
+    public class RegistrySyncLog
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid IntegrationId { get; set; }
+        public string ActionType { get; set; } = string.Empty; // e.g. Ping, Sync
+        public string Status { get; set; } = string.Empty; // e.g. Success, Failed
+        public string Message { get; set; } = string.Empty;
+        public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+
+        [ForeignKey("IntegrationId")]
+        public RegistryIntegrationRecord? Integration { get; set; }
     }
 }

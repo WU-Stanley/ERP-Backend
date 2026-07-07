@@ -27,6 +27,7 @@ namespace WUIAM.Interfaces
         Task<InterviewSchedule> CreateInterviewAsync(Guid applicationId, CreateInterviewDto dto);
         Task<List<InterviewSchedule>> GetInterviewsByApplicationIdAsync(Guid applicationId);
         Task<InterviewSchedule> UpdateInterviewStatusAsync(Guid id, string status, string? notes = null);
+        Task<InterviewInterviewer> SubmitInterviewFeedbackAsync(Guid interviewerId, SubmitInterviewFeedbackDto dto);
 
         // Offer Letters
         Task<OfferLetter> CreateOfferLetterAsync(Guid applicationId, CreateOfferLetterDto dto);

@@ -114,7 +114,13 @@ namespace WUIAM.Controllers
                 result.Any() ? "Leave requests found" : "No leave request found",
                 response));
         }
-             
+
+        [HttpGet("my-balances")]
+        public async Task<ActionResult<ApiResponse<IEnumerable<LeaveBalance>>>> GetMyBalances([FromQuery] int year)
+        {
+            var balances = await _leaveService.GetMyBalancesAsync(year);
+            return Ok(balances);
+        }
     }
 
 }

@@ -105,6 +105,7 @@ namespace WUIAM.Repositories
                 StartDate = dto.StartDate,
                 EndDate = dto.EndDate,
                 Reason = dto.Reason,
+                SupportDocument = dto.SupportDocument,
                 Status = "Pending",
                 AppliedAt = DateTime.UtcNow
             };

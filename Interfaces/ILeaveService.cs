@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using WUIAM.DTOs;
 using WUIAM.Models;
 
@@ -17,5 +17,6 @@ namespace WUIAM.Interfaces
         Task<ApiResponse<LeaveRequest>> UpdateLeaveRequestAsync(Guid id, LeaveRequestCreateDto leaveRequestCreateDto);
         Task<ApiResponse<LeaveRequest>> DeleteLeaveRequestAsync(Guid id);
         Task<ApiResponse<IEnumerable<LeaveRequestApproval>>> GetLeaveRequestApprovals(Guid leaveRequestId);
+        Task<ApiResponse<IEnumerable<LeaveBalance>>> GetMyBalancesAsync(int year);
     }
 }

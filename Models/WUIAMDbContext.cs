@@ -43,14 +43,28 @@ namespace WUIAM.Models
         public DbSet<AuditLog> AuditLogs { get; set; }
         public DbSet<SalaryStructure> SalaryStructures { get; set; }
         public DbSet<PayrollRun> PayrollRuns { get; set; }
+        public DbSet<Payslip> Payslips { get; set; }
+        public DbSet<PayrollAdjustment> PayrollAdjustments { get; set; }
         public DbSet<ProcurementRequest> ProcurementRequests { get; set; }
+        public DbSet<Vendor> Vendors { get; set; }
+        public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
+        public DbSet<PurchaseOrderLineItem> PurchaseOrderLineItems { get; set; }
+        public DbSet<GoodsReceivedNote> GoodsReceivedNotes { get; set; }
         public DbSet<InventoryItem> InventoryItems { get; set; }
+        public DbSet<InventoryTransaction> InventoryTransactions { get; set; }
         public DbSet<DocumentRecord> DocumentRecords { get; set; }
         public DbSet<HelpdeskTicket> HelpdeskTickets { get; set; }
         public DbSet<HelpdeskTicketComment> HelpdeskTicketComments { get; set; }
         public DbSet<FacilityAsset> FacilityAssets { get; set; }
+        public DbSet<AssetAssignment> AssetAssignments { get; set; }
+        public DbSet<AssetMaintenanceRecord> AssetMaintenanceRecords { get; set; }
         public DbSet<RegistryIntegrationRecord> RegistryIntegrationRecords { get; set; }
+        public DbSet<RegistrySyncLog> RegistrySyncLogs { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+
+        // Attendance Management
+        public DbSet<AttendanceRecord> AttendanceRecords { get; set; }
+        public DbSet<AttendanceSettings> AttendanceSettings { get; set; }
 
         // Recruitment Management
         public DbSet<JobPosting> JobPostings { get; set; }

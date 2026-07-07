@@ -509,6 +509,23 @@ namespace WUIAM.Services
             return interview;
         }
 
+        public async Task<InterviewInterviewer> SubmitInterviewFeedbackAsync(Guid interviewerId, SubmitInterviewFeedbackDto dto)
+        {
+            var interviewer = await _context.InterviewInterviewers
+                .FirstOrDefaultAsync(ii => ii.Id == interviewerId)
+                ?? throw new InvalidOperationException("Interviewer record not found.");
+
+            interviewer.Rating = dto.Rating;
+            interviewer.Comments = dto.Comments;
+            interviewer.Recommendation = dto.Recommendation;
+            interviewer.FeedbackStatus = "Submitted";
+            interviewer.SubmittedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+
+            return interviewer;
+        }
+
         public async Task<OfferLetter> CreateOfferLetterAsync(Guid applicationId, CreateOfferLetterDto dto)
         {
             var app = await _context.JobApplications

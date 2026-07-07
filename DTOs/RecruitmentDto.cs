@@ -151,6 +151,26 @@ namespace WUIAM.DTOs
         public string? EmployeeName { get; set; }
         public string Email { get; set; } = string.Empty;
         public string? Name { get; set; }
+
+        public string FeedbackStatus { get; set; } = "Pending";
+        public int? Rating { get; set; }
+        public string? Comments { get; set; }
+        public string? Recommendation { get; set; }
+        public DateTime? SubmittedAt { get; set; }
+    }
+
+    public class SubmitInterviewFeedbackDto
+    {
+        [Required]
+        [Range(1, 5)]
+        public int Rating { get; set; }
+
+        [MaxLength(2000)]
+        public string? Comments { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string Recommendation { get; set; } = string.Empty;
     }
 
     // ==================== Interview DTOs ====================

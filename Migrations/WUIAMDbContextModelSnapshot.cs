@@ -253,6 +253,153 @@ namespace WUIAM.Migrations
                     b.ToTable("ApprovalSteps");
                 });
 
+            modelBuilder.Entity("WUIAM.Models.AssetAssignment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("AssignedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ConditionAtAssignment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ConditionAtReturn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("EmployeeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ReturnedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssetId");
+
+                    b.ToTable("AssetAssignments");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.AssetMaintenanceRecord", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("CompletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Cost")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PerformedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ScheduledDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssetId");
+
+                    b.ToTable("AssetMaintenanceRecords");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.AttendanceRecord", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("CheckInTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("CheckOutTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("EmployeeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("AttendanceRecords");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.AttendanceSettings", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AllowedWifiIps")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("EnableWebAttendance")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<TimeSpan?>("StandardCheckInTime")
+                        .HasColumnType("time");
+
+                    b.Property<TimeSpan?>("StandardCheckOutTime")
+                        .HasColumnType("time");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AttendanceSettings");
+                });
+
             modelBuilder.Entity("WUIAM.Models.AuditLog", b =>
                 {
                     b.Property<Guid>("Id")
@@ -690,6 +837,9 @@ namespace WUIAM.Migrations
                     b.Property<Guid?>("CustodianEmployeeId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("ExpectedLifeSpanMonths")
+                        .HasColumnType("int");
+
                     b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -704,6 +854,9 @@ namespace WUIAM.Migrations
                     b.Property<DateTime?>("PurchaseDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<decimal>("SalvageValue")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -717,6 +870,33 @@ namespace WUIAM.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FacilityAssets");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.GoodsReceivedNote", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("PurchaseOrderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("ReceivedByUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ReceivedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Remarks")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GoodsReceivedNotes");
                 });
 
             modelBuilder.Entity("WUIAM.Models.HelpdeskTicket", b =>
@@ -745,6 +925,9 @@ namespace WUIAM.Migrations
                     b.Property<DateTime?>("DueAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid?>("FacilityAssetId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Priority")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -768,6 +951,8 @@ namespace WUIAM.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FacilityAssetId");
 
                     b.ToTable("HelpdeskTickets");
                 });
@@ -810,6 +995,10 @@ namespace WUIAM.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Comments")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(256)
@@ -818,12 +1007,27 @@ namespace WUIAM.Migrations
                     b.Property<Guid?>("EmployeeId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("FeedbackStatus")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<Guid>("InterviewScheduleId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Recommendation")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("SubmittedAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -925,6 +1129,37 @@ namespace WUIAM.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("InventoryItems");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.InventoryTransaction", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("InventoryItemId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("ReferenceId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Remarks")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TransactionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("InventoryTransactions");
                 });
 
             modelBuilder.Entity("WUIAM.Models.JobApplication", b =>
@@ -1528,6 +1763,50 @@ namespace WUIAM.Migrations
                     b.ToTable("OfferLetters");
                 });
 
+            modelBuilder.Entity("WUIAM.Models.PayrollAdjustment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("ApplicableMonth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("EmployeeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("EmployeeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsProcessed")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid?>("PayrollRunId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PayrollAdjustments");
+                });
+
             modelBuilder.Entity("WUIAM.Models.PayrollRun", b =>
                 {
                     b.Property<Guid>("Id")
@@ -1572,6 +1851,61 @@ namespace WUIAM.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PayrollRuns");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.Payslip", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("AllowancesTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("BasePay")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("BonusesTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("DeductionsTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("EmployeeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("EmployeeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GradeLevel")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("GrossPay")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("NetPay")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("PayrollRunId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("PensionAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Step")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TaxAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Payslips");
                 });
 
             modelBuilder.Entity("WUIAM.Models.Permission", b =>
@@ -1668,6 +2002,72 @@ namespace WUIAM.Migrations
                     b.ToTable("PublicHolidays");
                 });
 
+            modelBuilder.Entity("WUIAM.Models.PurchaseOrder", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PoNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("ProcurementRequestId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("VendorId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PurchaseOrders");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.PurchaseOrderLineItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("InventoryItemId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PurchaseOrderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PurchaseOrderId");
+
+                    b.ToTable("PurchaseOrderLineItems");
+                });
+
             modelBuilder.Entity("WUIAM.Models.RefreshToken", b =>
                 {
                     b.Property<int>("Id")
@@ -1758,6 +2158,37 @@ namespace WUIAM.Migrations
                     b.ToTable("RegistryIntegrationRecords");
                 });
 
+            modelBuilder.Entity("WUIAM.Models.RegistrySyncLog", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ActionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("IntegrationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IntegrationId");
+
+                    b.ToTable("RegistrySyncLogs");
+                });
+
             modelBuilder.Entity("WUIAM.Models.Role", b =>
                 {
                     b.Property<Guid>("Id")
@@ -1829,6 +2260,9 @@ namespace WUIAM.Migrations
 
                     b.Property<decimal>("PensionRatePercent")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Step")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("TaxRatePercent")
                         .HasColumnType("decimal(18,2)");
@@ -1985,6 +2419,43 @@ namespace WUIAM.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserTypes");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.Vendor", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vendors");
                 });
 
             modelBuilder.Entity("WUIAM.User", b =>
@@ -2164,6 +2635,39 @@ namespace WUIAM.Migrations
                     b.Navigation("ApprovalFlow");
                 });
 
+            modelBuilder.Entity("WUIAM.Models.AssetAssignment", b =>
+                {
+                    b.HasOne("WUIAM.Models.FacilityAsset", "Asset")
+                        .WithMany("Assignments")
+                        .HasForeignKey("AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Asset");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.AssetMaintenanceRecord", b =>
+                {
+                    b.HasOne("WUIAM.Models.FacilityAsset", "Asset")
+                        .WithMany("MaintenanceRecords")
+                        .HasForeignKey("AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Asset");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.AttendanceRecord", b =>
+                {
+                    b.HasOne("WUIAM.User", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
+                });
+
             modelBuilder.Entity("WUIAM.Models.AuditLog", b =>
                 {
                     b.HasOne("WUIAM.User", "Impersonator")
@@ -2265,6 +2769,15 @@ namespace WUIAM.Migrations
                     b.Navigation("EmploymentType");
 
                     b.Navigation("Supervisor");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.HelpdeskTicket", b =>
+                {
+                    b.HasOne("WUIAM.Models.FacilityAsset", "FacilityAsset")
+                        .WithMany()
+                        .HasForeignKey("FacilityAssetId");
+
+                    b.Navigation("FacilityAsset");
                 });
 
             modelBuilder.Entity("WUIAM.Models.HelpdeskTicketComment", b =>
@@ -2511,6 +3024,26 @@ namespace WUIAM.Migrations
                     b.Navigation("Application");
                 });
 
+            modelBuilder.Entity("WUIAM.Models.PurchaseOrderLineItem", b =>
+                {
+                    b.HasOne("WUIAM.Models.PurchaseOrder", null)
+                        .WithMany("LineItems")
+                        .HasForeignKey("PurchaseOrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("WUIAM.Models.RegistrySyncLog", b =>
+                {
+                    b.HasOne("WUIAM.Models.RegistryIntegrationRecord", "Integration")
+                        .WithMany()
+                        .HasForeignKey("IntegrationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Integration");
+                });
+
             modelBuilder.Entity("WUIAM.Models.RolePermission", b =>
                 {
                     b.HasOne("WUIAM.Models.Permission", "Permission")
@@ -2639,6 +3172,13 @@ namespace WUIAM.Migrations
                     b.Navigation("Employments");
                 });
 
+            modelBuilder.Entity("WUIAM.Models.FacilityAsset", b =>
+                {
+                    b.Navigation("Assignments");
+
+                    b.Navigation("MaintenanceRecords");
+                });
+
             modelBuilder.Entity("WUIAM.Models.HelpdeskTicket", b =>
                 {
                     b.Navigation("Comments");
@@ -2657,6 +3197,11 @@ namespace WUIAM.Migrations
             modelBuilder.Entity("WUIAM.Models.Permission", b =>
                 {
                     b.Navigation("RolePermissions");
+                });
+
+            modelBuilder.Entity("WUIAM.Models.PurchaseOrder", b =>
+                {
+                    b.Navigation("LineItems");
                 });
 
             modelBuilder.Entity("WUIAM.Models.Role", b =>
