@@ -23,6 +23,15 @@ namespace WUIAM.Controllers
             _employeeService = employeeService;
         }
 
+        // GET: api/Department/reports/summary
+        [HttpGet("reports/summary")]
+        [HasPermission(Permissions.AdminAccess, Permissions.ViewHRReports, Permissions.SuperAdminAccess)]
+        public async Task<ActionResult<ApiResponse<IEnumerable<DepartmentSummaryDto>>>> GetDepartmentSummaryReport()
+        {
+            var report = await _departmentService.GetDepartmentSummaryReportAsync();
+            return Ok(ApiResponse<IEnumerable<DepartmentSummaryDto>>.Success("Department Summary Report retrieved successfully", report));
+        }
+
         // GET: api/Department
         [HttpGet]
         public async Task<ActionResult<ApiResponse<IEnumerable<DepartmentResponseDto>>>> GetAll()

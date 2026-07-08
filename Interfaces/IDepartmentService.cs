@@ -16,6 +16,7 @@ namespace WUIAM.Interfaces
         Task<IEnumerable<DepartmentResponseDto>> GetNonAcademicDepartmentsAsync();
         Task<IEnumerable<DepartmentResponseDto>> GetAcademicDepartmentsAsync();
         Task<bool> EmployeeExistsAsync(Guid employeeId);
+        Task<IEnumerable<DepartmentSummaryDto>> GetDepartmentSummaryReportAsync();
     }
 
 }

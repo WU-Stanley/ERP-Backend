@@ -117,7 +117,10 @@ namespace WUIAM.Repositories
 
         public async Task<List<LeaveRequest>> GetAllLeaveRequestsAsync()
         {
-            return await _context.LeaveRequests.ToListAsync();
+            return await _context.LeaveRequests
+                .Include(r => r.User)
+                .Include(r => r.LeaveType)
+                .ToListAsync();
         }
 
         public async Task<List<LeaveRequest>> GetLeaveRequestsByUserAsync(Guid userId)

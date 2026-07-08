@@ -1,0 +1,234 @@
+[2026-07-08 11:09:59.987 WRN] [] No store type was specified for the decimal property 'Cost' on entity type 'AssetMaintenanceRecord'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:09:59.999 WRN] [] No store type was specified for the decimal property 'PurchaseCost' on entity type 'FacilityAsset'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:09:59.999 WRN] [] No store type was specified for the decimal property 'SalvageValue' on entity type 'FacilityAsset'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:09:59.999 WRN] [] No store type was specified for the decimal property 'UnitCost' on entity type 'InventoryItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'Amount' on entity type 'PayrollAdjustment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'GrossPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'NetPayTotal' on entity type 'PayrollRun'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'AllowancesTotal' on entity type 'Payslip'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'BasePay' on entity type 'Payslip'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'BonusesTotal' on entity type 'Payslip'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'DeductionsTotal' on entity type 'Payslip'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'GrossPay' on entity type 'Payslip'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'NetPay' on entity type 'Payslip'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'PensionAmount' on entity type 'Payslip'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'TaxAmount' on entity type 'Payslip'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'EstimatedAmount' on entity type 'ProcurementRequest'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'TotalAmount' on entity type 'PurchaseOrder'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'TotalPrice' on entity type 'PurchaseOrderLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'UnitPrice' on entity type 'PurchaseOrderLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'BasePay' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'HousingAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'OtherAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'PensionRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'TaxRatePercent' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.000 WRN] [] No store type was specified for the decimal property 'TransportAllowance' on entity type 'SalaryStructure'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-07-08 11:10:00.845 INF] [] Start installing Hangfire SQL objects...
+[2026-07-08 11:10:00.881 INF] [] Hangfire SQL objects installed.
+[2026-07-08 11:10:01.107 WRN] [] The WebRootPath was not found: /Users/mac/Apps/ERP/ERP-Backend/wwwroot. Static files may be unavailable.
+[2026-07-08 11:10:01.246 INF] [] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@WUIAM'
+[2026-07-08 11:10:01.247 INF] [] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+[2026-07-08 11:10:01.247 INF] [] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-07-08 11:10:01.259 INF] [] Server macbook-pro:48415:0897cca5 successfully announced in 7.7446 ms
+[2026-07-08 11:10:01.264 INF] [] Server macbook-pro:48415:0897cca5 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-07-08 11:10:01.267 INF] [] Server macbook-pro:48415:0897cca5 all the dispatchers started
+[2026-07-08 11:10:28.141 INF] [f1c172ad-5f41-4dc1-b683-ee702f464da6] [Perf] POST /api/notificationsHub/negotiate -> 200 in 36.76ms
+[2026-07-08 11:10:28.143 INF] [f1c172ad-5f41-4dc1-b683-ee702f464da6] [CorrelationId: f1c172ad-5f41-4dc1-b683-ee702f464da6] POST /api/notificationsHub/negotiate completed in 40.65ms with status 200
+[2026-07-08 11:11:52.004 INF] [7c744714-e71f-460c-9f54-a4e07f962360] [Perf] GET /api/Export/employees -> 200 in 122.00ms
+[2026-07-08 11:11:52.004 INF] [7c744714-e71f-460c-9f54-a4e07f962360] [CorrelationId: 7c744714-e71f-460c-9f54-a4e07f962360] GET /api/Export/employees completed in 122.52ms with status 200
+[2026-07-08 11:12:00.227 INF] [e840f345-ea2e-4f8a-9586-1154ebe8099c] [Perf] GET /api/Export/departments -> 200 in 21.00ms
+[2026-07-08 11:12:00.228 INF] [e840f345-ea2e-4f8a-9586-1154ebe8099c] [CorrelationId: e840f345-ea2e-4f8a-9586-1154ebe8099c] GET /api/Export/departments completed in 21.21ms with status 200
+[2026-07-08 11:12:09.710 INF] [04c55361-43c3-4b2b-b747-46c2d2dca5cc] [Perf] GET /api/Export/leave-requests -> 200 in 35.32ms
+[2026-07-08 11:12:09.710 INF] [04c55361-43c3-4b2b-b747-46c2d2dca5cc] [CorrelationId: 04c55361-43c3-4b2b-b747-46c2d2dca5cc] GET /api/Export/leave-requests completed in 35.53ms with status 200
+[2026-07-08 11:12:37.259 INF] [a4baa21a-0262-407d-ad6e-e24029a1bf8c] [Perf] GET /api/department -> 200 in 43.04ms
+[2026-07-08 11:12:37.259 INF] [a4baa21a-0262-407d-ad6e-e24029a1bf8c] [CorrelationId: a4baa21a-0262-407d-ad6e-e24029a1bf8c] GET /api/department completed in 43.23ms with status 200
+[2026-07-08 11:12:37.272 INF] [7f8185de-6dc3-4411-857b-bd830dfbe605] [Perf] GET /api/auth/users -> 200 in 36.47ms
+[2026-07-08 11:12:37.272 INF] [7f8185de-6dc3-4411-857b-bd830dfbe605] [CorrelationId: 7f8185de-6dc3-4411-857b-bd830dfbe605] GET /api/auth/users completed in 36.64ms with status 200
+[2026-07-08 11:12:40.808 INF] [f3abd82c-15ac-4780-95f7-f186181cd4a8] [Perf] GET /api/department/17f38eeb-b7ad-446e-1fd1-08dedab27eef -> 200 in 58.11ms
+[2026-07-08 11:12:40.808 INF] [f3abd82c-15ac-4780-95f7-f186181cd4a8] [CorrelationId: f3abd82c-15ac-4780-95f7-f186181cd4a8] GET /api/department/17f38eeb-b7ad-446e-1fd1-08dedab27eef completed in 58.37ms with status 200
+[2026-07-08 11:12:40.823 INF] [5b6ffbd4-0e06-4863-96be-31dd73b53088] [Perf] GET /api/Department/17f38eeb-b7ad-446e-1fd1-08dedab27eef/employees -> 200 in 72.84ms
+[2026-07-08 11:12:40.823 INF] [5b6ffbd4-0e06-4863-96be-31dd73b53088] [CorrelationId: 5b6ffbd4-0e06-4863-96be-31dd73b53088] GET /api/Department/17f38eeb-b7ad-446e-1fd1-08dedab27eef/employees completed in 73.02ms with status 200
+[2026-07-08 11:19:03.229 WRN] [282590fa-e26d-461d-8bf2-18b072aeabe9] [Perf] GET /api/notificationsHub -> 101 in 515059.92ms
+[2026-07-08 11:19:03.229 INF] [282590fa-e26d-461d-8bf2-18b072aeabe9] [CorrelationId: 282590fa-e26d-461d-8bf2-18b072aeabe9] GET /api/notificationsHub completed in 515060.12ms with status 101
+[2026-07-08 11:19:03.229 WRN] [282590fa-e26d-461d-8bf2-18b072aeabe9] [CorrelationId: 282590fa-e26d-461d-8bf2-18b072aeabe9] SLOW REQUEST: GET /api/notificationsHub took 515060.12ms (threshold: 1000ms)
+[2026-07-08 11:19:03.229 ERR] [282590fa-e26d-461d-8bf2-18b072aeabe9] [CorrelationId: 282590fa-e26d-461d-8bf2-18b072aeabe9] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 515060.12ms (threshold: 5000ms)
+[2026-07-08 11:19:03.469 INF] [826a15e7-3876-4a93-9c50-235b789d2d5c] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.45ms
+[2026-07-08 11:19:03.469 INF] [826a15e7-3876-4a93-9c50-235b789d2d5c] [CorrelationId: 826a15e7-3876-4a93-9c50-235b789d2d5c] POST /api/notificationsHub/negotiate completed in 0.64ms with status 200
+[2026-07-08 11:19:03.469 INF] [f5ab33c1-1293-46df-89ea-990ac6b2b848] [Perf] GET /api/notifications/unread-count -> 200 in 33.42ms
+[2026-07-08 11:19:03.470 INF] [f5ab33c1-1293-46df-89ea-990ac6b2b848] [CorrelationId: f5ab33c1-1293-46df-89ea-990ac6b2b848] GET /api/notifications/unread-count completed in 33.54ms with status 200
+[2026-07-08 11:19:03.483 INF] [a0453bb7-a8d2-4890-a870-dc3f09fd2244] [Perf] GET /api/department/17f38eeb-b7ad-446e-1fd1-08dedab27eef -> 200 in 40.96ms
+[2026-07-08 11:19:03.483 INF] [a0453bb7-a8d2-4890-a870-dc3f09fd2244] [CorrelationId: a0453bb7-a8d2-4890-a870-dc3f09fd2244] GET /api/department/17f38eeb-b7ad-446e-1fd1-08dedab27eef completed in 41.11ms with status 200
+[2026-07-08 11:19:03.486 INF] [72d02b65-a4dd-4a4b-99a4-0548386cd779] [Perf] GET /api/Department/17f38eeb-b7ad-446e-1fd1-08dedab27eef/employees -> 200 in 24.12ms
+[2026-07-08 11:19:03.486 INF] [72d02b65-a4dd-4a4b-99a4-0548386cd779] [CorrelationId: 72d02b65-a4dd-4a4b-99a4-0548386cd779] GET /api/Department/17f38eeb-b7ad-446e-1fd1-08dedab27eef/employees completed in 24.23ms with status 200
+[2026-07-08 11:19:03.495 INF] [b0640108-057b-4b71-835c-730e9e49da77] [Perf] GET /api/notifications/unread-count -> 200 in 3.04ms
+[2026-07-08 11:19:03.495 INF] [b0640108-057b-4b71-835c-730e9e49da77] [CorrelationId: b0640108-057b-4b71-835c-730e9e49da77] GET /api/notifications/unread-count completed in 3.19ms with status 200
+[2026-07-08 11:19:03.507 INF] [9e7dbb23-9182-459b-ae55-fc65a6fd6164] [Perf] GET /api/notifications -> 200 in 15.03ms
+[2026-07-08 11:19:03.507 INF] [9e7dbb23-9182-459b-ae55-fc65a6fd6164] [CorrelationId: 9e7dbb23-9182-459b-ae55-fc65a6fd6164] GET /api/notifications completed in 15.18ms with status 200
+[2026-07-08 11:19:29.498 INF] [fdfb671d-5bf6-4c55-9566-31dd9cc85c9b] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.43ms
+[2026-07-08 11:19:29.498 INF] [fdfb671d-5bf6-4c55-9566-31dd9cc85c9b] [CorrelationId: fdfb671d-5bf6-4c55-9566-31dd9cc85c9b] POST /api/notificationsHub/negotiate completed in 0.72ms with status 200
+[2026-07-08 11:19:29.499 INF] [c2c5d819-64cb-408c-a778-db829a81d7a2] [Perf] GET /api/notifications/unread-count -> 200 in 7.43ms
+[2026-07-08 11:19:29.500 INF] [c2c5d819-64cb-408c-a778-db829a81d7a2] [CorrelationId: c2c5d819-64cb-408c-a778-db829a81d7a2] GET /api/notifications/unread-count completed in 7.56ms with status 200
+[2026-07-08 11:19:29.520 INF] [b7e5671d-3d95-42d9-8b06-860dd7453a2f] [Perf] GET /api/erp-modules/documents -> 200 in 21.55ms
+[2026-07-08 11:19:29.521 INF] [b7e5671d-3d95-42d9-8b06-860dd7453a2f] [CorrelationId: b7e5671d-3d95-42d9-8b06-860dd7453a2f] GET /api/erp-modules/documents completed in 21.71ms with status 200
+[2026-07-08 11:19:29.541 INF] [b649cfc0-df01-449e-b097-ea0fbd6910f4] [Perf] GET /api/notifications/unread-count -> 200 in 2.60ms
+[2026-07-08 11:19:29.541 INF] [b649cfc0-df01-449e-b097-ea0fbd6910f4] [CorrelationId: b649cfc0-df01-449e-b097-ea0fbd6910f4] GET /api/notifications/unread-count completed in 2.75ms with status 200
+[2026-07-08 11:19:29.548 INF] [e9a484a1-f304-43dc-979c-7b4a4f707d66] [Perf] GET /api/erp-modules/summary -> 200 in 49.93ms
+[2026-07-08 11:19:29.548 INF] [e9a484a1-f304-43dc-979c-7b4a4f707d66] [CorrelationId: e9a484a1-f304-43dc-979c-7b4a4f707d66] GET /api/erp-modules/summary completed in 50.07ms with status 200
+[2026-07-08 11:19:29.565 INF] [71c42a23-7211-4432-a9ac-0cef02b20d72] [Perf] GET /api/notifications -> 200 in 25.94ms
+[2026-07-08 11:19:29.565 INF] [71c42a23-7211-4432-a9ac-0cef02b20d72] [CorrelationId: 71c42a23-7211-4432-a9ac-0cef02b20d72] GET /api/notifications completed in 26.38ms with status 200
+[2026-07-08 11:19:52.424 INF] [f521cc56-1106-474f-a9c7-014dbc42a3c6] [Perf] POST /api/erp-modules/documents/upload -> 200 in 85.82ms
+[2026-07-08 11:19:52.424 INF] [f521cc56-1106-474f-a9c7-014dbc42a3c6] [CorrelationId: f521cc56-1106-474f-a9c7-014dbc42a3c6] POST /api/erp-modules/documents/upload completed in 85.94ms with status 200
+[2026-07-08 11:20:21.750 INF] [8963b9fa-f030-4648-baae-f17b4de269c0] [Perf] POST /api/erp-modules/documents -> 201 in 72.46ms
+[2026-07-08 11:20:21.751 INF] [8963b9fa-f030-4648-baae-f17b4de269c0] [CorrelationId: 8963b9fa-f030-4648-baae-f17b4de269c0] POST /api/erp-modules/documents completed in 72.64ms with status 201
+[2026-07-08 11:20:21.758 INF] [f4024a9e-f405-403f-8bc3-c009f985650f] [Perf] GET /api/erp-modules/documents -> 200 in 3.45ms
+[2026-07-08 11:20:21.759 INF] [f4024a9e-f405-403f-8bc3-c009f985650f] [CorrelationId: f4024a9e-f405-403f-8bc3-c009f985650f] GET /api/erp-modules/documents completed in 3.58ms with status 200
+[2026-07-08 11:20:21.776 INF] [1629c7e1-e734-40bf-a95a-43d1afbbbd50] [Perf] GET /api/erp-modules/summary -> 200 in 21.07ms
+[2026-07-08 11:20:21.776 INF] [1629c7e1-e734-40bf-a95a-43d1afbbbd50] [CorrelationId: 1629c7e1-e734-40bf-a95a-43d1afbbbd50] GET /api/erp-modules/summary completed in 21.21ms with status 200
+[2026-07-08 11:20:28.584 INF] [852db997-e55e-46a2-82a6-e029b8c99947] [Perf] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status -> 200 in 50.38ms
+[2026-07-08 11:20:28.584 INF] [852db997-e55e-46a2-82a6-e029b8c99947] [CorrelationId: 852db997-e55e-46a2-82a6-e029b8c99947] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status completed in 50.52ms with status 200
+[2026-07-08 11:20:28.594 INF] [bd1e6242-de2c-43af-bec0-1af5916e46e8] [Perf] GET /api/erp-modules/documents -> 200 in 4.74ms
+[2026-07-08 11:20:28.594 INF] [bd1e6242-de2c-43af-bec0-1af5916e46e8] [CorrelationId: bd1e6242-de2c-43af-bec0-1af5916e46e8] GET /api/erp-modules/documents completed in 4.97ms with status 200
+[2026-07-08 11:20:28.611 INF] [372da76e-5202-48b5-9ca8-6c7692551c1f] [Perf] GET /api/erp-modules/summary -> 200 in 21.83ms
+[2026-07-08 11:20:28.611 INF] [372da76e-5202-48b5-9ca8-6c7692551c1f] [CorrelationId: 372da76e-5202-48b5-9ca8-6c7692551c1f] GET /api/erp-modules/summary completed in 21.99ms with status 200
+[2026-07-08 11:20:33.531 INF] [ebb73d6f-6eb7-45b4-b175-27099aa78502] [Perf] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status -> 200 in 26.23ms
+[2026-07-08 11:20:33.532 INF] [ebb73d6f-6eb7-45b4-b175-27099aa78502] [CorrelationId: ebb73d6f-6eb7-45b4-b175-27099aa78502] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status completed in 26.59ms with status 200
+[2026-07-08 11:20:33.543 INF] [f886655e-e0e7-4306-b86d-93549bcd65b7] [Perf] GET /api/erp-modules/documents -> 200 in 5.86ms
+[2026-07-08 11:20:33.544 INF] [f886655e-e0e7-4306-b86d-93549bcd65b7] [CorrelationId: f886655e-e0e7-4306-b86d-93549bcd65b7] GET /api/erp-modules/documents completed in 6.03ms with status 200
+[2026-07-08 11:20:33.555 INF] [7391f01f-581d-4ad0-80b1-edd67267be16] [Perf] GET /api/erp-modules/summary -> 200 in 18.38ms
+[2026-07-08 11:20:33.556 INF] [7391f01f-581d-4ad0-80b1-edd67267be16] [CorrelationId: 7391f01f-581d-4ad0-80b1-edd67267be16] GET /api/erp-modules/summary completed in 18.53ms with status 200
+[2026-07-08 11:21:05.757 INF] [2952cf8f-65ff-40d7-a02e-bd2e8539c618] [Perf] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status -> 200 in 29.02ms
+[2026-07-08 11:21:05.757 INF] [2952cf8f-65ff-40d7-a02e-bd2e8539c618] [CorrelationId: 2952cf8f-65ff-40d7-a02e-bd2e8539c618] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status completed in 29.36ms with status 200
+[2026-07-08 11:21:05.775 INF] [9ab5f1c1-0262-46f6-8438-555e53c6938b] [Perf] GET /api/erp-modules/documents -> 200 in 8.44ms
+[2026-07-08 11:21:05.776 INF] [9ab5f1c1-0262-46f6-8438-555e53c6938b] [CorrelationId: 9ab5f1c1-0262-46f6-8438-555e53c6938b] GET /api/erp-modules/documents completed in 8.71ms with status 200
+[2026-07-08 11:21:05.796 INF] [8fc075fd-82ba-476c-8afd-5e6c7b50527e] [Perf] GET /api/erp-modules/summary -> 200 in 29.34ms
+[2026-07-08 11:21:05.796 INF] [8fc075fd-82ba-476c-8afd-5e6c7b50527e] [CorrelationId: 8fc075fd-82ba-476c-8afd-5e6c7b50527e] GET /api/erp-modules/summary completed in 29.47ms with status 200
+[2026-07-08 11:21:09.704 INF] [75716cab-f193-4954-8716-aa6cf7e5bd35] [Perf] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status -> 200 in 24.95ms
+[2026-07-08 11:21:09.704 INF] [75716cab-f193-4954-8716-aa6cf7e5bd35] [CorrelationId: 75716cab-f193-4954-8716-aa6cf7e5bd35] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status completed in 25.11ms with status 200
+[2026-07-08 11:21:09.716 INF] [bf6219fc-d567-4cfe-92cb-5be1075b1614] [Perf] GET /api/erp-modules/documents -> 200 in 5.27ms
+[2026-07-08 11:21:09.717 INF] [bf6219fc-d567-4cfe-92cb-5be1075b1614] [CorrelationId: bf6219fc-d567-4cfe-92cb-5be1075b1614] GET /api/erp-modules/documents completed in 5.49ms with status 200
+[2026-07-08 11:21:09.732 INF] [28013b42-df33-4fd9-9e95-ad43561b6a02] [Perf] GET /api/erp-modules/summary -> 200 in 20.87ms
+[2026-07-08 11:21:09.732 INF] [28013b42-df33-4fd9-9e95-ad43561b6a02] [CorrelationId: 28013b42-df33-4fd9-9e95-ad43561b6a02] GET /api/erp-modules/summary completed in 21.01ms with status 200
+[2026-07-08 11:22:57.621 WRN] [97cc0d22-ab3d-44d7-b61f-d84fa0b68944] [Perf] GET /api/notificationsHub -> 101 in 208087.22ms
+[2026-07-08 11:22:57.621 INF] [97cc0d22-ab3d-44d7-b61f-d84fa0b68944] [CorrelationId: 97cc0d22-ab3d-44d7-b61f-d84fa0b68944] GET /api/notificationsHub completed in 208087.34ms with status 101
+[2026-07-08 11:22:57.621 WRN] [97cc0d22-ab3d-44d7-b61f-d84fa0b68944] [CorrelationId: 97cc0d22-ab3d-44d7-b61f-d84fa0b68944] SLOW REQUEST: GET /api/notificationsHub took 208087.34ms (threshold: 1000ms)
+[2026-07-08 11:22:57.621 ERR] [97cc0d22-ab3d-44d7-b61f-d84fa0b68944] [CorrelationId: 97cc0d22-ab3d-44d7-b61f-d84fa0b68944] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 208087.34ms (threshold: 5000ms)
+[2026-07-08 11:22:57.622 WRN] [732b1010-9bfb-4302-9201-cc4bb1befc00] [Perf] GET /api/notificationsHub -> 101 in 234135.75ms
+[2026-07-08 11:22:57.622 INF] [732b1010-9bfb-4302-9201-cc4bb1befc00] [CorrelationId: 732b1010-9bfb-4302-9201-cc4bb1befc00] GET /api/notificationsHub completed in 234135.85ms with status 101
+[2026-07-08 11:22:57.622 WRN] [732b1010-9bfb-4302-9201-cc4bb1befc00] [CorrelationId: 732b1010-9bfb-4302-9201-cc4bb1befc00] SLOW REQUEST: GET /api/notificationsHub took 234135.85ms (threshold: 1000ms)
+[2026-07-08 11:22:57.622 ERR] [732b1010-9bfb-4302-9201-cc4bb1befc00] [CorrelationId: 732b1010-9bfb-4302-9201-cc4bb1befc00] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 234135.85ms (threshold: 5000ms)
+[2026-07-08 11:22:57.820 INF] [3ff0e2bf-18ee-4cf1-a70c-b25329969098] [Perf] GET /api/notifications/unread-count -> 200 in 17.54ms
+[2026-07-08 11:22:57.820 INF] [3ff0e2bf-18ee-4cf1-a70c-b25329969098] [CorrelationId: 3ff0e2bf-18ee-4cf1-a70c-b25329969098] GET /api/notifications/unread-count completed in 17.68ms with status 200
+[2026-07-08 11:22:57.827 INF] [0413ccae-09be-4c68-991c-d5701bb83379] [Perf] GET /api/erp-modules/documents -> 200 in 6.75ms
+[2026-07-08 11:22:57.828 INF] [0413ccae-09be-4c68-991c-d5701bb83379] [CorrelationId: 0413ccae-09be-4c68-991c-d5701bb83379] GET /api/erp-modules/documents completed in 6.85ms with status 200
+[2026-07-08 11:22:57.831 INF] [b68f222b-9351-457b-95b1-6abda652f76d] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.28ms
+[2026-07-08 11:22:57.832 INF] [b68f222b-9351-457b-95b1-6abda652f76d] [CorrelationId: b68f222b-9351-457b-95b1-6abda652f76d] POST /api/notificationsHub/negotiate completed in 0.42ms with status 200
+[2026-07-08 11:22:57.836 INF] [7bd5e053-f8ef-4ed5-a11a-095df2cf9e44] [Perf] GET /api/erp-modules/summary -> 200 in 28.70ms
+[2026-07-08 11:22:57.836 INF] [7bd5e053-f8ef-4ed5-a11a-095df2cf9e44] [CorrelationId: 7bd5e053-f8ef-4ed5-a11a-095df2cf9e44] GET /api/erp-modules/summary completed in 28.80ms with status 200
+[2026-07-08 11:22:57.862 INF] [3b86f301-9524-4d07-89a9-c2fe7975530c] [Perf] GET /api/notifications/unread-count -> 200 in 2.29ms
+[2026-07-08 11:22:57.862 INF] [9e910cd6-e11b-493b-b586-375744553bcf] [Perf] GET /api/notifications -> 200 in 2.03ms
+[2026-07-08 11:22:57.862 INF] [3b86f301-9524-4d07-89a9-c2fe7975530c] [CorrelationId: 3b86f301-9524-4d07-89a9-c2fe7975530c] GET /api/notifications/unread-count completed in 2.40ms with status 200
+[2026-07-08 11:22:57.862 INF] [9e910cd6-e11b-493b-b586-375744553bcf] [CorrelationId: 9e910cd6-e11b-493b-b586-375744553bcf] GET /api/notifications completed in 2.14ms with status 200
+[2026-07-08 11:23:05.998 WRN] [0a37253e-1c36-48c5-96fd-7ab45d8f015d] [Perf] GET /api/notificationsHub -> 101 in 8141.30ms
+[2026-07-08 11:23:05.998 INF] [0a37253e-1c36-48c5-96fd-7ab45d8f015d] [CorrelationId: 0a37253e-1c36-48c5-96fd-7ab45d8f015d] GET /api/notificationsHub completed in 8141.42ms with status 101
+[2026-07-08 11:23:05.998 WRN] [0a37253e-1c36-48c5-96fd-7ab45d8f015d] [CorrelationId: 0a37253e-1c36-48c5-96fd-7ab45d8f015d] SLOW REQUEST: GET /api/notificationsHub took 8141.42ms (threshold: 1000ms)
+[2026-07-08 11:23:05.998 ERR] [0a37253e-1c36-48c5-96fd-7ab45d8f015d] [CorrelationId: 0a37253e-1c36-48c5-96fd-7ab45d8f015d] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 8141.42ms (threshold: 5000ms)
+[2026-07-08 11:23:06.133 INF] [f13771d7-d331-4501-b1de-1e48d34711c4] [Perf] GET /api/notifications/unread-count -> 200 in 4.43ms
+[2026-07-08 11:23:06.133 INF] [f13771d7-d331-4501-b1de-1e48d34711c4] [CorrelationId: f13771d7-d331-4501-b1de-1e48d34711c4] GET /api/notifications/unread-count completed in 4.51ms with status 200
+[2026-07-08 11:23:06.133 INF] [bcdbae0a-a6a3-484f-a906-5ed414ed7fbd] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.17ms
+[2026-07-08 11:23:06.134 INF] [bcdbae0a-a6a3-484f-a906-5ed414ed7fbd] [CorrelationId: bcdbae0a-a6a3-484f-a906-5ed414ed7fbd] POST /api/notificationsHub/negotiate completed in 0.24ms with status 200
+[2026-07-08 11:23:06.135 INF] [ff4bf6ea-448c-43f7-b31e-833980a740d3] [Perf] GET /api/erp-modules/documents -> 200 in 2.27ms
+[2026-07-08 11:23:06.135 INF] [ff4bf6ea-448c-43f7-b31e-833980a740d3] [CorrelationId: ff4bf6ea-448c-43f7-b31e-833980a740d3] GET /api/erp-modules/documents completed in 2.47ms with status 200
+[2026-07-08 11:23:06.144 INF] [d32a5f84-b958-4434-80eb-a49698da1a2d] [Perf] GET /api/erp-modules/summary -> 200 in 11.44ms
+[2026-07-08 11:23:06.144 INF] [d32a5f84-b958-4434-80eb-a49698da1a2d] [CorrelationId: d32a5f84-b958-4434-80eb-a49698da1a2d] GET /api/erp-modules/summary completed in 11.54ms with status 200
+[2026-07-08 11:23:06.182 INF] [b15ffb14-e55e-4100-8586-b5f6e8e11174] [Perf] GET /api/notifications -> 200 in 3.95ms
+[2026-07-08 11:23:06.182 INF] [2d813e82-38a9-44ed-995f-7b3e5ec29dfd] [Perf] GET /api/notifications/unread-count -> 200 in 4.30ms
+[2026-07-08 11:23:06.182 INF] [b15ffb14-e55e-4100-8586-b5f6e8e11174] [CorrelationId: b15ffb14-e55e-4100-8586-b5f6e8e11174] GET /api/notifications completed in 4.04ms with status 200
+[2026-07-08 11:23:06.182 INF] [2d813e82-38a9-44ed-995f-7b3e5ec29dfd] [CorrelationId: 2d813e82-38a9-44ed-995f-7b3e5ec29dfd] GET /api/notifications/unread-count completed in 4.42ms with status 200
+[2026-07-08 11:23:49.365 INF] [5203f391-a69e-4624-a1e5-4d581e72e6cb] [Perf] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status -> 200 in 17.94ms
+[2026-07-08 11:23:49.365 INF] [5203f391-a69e-4624-a1e5-4d581e72e6cb] [CorrelationId: 5203f391-a69e-4624-a1e5-4d581e72e6cb] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status completed in 18.09ms with status 200
+[2026-07-08 11:23:49.378 INF] [8c97a5f1-5b78-4b19-8c37-ca355203aead] [Perf] GET /api/erp-modules/documents -> 200 in 6.18ms
+[2026-07-08 11:23:49.378 INF] [8c97a5f1-5b78-4b19-8c37-ca355203aead] [CorrelationId: 8c97a5f1-5b78-4b19-8c37-ca355203aead] GET /api/erp-modules/documents completed in 6.29ms with status 200
+[2026-07-08 11:23:49.395 INF] [803babae-5e41-4203-bc29-830005beb541] [Perf] GET /api/erp-modules/summary -> 200 in 23.24ms
+[2026-07-08 11:23:49.395 INF] [803babae-5e41-4203-bc29-830005beb541] [CorrelationId: 803babae-5e41-4203-bc29-830005beb541] GET /api/erp-modules/summary completed in 23.34ms with status 200
+[2026-07-08 11:23:58.544 INF] [ad445887-23c5-459f-9cc0-b9744b05a078] [Perf] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status -> 200 in 16.71ms
+[2026-07-08 11:23:58.544 INF] [ad445887-23c5-459f-9cc0-b9744b05a078] [CorrelationId: ad445887-23c5-459f-9cc0-b9744b05a078] PATCH /api/erp-modules/documents/3febafae-005f-4130-9ad9-4906352fd151/status completed in 16.97ms with status 200
+[2026-07-08 11:23:58.555 INF] [be48885d-2d19-4cc4-a0d6-a0452b77f3e1] [Perf] GET /api/erp-modules/documents -> 200 in 4.23ms
+[2026-07-08 11:23:58.555 INF] [be48885d-2d19-4cc4-a0d6-a0452b77f3e1] [CorrelationId: be48885d-2d19-4cc4-a0d6-a0452b77f3e1] GET /api/erp-modules/documents completed in 4.35ms with status 200
+[2026-07-08 11:23:58.567 INF] [e85144dc-8815-44c1-9943-d38ba752616f] [Perf] GET /api/erp-modules/summary -> 200 in 15.82ms
+[2026-07-08 11:23:58.567 INF] [e85144dc-8815-44c1-9943-d38ba752616f] [CorrelationId: e85144dc-8815-44c1-9943-d38ba752616f] GET /api/erp-modules/summary completed in 15.95ms with status 200
+[2026-07-08 11:24:49.733 WRN] [64a24f85-49df-4ddd-b1bf-f9d27b5d45bf] [Perf] GET /api/notificationsHub -> 101 in 103559.51ms
+[2026-07-08 11:24:49.733 INF] [64a24f85-49df-4ddd-b1bf-f9d27b5d45bf] [CorrelationId: 64a24f85-49df-4ddd-b1bf-f9d27b5d45bf] GET /api/notificationsHub completed in 103559.63ms with status 101
+[2026-07-08 11:24:49.733 WRN] [64a24f85-49df-4ddd-b1bf-f9d27b5d45bf] [CorrelationId: 64a24f85-49df-4ddd-b1bf-f9d27b5d45bf] SLOW REQUEST: GET /api/notificationsHub took 103559.63ms (threshold: 1000ms)
+[2026-07-08 11:24:49.733 ERR] [64a24f85-49df-4ddd-b1bf-f9d27b5d45bf] [CorrelationId: 64a24f85-49df-4ddd-b1bf-f9d27b5d45bf] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 103559.63ms (threshold: 5000ms)
+[2026-07-08 11:24:49.961 INF] [f60e32f6-4b78-44c1-80fb-9a5666754b45] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.36ms
+[2026-07-08 11:24:49.961 INF] [f60e32f6-4b78-44c1-80fb-9a5666754b45] [CorrelationId: f60e32f6-4b78-44c1-80fb-9a5666754b45] POST /api/notificationsHub/negotiate completed in 0.46ms with status 200
+[2026-07-08 11:24:49.964 INF] [0570659e-5473-4631-96a0-1b60735e5f9f] [Perf] GET /api/notifications/unread-count -> 200 in 14.38ms
+[2026-07-08 11:24:49.964 INF] [0570659e-5473-4631-96a0-1b60735e5f9f] [CorrelationId: 0570659e-5473-4631-96a0-1b60735e5f9f] GET /api/notifications/unread-count completed in 14.48ms with status 200
+[2026-07-08 11:24:49.993 INF] [1e1697ff-197f-4c26-9a86-4a979b7c2b40] [Perf] GET /api/erp-modules/summary -> 200 in 38.69ms
+[2026-07-08 11:24:49.994 INF] [1e1697ff-197f-4c26-9a86-4a979b7c2b40] [CorrelationId: 1e1697ff-197f-4c26-9a86-4a979b7c2b40] GET /api/erp-modules/summary completed in 38.98ms with status 200
+[2026-07-08 11:24:49.996 INF] [bd7da5ba-6434-4d80-8736-690d4d259223] [Perf] GET /api/erp-modules/documents -> 200 in 41.82ms
+[2026-07-08 11:24:49.997 INF] [bd7da5ba-6434-4d80-8736-690d4d259223] [CorrelationId: bd7da5ba-6434-4d80-8736-690d4d259223] GET /api/erp-modules/documents completed in 42.01ms with status 200
+[2026-07-08 11:24:50.009 INF] [c18039dc-f980-4565-bed2-852567fe825e] [Perf] GET /api/notifications/unread-count -> 200 in 3.95ms
+[2026-07-08 11:24:50.009 INF] [c18039dc-f980-4565-bed2-852567fe825e] [CorrelationId: c18039dc-f980-4565-bed2-852567fe825e] GET /api/notifications/unread-count completed in 4.06ms with status 200
+[2026-07-08 11:24:50.009 INF] [f8b29487-599f-4f8b-9086-ee10ce8f149b] [Perf] GET /api/notifications -> 200 in 3.27ms
+[2026-07-08 11:24:50.009 INF] [f8b29487-599f-4f8b-9086-ee10ce8f149b] [CorrelationId: f8b29487-599f-4f8b-9086-ee10ce8f149b] GET /api/notifications completed in 3.40ms with status 200
+[2026-07-08 11:25:05.471 WRN] [257d342a-11db-4afe-9772-19f9cb100bc9] [Perf] GET /api/notificationsHub -> 101 in 15470.79ms
+[2026-07-08 11:25:05.471 INF] [257d342a-11db-4afe-9772-19f9cb100bc9] [CorrelationId: 257d342a-11db-4afe-9772-19f9cb100bc9] GET /api/notificationsHub completed in 15470.87ms with status 101
+[2026-07-08 11:25:05.471 WRN] [257d342a-11db-4afe-9772-19f9cb100bc9] [CorrelationId: 257d342a-11db-4afe-9772-19f9cb100bc9] SLOW REQUEST: GET /api/notificationsHub took 15470.87ms (threshold: 1000ms)
+[2026-07-08 11:25:05.471 ERR] [257d342a-11db-4afe-9772-19f9cb100bc9] [CorrelationId: 257d342a-11db-4afe-9772-19f9cb100bc9] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 15470.87ms (threshold: 5000ms)
+[2026-07-08 11:25:05.682 INF] [b46f0ffe-d049-4091-8125-34c56ffb7c48] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.16ms
+[2026-07-08 11:25:05.682 INF] [b46f0ffe-d049-4091-8125-34c56ffb7c48] [CorrelationId: b46f0ffe-d049-4091-8125-34c56ffb7c48] POST /api/notificationsHub/negotiate completed in 0.24ms with status 200
+[2026-07-08 11:25:05.684 INF] [c0e06a45-c079-4741-a4e9-7ad21fd2e5ae] [Perf] GET /api/notifications/unread-count -> 200 in 6.78ms
+[2026-07-08 11:25:05.684 INF] [c0e06a45-c079-4741-a4e9-7ad21fd2e5ae] [CorrelationId: c0e06a45-c079-4741-a4e9-7ad21fd2e5ae] GET /api/notifications/unread-count completed in 7.46ms with status 200
+[2026-07-08 11:25:05.687 INF] [30e135ac-0c7c-4ae4-92e7-1465f75e52dc] [Perf] GET /api/erp-modules/documents -> 200 in 5.80ms
+[2026-07-08 11:25:05.688 INF] [30e135ac-0c7c-4ae4-92e7-1465f75e52dc] [CorrelationId: 30e135ac-0c7c-4ae4-92e7-1465f75e52dc] GET /api/erp-modules/documents completed in 5.89ms with status 200
+[2026-07-08 11:25:05.696 INF] [04b50976-85a6-48f8-8bc6-3d7f21b0814a] [Perf] GET /api/erp-modules/summary -> 200 in 14.05ms
+[2026-07-08 11:25:05.696 INF] [04b50976-85a6-48f8-8bc6-3d7f21b0814a] [CorrelationId: 04b50976-85a6-48f8-8bc6-3d7f21b0814a] GET /api/erp-modules/summary completed in 14.21ms with status 200
+[2026-07-08 11:25:05.728 INF] [48b47dc1-2f54-4a65-a18b-231a326b522a] [Perf] GET /api/notifications -> 200 in 5.27ms
+[2026-07-08 11:25:05.728 INF] [4ce4f948-7420-4864-b863-b23e408c943b] [Perf] GET /api/notifications/unread-count -> 200 in 5.85ms
+[2026-07-08 11:25:05.728 INF] [48b47dc1-2f54-4a65-a18b-231a326b522a] [CorrelationId: 48b47dc1-2f54-4a65-a18b-231a326b522a] GET /api/notifications completed in 5.37ms with status 200
+[2026-07-08 11:25:05.728 INF] [4ce4f948-7420-4864-b863-b23e408c943b] [CorrelationId: 4ce4f948-7420-4864-b863-b23e408c943b] GET /api/notifications/unread-count completed in 5.89ms with status 200
+[2026-07-08 11:25:43.755 INF] [b39a333d-8cae-410d-ba40-0b3a6a21b248] [Perf] GET /uploads/documents/647bc768-fd38-4669-ac47-ac6d18e00279.pdf -> 200 in 4.71ms
+[2026-07-08 11:25:43.756 INF] [b39a333d-8cae-410d-ba40-0b3a6a21b248] [CorrelationId: b39a333d-8cae-410d-ba40-0b3a6a21b248] GET /uploads/documents/647bc768-fd38-4669-ac47-ac6d18e00279.pdf completed in 4.82ms with status 200
+[2026-07-08 11:29:21.878 INF] [cde54dc1-62fa-454c-be59-3e9d2e09062c] [Perf] GET /api/notifications/unread-count -> 200 in 4.66ms
+[2026-07-08 11:29:21.878 INF] [cde54dc1-62fa-454c-be59-3e9d2e09062c] [CorrelationId: cde54dc1-62fa-454c-be59-3e9d2e09062c] GET /api/notifications/unread-count completed in 4.83ms with status 200
+[2026-07-08 11:29:21.901 INF] [7086f3b6-9f9c-44ab-8aa2-7749e195ecc2] [Perf] GET /api/erp-modules/summary -> 200 in 21.24ms
+[2026-07-08 11:29:21.901 INF] [7086f3b6-9f9c-44ab-8aa2-7749e195ecc2] [CorrelationId: 7086f3b6-9f9c-44ab-8aa2-7749e195ecc2] GET /api/erp-modules/summary completed in 21.37ms with status 200
+[2026-07-08 11:29:21.906 INF] [7e940acc-50b7-4a2c-93ff-a646d68f079a] [Perf] GET /api/erp-modules/finance/salary-structures -> 200 in 13.64ms
+[2026-07-08 11:29:21.907 INF] [7e940acc-50b7-4a2c-93ff-a646d68f079a] [CorrelationId: 7e940acc-50b7-4a2c-93ff-a646d68f079a] GET /api/erp-modules/finance/salary-structures completed in 13.75ms with status 200
+[2026-07-08 11:29:21.908 INF] [4fbd0f6a-cf89-477a-abcf-5c1b73afe418] [Perf] GET /api/erp-modules/finance/payroll-adjustments -> 404 in 0.15ms
+[2026-07-08 11:29:21.908 INF] [4fbd0f6a-cf89-477a-abcf-5c1b73afe418] [CorrelationId: 4fbd0f6a-cf89-477a-abcf-5c1b73afe418] GET /api/erp-modules/finance/payroll-adjustments completed in 0.28ms with status 404
+[2026-07-08 11:29:21.909 INF] [06caf695-de90-42ba-b0bc-618af291a6d0] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.21ms
+[2026-07-08 11:29:21.909 INF] [06caf695-de90-42ba-b0bc-618af291a6d0] [CorrelationId: 06caf695-de90-42ba-b0bc-618af291a6d0] POST /api/notificationsHub/negotiate completed in 0.27ms with status 200
+[2026-07-08 11:29:21.916 INF] [870200de-9122-486e-bd0e-2637a868edd8] [Perf] GET /api/erp-modules/finance/payroll-runs -> 200 in 15.00ms
+[2026-07-08 11:29:21.917 INF] [870200de-9122-486e-bd0e-2637a868edd8] [CorrelationId: 870200de-9122-486e-bd0e-2637a868edd8] GET /api/erp-modules/finance/payroll-runs completed in 15.12ms with status 200
+[2026-07-08 11:29:21.966 INF] [c2aeef23-2b3e-4a70-876d-c9b886b18b75] [Perf] GET /api/notifications/unread-count -> 200 in 4.95ms
+[2026-07-08 11:29:21.966 INF] [c2aeef23-2b3e-4a70-876d-c9b886b18b75] [CorrelationId: c2aeef23-2b3e-4a70-876d-c9b886b18b75] GET /api/notifications/unread-count completed in 5.05ms with status 200
+[2026-07-08 11:29:21.966 INF] [063cf3cc-79ab-4b37-9294-2b573acfea15] [Perf] GET /api/notifications -> 200 in 4.48ms
+[2026-07-08 11:29:21.966 INF] [063cf3cc-79ab-4b37-9294-2b573acfea15] [CorrelationId: 063cf3cc-79ab-4b37-9294-2b573acfea15] GET /api/notifications completed in 4.55ms with status 200
+[2026-07-08 11:57:29.332 ERR] [8dd51238-d4a9-4b90-8cf0-fb87119ff837] Exception occurred while processing message.
+System.IO.FileNotFoundException: Could not load file or assembly '19, Version=10.0.0.0, Culture=neutral, PublicKeyToken=08151189790111897d1f0009128a35128a4911897d0e128a51128a55151189790111897d128a59021c052002010808042001010e0500001189f507300102011e000e050a011189f505'. The system cannot find the file specified.
+
+File name: '19, Version=10.0.0.0, Culture=neutral, PublicKeyToken=08151189790111897d1f0009128a35128a4911897d0e128a51128a55151189790111897d128a59021c052002010808042001010e0500001189f507300102011e000e050a011189f505'
+   at Program.<>c.<<Main>$>b__0_22
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2026-07-08 11:57:29.340 INF] [8dd51238-d4a9-4b90-8cf0-fb87119ff837] [Perf] GET /api/Health/test-sms -> 200 in 10.50ms
+[2026-07-08 11:57:29.355 ERR] [8dd51238-d4a9-4b90-8cf0-fb87119ff837] Unhandled exception: FileNotFoundException: Could not load file or assembly '19, Version=10.0.0.0, Culture=neutral, PublicKeyToken=08151189790111897d1f0009128a35128a4911897d0e128a51128a55151189790111897d128a59021c052002010808042001010e0500001189f507300102011e000e050a011189f505'. The system cannot find the file specified.
+ | Response: An unexpected error occurred. Please try again later. | Path: /api/Health/test-sms | Client IP: ::1
+[2026-07-08 11:59:01.275 INF] [] Server macbook-pro:48415:0897cca5 caught stopping signal...
+[2026-07-08 11:59:01.277 WRN] [c0196015-0db4-4f69-b524-a0f10d9c37ff] [Perf] GET /api/notificationsHub -> 101 in 1779318.43ms
+[2026-07-08 11:59:01.277 WRN] [2767c3e2-9e3a-4bf3-a8fd-1e02e70de838] [Perf] GET /api/notificationsHub -> 101 in 2035540.23ms
+[2026-07-08 11:59:01.277 INF] [c0196015-0db4-4f69-b524-a0f10d9c37ff] [CorrelationId: c0196015-0db4-4f69-b524-a0f10d9c37ff] GET /api/notificationsHub completed in 1779318.57ms with status 101
+[2026-07-08 11:59:01.277 WRN] [c0196015-0db4-4f69-b524-a0f10d9c37ff] [CorrelationId: c0196015-0db4-4f69-b524-a0f10d9c37ff] SLOW REQUEST: GET /api/notificationsHub took 1779318.57ms (threshold: 1000ms)
+[2026-07-08 11:59:01.277 ERR] [c0196015-0db4-4f69-b524-a0f10d9c37ff] [CorrelationId: c0196015-0db4-4f69-b524-a0f10d9c37ff] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 1779318.57ms (threshold: 5000ms)
+[2026-07-08 11:59:01.277 INF] [2767c3e2-9e3a-4bf3-a8fd-1e02e70de838] [CorrelationId: 2767c3e2-9e3a-4bf3-a8fd-1e02e70de838] GET /api/notificationsHub completed in 2035540.35ms with status 101
+[2026-07-08 11:59:01.277 WRN] [2767c3e2-9e3a-4bf3-a8fd-1e02e70de838] [CorrelationId: 2767c3e2-9e3a-4bf3-a8fd-1e02e70de838] SLOW REQUEST: GET /api/notificationsHub took 2035540.35ms (threshold: 1000ms)
+[2026-07-08 11:59:01.277 ERR] [2767c3e2-9e3a-4bf3-a8fd-1e02e70de838] [CorrelationId: 2767c3e2-9e3a-4bf3-a8fd-1e02e70de838] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 2035540.35ms (threshold: 5000ms)
+[2026-07-08 11:59:01.781 INF] [] Server macbook-pro:48415:0897cca5 caught stopped signal...
+[2026-07-08 11:59:01.948 INF] [] Server macbook-pro:48415:0897cca5 All dispatchers stopped
+[2026-07-08 11:59:01.958 INF] [] Server macbook-pro:48415:0897cca5 successfully reported itself as stopped in 9.2887 ms
+[2026-07-08 11:59:01.958 INF] [] Server macbook-pro:48415:0897cca5 has been stopped in total 682.7696 ms

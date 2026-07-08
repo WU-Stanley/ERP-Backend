@@ -292,5 +292,40 @@ namespace WUIAM.Repositories
         {
             return await _context.JobCategories.ToListAsync();
         }
+
+        public async Task<WUIAM.DTOs.HrSummaryReportDto> GetHrSummaryReportAsync()
+        {
+            var totalEmployees = await _context.EmployeeDetails.CountAsync();
+            // Assuming IsActive is tracked on EmploymentDetails or EmployeeDetails. For this demo, we'll assume everyone is active if EmploymentStatus == "Active".
+            var activeEmployees = await _context.EmploymentDetails.Where(e => e.EmploymentStatus == "Active").Select(e => e.EmployeeId).Distinct().CountAsync();
+            var inactiveEmployees = totalEmployees - activeEmployees;
+
+            var deptHeadcount = await _context.EmploymentDetails
+                .Where(e => e.EmploymentStatus == "Active" && e.DepartmentId != null)
+                .GroupBy(e => e.Department.Name)
+                .Select(g => new WUIAM.DTOs.DepartmentHeadcountDto { DepartmentName = g.Key, Count = g.Count() })
+                .ToListAsync();
+
+            var empTypeBreakdown = await _context.EmploymentDetails
+                .Where(e => e.EmploymentStatus == "Active" && e.EmploymentTypeId != null)
+                .GroupBy(e => e.EmploymentType.Name)
+                .Select(g => new WUIAM.DTOs.EmploymentTypeBreakdownDto { EmploymentTypeName = g.Key, Count = g.Count() })
+                .ToListAsync();
+
+            var genderBreakdown = await _context.EmployeeDetails
+                .GroupBy(e => e.Gender.ToString())
+                .Select(g => new WUIAM.DTOs.GenderBreakdownDto { Gender = g.Key, Count = g.Count() })
+                .ToListAsync();
+
+            return new WUIAM.DTOs.HrSummaryReportDto
+            {
+                TotalEmployees = totalEmployees,
+                ActiveEmployees = activeEmployees,
+                InactiveEmployees = inactiveEmployees,
+                HeadcountByDepartment = deptHeadcount,
+                HeadcountByEmploymentType = empTypeBreakdown,
+                HeadcountByGender = genderBreakdown
+            };
+        }
     }
 }

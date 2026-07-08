@@ -23,6 +23,14 @@ namespace WUIAM.Controllers
             _employeeService = employeeService;
         }
 
+        [HttpGet("reports/hr-summary")]
+        [HasPermission(Permissions.AdminAccess, Permissions.ViewHRReports, Permissions.SuperAdminAccess)]
+        public async Task<ActionResult<ApiResponse<HrSummaryReportDto>>> GetHrSummaryReport()
+        {
+            var report = await _employeeService.GetHrSummaryReportAsync();
+            return Ok(ApiResponse<HrSummaryReportDto>.Success("HR Summary Report retrieved successfully", report));
+        }
+
         /// <summary>
         /// Get a paginated list of all employees.
         /// </summary>

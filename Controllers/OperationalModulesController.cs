@@ -794,6 +794,23 @@ namespace WUIAM.Controllers
             return CreatedAtAction(nameof(GetDocuments), ApiResponse<DocumentRecord>.Success("Document registered successfully", document));
         }
 
+        [HttpPost("documents/{id}/versions")]
+        [HasPermission(Permissions.AdminAccess, Permissions.UploadDocuments, Permissions.SuperAdminAccess)]
+        public async Task<ActionResult<ApiResponse<DocumentRecord>>> UploadNewDocumentVersion(Guid id, [FromBody] UploadNewDocumentVersionDto dto)
+        {
+            var document = await _context.DocumentRecords.FindAsync(id);
+            if (document == null)
+                return NotFound(ApiResponse<DocumentRecord>.Failure("Document not found"));
+
+            document.StorageUrl = dto.StorageUrl.Trim();
+            document.Version += 1;
+            document.UpdatedAt = DateTime.UtcNow;
+            
+            await _context.SaveChangesAsync();
+
+            return Ok(ApiResponse<DocumentRecord>.Success("New document version uploaded successfully", document));
+        }
+
         [HttpPatch("documents/{id}/status")]
         [HasPermission(Permissions.AdminAccess, Permissions.ApproveDocuments, Permissions.ArchiveDocuments, Permissions.SuperAdminAccess)]
         public async Task<ActionResult<ApiResponse<DocumentRecord>>> UpdateDocumentStatus(Guid id, [FromBody] UpdateOperationalStatusDto dto)
@@ -887,9 +904,7 @@ namespace WUIAM.Controllers
             return CreatedAtAction(nameof(GetHelpdeskTickets), ApiResponse<HelpdeskTicket>.Success("Helpdesk ticket created successfully", ticket));
         }
 
-        [HttpPatch("helpdesk/tickets/{id}/status")]
         [AllowAuthenticatedUsers]
-        
         [HttpPost("helpdesk/tickets/{id}/assign")]
         public async Task<ActionResult<ApiResponse<HelpdeskTicket>>> AssignHelpdeskTicket(Guid id, [FromBody] AssignHelpdeskTicketDto dto)
         {

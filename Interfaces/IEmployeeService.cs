@@ -19,6 +19,7 @@ namespace WUIAM.Interfaces
         Task<BulkStaffUploadResultDto> BulkCreateEmployeesAsync(IFormFile file);
         Task<EmployeeDetails> UpdateEmployeeAsync(EmployeeDetails employee);
         Task<List<JobCategory>> GetJobCategoriesAsync();
+        Task<HrSummaryReportDto> GetHrSummaryReportAsync();
     }
 
 }

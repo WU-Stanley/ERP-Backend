@@ -1,0 +1,236 @@
+[2026-07-08 00:08:12.653 INF] [] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:26.1716386 and is in the Running state now
+[2026-07-08 03:54:26.865 INF] [] 1 servers were removed due to timeout
+[2026-07-08 03:54:33.818 WRN] [] Server macbook-pro:30432:677aa820 was considered dead by other servers, restarting...
+[2026-07-08 03:54:33.818 INF] [] Server macbook-pro:30432:677aa820 caught restart signal...
+[2026-07-08 03:54:33.819 WRN] [] Server macbook-pro:30432:677aa820 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-07-08 03:54:36.075 INF] [] Server macbook-pro:30432:677aa820 successfully reported itself as stopped in 2255.3757 ms
+[2026-07-08 03:54:36.075 INF] [] Server macbook-pro:30432:677aa820 has been stopped in total 2257.3737 ms
+[2026-07-08 03:54:39.799 INF] [] Server macbookpro:30432:014a3c76 successfully announced in 3725.0278 ms
+[2026-07-08 03:54:39.811 INF] [] Server macbookpro:30432:014a3c76 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-07-08 03:54:40.412 INF] [] Server macbookpro:30432:014a3c76 all the dispatchers started
+[2026-07-08 05:46:01.749 INF] [] 1 servers were removed due to timeout
+[2026-07-08 05:46:08.866 WRN] [] Server macbookpro:30432:014a3c76 was considered dead by other servers, restarting...
+[2026-07-08 05:46:08.866 INF] [] Server macbookpro:30432:014a3c76 caught restart signal...
+[2026-07-08 05:46:08.867 WRN] [] Server macbookpro:30432:014a3c76 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-07-08 05:46:08.873 INF] [] Server macbookpro:30432:014a3c76 successfully reported itself as stopped in 3.7581 ms
+[2026-07-08 05:46:08.873 INF] [] Server macbookpro:30432:014a3c76 has been stopped in total 6.6013 ms
+[2026-07-08 05:46:08.882 INF] [] Server macbookpro:30432:506510b2 successfully announced in 8.1892 ms
+[2026-07-08 05:46:08.884 INF] [] Server macbookpro:30432:506510b2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-07-08 05:46:08.892 INF] [] Server macbookpro:30432:506510b2 all the dispatchers started
+[2026-07-08 06:31:01.238 INF] [] 1 servers were removed due to timeout
+[2026-07-08 06:31:01.326 WRN] [] Server macbookpro:30432:506510b2 was considered dead by other servers, restarting...
+[2026-07-08 06:31:01.326 INF] [] Server macbookpro:30432:506510b2 caught restart signal...
+[2026-07-08 06:31:01.327 WRN] [] Server macbookpro:30432:506510b2 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-07-08 06:31:01.335 INF] [] Server macbookpro:30432:506510b2 successfully reported itself as stopped in 5.6492 ms
+[2026-07-08 06:31:01.335 INF] [] Server macbookpro:30432:506510b2 has been stopped in total 7.7307 ms
+[2026-07-08 06:31:01.341 INF] [] Server macbookpro:30432:800f5952 successfully announced in 5.9579 ms
+[2026-07-08 06:31:01.341 INF] [] Server macbookpro:30432:800f5952 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-07-08 06:31:01.348 INF] [] Server macbookpro:30432:800f5952 all the dispatchers started
+[2026-07-08 09:30:26.426 INF] [] 1 servers were removed due to timeout
+[2026-07-08 09:30:28.017 WRN] [] Server macbookpro:30432:800f5952 was considered dead by other servers, restarting...
+[2026-07-08 09:30:28.018 INF] [] Server macbookpro:30432:800f5952 caught restart signal...
+[2026-07-08 09:30:28.019 WRN] [] Server macbookpro:30432:800f5952 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+[2026-07-08 09:30:28.038 INF] [] Server macbookpro:30432:800f5952 successfully reported itself as stopped in 18.8921 ms
+[2026-07-08 09:30:28.038 INF] [] Server macbookpro:30432:800f5952 has been stopped in total 20.0135 ms
+[2026-07-08 09:30:28.044 INF] [] Server macbook-pro:30432:636967eb successfully announced in 5.8894 ms
+[2026-07-08 09:30:28.044 INF] [] Server macbook-pro:30432:636967eb is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-07-08 09:30:28.048 INF] [] Server macbook-pro:30432:636967eb all the dispatchers started
+[2026-07-08 10:18:49.797 WRN] [45f4eb7c-88b2-47ff-ab08-48970da53595] [Perf] GET /api/notificationsHub -> 101 in 4983873.61ms
+[2026-07-08 10:18:49.797 INF] [45f4eb7c-88b2-47ff-ab08-48970da53595] [CorrelationId: 45f4eb7c-88b2-47ff-ab08-48970da53595] GET /api/notificationsHub completed in 4983874.02ms with status 101
+[2026-07-08 10:18:49.798 WRN] [45f4eb7c-88b2-47ff-ab08-48970da53595] [CorrelationId: 45f4eb7c-88b2-47ff-ab08-48970da53595] SLOW REQUEST: GET /api/notificationsHub took 4983874.02ms (threshold: 1000ms)
+[2026-07-08 10:18:49.798 ERR] [45f4eb7c-88b2-47ff-ab08-48970da53595] [CorrelationId: 45f4eb7c-88b2-47ff-ab08-48970da53595] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 4983874.02ms (threshold: 5000ms)
+[2026-07-08 10:18:50.631 INF] [575892a0-e36b-452f-b0c0-27cf890951c3] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.21ms
+[2026-07-08 10:18:50.631 INF] [575892a0-e36b-452f-b0c0-27cf890951c3] [CorrelationId: 575892a0-e36b-452f-b0c0-27cf890951c3] POST /api/notificationsHub/negotiate completed in 0.30ms with status 200
+[2026-07-08 10:18:50.698 INF] [2c633200-e739-4fca-a0c3-d4e054d340d3] [Perf] GET /api/leavetype/available -> 200 in 67.03ms
+[2026-07-08 10:18:50.698 INF] [2c633200-e739-4fca-a0c3-d4e054d340d3] [CorrelationId: 2c633200-e739-4fca-a0c3-d4e054d340d3] GET /api/leavetype/available completed in 67.12ms with status 200
+[2026-07-08 10:18:50.720 INF] [a2627b9b-f604-4ed5-94a2-37f745c31de8] [Perf] GET /api/notifications/unread-count -> 200 in 87.86ms
+[2026-07-08 10:18:50.720 INF] [a2627b9b-f604-4ed5-94a2-37f745c31de8] [CorrelationId: a2627b9b-f604-4ed5-94a2-37f745c31de8] GET /api/notifications/unread-count completed in 87.95ms with status 200
+[2026-07-08 10:18:50.764 INF] [fc6973d1-37b5-4ec5-a4ae-b3fc72537e06] [Perf] GET /api/notifications/unread-count -> 200 in 2.63ms
+[2026-07-08 10:18:50.764 INF] [fc6973d1-37b5-4ec5-a4ae-b3fc72537e06] [CorrelationId: fc6973d1-37b5-4ec5-a4ae-b3fc72537e06] GET /api/notifications/unread-count completed in 2.77ms with status 200
+[2026-07-08 10:18:50.765 INF] [43a0e455-f406-4cfe-be90-5eb76f01c524] [Perf] GET /api/notifications -> 200 in 2.62ms
+[2026-07-08 10:18:50.765 INF] [43a0e455-f406-4cfe-be90-5eb76f01c524] [CorrelationId: 43a0e455-f406-4cfe-be90-5eb76f01c524] GET /api/notifications completed in 2.96ms with status 200
+[2026-07-08 10:19:06.536 WRN] [3c2cb6f7-b0de-491f-9bb0-92eadb405b33] [Perf] GET /api/notificationsHub -> 101 in 15778.44ms
+[2026-07-08 10:19:06.537 INF] [3c2cb6f7-b0de-491f-9bb0-92eadb405b33] [CorrelationId: 3c2cb6f7-b0de-491f-9bb0-92eadb405b33] GET /api/notificationsHub completed in 15779.41ms with status 101
+[2026-07-08 10:19:06.537 WRN] [3c2cb6f7-b0de-491f-9bb0-92eadb405b33] [CorrelationId: 3c2cb6f7-b0de-491f-9bb0-92eadb405b33] SLOW REQUEST: GET /api/notificationsHub took 15779.41ms (threshold: 1000ms)
+[2026-07-08 10:19:06.537 ERR] [3c2cb6f7-b0de-491f-9bb0-92eadb405b33] [CorrelationId: 3c2cb6f7-b0de-491f-9bb0-92eadb405b33] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 15779.41ms (threshold: 5000ms)
+[2026-07-08 10:19:06.963 INF] [cc2d33ae-db34-4a86-8563-6bf7c7f74b7d] [Perf] GET /api/notifications/unread-count -> 200 in 4.76ms
+[2026-07-08 10:19:06.963 INF] [cc2d33ae-db34-4a86-8563-6bf7c7f74b7d] [CorrelationId: cc2d33ae-db34-4a86-8563-6bf7c7f74b7d] GET /api/notifications/unread-count completed in 4.87ms with status 200
+[2026-07-08 10:19:06.984 INF] [f4fb24d8-23aa-4610-862d-94ec6db4bb56] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.12ms
+[2026-07-08 10:19:06.984 INF] [f4fb24d8-23aa-4610-862d-94ec6db4bb56] [CorrelationId: f4fb24d8-23aa-4610-862d-94ec6db4bb56] POST /api/notificationsHub/negotiate completed in 0.18ms with status 200
+[2026-07-08 10:19:06.992 INF] [6f2dddbc-208e-43d5-8e82-0176c051b45e] [Perf] GET /api/leavetype/available -> 200 in 8.47ms
+[2026-07-08 10:19:06.992 INF] [6f2dddbc-208e-43d5-8e82-0176c051b45e] [CorrelationId: 6f2dddbc-208e-43d5-8e82-0176c051b45e] GET /api/leavetype/available completed in 8.57ms with status 200
+[2026-07-08 10:19:07.025 INF] [0e58e1f3-468e-446d-afaf-4735b2809cc2] [Perf] GET /api/notifications -> 200 in 2.99ms
+[2026-07-08 10:19:07.025 INF] [2b47d9a2-796d-4655-903d-82ff1f2ed0b3] [Perf] GET /api/notifications/unread-count -> 200 in 3.49ms
+[2026-07-08 10:19:07.025 INF] [0e58e1f3-468e-446d-afaf-4735b2809cc2] [CorrelationId: 0e58e1f3-468e-446d-afaf-4735b2809cc2] GET /api/notifications completed in 3.07ms with status 200
+[2026-07-08 10:19:07.025 INF] [2b47d9a2-796d-4655-903d-82ff1f2ed0b3] [CorrelationId: 2b47d9a2-796d-4655-903d-82ff1f2ed0b3] GET /api/notifications/unread-count completed in 3.58ms with status 200
+[2026-07-08 10:19:23.247 WRN] [bb5bc4a9-f77a-4ba7-89a2-3bb19eaa1f33] [Perf] GET /api/notificationsHub -> 101 in 16228.44ms
+[2026-07-08 10:19:23.247 INF] [bb5bc4a9-f77a-4ba7-89a2-3bb19eaa1f33] [CorrelationId: bb5bc4a9-f77a-4ba7-89a2-3bb19eaa1f33] GET /api/notificationsHub completed in 16228.55ms with status 101
+[2026-07-08 10:19:23.247 WRN] [bb5bc4a9-f77a-4ba7-89a2-3bb19eaa1f33] [CorrelationId: bb5bc4a9-f77a-4ba7-89a2-3bb19eaa1f33] SLOW REQUEST: GET /api/notificationsHub took 16228.55ms (threshold: 1000ms)
+[2026-07-08 10:19:23.247 ERR] [bb5bc4a9-f77a-4ba7-89a2-3bb19eaa1f33] [CorrelationId: bb5bc4a9-f77a-4ba7-89a2-3bb19eaa1f33] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 16228.55ms (threshold: 5000ms)
+[2026-07-08 10:19:23.643 INF] [c586fcbc-df97-4b3a-9744-3ff85384647a] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.18ms
+[2026-07-08 10:19:23.643 INF] [c586fcbc-df97-4b3a-9744-3ff85384647a] [CorrelationId: c586fcbc-df97-4b3a-9744-3ff85384647a] POST /api/notificationsHub/negotiate completed in 0.27ms with status 200
+[2026-07-08 10:19:23.643 INF] [b6ad8d34-daf5-46e4-89e8-3f5c86d7f85f] [Perf] GET /api/notifications/unread-count -> 200 in 6.10ms
+[2026-07-08 10:19:23.643 INF] [b6ad8d34-daf5-46e4-89e8-3f5c86d7f85f] [CorrelationId: b6ad8d34-daf5-46e4-89e8-3f5c86d7f85f] GET /api/notifications/unread-count completed in 6.12ms with status 200
+[2026-07-08 10:19:23.650 INF] [5d1ce429-d531-422d-a8e0-db3d7d0b98b6] [Perf] GET /api/leavetype/available -> 200 in 7.72ms
+[2026-07-08 10:19:23.650 INF] [5d1ce429-d531-422d-a8e0-db3d7d0b98b6] [CorrelationId: 5d1ce429-d531-422d-a8e0-db3d7d0b98b6] GET /api/leavetype/available completed in 7.79ms with status 200
+[2026-07-08 10:19:23.680 INF] [273058ee-6c34-4d89-9fc4-96621ead6252] [Perf] GET /api/notifications -> 200 in 3.67ms
+[2026-07-08 10:19:23.680 INF] [80bab75a-7397-4431-bad9-f2a8e673bc5c] [Perf] GET /api/notifications/unread-count -> 200 in 3.89ms
+[2026-07-08 10:19:23.680 INF] [80bab75a-7397-4431-bad9-f2a8e673bc5c] [CorrelationId: 80bab75a-7397-4431-bad9-f2a8e673bc5c] GET /api/notifications/unread-count completed in 4.05ms with status 200
+[2026-07-08 10:19:23.680 INF] [273058ee-6c34-4d89-9fc4-96621ead6252] [CorrelationId: 273058ee-6c34-4d89-9fc4-96621ead6252] GET /api/notifications completed in 3.75ms with status 200
+[2026-07-08 10:20:19.456 INF] [5b53ef5a-f0d4-40b7-8a4f-b80a7b9830ef] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 5.27ms
+[2026-07-08 10:20:19.457 INF] [5b53ef5a-f0d4-40b7-8a4f-b80a7b9830ef] [CorrelationId: 5b53ef5a-f0d4-40b7-8a4f-b80a7b9830ef] GET /api/erp-modules/helpdesk/tickets completed in 5.49ms with status 200
+[2026-07-08 10:20:19.466 INF] [64b28454-db04-441c-b6f4-ecc736986ef3] [Perf] GET /api/erp-modules/summary -> 200 in 14.40ms
+[2026-07-08 10:20:19.466 INF] [64b28454-db04-441c-b6f4-ecc736986ef3] [CorrelationId: 64b28454-db04-441c-b6f4-ecc736986ef3] GET /api/erp-modules/summary completed in 14.56ms with status 200
+[2026-07-08 10:20:19.466 INF] [d40e7d45-ab10-4e3a-8f93-d790188d0a0a] [Perf] GET /api/erp-modules/facilities/assets -> 200 in 8.07ms
+[2026-07-08 10:20:19.466 INF] [d40e7d45-ab10-4e3a-8f93-d790188d0a0a] [CorrelationId: d40e7d45-ab10-4e3a-8f93-d790188d0a0a] GET /api/erp-modules/facilities/assets completed in 8.16ms with status 200
+[2026-07-08 10:20:19.488 INF] [4a7245e2-876c-4109-9a02-302c8e9d1e5f] [Perf] GET /api/Employees -> 200 in 35.77ms
+[2026-07-08 10:20:19.488 INF] [4a7245e2-876c-4109-9a02-302c8e9d1e5f] [CorrelationId: 4a7245e2-876c-4109-9a02-302c8e9d1e5f] GET /api/Employees completed in 35.87ms with status 200
+[2026-07-08 10:20:27.328 INF] [3ebc7d88-9cef-4114-9ce8-6fabfe99345a] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.20ms
+[2026-07-08 10:20:27.328 INF] [3ebc7d88-9cef-4114-9ce8-6fabfe99345a] [CorrelationId: 3ebc7d88-9cef-4114-9ce8-6fabfe99345a] POST /api/notificationsHub/negotiate completed in 0.30ms with status 200
+[2026-07-08 10:20:27.333 INF] [e64e4b5d-e8af-42ea-b527-2a64289cf229] [Perf] GET /api/notifications/unread-count -> 200 in 7.62ms
+[2026-07-08 10:20:27.334 INF] [e64e4b5d-e8af-42ea-b527-2a64289cf229] [CorrelationId: e64e4b5d-e8af-42ea-b527-2a64289cf229] GET /api/notifications/unread-count completed in 8.40ms with status 200
+[2026-07-08 10:20:27.343 INF] [cb0db5eb-4ac9-431f-9bfb-5edabbfb8295] [Perf] GET /api/erp-modules/registry/integrations -> 200 in 15.17ms
+[2026-07-08 10:20:27.343 INF] [cb0db5eb-4ac9-431f-9bfb-5edabbfb8295] [CorrelationId: cb0db5eb-4ac9-431f-9bfb-5edabbfb8295] GET /api/erp-modules/registry/integrations completed in 15.27ms with status 200
+[2026-07-08 10:20:27.345 INF] [7356469a-2c38-4626-a1ae-8f0180070fd4] [Perf] GET /api/erp-modules/summary -> 200 in 16.99ms
+[2026-07-08 10:20:27.345 INF] [7356469a-2c38-4626-a1ae-8f0180070fd4] [CorrelationId: 7356469a-2c38-4626-a1ae-8f0180070fd4] GET /api/erp-modules/summary completed in 17.19ms with status 200
+[2026-07-08 10:20:27.369 INF] [905fa593-1979-40c7-b44a-8c482b46770e] [Perf] GET /api/notifications/unread-count -> 200 in 3.88ms
+[2026-07-08 10:20:27.369 INF] [905fa593-1979-40c7-b44a-8c482b46770e] [CorrelationId: 905fa593-1979-40c7-b44a-8c482b46770e] GET /api/notifications/unread-count completed in 3.97ms with status 200
+[2026-07-08 10:20:27.369 INF] [a94717ea-b807-4f0a-a3f5-69ae29b05ead] [Perf] GET /api/notifications -> 200 in 3.51ms
+[2026-07-08 10:20:27.369 INF] [a94717ea-b807-4f0a-a3f5-69ae29b05ead] [CorrelationId: a94717ea-b807-4f0a-a3f5-69ae29b05ead] GET /api/notifications completed in 3.53ms with status 200
+[2026-07-08 10:20:33.925 INF] [21156a79-0041-4cc5-96b4-35f00fd8a695] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.65ms
+[2026-07-08 10:20:33.925 INF] [21156a79-0041-4cc5-96b4-35f00fd8a695] [CorrelationId: 21156a79-0041-4cc5-96b4-35f00fd8a695] POST /api/notificationsHub/negotiate completed in 0.85ms with status 200
+[2026-07-08 10:20:33.926 INF] [e200caa2-e1af-4c30-ade9-e771186dde0e] [Perf] GET /api/notifications/unread-count -> 200 in 9.25ms
+[2026-07-08 10:20:33.926 INF] [e200caa2-e1af-4c30-ade9-e771186dde0e] [CorrelationId: e200caa2-e1af-4c30-ade9-e771186dde0e] GET /api/notifications/unread-count completed in 9.38ms with status 200
+[2026-07-08 10:20:33.936 INF] [15b82ef6-85a7-4556-b362-f601081069b6] [Perf] GET /api/dashboard/hr-summary -> 200 in 11.95ms
+[2026-07-08 10:20:33.937 INF] [15b82ef6-85a7-4556-b362-f601081069b6] [CorrelationId: 15b82ef6-85a7-4556-b362-f601081069b6] GET /api/dashboard/hr-summary completed in 12.05ms with status 200
+[2026-07-08 10:20:33.957 INF] [2e18742a-a06d-45a1-b7ce-b2b53984b382] [Perf] GET /api/notifications/unread-count -> 200 in 2.35ms
+[2026-07-08 10:20:33.957 INF] [2e18742a-a06d-45a1-b7ce-b2b53984b382] [CorrelationId: 2e18742a-a06d-45a1-b7ce-b2b53984b382] GET /api/notifications/unread-count completed in 2.45ms with status 200
+[2026-07-08 10:20:33.957 INF] [c8090888-11a2-49fd-a98c-993f2baa76f0] [Perf] GET /api/notifications -> 200 in 2.10ms
+[2026-07-08 10:20:33.957 INF] [c8090888-11a2-49fd-a98c-993f2baa76f0] [CorrelationId: c8090888-11a2-49fd-a98c-993f2baa76f0] GET /api/notifications completed in 2.18ms with status 200
+[2026-07-08 10:20:39.191 INF] [60bd8810-d62c-4469-931f-1f157eb5d22d] [Perf] POST /api/auth/logout -> 200 in 28.73ms
+[2026-07-08 10:20:39.192 ERR] [60bd8810-d62c-4469-931f-1f157eb5d22d] Unhandled exception: InvalidOperationException: The LINQ expression 'DbSet<RefreshToken>()
+    .Where(r => r.UserId == @userId && r.RevokedOn == null && r.IsExpired == False)' could not be translated. Additional information: Translation of member 'IsExpired' on entity type 'RefreshToken' failed. This commonly occurs when the specified member is unmapped. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. | Response: Invalid operation. | Path: /api/auth/logout | Client IP: ::1
+[2026-07-08 10:20:43.355 WRN] [af01e6f4-93b7-4fa8-8450-03c59898e00a] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[2026-07-08 10:20:44.750 WRN] [af01e6f4-93b7-4fa8-8450-03c59898e00a] [Perf] POST /api/auth/login -> 200 in 1416.72ms
+[2026-07-08 10:20:44.750 INF] [af01e6f4-93b7-4fa8-8450-03c59898e00a] [CorrelationId: af01e6f4-93b7-4fa8-8450-03c59898e00a] POST /api/auth/login completed in 1416.93ms with status 200
+[2026-07-08 10:20:44.750 WRN] [af01e6f4-93b7-4fa8-8450-03c59898e00a] [CorrelationId: af01e6f4-93b7-4fa8-8450-03c59898e00a] SLOW REQUEST: POST /api/auth/login took 1416.93ms (threshold: 1000ms)
+[2026-07-08 10:20:44.786 INF] [dca4af7c-c877-4352-b8c0-515e378e72da] [Perf] GET /api/dashboard/admin-summary -> 200 in 18.08ms
+[2026-07-08 10:20:44.787 INF] [dca4af7c-c877-4352-b8c0-515e378e72da] [CorrelationId: dca4af7c-c877-4352-b8c0-515e378e72da] GET /api/dashboard/admin-summary completed in 18.30ms with status 200
+[2026-07-08 10:20:47.817 INF] [8f6c5628-6122-46e7-b5a8-99ce19d67457] [Perf] GET /api/AuditLogs -> 200 in 36.34ms
+[2026-07-08 10:20:47.817 INF] [8f6c5628-6122-46e7-b5a8-99ce19d67457] [CorrelationId: 8f6c5628-6122-46e7-b5a8-99ce19d67457] GET /api/AuditLogs completed in 36.47ms with status 200
+[2026-07-08 10:20:47.838 INF] [7e012642-40e4-4900-9f8e-3e30d10fb00a] [Perf] GET /api/AuditLogs/stats -> 200 in 56.19ms
+[2026-07-08 10:20:47.838 INF] [7e012642-40e4-4900-9f8e-3e30d10fb00a] [CorrelationId: 7e012642-40e4-4900-9f8e-3e30d10fb00a] GET /api/AuditLogs/stats completed in 56.33ms with status 200
+[2026-07-08 10:21:18.588 INF] [83588cd2-6253-49d4-9d47-5f041e71a327] [Perf] GET /api/erp-modules/helpdesk/tickets -> 200 in 4.15ms
+[2026-07-08 10:21:18.588 INF] [83588cd2-6253-49d4-9d47-5f041e71a327] [CorrelationId: 83588cd2-6253-49d4-9d47-5f041e71a327] GET /api/erp-modules/helpdesk/tickets completed in 4.25ms with status 200
+[2026-07-08 10:21:18.588 INF] [c9ed3314-0ffe-4b42-a553-a772ad8e0ee0] [Perf] GET /api/notifications/unread-count -> 200 in 6.35ms
+[2026-07-08 10:21:18.588 INF] [c9ed3314-0ffe-4b42-a553-a772ad8e0ee0] [CorrelationId: c9ed3314-0ffe-4b42-a553-a772ad8e0ee0] GET /api/notifications/unread-count completed in 6.55ms with status 200
+[2026-07-08 10:21:18.590 INF] [3cd47269-4ead-486b-b740-7ec69e36a25f] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.28ms
+[2026-07-08 10:21:18.590 INF] [3cd47269-4ead-486b-b740-7ec69e36a25f] [CorrelationId: 3cd47269-4ead-486b-b740-7ec69e36a25f] POST /api/notificationsHub/negotiate completed in 0.38ms with status 200
+[2026-07-08 10:21:18.593 INF] [c6fbe311-8e22-4019-90f3-45d786710007] [Perf] GET /api/Employees -> 200 in 2.82ms
+[2026-07-08 10:21:18.593 INF] [c6fbe311-8e22-4019-90f3-45d786710007] [CorrelationId: c6fbe311-8e22-4019-90f3-45d786710007] GET /api/Employees completed in 3.00ms with status 200
+[2026-07-08 10:21:18.602 INF] [8a905ff7-3f8e-4035-88e5-2702e160d781] [Perf] GET /api/erp-modules/summary -> 200 in 17.77ms
+[2026-07-08 10:21:18.602 INF] [8a905ff7-3f8e-4035-88e5-2702e160d781] [CorrelationId: 8a905ff7-3f8e-4035-88e5-2702e160d781] GET /api/erp-modules/summary completed in 17.89ms with status 200
+[2026-07-08 10:21:18.612 INF] [55532ec6-f30b-4e0d-9a3c-eeb9fa6c98a5] [Perf] GET /api/erp-modules/facilities/assets -> 200 in 25.75ms
+[2026-07-08 10:21:18.612 INF] [55532ec6-f30b-4e0d-9a3c-eeb9fa6c98a5] [CorrelationId: 55532ec6-f30b-4e0d-9a3c-eeb9fa6c98a5] GET /api/erp-modules/facilities/assets completed in 25.86ms with status 200
+[2026-07-08 10:21:18.646 INF] [82b34cff-f5c3-4b7f-af7a-d743c504f777] [Perf] GET /api/notifications/unread-count -> 200 in 2.27ms
+[2026-07-08 10:21:18.646 INF] [82b34cff-f5c3-4b7f-af7a-d743c504f777] [CorrelationId: 82b34cff-f5c3-4b7f-af7a-d743c504f777] GET /api/notifications/unread-count completed in 2.36ms with status 200
+[2026-07-08 10:21:18.647 INF] [f252ba1b-df15-4d13-ba3d-abf40187312e] [Perf] GET /api/notifications -> 200 in 2.95ms
+[2026-07-08 10:21:18.647 INF] [f252ba1b-df15-4d13-ba3d-abf40187312e] [CorrelationId: f252ba1b-df15-4d13-ba3d-abf40187312e] GET /api/notifications completed in 3.00ms with status 200
+[2026-07-08 10:26:08.097 WRN] [924c473c-fcaf-4702-a647-9b434a34beaf] [Perf] GET /api/notificationsHub -> 101 in 404484.89ms
+[2026-07-08 10:26:08.098 INF] [924c473c-fcaf-4702-a647-9b434a34beaf] [CorrelationId: 924c473c-fcaf-4702-a647-9b434a34beaf] GET /api/notificationsHub completed in 404485.08ms with status 101
+[2026-07-08 10:26:08.098 WRN] [924c473c-fcaf-4702-a647-9b434a34beaf] [CorrelationId: 924c473c-fcaf-4702-a647-9b434a34beaf] SLOW REQUEST: GET /api/notificationsHub took 404485.08ms (threshold: 1000ms)
+[2026-07-08 10:26:08.098 ERR] [924c473c-fcaf-4702-a647-9b434a34beaf] [CorrelationId: 924c473c-fcaf-4702-a647-9b434a34beaf] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 404485.08ms (threshold: 5000ms)
+[2026-07-08 10:26:08.098 WRN] [6ac775c5-c303-4d91-ba09-5ac151504bda] [Perf] GET /api/notificationsHub -> 101 in 340797.08ms
+[2026-07-08 10:26:08.098 INF] [6ac775c5-c303-4d91-ba09-5ac151504bda] [CorrelationId: 6ac775c5-c303-4d91-ba09-5ac151504bda] GET /api/notificationsHub completed in 340797.10ms with status 101
+[2026-07-08 10:26:08.098 WRN] [6ac775c5-c303-4d91-ba09-5ac151504bda] [CorrelationId: 6ac775c5-c303-4d91-ba09-5ac151504bda] SLOW REQUEST: GET /api/notificationsHub took 340797.10ms (threshold: 1000ms)
+[2026-07-08 10:26:08.098 ERR] [6ac775c5-c303-4d91-ba09-5ac151504bda] [CorrelationId: 6ac775c5-c303-4d91-ba09-5ac151504bda] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 340797.10ms (threshold: 5000ms)
+[2026-07-08 10:26:08.098 WRN] [eff833cd-cad2-4a9e-aa06-c9335637f7c9] [Perf] GET /api/notificationsHub -> 101 in 289517.18ms
+[2026-07-08 10:26:08.098 INF] [eff833cd-cad2-4a9e-aa06-c9335637f7c9] [CorrelationId: eff833cd-cad2-4a9e-aa06-c9335637f7c9] GET /api/notificationsHub completed in 289517.19ms with status 101
+[2026-07-08 10:26:08.098 WRN] [eff833cd-cad2-4a9e-aa06-c9335637f7c9] [CorrelationId: eff833cd-cad2-4a9e-aa06-c9335637f7c9] SLOW REQUEST: GET /api/notificationsHub took 289517.19ms (threshold: 1000ms)
+[2026-07-08 10:26:08.098 ERR] [eff833cd-cad2-4a9e-aa06-c9335637f7c9] [CorrelationId: eff833cd-cad2-4a9e-aa06-c9335637f7c9] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 289517.19ms (threshold: 5000ms)
+[2026-07-08 10:26:08.099 WRN] [82a46c46-3c98-45da-9f21-b38f8be061fd] [Perf] GET /api/notificationsHub -> 101 in 334208.12ms
+[2026-07-08 10:26:08.099 INF] [82a46c46-3c98-45da-9f21-b38f8be061fd] [CorrelationId: 82a46c46-3c98-45da-9f21-b38f8be061fd] GET /api/notificationsHub completed in 334208.19ms with status 101
+[2026-07-08 10:26:08.099 WRN] [82a46c46-3c98-45da-9f21-b38f8be061fd] [CorrelationId: 82a46c46-3c98-45da-9f21-b38f8be061fd] SLOW REQUEST: GET /api/notificationsHub took 334208.19ms (threshold: 1000ms)
+[2026-07-08 10:26:08.099 ERR] [82a46c46-3c98-45da-9f21-b38f8be061fd] [CorrelationId: 82a46c46-3c98-45da-9f21-b38f8be061fd] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 334208.19ms (threshold: 5000ms)
+[2026-07-08 10:26:08.299 INF] [87f2077d-3e1a-4a1c-9f7f-8561c0700f9e] [Perf] GET /api/notifications/unread-count -> 200 in 2.09ms
+[2026-07-08 10:26:08.299 INF] [87f2077d-3e1a-4a1c-9f7f-8561c0700f9e] [CorrelationId: 87f2077d-3e1a-4a1c-9f7f-8561c0700f9e] GET /api/notifications/unread-count completed in 2.18ms with status 200
+[2026-07-08 10:26:08.300 INF] [b1504d7b-9e29-4f72-b770-d9476e0de1af] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.15ms
+[2026-07-08 10:26:08.300 INF] [b1504d7b-9e29-4f72-b770-d9476e0de1af] [CorrelationId: b1504d7b-9e29-4f72-b770-d9476e0de1af] POST /api/notificationsHub/negotiate completed in 0.22ms with status 200
+[2026-07-08 10:26:08.323 INF] [36a02f87-93cb-4b5e-839e-4a9f39530654] [Perf] GET /api/notifications/unread-count -> 200 in 10.97ms
+[2026-07-08 10:26:08.323 INF] [36a02f87-93cb-4b5e-839e-4a9f39530654] [CorrelationId: 36a02f87-93cb-4b5e-839e-4a9f39530654] GET /api/notifications/unread-count completed in 11.06ms with status 200
+[2026-07-08 10:26:08.324 INF] [fff4d212-2b1e-4970-bc6a-692150f4786e] [Perf] GET /api/notifications -> 200 in 11.01ms
+[2026-07-08 10:26:08.324 INF] [fff4d212-2b1e-4970-bc6a-692150f4786e] [CorrelationId: fff4d212-2b1e-4970-bc6a-692150f4786e] GET /api/notifications completed in 11.08ms with status 200
+[2026-07-08 10:26:24.124 WRN] [d92c4f01-f304-4cf0-9f6e-915ca74fcf8a] [Perf] GET /api/notificationsHub -> 101 in 15813.68ms
+[2026-07-08 10:26:24.124 INF] [d92c4f01-f304-4cf0-9f6e-915ca74fcf8a] [CorrelationId: d92c4f01-f304-4cf0-9f6e-915ca74fcf8a] GET /api/notificationsHub completed in 15813.82ms with status 101
+[2026-07-08 10:26:24.124 WRN] [d92c4f01-f304-4cf0-9f6e-915ca74fcf8a] [CorrelationId: d92c4f01-f304-4cf0-9f6e-915ca74fcf8a] SLOW REQUEST: GET /api/notificationsHub took 15813.82ms (threshold: 1000ms)
+[2026-07-08 10:26:24.124 ERR] [d92c4f01-f304-4cf0-9f6e-915ca74fcf8a] [CorrelationId: d92c4f01-f304-4cf0-9f6e-915ca74fcf8a] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 15813.82ms (threshold: 5000ms)
+[2026-07-08 10:26:24.292 INF] [15290603-a0c5-4556-a32b-f951995b00a5] [Perf] GET /api/notifications/unread-count -> 200 in 2.36ms
+[2026-07-08 10:26:24.292 INF] [15290603-a0c5-4556-a32b-f951995b00a5] [CorrelationId: 15290603-a0c5-4556-a32b-f951995b00a5] GET /api/notifications/unread-count completed in 2.45ms with status 200
+[2026-07-08 10:26:24.293 INF] [208e8240-d50d-43e5-99a2-8319ae93fca2] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.17ms
+[2026-07-08 10:26:24.293 INF] [208e8240-d50d-43e5-99a2-8319ae93fca2] [CorrelationId: 208e8240-d50d-43e5-99a2-8319ae93fca2] POST /api/notificationsHub/negotiate completed in 0.25ms with status 200
+[2026-07-08 10:26:24.350 INF] [fd4f9bec-5ce3-43fb-af3f-4aeacdff7c4d] [Perf] GET /api/notifications/unread-count -> 200 in 5.91ms
+[2026-07-08 10:26:24.350 INF] [048a0e42-e254-4cd9-9196-ef0898541ff5] [Perf] GET /api/notifications -> 200 in 5.52ms
+[2026-07-08 10:26:24.350 INF] [fd4f9bec-5ce3-43fb-af3f-4aeacdff7c4d] [CorrelationId: fd4f9bec-5ce3-43fb-af3f-4aeacdff7c4d] GET /api/notifications/unread-count completed in 6.00ms with status 200
+[2026-07-08 10:26:24.350 INF] [048a0e42-e254-4cd9-9196-ef0898541ff5] [CorrelationId: 048a0e42-e254-4cd9-9196-ef0898541ff5] GET /api/notifications completed in 5.67ms with status 200
+[2026-07-08 10:31:04.262 WRN] [6b1572e1-8f0a-43aa-8006-e26e85c6d3af] [Perf] GET /api/notificationsHub -> 101 in 279922.40ms
+[2026-07-08 10:31:04.265 INF] [6b1572e1-8f0a-43aa-8006-e26e85c6d3af] [CorrelationId: 6b1572e1-8f0a-43aa-8006-e26e85c6d3af] GET /api/notificationsHub completed in 279925.01ms with status 101
+[2026-07-08 10:31:04.265 WRN] [6b1572e1-8f0a-43aa-8006-e26e85c6d3af] [CorrelationId: 6b1572e1-8f0a-43aa-8006-e26e85c6d3af] SLOW REQUEST: GET /api/notificationsHub took 279925.01ms (threshold: 1000ms)
+[2026-07-08 10:31:04.265 ERR] [6b1572e1-8f0a-43aa-8006-e26e85c6d3af] [CorrelationId: 6b1572e1-8f0a-43aa-8006-e26e85c6d3af] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 279925.01ms (threshold: 5000ms)
+[2026-07-08 10:31:04.474 INF] [b300f48d-38f3-47ce-860b-c6c2d32e1bec] [Perf] GET /api/notifications/unread-count -> 200 in 3.82ms
+[2026-07-08 10:31:04.474 INF] [b300f48d-38f3-47ce-860b-c6c2d32e1bec] [CorrelationId: b300f48d-38f3-47ce-860b-c6c2d32e1bec] GET /api/notifications/unread-count completed in 3.93ms with status 200
+[2026-07-08 10:31:04.475 INF] [8a4c7d71-98a8-477c-ba6c-a6abf672895b] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.27ms
+[2026-07-08 10:31:04.475 INF] [8a4c7d71-98a8-477c-ba6c-a6abf672895b] [CorrelationId: 8a4c7d71-98a8-477c-ba6c-a6abf672895b] POST /api/notificationsHub/negotiate completed in 0.33ms with status 200
+[2026-07-08 10:31:04.502 INF] [8fdbddda-1bc8-4671-b6af-d8f1bbac0ed1] [Perf] GET /api/notifications -> 200 in 3.69ms
+[2026-07-08 10:31:04.502 INF] [8fdbddda-1bc8-4671-b6af-d8f1bbac0ed1] [CorrelationId: 8fdbddda-1bc8-4671-b6af-d8f1bbac0ed1] GET /api/notifications completed in 3.78ms with status 200
+[2026-07-08 10:31:04.503 INF] [1bfd7e85-9c78-48d6-9465-9e6f7455e6e7] [Perf] GET /api/notifications/unread-count -> 200 in 4.94ms
+[2026-07-08 10:31:04.503 INF] [1bfd7e85-9c78-48d6-9465-9e6f7455e6e7] [CorrelationId: 1bfd7e85-9c78-48d6-9465-9e6f7455e6e7] GET /api/notifications/unread-count completed in 4.99ms with status 200
+[2026-07-08 10:31:16.717 INF] [c8a7b80a-8e0c-4105-a186-d76c6a99ec39] [Perf] GET /api/Employees/reports/hr-summary -> 404 in 0.14ms
+[2026-07-08 10:31:16.718 INF] [c8a7b80a-8e0c-4105-a186-d76c6a99ec39] [CorrelationId: c8a7b80a-8e0c-4105-a186-d76c6a99ec39] GET /api/Employees/reports/hr-summary completed in 0.23ms with status 404
+[2026-07-08 10:31:26.227 WRN] [04d6abb2-5557-43e2-b3d9-8a538074dbcc] [Perf] GET /api/notificationsHub -> 101 in 21732.02ms
+[2026-07-08 10:31:26.229 INF] [04d6abb2-5557-43e2-b3d9-8a538074dbcc] [CorrelationId: 04d6abb2-5557-43e2-b3d9-8a538074dbcc] GET /api/notificationsHub completed in 21733.43ms with status 101
+[2026-07-08 10:31:26.229 WRN] [04d6abb2-5557-43e2-b3d9-8a538074dbcc] [CorrelationId: 04d6abb2-5557-43e2-b3d9-8a538074dbcc] SLOW REQUEST: GET /api/notificationsHub took 21733.43ms (threshold: 1000ms)
+[2026-07-08 10:31:26.229 ERR] [04d6abb2-5557-43e2-b3d9-8a538074dbcc] [CorrelationId: 04d6abb2-5557-43e2-b3d9-8a538074dbcc] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 21733.43ms (threshold: 5000ms)
+[2026-07-08 10:31:27.048 INF] [d7c62ce0-088f-4749-a1ab-59fabe024edd] [Perf] GET /api/notifications/unread-count -> 200 in 6.14ms
+[2026-07-08 10:31:27.049 INF] [d7c62ce0-088f-4749-a1ab-59fabe024edd] [CorrelationId: d7c62ce0-088f-4749-a1ab-59fabe024edd] GET /api/notifications/unread-count completed in 6.28ms with status 200
+[2026-07-08 10:31:27.052 INF] [3c167c7d-fb4b-43fe-9a82-515011bbe488] [Perf] GET /api/Employees/reports/hr-summary -> 404 in 0.11ms
+[2026-07-08 10:31:27.052 INF] [3c167c7d-fb4b-43fe-9a82-515011bbe488] [CorrelationId: 3c167c7d-fb4b-43fe-9a82-515011bbe488] GET /api/Employees/reports/hr-summary completed in 0.18ms with status 404
+[2026-07-08 10:31:27.052 INF] [3a9eef8e-d8e0-4540-a03c-8bc677a3f689] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.19ms
+[2026-07-08 10:31:27.052 INF] [3a9eef8e-d8e0-4540-a03c-8bc677a3f689] [CorrelationId: 3a9eef8e-d8e0-4540-a03c-8bc677a3f689] POST /api/notificationsHub/negotiate completed in 0.24ms with status 200
+[2026-07-08 10:31:27.105 INF] [b0d24fac-f469-40ab-b415-c7e8c5258757] [Perf] GET /api/notifications/unread-count -> 200 in 3.05ms
+[2026-07-08 10:31:27.105 INF] [b0d24fac-f469-40ab-b415-c7e8c5258757] [CorrelationId: b0d24fac-f469-40ab-b415-c7e8c5258757] GET /api/notifications/unread-count completed in 3.15ms with status 200
+[2026-07-08 10:31:27.105 INF] [5019dcc0-850c-423d-a624-1591e48529ed] [Perf] GET /api/notifications -> 200 in 4.08ms
+[2026-07-08 10:31:27.105 INF] [5019dcc0-850c-423d-a624-1591e48529ed] [CorrelationId: 5019dcc0-850c-423d-a624-1591e48529ed] GET /api/notifications completed in 4.12ms with status 200
+[2026-07-08 10:32:03.134 INF] [0eb6ad72-48cd-4edd-afd4-b305b39e2207] [Perf] GET /api/dashboard/hr-summary -> 200 in 15.25ms
+[2026-07-08 10:32:03.134 INF] [0eb6ad72-48cd-4edd-afd4-b305b39e2207] [CorrelationId: 0eb6ad72-48cd-4edd-afd4-b305b39e2207] GET /api/dashboard/hr-summary completed in 15.49ms with status 200
+[2026-07-08 10:32:11.223 INF] [343241f0-724d-4a29-acae-187243c6a1a4] [Perf] GET /api/Employees/reports/hr-summary -> 404 in 0.62ms
+[2026-07-08 10:32:11.223 INF] [343241f0-724d-4a29-acae-187243c6a1a4] [CorrelationId: 343241f0-724d-4a29-acae-187243c6a1a4] GET /api/Employees/reports/hr-summary completed in 0.81ms with status 404
+[2026-07-08 10:35:54.635 INF] [483de9b5-4d43-467b-b30e-0ab817b33f59] [Perf] HEAD /api/Employees/reports/hr-summary -> 401 in 0.21ms
+[2026-07-08 10:35:54.635 INF] [483de9b5-4d43-467b-b30e-0ab817b33f59] [CorrelationId: 483de9b5-4d43-467b-b30e-0ab817b33f59] HEAD /api/Employees/reports/hr-summary completed in 0.30ms with status 401
+[2026-07-08 10:36:12.107 INF] [deca8cc0-fc38-4237-864a-c3b6ec21fdd6] [Perf] HEAD /api/employees/reports/hr-summary -> 401 in 0.08ms
+[2026-07-08 10:36:12.107 INF] [deca8cc0-fc38-4237-864a-c3b6ec21fdd6] [CorrelationId: deca8cc0-fc38-4237-864a-c3b6ec21fdd6] HEAD /api/employees/reports/hr-summary completed in 0.18ms with status 401
+[2026-07-08 10:38:18.836 INF] [95f0ea3f-8272-49ee-989a-2a7fc7884275] [Perf] HEAD /api/Employees/reports/hr-summary -> 401 in 0.08ms
+[2026-07-08 10:38:18.836 INF] [95f0ea3f-8272-49ee-989a-2a7fc7884275] [CorrelationId: 95f0ea3f-8272-49ee-989a-2a7fc7884275] HEAD /api/Employees/reports/hr-summary completed in 0.41ms with status 401
+[2026-07-08 10:38:36.467 INF] [1a076ce7-ea6d-4126-919e-7b49c29ae964] [Perf] OPTIONS /api/Employees/reports/hr-summary -> 401 in 0.08ms
+[2026-07-08 10:38:36.467 INF] [1a076ce7-ea6d-4126-919e-7b49c29ae964] [CorrelationId: 1a076ce7-ea6d-4126-919e-7b49c29ae964] OPTIONS /api/Employees/reports/hr-summary completed in 0.17ms with status 401
+[2026-07-08 10:41:42.741 WRN] [b943a825-bf53-41a9-badc-96de91d8fbd2] [Perf] GET /api/notificationsHub -> 101 in 615710.20ms
+[2026-07-08 10:41:42.741 INF] [b943a825-bf53-41a9-badc-96de91d8fbd2] [CorrelationId: b943a825-bf53-41a9-badc-96de91d8fbd2] GET /api/notificationsHub completed in 615710.42ms with status 101
+[2026-07-08 10:41:42.741 WRN] [b943a825-bf53-41a9-badc-96de91d8fbd2] [CorrelationId: b943a825-bf53-41a9-badc-96de91d8fbd2] SLOW REQUEST: GET /api/notificationsHub took 615710.42ms (threshold: 1000ms)
+[2026-07-08 10:41:42.741 ERR] [b943a825-bf53-41a9-badc-96de91d8fbd2] [CorrelationId: b943a825-bf53-41a9-badc-96de91d8fbd2] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 615710.42ms (threshold: 5000ms)
+[2026-07-08 10:41:43.540 INF] [d9c1a3bf-b89a-432a-8978-b0d2d8c24543] [Perf] POST /api/notificationsHub/negotiate -> 200 in 0.73ms
+[2026-07-08 10:41:43.541 INF] [d9c1a3bf-b89a-432a-8978-b0d2d8c24543] [CorrelationId: d9c1a3bf-b89a-432a-8978-b0d2d8c24543] POST /api/notificationsHub/negotiate completed in 0.88ms with status 200
+[2026-07-08 10:41:43.542 INF] [3de9aea6-f469-42d4-bc83-ccc01fd8fbe1] [Perf] GET /api/Employees/reports/hr-summary -> 404 in 0.10ms
+[2026-07-08 10:41:43.542 INF] [3de9aea6-f469-42d4-bc83-ccc01fd8fbe1] [CorrelationId: 3de9aea6-f469-42d4-bc83-ccc01fd8fbe1] GET /api/Employees/reports/hr-summary completed in 0.17ms with status 404
+[2026-07-08 10:41:43.566 INF] [c8ad2ddf-4d70-40b2-ad75-252c18eefe79] [Perf] GET /api/notifications/unread-count -> 200 in 23.50ms
+[2026-07-08 10:41:43.566 INF] [c8ad2ddf-4d70-40b2-ad75-252c18eefe79] [CorrelationId: c8ad2ddf-4d70-40b2-ad75-252c18eefe79] GET /api/notifications/unread-count completed in 23.60ms with status 200
+[2026-07-08 10:41:43.569 INF] [e886f128-441f-4235-a39e-92e4aca264e4] [Perf] GET /api/notifications -> 200 in 3.79ms
+[2026-07-08 10:41:43.569 INF] [e886f128-441f-4235-a39e-92e4aca264e4] [CorrelationId: e886f128-441f-4235-a39e-92e4aca264e4] GET /api/notifications completed in 4.02ms with status 200
+[2026-07-08 10:41:43.585 INF] [51e30406-0bc2-44fe-a7ca-c78c026c536c] [Perf] GET /api/notifications/unread-count -> 200 in 18.61ms
+[2026-07-08 10:41:43.585 INF] [51e30406-0bc2-44fe-a7ca-c78c026c536c] [CorrelationId: 51e30406-0bc2-44fe-a7ca-c78c026c536c] GET /api/notifications/unread-count completed in 18.70ms with status 200
+[2026-07-08 10:41:52.817 INF] [] Server macbook-pro:30432:636967eb caught stopping signal...
+[2026-07-08 10:41:52.820 WRN] [f5da71dc-247c-4fe0-942c-5885202da27f] [Perf] GET /api/notificationsHub -> 101 in 9261.06ms
+[2026-07-08 10:41:52.820 INF] [f5da71dc-247c-4fe0-942c-5885202da27f] [CorrelationId: f5da71dc-247c-4fe0-942c-5885202da27f] GET /api/notificationsHub completed in 9261.21ms with status 101
+[2026-07-08 10:41:52.820 WRN] [f5da71dc-247c-4fe0-942c-5885202da27f] [CorrelationId: f5da71dc-247c-4fe0-942c-5885202da27f] SLOW REQUEST: GET /api/notificationsHub took 9261.21ms (threshold: 1000ms)
+[2026-07-08 10:41:52.820 ERR] [f5da71dc-247c-4fe0-942c-5885202da27f] [CorrelationId: f5da71dc-247c-4fe0-942c-5885202da27f] CRITICAL SLOW REQUEST: GET /api/notificationsHub took 9261.21ms (threshold: 5000ms)
+[2026-07-08 10:41:52.982 INF] [] Server macbook-pro:30432:636967eb All dispatchers stopped
+[2026-07-08 10:41:52.996 INF] [] Server macbook-pro:30432:636967eb successfully reported itself as stopped in 12.2557 ms
+[2026-07-08 10:41:52.996 INF] [] Server macbook-pro:30432:636967eb has been stopped in total 177.941 ms

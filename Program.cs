@@ -24,6 +24,7 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+// Force restart for DI registration
 using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -147,7 +148,7 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
-builder.Services.AddScoped<INotifyService, NotifyService>();
+builder.Services.AddHttpClient<INotifyService, NotifyService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IPermissionService, PermissionService>();
@@ -192,6 +193,7 @@ builder.Services.AddScoped<ILeaveApprovalService, LeaveApprovalService>();
         // Attendance Management
         builder.Services.AddScoped<IAttendanceRepository, AttendanceRepository>();
         builder.Services.AddScoped<IAttendanceService, AttendanceService>();
+        builder.Services.AddScoped<IExportService, ExportService>();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -382,7 +384,7 @@ try
             if (isDbCreated)
             {
                 var appliedMigrations = db.Database.GetAppliedMigrations();
-                bool hasInitialCreate = appliedMigrations.Any(m => m == "InitialCreate");
+                bool hasInitialCreate = appliedMigrations.Any(m => m.EndsWith("InitialCreate"));
                 if (!hasInitialCreate)
                 {
                     Console.WriteLine("WARNING: Database exists but migration history is missing. " +

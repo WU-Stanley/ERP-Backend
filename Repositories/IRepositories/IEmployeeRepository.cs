@@ -18,5 +18,6 @@ namespace WUIAM.Repositories.IRepositories
         // With User
         Task<EmployeeDetails?> GetByUserIdAsync(Guid userId);
         Task<List<JobCategory>> GetJobCategoriesAsync();
+        Task<WUIAM.DTOs.HrSummaryReportDto> GetHrSummaryReportAsync();
     }
 }

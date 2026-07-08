@@ -104,5 +104,38 @@ namespace WUIAM.Services
         {
             return await _dbContext.EmployeeDetails.AnyAsync(employee => employee.EmployeeId == employeeId);
         }
+
+        public async Task<IEnumerable<DepartmentSummaryDto>> GetDepartmentSummaryReportAsync()
+        {
+            var depts = await _dbContext.Departments.ToListAsync();
+            var employmentStats = await _dbContext.EmploymentDetails
+                .Where(e => e.DepartmentId != null)
+                .GroupBy(e => e.DepartmentId)
+                .Select(g => new {
+                    DeptId = g.Key,
+                    Total = g.Count(),
+                    Active = g.Count(x => x.EmploymentStatus == "Active"),
+                    Inactive = g.Count(x => x.EmploymentStatus != "Active")
+                })
+                .ToListAsync();
+
+            var result = new List<DepartmentSummaryDto>();
+            foreach (var d in depts)
+            {
+                var stat = employmentStats.FirstOrDefault(s => s.DeptId == d.Id);
+                result.Add(new DepartmentSummaryDto
+                {
+                    DepartmentId = d.Id,
+                    Name = d.Name,
+                    Code = d.Code,
+                    DepartmentType = d.DepartmentType,
+                    TotalEmployees = stat?.Total ?? 0,
+                    ActiveEmployees = stat?.Active ?? 0,
+                    InactiveEmployees = stat?.Inactive ?? 0
+                });
+            }
+
+            return result.OrderByDescending(r => r.TotalEmployees).ToList();
+        }
     }
 }

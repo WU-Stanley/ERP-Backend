@@ -714,6 +714,11 @@ namespace WUIAM.Services
             };
         }
 
+        public async Task<HrSummaryReportDto> GetHrSummaryReportAsync()
+        {
+            return await _employeeRepo.GetHrSummaryReportAsync();
+        }
+
         private record BulkStaffRow(int RowNumber, Dictionary<string, string> Values);
     }
 }
